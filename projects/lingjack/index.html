@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Public Safety & Firefighting Equipment Manufacturing Solution</title>
+  <link rel="stylesheet" href="lingjack-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+      --red: #d9252a;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #e8eef7; color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1536px;
+      margin: 0;
+      overflow: hidden;
+      user-select: none;
+      background:
+        radial-gradient(circle at 80% 10%, rgba(217, 37, 42, .08), transparent 18%),
+        linear-gradient(180deg, #fff 0%, #fbfdff 58%, #fff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 520px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.98) 30%, rgba(255,255,255,.7) 52%, rgba(255,255,255,.05) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 358px;
+      width: 1120px;
+      height: 92px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 492px;
+      padding: 26px 32px 0 34px;
+    }
+
+    .top-row { display: flex; align-items: flex-start; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 18px; }
+    .mark { width: 120px; height: 120px; object-fit: contain; display: block; }
+    .divider { width: 1px; height: 120px; background: var(--navy); opacity: .9; }
+
+    h1 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 49px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle { color: var(--ink); font-size: 18px; margin-top: 8px; }
+    .short-line { width: 64px; height: 4px; margin-top: 16px; background: var(--gold); }
+    .odoo { width: 205px; text-align: right; }
+    .odoo-logo { width: 205px; height: auto; display: block; }
+
+    .intro {
+      width: 452px;
+      margin-top: 28px;
+      font-size: 16.5px;
+      line-height: 1.43;
+      color: var(--ink);
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 546px;
+      margin-top: 18px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit { height: 128px; padding: 13px 16px 11px; border-right: 1px dashed #b7c8e1; }
+    .quick-benefit:last-child { border-right: 0; }
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 7px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+    .round-icon i { font-size: 18px; }
+    .quick-benefit h3 { margin: 0 0 7px; font-size: 13px; color: var(--navy); font-weight: 900; }
+    .quick-benefit p { margin: 0; font-size: 9.1px; line-height: 1.18; font-weight: 800; }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 14px 22px 18px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+    }
+    .section-title::before, .section-title::after { content: ""; flex: 1; height: 1px; background: #9fc0ee; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--navy-2); }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      padding: 0 24px;
+    }
+    .capability { min-height: 142px; padding: 0 9px; text-align: center; border-right: 1px dashed #b9cce5; }
+    .capability:last-child { border-right: 0; }
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon.red { color: var(--red); }
+    .cap-icon i { font-size: 24px; }
+    .capability h3 { min-height: 35px; margin: 0 0 5px; color: var(--navy); font-size: 12.3px; line-height: 1.15; font-weight: 900; }
+    .capability p { margin: 0; color: var(--ink); font-size: 10px; line-height: 1.35; font-weight: 700; }
+
+    .panels { display: grid; grid-template-columns: 46% 54%; gap: 14px; padding: 8px 16px 0; }
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+    .panel-header.purple { background: linear-gradient(90deg, #722384, #8d2d92); }
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow { padding: 15px 13px 8px; }
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; position: relative; }
+    .steps::before { content: ""; position: absolute; top: 37px; left: 62px; right: 62px; height: 2px; background: var(--navy); }
+    .step { position: relative; z-index: 1; text-align: center; }
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+    .step-box i { font-size: 30px; }
+    .step h4 { margin: 0 0 5px; color: var(--navy); font-size: 12px; line-height: 1.2; font-weight: 900; }
+    .step p { margin: 0; font-size: 9.5px; line-height: 1.32; font-weight: 700; }
+
+    .sub-title { margin: 17px 0 11px; border-top: 1px solid #d8e4f3; padding-top: 13px; color: var(--navy); text-align: center; font-size: 15px; font-weight: 900; text-transform: uppercase; }
+    .slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .slot { min-height: 82px; padding: 10px 4px 8px; text-align: center; border: 1px solid #d5e1f1; border-radius: 8px; background: #fbfdff; }
+    .slot i { color: var(--blue); font-size: 27px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 { margin: 5px 0 3px; color: var(--navy); font-size: 12px; font-weight: 900; }
+    .slot p { margin: 0; font-size: 9.5px; line-height: 1.25; font-weight: 700; }
+
+    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 12px; border-top: 1px solid #d8e4f3; }
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 6px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.5px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard { padding: 13px 12px 12px; }
+    .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .stat { min-height: 76px; padding: 11px 9px 8px; border: 1px solid #d7e2f1; border-radius: 7px; background: #fff; }
+    .stat h4 { margin: 0 0 10px; color: #2a4777; font-size: 9.8px; font-weight: 800; }
+    .stat .number { display: flex; align-items: center; justify-content: space-between; color: var(--navy); font-size: 21px; font-weight: 900; }
+    .stat i { font-size: 22px; color: var(--blue); }
+    .charts { display: grid; grid-template-columns: 43% 57%; gap: 8px; margin-top: 12px; }
+    .chart-card { border: 1px solid #d7e2f1; border-radius: 8px; padding: 12px; min-height: 138px; background: #fff; }
+    .chart-card h4 { margin: 0 0 9px; color: var(--navy); font-size: 11px; font-weight: 900; }
+    .donut-wrap { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: 13px; }
+    .donut { width: 92px; height: 92px; border-radius: 50%; background: conic-gradient(var(--green) 0 58%, var(--blue) 58% 82%, var(--orange) 82% 100%); position: relative; }
+    .donut::after { content: ""; position: absolute; inset: 25px; border-radius: 50%; background: #fff; }
+    .legend { display: grid; gap: 8px; font-size: 9.5px; font-weight: 800; }
+    .legend span { display: inline-flex; width: 10px; height: 10px; margin-right: 6px; border-radius: 2px; background: var(--green); }
+    .legend div:nth-child(2) span { background: var(--blue); }
+    .legend div:nth-child(3) span { background: var(--orange); }
+    .line-chart { width: 100%; height: 84px; }
+    .mini-table { margin-top: 10px; border: 1px solid #d7e2f1; border-radius: 8px; overflow: hidden; font-size: 10px; font-weight: 700; }
+    .row { display: grid; grid-template-columns: 1.12fr .8fr .75fr .6fr .6fr; min-height: 25px; align-items: center; padding: 0 10px; border-bottom: 1px solid #e6eef8; }
+    .row:last-child { border-bottom: 0; }
+    .row.head { color: #39547d; background: #f7fbff; font-size: 9.5px; font-weight: 900; }
+    .pill { justify-self: start; border-radius: 20px; padding: 4px 9px; background: #ccebc6; color: #26763a; font-size: 9px; font-weight: 900; }
+
+    .integrations { padding: 2px 43px 0; }
+    .integration-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 11px; align-items: start; }
+    .app { text-align: center; color: var(--navy); font-size: 11px; line-height: 1.2; font-weight: 900; }
+    .app .circle { display: grid; place-items: center; width: 54px; height: 54px; margin: 0 auto 7px; border-radius: 15px; border: 1px solid #cbd9ef; background: #fff; color: var(--blue); box-shadow: 0 4px 10px rgba(13, 39, 85, .07); }
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits { position: absolute; left: 16px; right: 16px; bottom: 54px; display: grid; grid-template-columns: 132px repeat(4, 1fr); height: 76px; border-radius: 11px; overflow: hidden; background: linear-gradient(90deg, #062a6f, #0b3b91); color: #fff; }
+    .benefit-title { display: grid; place-items: center; padding: 0 12px; color: var(--gold); font-size: 19px; line-height: 1.1; font-weight: 900; text-transform: uppercase; border-right: 1px solid rgba(255,255,255,.42); }
+    .bottom-item { display: grid; grid-template-columns: 34px 1fr; gap: 8px; align-items: center; padding: 9px 10px; border-right: 1px solid rgba(255,255,255,.42); }
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 { margin: 0 0 4px; color: #fff; font-size: 9.8px; line-height: 1.25; font-weight: 900; }
+    .bottom-item p { margin: 0; font-size: 8.3px; line-height: 1.22; font-weight: 700; }
+
+    .footer { position: absolute; left: 0; right: 0; bottom: 0; height: 54px; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; background: var(--navy); color: #fff; padding: 0 44px; font-size: 16px; }
+    .contact { display: flex; align-items: center; justify-content: center; gap: 12px; height: 28px; border-right: 1px solid rgba(255,255,255,.55); }
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 22px; font-size: 19px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="hero-image" src="lingjack-assets/public-safety-firefighting-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="lingjack-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>Public Safety<br />Equipment</h1>
+            <div class="subtitle">Complete Firefighting Manufacturing Solutions with Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="lingjack-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec's Public Safety and Firefighting Equipment Manufacturing solution on Odoo helps manufacturers and service teams manage the full lifecycle, from sales demand and BOM planning to shop-floor production, QC, serial traceability, field service, invoicing, and compliance documents.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit"><div class="round-icon"><i class="fa-solid fa-layer-group"></i></div><h3>Centralized</h3><p>Sales, projects, MRP, QC, inventory, service, and finance together.</p></div>
+        <div class="quick-benefit"><div class="round-icon"><i class="fa-solid fa-gears"></i></div><h3>Automated</h3><p>Turn sales demand into work orders, serials, worksheets, and invoices.</p></div>
+        <div class="quick-benefit"><div class="round-icon"><i class="fa-solid fa-fingerprint"></i></div><h3>Traceable</h3><p>Track Service IDs, Setsco/TUV serials, barcodes, transfers, and delivery.</p></div>
+        <div class="quick-benefit"><div class="round-icon"><i class="fa-solid fa-shield-halved"></i></div><h3>Controlled</h3><p>Support approvals, QC checks, backdate controls, and compliance packs.</p></div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability"><div class="cap-icon red"><i class="fa-solid fa-fire-extinguisher"></i></div><h3>Product &amp; BOM Engineering</h3><p>Extend BOMs with routes, area IDs, SID prefixes, and component-change tools.</p></div>
+      <div class="capability"><div class="cap-icon"><i class="fa-solid fa-clipboard-list"></i></div><h3>Sales to Work Orders</h3><p>Create manufacturing demand and production work orders directly from sales.</p></div>
+      <div class="capability"><div class="cap-icon green"><i class="fa-solid fa-industry"></i></div><h3>Shop Floor Execution</h3><p>Track operators, terminals, work sessions, quantities, components, and backorders.</p></div>
+      <div class="capability"><div class="cap-icon purple"><i class="fa-solid fa-barcode"></i></div><h3>Serial &amp; Barcode Traceability</h3><p>Manage Service IDs, Setsco serials, QR labels, ranges, scanning, and transfers.</p></div>
+      <div class="capability"><div class="cap-icon orange"><i class="fa-solid fa-microscope"></i></div><h3>Quality &amp; QC Sheets</h3><p>Reuse QC spreadsheet templates by procurement group and produce QC PDFs.</p></div>
+      <div class="capability"><div class="cap-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Field Service Worksheets</h3><p>Handle SCBA, hose reel, hydrant, dry rising, installation, and bus servicing.</p></div>
+      <div class="capability"><div class="cap-icon green"><i class="fa-solid fa-boxes-stacked"></i></div><h3>Inventory &amp; Replenishment</h3><p>Control stock, no-negative rules, barcode demand, serial ranges, and shortages.</p></div>
+      <div class="capability"><div class="cap-icon"><i class="fa-solid fa-file-signature"></i></div><h3>Documents &amp; Approvals</h3><p>Generate certificates, invoices, packing lists, warranties, and tier approvals.</p></div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-route"></i> Manufacturing Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-contract"></i></div><h4>Sales<br />Demand</h4><p>Quotation, order, project, and delivery split</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-diagram-project"></i></div><h4>BOM &amp;<br />Planning</h4><p>Routes, procurement, deposits, and approvals</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-industry"></i></div><h4>Shop Floor<br />Production</h4><p>Work sessions, quantities, components, and MOs</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-qrcode"></i></div><h4>Serial &amp;<br />QC</h4><p>Service IDs, Setsco, barcode labels, QC sheets</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-truck-fast"></i></div><h4>Deliver &amp;<br />Invoice</h4><p>Delivery orders, service reports, invoices, certificates</p></div>
+          </div>
+
+          <div class="sub-title">Fire Safety Operation Areas</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-fire-extinguisher"></i><h4>Extinguishers</h4><p>Serial and distribution control</p></div>
+            <div class="slot"><i class="fa-solid fa-circle-nodes"></i><h4>Hose Reels</h4><p>Service worksheet tracking</p></div>
+            <div class="slot"><i class="fa-solid fa-mask-ventilator"></i><h4>SCBA</h4><p>Testing and service products</p></div>
+            <div class="slot"><i class="fa-solid fa-water"></i><h4>Hydrants</h4><p>Testing and field records</p></div>
+            <div class="slot"><i class="fa-solid fa-bus"></i><h4>Bus Service</h4><p>Labour and component usage</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-check-double"></i>Tier Validation</div>
+            <div class="feature"><i class="fa-solid fa-calendar-check"></i>Milestone Billing</div>
+            <div class="feature"><i class="fa-solid fa-file-invoice"></i>Invoice From Delivery</div>
+            <div class="feature"><i class="fa-solid fa-money-check-dollar"></i>SG Payment File</div>
+            <div class="feature"><i class="fa-solid fa-mobile-screen"></i>Mobile Barcode Scan</div>
+            <div class="feature"><i class="fa-solid fa-chart-column"></i>XLSX Service Reports</div>
+            <div class="feature"><i class="fa-solid fa-bell"></i>Min/Max Shortage Alerts</div>
+            <div class="feature"><i class="fa-solid fa-file-shield"></i>Compliance Print Pack</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> Real-Time Dashboard</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Open Work Orders</h4><div class="number">142<i class="fa-solid fa-clipboard-list"></i></div></div>
+            <div class="stat"><h4>Active MOs</h4><div class="number">86<i class="fa-solid fa-industry"></i></div></div>
+            <div class="stat"><h4>Serial Units</h4><div class="number">1.8k<i class="fa-solid fa-barcode"></i></div></div>
+            <div class="stat"><h4>QC Pass Rate</h4><div class="number">97%<i class="fa-solid fa-microscope"></i></div></div>
+            <div class="stat"><h4>Service Jobs</h4><div class="number">214<i class="fa-solid fa-screwdriver-wrench"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Operation Mix</h4>
+              <div class="donut-wrap">
+                <div class="donut"></div>
+                <div class="legend">
+                  <div><span></span>Manufacturing 58%</div>
+                  <div><span></span>Field Service 24%</div>
+                  <div><span></span>Projects 18%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Monthly Output &amp; Service Revenue</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 80 L62 55 L100 58 L138 36 L176 28 L214 46 L252 39 L286 20" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 80 L62 55 L100 58 L138 36 L176 28 L214 46 L252 39 L286 20 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f"><circle cx="24" cy="80" r="4"/><circle cx="62" cy="55" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="36" r="4"/><circle cx="176" cy="28" r="4"/><circle cx="214" cy="46" r="4"/><circle cx="252" cy="39" r="4"/><circle cx="286" cy="20" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="252" y="99">Jun</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Operation Area</div><div>Module</div><div>Output</div><div>Open</div><div>Status</div></div>
+            <div class="row"><div>Fire Extinguisher</div><div>MRP</div><div>Serials</div><div>48</div><div class="pill">Active</div></div>
+            <div class="row"><div>SCBA Testing</div><div>Service</div><div>Worksheet</div><div>32</div><div class="pill">Active</div></div>
+            <div class="row"><div>QC Inspection</div><div>Quality</div><div>PDF/XLSX</div><div>19</div><div class="pill">Active</div></div>
+            <div class="row"><div>Project Billing</div><div>Project</div><div>Claims</div><div>11</div><div class="pill">Planned</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:16px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-industry"></i></div>MRP</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-microscope"></i></div>Quality</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cube"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-basket-shopping"></i></div>Purchase</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-diagram-project"></i></div>Project</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-screwdriver-wrench"></i></div>Field Service</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Invoicing</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-user-check"></i></div>Approvals</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-simple"></i></div>Reports</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-arrow-trend-up"></i><div><h3>Better Sales to Production Flow</h3><p>Connect quotations, demand planning, work orders, procurement, and delivery.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-fingerprint"></i><div><h3>Full Serial Traceability</h3><p>Track manufactured units, Setsco/TUV references, barcodes, transfers, and service history.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-shield-halved"></i><div><h3>Quality &amp; Compliance Control</h3><p>Standardize QC, certificates, warranties, approvals, and audit-ready documents.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-people-carry-box"></i><div><h3>Service Team Efficiency</h3><p>Turn field worksheets into service products, delivery demand, reports, and invoices.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+    </footer>
+  </main>
+</body>
+</html>
