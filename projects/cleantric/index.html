@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cleaning Service Company Solution Flyer</title>
+  <link rel="stylesheet" href="cleantric-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --muted: #4b5f86;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+      --bg: #f7fbff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1536px;
+      overflow: hidden;
+      margin: 0 auto;
+      user-select: none;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(39, 121, 227, .11), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 520px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 358px;
+      width: 1120px;
+      height: 92px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 492px;
+      padding: 26px 32px 0 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .mark {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 120px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 4px 0 6px;
+      color: var(--navy);
+      font-size: 54px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 19px;
+      margin-top: 8px;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 16px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 205px;
+    }
+
+    .odoo-logo {
+      width: 205px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 446px;
+      margin-top: 32px;
+      font-size: 17px;
+      line-height: 1.45;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 548px;
+      margin-top: 18px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      height: 128px;
+      padding: 13px 16px 11px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 7px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0 0 7px;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.4px;
+      line-height: 1.24;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 12px 22px 14px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 6px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.purple {
+      background: linear-gradient(90deg, #722384, #8d2d92);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow {
+      padding: 12px 12px 6px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard {
+      padding: 10px 10px 10px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .donut {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: conic-gradient(var(--green) 0 61%, var(--blue) 61% 100%);
+      position: relative;
+    }
+
+    .donut::after {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .legend {
+      display: grid;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    .legend div:last-child span { background: var(--blue); }
+
+    .line-chart {
+      width: 100%;
+      height: 84px;
+    }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ccebc6;
+      color: #26763a;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .integrations {
+      padding: 0 43px 0;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 8px 16px 0;
+      min-height: 68px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 54px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 44px;
+      font-size: 16px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 28px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 22px; font-size: 19px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="hero-image" src="cleantric-assets/cleantric-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="cleantric-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>Cleaning Service<br />Company</h1>
+            <div class="subtitle">Complete Cleaning Booking Solutions with Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="cleantric-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec's Cleaning Service Company solution on Odoo helps cleaning
+        operators manage the full booking lifecycle, from website enquiry and
+        cleaner selection to repeat sessions, appointment slots, address
+        capture, portal follow-up, sales orders, and payment continuity.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-house-circle-check"></i></div>
+          <h3>Address-First</h3>
+          <p>Start the booking flow from service address or postal details.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-user-check"></i></div>
+          <h3>Cleaner Choice</h3>
+          <p>Support preferred-cleaner requests or any available cleaner.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3>Accurate Slots</h3>
+          <p>Search service windows from real calendars, duration, and availability.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <h3>Payment-Ready</h3>
+          <p>Carry bookings forward into order review, portal follow-up, and payment.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Website Booking Journey</h3>
+        <p>Guide customers through a structured self-service cleaning reservation flow.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-broom"></i></div>
+        <h3>Service Catalog &amp; Options</h3>
+        <p>Offer service types, session counts, and repeat-cleaning choices clearly.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-user-group"></i></div>
+        <h3>Cleaner Matching</h3>
+        <p>Match bookings to a selected helper or the next available resource.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <h3>Slot Search &amp; Scheduling</h3>
+        <p>Generate time slots from calendars, service duration, and actual availability.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Address Book Control</h3>
+        <p>Save service locations, contact names, phones, and postal details before confirmation.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>Sales &amp; Payment Continuity</h3>
+        <p>Carry the booking into orders, payment status, and invoice-ready follow-through.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-user-clock"></i></div>
+        <h3>Portal Follow-Up</h3>
+        <p>Give customers a cleaner portal experience after booking and confirmation.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-wallet"></i></div>
+        <h3>Gateway Integration</h3>
+        <p>Support local payment-provider flows such as HitPay and related online checkout options.</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-soap"></i> Cleaning Booking Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-location-dot"></i></div><h4>Address<br />Start</h4><p>Enter service address or postal code first</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-spray-can-sparkles"></i></div><h4>Select<br />Service</h4><p>Choose service type and package or sessions</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-user-check"></i></div><h4>Choose<br />Cleaner</h4><p>Pick a helper or request any available cleaner</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-calendar-check"></i></div><h4>Find &amp;<br />Confirm Slot</h4><p>Search dates and confirm available appointment windows</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-credit-card"></i></div><h4>Review &amp;<br />Pay</h4><p>Continue to order review, portal follow-up, and payment</p></div>
+          </div>
+
+          <div class="sub-title">Flexible Booking Modes</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-house"></i><h4>One-Time</h4><p>Single cleaning appointments on demand</p></div>
+            <div class="slot"><i class="fa-solid fa-repeat"></i><h4>Repeat Sessions</h4><p>Session-based cleaning packages</p></div>
+            <div class="slot"><i class="fa-solid fa-user-group"></i><h4>Any Cleaner</h4><p>Auto-match by available resource</p></div>
+            <div class="slot"><i class="fa-solid fa-user-check"></i><h4>Preferred Helper</h4><p>Support customer helper preference</p></div>
+            <div class="slot"><i class="fa-solid fa-address-book"></i><h4>Saved Address</h4><p>Reuse stored service-location details</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-map-pin"></i>Postal-code booking start</div>
+            <div class="feature"><i class="fa-solid fa-box-open"></i>Session package control</div>
+            <div class="feature"><i class="fa-solid fa-phone-volume"></i>Customer contact capture</div>
+            <div class="feature"><i class="fa-solid fa-circle-check"></i>Booking summary review</div>
+            <div class="feature"><i class="fa-solid fa-clock"></i>Calendar-based slot logic</div>
+            <div class="feature"><i class="fa-solid fa-receipt"></i>Custom sales or invoice print</div>
+            <div class="feature"><i class="fa-solid fa-wallet"></i>Payment status visibility</div>
+            <div class="feature"><i class="fa-solid fa-share-nodes"></i>Portal and order continuity</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> Real-Time Dashboard</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Service Types</h4><div class="number">24<i class="fa-solid fa-spray-can-sparkles"></i></div></div>
+            <div class="stat"><h4>Active Cleaners</h4><div class="number">56<i class="fa-solid fa-user-group"></i></div></div>
+            <div class="stat"><h4>Online Bookings</h4><div class="number">318<i class="fa-solid fa-globe"></i></div></div>
+            <div class="stat"><h4>Future Slots</h4><div class="number">164<i class="fa-solid fa-calendar-days"></i></div></div>
+            <div class="stat"><h4>Payment Ready</h4><div class="number">94%<i class="fa-solid fa-check"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Booking Type Overview</h4>
+              <div class="donut-wrap">
+                <div class="donut"></div>
+                <div class="legend">
+                  <div><span></span>Repeat Cleaning (194) 61%</div>
+                  <div><span></span>One-Time Service (124) 39%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Monthly Booking Volume</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 74 L62 56 L100 48 L138 36 L176 42 L214 39 L252 50 L286 30" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 74 L62 56 L100 48 L138 36 L176 42 L214 39 L252 50 L286 30 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f"><circle cx="24" cy="74" r="4"/><circle cx="62" cy="56" r="4"/><circle cx="100" cy="48" r="4"/><circle cx="138" cy="36" r="4"/><circle cx="176" cy="42" r="4"/><circle cx="214" cy="39" r="4"/><circle cx="252" cy="50" r="4"/><circle cx="286" cy="30" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="252" y="99">Jun</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Service Type</div><div>Cleaner</div><div>Window</div><div>Slots</div><div>Status</div></div>
+            <div class="row"><div>Residential Cleaning</div><div>Any</div><div>Morning</div><div>42</div><div class="pill">Active</div></div>
+            <div class="row"><div>Deep Cleaning</div><div>Named</div><div>Afternoon</div><div>18</div><div class="pill">Active</div></div>
+            <div class="row"><div>Weekly Package</div><div>Repeat</div><div>Flexible</div><div>76</div><div class="pill">Planned</div></div>
+            <div class="row"><div>Move-Out Service</div><div>Team</div><div>Custom</div><div>12</div><div class="pill">Active</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:16px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-window-maximize"></i></div>Website</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-user-plus"></i></div>CRM</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-calendar-days"></i></div>Appointments</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-user"></i></div>Portal</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Invoicing</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-dollar-sign"></i></div>Accounting</div>
+        <div class="app"><div class="circle"><i class="fa-regular fa-credit-card"></i></div>Payments</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-globe"></i></div>eCommerce</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-folder-open"></i></div>Documents</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-laptop"></i><div><h3>Faster Self-Service Booking</h3><p>Reduce manual back-and-forth by letting customers start and complete bookings online.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-user-group"></i><div><h3>Better Cleaner Utilization</h3><p>Match real helper availability to service demand and repeat-session planning.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-file-circle-check"></i><div><h3>Cleaner Order Continuity</h3><p>Keep address, slot, order, and payment details connected across the full flow.</p></div></div>
+      <div class="bottom-item"><i class="fa-regular fa-face-smile"></i><div><h3>Smoother Customer Experience</h3><p>Give customers clearer scheduling, saved addresses, and better follow-up after confirmation.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+    </footer>
+  </main>
+</body>
+</html>
