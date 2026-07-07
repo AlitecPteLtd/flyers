@@ -28,7 +28,7 @@
       height: 1448px;
       margin: 0;
       overflow: hidden;
-      padding-bottom: 140px;
+      padding-bottom: 160px;
       box-sizing: border-box;
       user-select: none;
       background:
@@ -41,7 +41,7 @@
       top: 0;
       right: 0;
       width: 500px;
-      height: 380px;
+      height: 340px;
       object-fit: cover;
       object-position: 55% center;
       z-index: 0;
@@ -50,7 +50,7 @@
     .hero-fade {
       position: absolute;
       inset: 0 0 auto 0;
-      height: 400px;
+      height: 360px;
       z-index: 1;
       background:
         linear-gradient(
@@ -76,9 +76,9 @@
     .curve {
       position: absolute;
       left: -40px;
-      top: 288px;
+      top: 248px;
       width: 1120px;
-      height: 80px;
+      height: 72px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
       background: linear-gradient(
@@ -97,19 +97,19 @@
     .hero {
       position: relative;
       z-index: 3;
-      height: 400px;
-      padding: 18px 32px 0 34px;
+      height: 360px;
+      padding: 14px 32px 0 34px;
     }
 
     .top-row { display: flex; align-items: flex-start; justify-content: space-between; }
     .brand { display: flex; align-items: center; gap: 18px; }
-    .mark { width: 96px; height: 96px; object-fit: contain; display: block; }
-    .divider { width: 1px; height: 96px; background: var(--navy); opacity: .9; }
+    .mark { width: 96px; height: 88px; object-fit: contain; display: block; }
+    .divider { width: 1px; height: 88px; background: var(--navy); opacity: .9; }
 
     h1 {
       margin: 2px 0 4px;
       color: var(--navy);
-      font-size: 42px;
+      font-size: 38px;
       line-height: .96;
       font-weight: 900;
       letter-spacing: 0;
@@ -118,14 +118,14 @@
 
     .subtitle { color: var(--ink); font-size: 16px; margin-top: 6px; max-width: 440px; line-height: 1.25; }
     .short-line { width: 64px; height: 4px; margin-top: 10px; background: var(--gold); }
-    .odoo { width: 180px; text-align: right; }
-    .odoo-logo { width: 180px; height: auto; display: block; }
+    .odoo { width: 170px; text-align: right; }
+    .odoo-logo { width: 170px; height: auto; display: block; }
 
     .intro {
       width: 720px;
-      margin-top: 16px;
-      font-size: 16px;
-      line-height: 1.38;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
       color: var(--ink);
     }
 
@@ -133,7 +133,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
-      margin-top: 12px;
+      margin-top: 8px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
       background: rgba(255,255,255,.95);
@@ -141,7 +141,7 @@
       overflow: hidden;
     }
 
-    .quick-benefit { min-height: 96px; padding: 10px 12px 8px; border-right: 1px dashed #b7c8e1; }
+    .quick-benefit { min-height: 88px; padding: 10px 12px 8px; border-right: 1px dashed #b7c8e1; }
     .quick-benefit:last-child { border-right: 0; }
     .quick-benefit-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .round-icon {
@@ -164,7 +164,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      margin: 8px 22px 10px;
+      margin: 6px 22px 8px;
       color: var(--navy);
       font-size: 24px;
       font-weight: 900;
@@ -180,7 +180,7 @@
       grid-template-columns: repeat(8, 1fr);
       padding: 0 24px;
     }
-    .capability { min-height: 132px; padding: 0 9px; text-align: center; border-right: 1px dashed #b9cce5; }
+    .capability { min-height: 120px; padding: 0 9px; text-align: center; border-right: 1px dashed #b9cce5; }
     .capability:last-child { border-right: 0; }
     .cap-icon {
       display: grid;
@@ -201,7 +201,7 @@
     .capability h3 { min-height: 35px; margin: 0 0 5px; color: var(--navy); font-size: 12.3px; line-height: 1.15; font-weight: 900; }
     .capability p { margin: 0; color: var(--ink); font-size: 10px; line-height: 1.35; font-weight: 700; }
 
-    .panels { display: grid; grid-template-columns: 46% 54%; gap: 14px; padding: 6px 16px 0; }
+    .panels { display: grid; grid-template-columns: 46% 54%; gap: 14px; padding: 4px 16px 0; }
     .panel {
       border: 1px solid #d5e1f1;
       border-radius: 10px;
@@ -302,9 +302,9 @@
     .dash-card {
       border: 1px solid #d7e2f1;
       border-radius: 8px;
-      padding: 10px;
+      padding: 8px;
       background: #fff;
-      min-height: 118px;
+      min-height: 108px;
     }
 
     .dash-card h4 {
@@ -391,7 +391,7 @@
     .app:nth-child(5n) .circle { color: var(--green); }
     .app i { font-size: 28px; }
 
-    .bottom-benefits { position: absolute; left: 16px; right: 16px; bottom: 72px; display: grid; grid-template-columns: 132px repeat(4, 1fr); height: 64px; border-radius: 11px; overflow: hidden; background: linear-gradient(90deg, #062a6f, #0b3b91); color: #fff; z-index: 5; }
+    .bottom-benefits { position: absolute; left: 16px; right: 16px; bottom: 84px; display: grid; grid-template-columns: 132px repeat(4, 1fr); min-height: 58px; border-radius: 11px; overflow: hidden; background: linear-gradient(90deg, #062a6f, #0b3b91); color: #fff; z-index: 5; }
     .benefit-title { display: grid; place-items: center; padding: 0 12px; color: var(--gold); font-size: 19px; line-height: 1.1; font-weight: 900; text-transform: uppercase; border-right: 1px solid rgba(255,255,255,.42); }
     .bottom-item { display: grid; grid-template-columns: 30px 1fr; gap: 8px; align-items: center; padding: 7px 10px; border-right: 1px solid rgba(255,255,255,.42); }
     .bottom-item:last-child { border-right: 0; }
@@ -559,7 +559,7 @@
       </div>
     </section>
 
-    <div class="section-title" style="margin-top:4px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
     <section class="integrations">
       <div class="integration-grid">
         <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>

@@ -34,7 +34,7 @@
       width: 1024px;
       height: 1448px;
       overflow: hidden;
-      padding-bottom: 140px;
+      padding-bottom: 160px;
       box-sizing: border-box;
       margin: 0 auto;
       user-select: none;
@@ -48,7 +48,7 @@
       top: 0;
       right: 0;
       width: 500px;
-      height: 380px;
+      height: 340px;
       object-fit: cover;
       object-position: 55% center;
       z-index: 0;
@@ -57,19 +57,35 @@
     .hero-fade {
       position: absolute;
       inset: 0 0 auto 0;
-      height: 400px;
+      height: 360px;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
-        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
     }
 
     .curve {
       position: absolute;
       left: -40px;
-      top: 288px;
+      top: 248px;
       width: 1120px;
-      height: 80px;
+      height: 72px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
       background: linear-gradient(
@@ -88,8 +104,8 @@
     .hero {
       position: relative;
       z-index: 3;
-      height: 400px;
-      padding: 18px 32px 0 34px;
+      height: 360px;
+      padding: 14px 32px 0 34px;
     }
 
     .top-row {
@@ -105,15 +121,15 @@
     }
 
     .mark {
-      width: 96px;
-      height: 96px;
+      width: 88px;
+      height: 88px;
       object-fit: contain;
       display: block;
     }
 
     .divider {
       width: 1px;
-      height: 96px;
+      height: 88px;
       background: var(--navy);
       opacity: .9;
     }
@@ -121,7 +137,7 @@
     h1 {
       margin: 4px 0 6px;
       color: var(--navy);
-      font-size: 42px;
+      font-size: 38px;
       line-height: .96;
       font-weight: 900;
       letter-spacing: 0;
@@ -130,33 +146,35 @@
 
     .subtitle {
       color: var(--ink);
-      font-size: 19px;
-      margin-top: 8px;
+      font-size: 15px;
+      margin-top: 4px;
+      max-width: 440px;
+      line-height: 1.2;
     }
 
     .short-line {
       width: 64px;
       height: 4px;
-      margin-top: 16px;
+      margin-top: 8px;
       background: var(--gold);
     }
 
     .odoo {
       text-align: right;
-      width: 205px;
+      width: 170px;
     }
 
     .odoo-logo {
-      width: 205px;
+      width: 170px;
       height: auto;
       display: block;
     }
 
     .intro {
       width: 720px;
-      margin-top: 16px;
-      font-size: 16px;
-      line-height: 1.38;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
       color: #07194f;
     }
 
@@ -164,7 +182,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
-      margin-top: 12px;
+      margin-top: 8px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
       background: rgba(255,255,255,.95);
@@ -173,8 +191,8 @@
     }
 
     .quick-benefit {
-      min-height: 108px;
-      padding: 12px 14px 10px;
+      min-height: 88px;
+      padding: 8px 10px 6px;
       border-right: 1px dashed #b7c8e1;
     }
 
@@ -222,7 +240,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      margin: 12px 22px 14px;
+      margin: 6px 22px 8px;
       color: var(--navy);
       font-size: 24px;
       font-weight: 900;
@@ -255,7 +273,7 @@
     }
 
     .capability {
-      min-height: 142px;
+      min-height: 120px;
       padding: 0 9px;
       text-align: center;
       border-right: 1px dashed #b9cce5;
@@ -301,7 +319,7 @@
       display: grid;
       grid-template-columns: 46% 54%;
       gap: 14px;
-      padding: 6px 16px 0;
+      padding: 4px 16px 0;
     }
 
     .panel {
@@ -432,7 +450,7 @@
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: 12px;
+      margin-top: 8px;
       border-top: 1px solid #d8e4f3;
     }
 
@@ -604,9 +622,9 @@
     .dash-card {
       border: 1px solid #d7e2f1;
       border-radius: 8px;
-      padding: 10px;
+      padding: 8px;
       background: #fff;
-      min-height: 118px;
+      min-height: 108px;
     }
 
     .dash-card h4 {
@@ -725,13 +743,13 @@
       position: absolute;
       left: 16px;
       right: 16px;
-      bottom: 72px;
+      bottom: 84px;
       z-index: 4;
       display: grid;
       grid-template-columns: 132px repeat(4, 1fr);
       gap: 0;
       margin: 0;
-      min-height: 64px;
+      min-height: 58px;
       border-radius: 11px;
       overflow: hidden;
       background: linear-gradient(90deg, #062a6f, #0b3b91);
@@ -1014,7 +1032,7 @@
       </div>
     </section>
 
-    <div class="section-title" style="margin-top:4px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
     <section class="integrations">
       <div class="integration-grid">
         <div class="app"><div class="circle"><i class="fa-solid fa-window-maximize"></i></div>Website</div>
