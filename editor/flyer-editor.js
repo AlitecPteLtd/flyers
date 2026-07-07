@@ -105,7 +105,7 @@
       }
 
       .flyer-editor-status {
-        min-width: 148px;
+        min-width: 168px;
         font-size: 12px;
         font-weight: 700;
         color: #d9e6ff;
@@ -239,7 +239,11 @@
       button.classList.toggle("active", isEditMode);
       button.textContent = isEditMode ? "Stop Editing" : "Edit Text";
     }
-    updateStatus(isEditMode ? "Editing on" : "Editing off");
+    if (isEditMode) {
+      updateStatus("Editing on · ESC to stop");
+    } else {
+      refreshIdleStatus();
+    }
   }
 
   function htmlSnapshot(options) {
@@ -1527,6 +1531,18 @@
     if (statusNode) statusNode.textContent = text;
   }
 
+  function refreshIdleStatus() {
+    if (isEditMode) {
+      updateStatus("Editing on · ESC to stop");
+      return;
+    }
+    if (isToolbarVisible) {
+      updateStatus("Toolbar shown · ESC to hide");
+      return;
+    }
+    updateStatus("Toolbar hidden · ESC to show");
+  }
+
   function setToolbarVisible(nextState) {
     isToolbarVisible = nextState;
     if (toolbarNode) {
@@ -1539,9 +1555,7 @@
 
   function toggleToolbarVisible() {
     setToolbarVisible(!isToolbarVisible);
-    if (isToolbarVisible) {
-      updateStatus("Toolbar shown · ESC to hide");
-    }
+    refreshIdleStatus();
   }
 
   async function refreshAlternatePdfButton(toolbar) {
@@ -1563,7 +1577,6 @@
       }
       if (isEditMode) {
         setEditMode(false);
-        updateStatus("Editing off");
         event.preventDefault();
         return;
       }
@@ -1633,6 +1646,7 @@
     bindToolbarShortcuts();
     loadDraft();
     setEditMode(false);
+    refreshIdleStatus();
   }
 
   if (document.readyState === "loading") {
