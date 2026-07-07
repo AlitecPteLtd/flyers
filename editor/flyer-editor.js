@@ -105,7 +105,7 @@
       }
 
       .flyer-editor-status {
-        min-width: 78px;
+        min-width: 148px;
         font-size: 12px;
         font-weight: 700;
         color: #d9e6ff;
@@ -1540,7 +1540,7 @@
   function toggleToolbarVisible() {
     setToolbarVisible(!isToolbarVisible);
     if (isToolbarVisible) {
-      updateStatus("Toolbar shown");
+      updateStatus("Toolbar shown · ESC to hide");
     }
   }
 
