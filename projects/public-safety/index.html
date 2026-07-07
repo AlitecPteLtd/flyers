@@ -291,6 +291,97 @@
     .row.head { color: #39547d; background: #f7fbff; font-size: 9.5px; font-weight: 900; }
     .pill { justify-self: start; border-radius: 20px; padding: 4px 9px; background: #ccebc6; color: #26763a; font-size: 9px; font-weight: 900; }
 
+    
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list { display: grid; gap: 7px; }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      background: #dbeafe;
+      color: #1d4f91;
+      font-size: 8px;
+      font-weight: 900;
+    }
+
+    .tag.delivery { background: #ffe2bf; color: #9a4f08; }
+
     .integrations { padding: 0 43px 0; }
     .integration-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 11px; align-items: start; }
     .app { text-align: center; color: var(--navy); font-size: 10px; line-height: 1.15; font-weight: 900; }
@@ -300,7 +391,7 @@
     .app:nth-child(5n) .circle { color: var(--green); }
     .app i { font-size: 28px; }
 
-    .bottom-benefits { position: absolute; left: 16px; right: 16px; bottom: 44px; display: grid; grid-template-columns: 132px repeat(4, 1fr); height: 64px; border-radius: 11px; overflow: hidden; background: linear-gradient(90deg, #062a6f, #0b3b91); color: #fff; z-index: 5; }
+    .bottom-benefits { position: absolute; left: 16px; right: 16px; bottom: 72px; display: grid; grid-template-columns: 132px repeat(4, 1fr); height: 64px; border-radius: 11px; overflow: hidden; background: linear-gradient(90deg, #062a6f, #0b3b91); color: #fff; z-index: 5; }
     .benefit-title { display: grid; place-items: center; padding: 0 12px; color: var(--gold); font-size: 19px; line-height: 1.1; font-weight: 900; text-transform: uppercase; border-right: 1px solid rgba(255,255,255,.42); }
     .bottom-item { display: grid; grid-template-columns: 30px 1fr; gap: 8px; align-items: center; padding: 7px 10px; border-right: 1px solid rgba(255,255,255,.42); }
     .bottom-item:last-child { border-right: 0; }
@@ -441,6 +532,28 @@
             <div class="row"><div>SCBA Testing</div><div>Service</div><div>Worksheet</div><div>32</div><div class="pill">Active</div></div>
             <div class="row"><div>QC Inspection</div><div>Quality</div><div>PDF/XLSX</div><div>19</div><div class="pill">Active</div></div>
             <div class="row"><div>Project Billing</div><div>Project</div><div>Claims</div><div>11</div><div class="pill">Planned</div></div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>Operation Area Mix</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>MRP</span><div class="bar-track"><div class="bar-fill" style="width:58%"></div></div><span>58%</span></div>
+                <div class="bar-item"><span>Service</span><div class="bar-track"><div class="bar-fill green" style="width:42%"></div></div><span>42%</span></div>
+                <div class="bar-item"><span>QC</span><div class="bar-track"><div class="bar-fill blue" style="width:36%"></div></div><span>36%</span></div>
+                <div class="bar-item"><span>Projects</span><div class="bar-track"><div class="bar-fill purple" style="width:24%"></div></div><span>24%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>Open Work Orders</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>Order</div><div>Customer</div><div>Due</div><div>Type</div></div>
+                <div class="queue-row"><div>MO-1842</div><div>Site A</div><div>Today</div><div class="tag">MRP</div></div>
+                <div class="queue-row"><div>SO-1847</div><div>Client B</div><div>Today</div><div class="tag delivery">Service</div></div>
+                <div class="queue-row"><div>QC-1851</div><div>Warehouse</div><div>Fri</div><div class="tag">QC</div></div>
+                <div class="queue-row"><div>PRJ-1854</div><div>Contract C</div><div>Mon</div><div class="tag delivery">Install</div></div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>

@@ -34,6 +34,8 @@
       width: 1024px;
       height: 1448px;
       overflow: hidden;
+      padding-bottom: 140px;
+      box-sizing: border-box;
       margin: 0 auto;
       user-select: none;
       background:
@@ -45,17 +47,17 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 1024px;
-      height: 480px;
+      width: 500px;
+      height: 380px;
       object-fit: cover;
-      object-position: center top;
+      object-position: 55% center;
       z-index: 0;
     }
 
     .hero-fade {
       position: absolute;
       inset: 0 0 auto 0;
-      height: 520px;
+      height: 400px;
       z-index: 1;
       background:
         linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
@@ -65,22 +67,29 @@
     .curve {
       position: absolute;
       left: -40px;
-      top: 358px;
+      top: 288px;
       width: 1120px;
-      height: 92px;
+      height: 80px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
-      background: var(--navy);
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
       transform: rotate(-4deg);
       transform-origin: center;
-      box-shadow: 0 -14px 0 var(--gold);
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
     }
 
     .hero {
       position: relative;
       z-index: 3;
-      height: 492px;
-      padding: 26px 32px 0 34px;
+      height: 400px;
+      padding: 18px 32px 0 34px;
     }
 
     .top-row {
@@ -96,15 +105,15 @@
     }
 
     .mark {
-      width: 120px;
-      height: 120px;
+      width: 96px;
+      height: 96px;
       object-fit: contain;
       display: block;
     }
 
     .divider {
       width: 1px;
-      height: 120px;
+      height: 96px;
       background: var(--navy);
       opacity: .9;
     }
@@ -112,7 +121,7 @@
     h1 {
       margin: 4px 0 6px;
       color: var(--navy);
-      font-size: 54px;
+      font-size: 42px;
       line-height: .96;
       font-weight: 900;
       letter-spacing: 0;
@@ -145,9 +154,9 @@
 
     .intro {
       width: 720px;
-      margin-top: 32px;
-      font-size: 17px;
-      line-height: 1.45;
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.38;
       color: #07194f;
     }
 
@@ -155,7 +164,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
-      margin-top: 18px;
+      margin-top: 12px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
       background: rgba(255,255,255,.95);
@@ -510,7 +519,7 @@
 
     .donut {
       width: 92px;
-      height: 92px;
+      height: 80px;
       overflow: visible;
     }
 
@@ -584,6 +593,97 @@
       font-weight: 900;
     }
 
+    
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list { display: grid; gap: 7px; }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      background: #dbeafe;
+      color: #1d4f91;
+      font-size: 8px;
+      font-weight: 900;
+    }
+
+    .tag.delivery { background: #ffe2bf; color: #9a4f08; }
+
     .integrations {
       padding: 0 43px 0;
     }
@@ -622,11 +722,16 @@
     .app i { font-size: 28px; }
 
     .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 72px;
+      z-index: 4;
       display: grid;
       grid-template-columns: 132px repeat(4, 1fr);
       gap: 0;
-      margin: 8px 16px 0;
-      min-height: 68px;
+      margin: 0;
+      min-height: 64px;
       border-radius: 11px;
       overflow: hidden;
       background: linear-gradient(90deg, #062a6f, #0b3b91);
@@ -882,12 +987,34 @@
             <div class="row"><div>Deep Cleaning</div><div>Named</div><div>Afternoon</div><div>18</div><div class="pill">Active</div></div>
             <div class="row"><div>Weekly Package</div><div>Repeat</div><div>Flexible</div><div>76</div><div class="pill">Planned</div></div>
             <div class="row"><div>Move-Out Service</div><div>Team</div><div>Custom</div><div>12</div><div class="pill">Active</div></div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>Service Type Mix</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>Office</span><div class="bar-track"><div class="bar-fill" style="width:62%"></div></div><span>62%</span></div>
+                <div class="bar-item"><span>Industrial</span><div class="bar-track"><div class="bar-fill green" style="width:44%"></div></div><span>44%</span></div>
+                <div class="bar-item"><span>Residential</span><div class="bar-track"><div class="bar-fill blue" style="width:28%"></div></div><span>28%</span></div>
+                <div class="bar-item"><span>Ad-hoc</span><div class="bar-track"><div class="bar-fill purple" style="width:18%"></div></div><span>18%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>Jobs Scheduled Today</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>Job</div><div>Site</div><div>Time</div><div>Type</div></div>
+                <div class="queue-row"><div>CL-2842</div><div>Tower A</div><div>09:00</div><div class="tag">Office</div></div>
+                <div class="queue-row"><div>CL-2847</div><div>Factory</div><div>11:30</div><div class="tag delivery">Deep</div></div>
+                <div class="queue-row"><div>CL-2851</div><div>Mall B</div><div>14:00</div><div class="tag">Retail</div></div>
+                <div class="queue-row"><div>CL-2854</div><div>Unit 5C</div><div>16:00</div><div class="tag delivery">Move</div></div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="section-title" style="margin-top:16px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <div class="section-title" style="margin-top:4px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
     <section class="integrations">
       <div class="integration-grid">
         <div class="app"><div class="circle"><i class="fa-solid fa-window-maximize"></i></div>Website</div>
