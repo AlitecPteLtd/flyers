@@ -30,7 +30,7 @@ Business process and margin governance:
 - **VOC / min selling price** — value and margin checks on sale order lines
 - **Price approval flags** — block quote send/preview when under approval
 - **Customer segments & service levels** on partners and orders
-- **SMS product marking** and purchase restrictions on flagged products
+- **Slow-moving stock marking** and purchase restrictions on aged SKUs
 - **Margin setup** by manufacturer with exclude-approval rules
 - **Forwarder master**, tax deductible rules, analytic text on SO/PO lines
 - **Stock lots** — manufacturing date on lot reports

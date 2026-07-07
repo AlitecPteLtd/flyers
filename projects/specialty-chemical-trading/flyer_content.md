@@ -39,7 +39,7 @@ Alitec's chemical trading solution helps distributors manage indent and ex-stock
 - Indent vs ex-stock order routing
 - Trade / non-trade and agency partner types
 - Customer grading and available credit limit
-- SMS-restricted products on sales and purchase
+- Slow-moving stock controls on sales and purchase
 - Multi-company analytic distribution on lines
 
 **Additional features:**

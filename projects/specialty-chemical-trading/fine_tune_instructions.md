@@ -23,11 +23,13 @@
 - Landed cost split by business unit
 - Lot and expiration on invoices
 - Customer grading, segments, credit available limit
+- Slow-moving stock purchase blocks and flagged sales lines
 - eCommerce quote request flow with product groups
 
 ## Avoid Claiming
 
 - Client brand "Maha" or specific office/country counts from their website
+- Internal acronym **SMS** on customer-facing copy — use **Slow Moving Stock** instead
 - Full SAP replacement
 - SDS/MSDS document management unless verified
 - Sustainability/green marketing claims unless user requests
