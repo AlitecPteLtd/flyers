@@ -185,7 +185,7 @@
     .quick-benefits {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      width: 548px;
+      width: 720px;
       margin-top: 18px;
       border: 1px solid var(--line);
       border-radius: 18px;
@@ -195,19 +195,26 @@
     }
 
     .quick-benefit {
-      min-height: 132px;
-      padding: 14px 14px 11px;
+      min-height: 108px;
+      padding: 12px 14px 10px;
       border-right: 1px dashed #bdd0ea;
     }
 
     .quick-benefit:last-child { border-right: 0; }
 
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
     .round-icon {
       width: 40px;
       height: 40px;
+      flex: 0 0 40px;
       display: grid;
       place-items: center;
-      margin-bottom: 8px;
       border-radius: 50%;
       background: var(--navy);
       color: #fff;
@@ -216,9 +223,9 @@
     .round-icon i { font-size: 18px; }
 
     .quick-benefit h3 {
-      margin: 0 0 6px;
+      margin: 0;
       color: var(--navy);
-      font-size: 13px;
+      font-size: 12.5px;
       line-height: 1.12;
       font-weight: 900;
     }
@@ -227,7 +234,7 @@
       margin: 0;
       color: var(--ink);
       font-size: 9.2px;
-      line-height: 1.22;
+      line-height: 1.24;
       font-weight: 700;
     }
 

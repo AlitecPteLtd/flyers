@@ -151,7 +151,7 @@
     .quick-benefits {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      width: 548px;
+      width: 720px;
       margin-top: 18px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
@@ -161,19 +161,26 @@
     }
 
     .quick-benefit {
-      height: 128px;
-      padding: 13px 16px 11px;
+      min-height: 108px;
+      padding: 12px 14px 10px;
       border-right: 1px dashed #b7c8e1;
     }
 
     .quick-benefit:last-child { border-right: 0; }
 
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
     .round-icon {
       width: 39px;
       height: 39px;
+      flex: 0 0 39px;
       display: grid;
       place-items: center;
-      margin-bottom: 7px;
       border-radius: 50%;
       background: var(--navy);
       color: #fff;
@@ -182,8 +189,9 @@
     .round-icon i { font-size: 18px; }
 
     .quick-benefit h3 {
-      margin: 0 0 7px;
-      font-size: 13px;
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.15;
       color: var(--navy);
       font-weight: 800;
     }
@@ -191,8 +199,8 @@
     .quick-benefit p {
       margin: 0;
       color: #07194f;
-      font-size: 9.4px;
-      line-height: 1.24;
+      font-size: 9.2px;
+      line-height: 1.28;
       font-weight: 600;
     }
 
@@ -716,23 +724,31 @@
 
       <div class="quick-benefits">
         <div class="quick-benefit">
-          <div class="round-icon"><i class="fa-solid fa-diagram-project"></i></div>
-          <h3>Project-Linked</h3>
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>Project-Linked</h3>
+          </div>
           <p>Confirmed sales can create or link a dedicated job account immediately.</p>
         </div>
         <div class="quick-benefit">
-          <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
-          <h3>Detailed Quotations</h3>
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h3>Detailed Quotations</h3>
+          </div>
           <p>Capture subject, contact, lead time, handover, packing, and dimensions.</p>
         </div>
         <div class="quick-benefit">
-          <div class="round-icon"><i class="fa-solid fa-building-shield"></i></div>
-          <h3>Branch-Safe</h3>
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-building-shield"></i></div>
+            <h3>Branch-Safe</h3>
+          </div>
           <p>Operating-unit checks reduce cross-branch purchasing and billing errors.</p>
         </div>
         <div class="quick-benefit">
-          <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
-          <h3>Visible Closure</h3>
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <h3>Visible Closure</h3>
+          </div>
           <p>Track project status, budget, and billing completion more cleanly.</p>
         </div>
       </div>
