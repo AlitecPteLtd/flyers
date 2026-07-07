@@ -69,6 +69,10 @@
         cursor: pointer;
       }
 
+      .flyer-editor-toolbar button:focus {
+        outline: none;
+      }
+
       .flyer-editor-toolbar button.secondary {
         background: #35507f;
       }
@@ -326,55 +330,234 @@
     });
   }
 
-  async function inlineRenderableImages(root) {
-    const restores = [];
+  function rememberCacheEntry(cache, url, dataUrl) {
+    if (!url || !dataUrl) {
+      return;
+    }
+    cache[url] = dataUrl;
+    cache[absoluteUrl(url)] = dataUrl;
+    try {
+      const parsed = new URL(url, window.location.href);
+      cache[parsed.pathname] = dataUrl;
+      const parts = parsed.pathname.split("/").filter(Boolean);
+      if (parts.length >= 2) {
+        cache[parts.slice(-2).join("/")] = dataUrl;
+      }
+      if (parts.length >= 3) {
+        cache[parts.slice(-3).join("/")] = dataUrl;
+      }
+    } catch (error) {
+      // Ignore malformed URLs.
+    }
+  }
 
+  function lookupImageCache(imageCache, url) {
+    if (!url) {
+      return null;
+    }
+    if (imageCache[url]) {
+      return imageCache[url];
+    }
+    const absolute = absoluteUrl(url);
+    if (imageCache[absolute]) {
+      return imageCache[absolute];
+    }
+    try {
+      const parsed = new URL(url, window.location.href);
+      if (imageCache[parsed.pathname]) {
+        return imageCache[parsed.pathname];
+      }
+      const parts = parsed.pathname.split("/").filter(Boolean);
+      if (parts.length >= 2 && imageCache[parts.slice(-2).join("/")]) {
+        return imageCache[parts.slice(-2).join("/")];
+      }
+      if (parts.length >= 3 && imageCache[parts.slice(-3).join("/")]) {
+        return imageCache[parts.slice(-3).join("/")];
+      }
+    } catch (error) {
+      return null;
+    }
+    return null;
+  }
+
+  async function buildImageDataUrlCache(root) {
+    const urls = new Set();
+
+    root.querySelectorAll("img[src]").forEach(function (image) {
+      const src = image.getAttribute("src");
+      if (src && !src.startsWith("data:")) {
+        urls.add(src);
+      }
+    });
+
+    Array.from(root.querySelectorAll("*")).forEach(function (node) {
+      const backgroundImage = window.getComputedStyle(node).backgroundImage;
+      if (!backgroundImage || backgroundImage === "none" || backgroundImage.indexOf("url(") === -1) {
+        return;
+      }
+      const originalUrl = extractCssUrl(backgroundImage);
+      if (originalUrl && !originalUrl.startsWith("data:")) {
+        urls.add(originalUrl);
+      }
+    });
+
+    const cache = Object.create(null);
     await Promise.all(
-      Array.from(root.querySelectorAll("img[src]")).map(async function (image) {
-        const original = image.getAttribute("src");
-        if (!original || original.startsWith("data:")) {
-          return;
-        }
-        const dataUrl = await imageUrlToDataUrl(original);
-        if (dataUrl && dataUrl !== original) {
-          restores.push(function () {
-            image.setAttribute("src", original);
-          });
-          image.setAttribute("src", dataUrl);
-        }
+      Array.from(urls).map(async function (url) {
+        rememberCacheEntry(cache, url, await imageUrlToDataUrl(url));
       })
     );
+    return cache;
+  }
 
-    await Promise.all(
-      Array.from(root.querySelectorAll("*")).map(async function (node) {
-        const backgroundImage = window.getComputedStyle(node).backgroundImage;
-        if (!backgroundImage || backgroundImage === "none" || backgroundImage.indexOf("url(") === -1) {
-          return;
+  const CAPTURE_STYLE_PROPS = [
+    "background",
+    "background-color",
+    "background-image",
+    "background-size",
+    "background-position",
+    "background-repeat",
+    "color",
+    "border",
+    "border-top",
+    "border-right",
+    "border-bottom",
+    "border-left",
+    "border-radius",
+    "box-shadow",
+    "transform",
+    "transform-origin",
+    "opacity",
+    "font",
+    "font-size",
+    "font-weight",
+    "font-family",
+    "line-height",
+    "letter-spacing",
+    "text-transform",
+    "width",
+    "height",
+    "min-height",
+    "max-width",
+    "max-height",
+    "position",
+    "inset",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "z-index",
+    "display",
+    "flex",
+    "flex-direction",
+    "align-items",
+    "justify-content",
+    "gap",
+    "grid-template-columns",
+    "padding",
+    "margin",
+    "overflow",
+    "text-align",
+    "filter",
+    "-webkit-background-clip",
+    "-webkit-text-fill-color",
+    "box-sizing",
+  ];
+
+  function syncComputedStyles(sourceRoot, cloneRoot) {
+    const sourceNodes = [sourceRoot].concat(Array.from(sourceRoot.querySelectorAll("*")));
+    const cloneNodes = [cloneRoot].concat(Array.from(cloneRoot.querySelectorAll("*")));
+    const limit = Math.min(sourceNodes.length, cloneNodes.length);
+
+    for (let index = 0; index < limit; index += 1) {
+      const computed = window.getComputedStyle(sourceNodes[index]);
+      CAPTURE_STYLE_PROPS.forEach(function (prop) {
+        const value = computed.getPropertyValue(prop);
+        if (value) {
+          cloneNodes[index].style.setProperty(prop, value);
         }
-
-        const originalUrl = extractCssUrl(backgroundImage);
-        if (!originalUrl || originalUrl.startsWith("data:")) {
-          return;
-        }
-
-        const dataUrl = await imageUrlToDataUrl(originalUrl);
-        if (!dataUrl || dataUrl === originalUrl) {
-          return;
-        }
-
-        const previous = node.style.backgroundImage;
-        restores.push(function () {
-          node.style.backgroundImage = previous;
-        });
-        node.style.backgroundImage = 'url("' + dataUrl + '")';
-      })
-    );
-
-    return function restoreInlinedImages() {
-      restores.reverse().forEach(function (restore) {
-        restore();
       });
-    };
+    }
+  }
+
+  function applyImageCacheToClone(cloneRoot, imageCache) {
+    cloneRoot.querySelectorAll("img[src]").forEach(function (image) {
+      const src = image.getAttribute("src");
+      const dataUrl = lookupImageCache(imageCache, src);
+      if (dataUrl) {
+        image.setAttribute("src", dataUrl);
+      }
+    });
+
+    cloneRoot.querySelectorAll("*").forEach(function (node) {
+      const backgroundImage = node.style.backgroundImage;
+      if (!backgroundImage || backgroundImage === "none") {
+        return;
+      }
+      const originalUrl = extractCssUrl(backgroundImage);
+      const dataUrl = lookupImageCache(imageCache, originalUrl);
+      if (dataUrl) {
+        node.style.backgroundImage = backgroundImage.replace(originalUrl, dataUrl);
+      }
+    });
+  }
+
+  function replaceObjectFitImages(sourceRoot, cloneRoot, clonedDoc) {
+    const sourceImages = sourceRoot.querySelectorAll("img");
+    const cloneImages = cloneRoot.querySelectorAll("img");
+
+    sourceImages.forEach(function (sourceImage, index) {
+      const cloneImage = cloneImages[index];
+      if (!cloneImage) {
+        return;
+      }
+
+      const computed = window.getComputedStyle(sourceImage);
+      const objectFit = computed.objectFit;
+      if (!objectFit || objectFit === "fill") {
+        return;
+      }
+
+      const replacement = clonedDoc.createElement("div");
+      [
+        "width",
+        "height",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "margin",
+        "padding",
+        "border",
+        "border-radius",
+        "opacity",
+        "transform",
+        "transform-origin",
+      ].forEach(function (prop) {
+        replacement.style.setProperty(prop, computed.getPropertyValue(prop));
+      });
+
+      const src = cloneImage.getAttribute("src");
+      if (src) {
+        replacement.style.backgroundImage = 'url("' + src + '")';
+        replacement.style.backgroundSize = objectFit;
+        replacement.style.backgroundPosition = computed.objectPosition || "center";
+        replacement.style.backgroundRepeat = "no-repeat";
+      }
+
+      cloneImage.replaceWith(replacement);
+    });
+  }
+
+  function prepareCaptureClone(sourcePage, clonedDoc, clonedPage, imageCache) {
+    syncComputedStyles(sourcePage, clonedPage);
+    applyImageCacheToClone(clonedPage, imageCache);
+    replaceObjectFitImages(sourcePage, clonedPage, clonedDoc);
+    clonedPage.style.margin = "0";
+    clonedPage.style.transform = "none";
   }
 
   function waitForCaptureAssets() {
@@ -412,29 +595,23 @@
     return Math.max(1, scale);
   }
 
-  function getCaptureOptions(page, scale) {
-    const fileMode = isFileProtocol();
+  function getCaptureOptions(page, scale, imageCache) {
     return {
       backgroundColor: "#ffffff",
       scale: scale,
-      useCORS: !fileMode,
-      allowTaint: fileMode,
+      useCORS: false,
+      allowTaint: false,
       logging: false,
-      imageTimeout: 15000,
+      imageTimeout: 20000,
+      scrollX: 0,
+      scrollY: 0,
+      windowWidth: page.scrollWidth,
+      windowHeight: page.scrollHeight,
       ignoreElements: function (node) {
         return !!node.closest && !!node.closest(".flyer-editor-toolbar");
       },
-      onclone: function (doc) {
-        doc.querySelectorAll("img").forEach(function (image) {
-          if (!image.getAttribute("src")) return;
-          if (fileMode) {
-            image.removeAttribute("crossorigin");
-            return;
-          }
-          if (!image.getAttribute("crossorigin")) {
-            image.setAttribute("crossorigin", "anonymous");
-          }
-        });
+      onclone: function (clonedDoc, clonedPage) {
+        prepareCaptureClone(page, clonedDoc, clonedPage, imageCache);
       },
     };
   }
@@ -442,18 +619,29 @@
   async function capturePage(page, preferredScale) {
     let scale = getMaxCaptureScale(page, preferredScale);
     let lastError = null;
+    const imageCache = await buildImageDataUrlCache(page);
+    const previousScrollX = window.scrollX;
+    const previousScrollY = window.scrollY;
 
-    while (scale >= 1) {
-      try {
-        const canvas = await window.html2canvas(page, getCaptureOptions(page, scale));
-        return { canvas: canvas, scale: scale };
-      } catch (error) {
-        lastError = error;
-        scale -= 1;
+    window.scrollTo(0, 0);
+
+    try {
+      while (scale >= 1) {
+        try {
+          const canvas = await window.html2canvas(
+            page,
+            getCaptureOptions(page, scale, imageCache)
+          );
+          return { canvas: canvas, scale: scale };
+        } catch (error) {
+          lastError = error;
+          scale -= 1;
+        }
       }
+      throw lastError || new Error("Unable to capture flyer");
+    } finally {
+      window.scrollTo(previousScrollX, previousScrollY);
     }
-
-    throw lastError || new Error("Unable to capture flyer");
   }
 
   function canvasToPngBlob(canvas) {
@@ -547,27 +735,40 @@
     });
   }
 
+  function loadScriptWithFallback(primarySrc, fallbackSrc) {
+    return loadScript(primarySrc).catch(function () {
+      return loadScript(fallbackSrc);
+    });
+  }
+
+  const HTML2CANVAS_CDN =
+    "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+  const JSPDF_CDN =
+    "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
+
   function ensurePdfTools() {
     if (window.html2canvas && window.jspdf && window.jspdf.jsPDF) {
       return Promise.resolve();
     }
-    if (!editorBaseUrl) {
-      return Promise.reject(new Error("Editor base URL unavailable"));
-    }
-    return loadScript(new URL("vendor/html2canvas.min.js", editorBaseUrl).href)
-      .then(function () {
-        return loadScript(new URL("vendor/jspdf.umd.min.js", editorBaseUrl).href);
-      });
+    const localCanvas = editorBaseUrl
+      ? new URL("vendor/html2canvas.min.js", editorBaseUrl).href
+      : HTML2CANVAS_CDN;
+    const localPdf = editorBaseUrl
+      ? new URL("vendor/jspdf.umd.min.js", editorBaseUrl).href
+      : JSPDF_CDN;
+    return loadScriptWithFallback(localCanvas, HTML2CANVAS_CDN).then(function () {
+      return loadScriptWithFallback(localPdf, JSPDF_CDN);
+    });
   }
 
   function ensureCanvasTool() {
     if (window.html2canvas) {
       return Promise.resolve();
     }
-    if (!editorBaseUrl) {
-      return Promise.reject(new Error("Editor base URL unavailable"));
-    }
-    return loadScript(new URL("vendor/html2canvas.min.js", editorBaseUrl).href);
+    const localCanvas = editorBaseUrl
+      ? new URL("vendor/html2canvas.min.js", editorBaseUrl).href
+      : HTML2CANVAS_CDN;
+    return loadScriptWithFallback(localCanvas, HTML2CANVAS_CDN);
   }
 
   function openPrintPdf() {
@@ -652,9 +853,10 @@
     } catch (error) {
       console.error(error);
       updateStatus("PNG failed");
-      alert(
-        "Print PNG export failed. Open the flyer through a local web server or refresh and try again."
-      );
+      const hint = isFileProtocol()
+        ? "Open the flyer through a local web server instead of double-clicking the HTML file."
+        : "Refresh the page and try again.";
+      alert("Print PNG export failed. " + hint + "\n\n" + (error && error.message ? error.message : error));
     } finally {
       isPngExporting = false;
     }
@@ -681,15 +883,16 @@
     toolbar.className = "flyer-editor-toolbar";
     toolbar.innerHTML = `
       <div class="flyer-editor-status">Ready</div>
-      <button type="button" data-flyer-toggle>Edit Text</button>
-      <button type="button" class="secondary" data-flyer-save>Save Draft</button>
-      <button type="button" class="secondary" data-flyer-load>Load Draft</button>
-      <button type="button" class="secondary" data-flyer-pdf>Download A4 PDF</button>
-      <button type="button" class="secondary" data-flyer-png>Download Print PNG</button>
-      <button type="button" class="secondary" data-flyer-download>Download HTML</button>
-      <button type="button" class="secondary" data-flyer-copy>Copy HTML</button>
-      <button type="button" class="warn" data-flyer-clear>Clear Draft</button>
+      <button type="button" tabindex="-1" data-flyer-toggle>Edit Text</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-save>Save Draft</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-load>Load Draft</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-pdf>Download A4 PDF</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-png>Download Print PNG</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-download>Download HTML</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-copy>Copy HTML</button>
+      <button type="button" tabindex="-1" class="warn" data-flyer-clear>Clear Draft</button>
     `;
+    toolbar.setAttribute("tabindex", "-1");
     document.body.appendChild(toolbar);
 
     statusNode = toolbar.querySelector(".flyer-editor-status");

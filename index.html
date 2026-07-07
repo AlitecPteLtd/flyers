@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alitec Odoo Flyers</title>
+  <style>
+    :root {
+      --navy: #062a6f;
+      --blue: #2879e3;
+      --gold: #f6aa17;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(40, 121, 227, .16), transparent 22%),
+        radial-gradient(circle at 8% 86%, rgba(246, 170, 23, .16), transparent 24%),
+        linear-gradient(180deg, #eef4ff 0%, #ffffff 56%, #eef4ff 100%);
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 52px 0 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 116px 1fr;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 34px;
+      padding: 28px;
+      border: 1px solid rgba(203, 217, 239, .9);
+      border-radius: 24px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 18px 46px rgba(6, 42, 111, .12);
+    }
+
+    .logo {
+      width: 116px;
+      height: 116px;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(38px, 6vw, 72px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+    }
+
+    .subtitle {
+      margin: 14px 0 0;
+      max-width: 740px;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #33476f;
+    }
+
+    .bar {
+      width: 86px;
+      height: 5px;
+      margin-top: 18px;
+      border-radius: 99px;
+      background: var(--gold);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 178px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 14px 34px rgba(6, 42, 111, .08);
+      text-decoration: none;
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      right: -34px;
+      bottom: -48px;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: rgba(40, 121, 227, .09);
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: #8bb9ef;
+      box-shadow: 0 18px 42px rgba(6, 42, 111, .14);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eef5ff;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .card h2 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1.08;
+    }
+
+    .card p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #33476f;
+      font-size: 14px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: #597094;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <img class="logo" src="projects/positive/positive-assets/alitec-logo.jpeg" alt="Alitec" />
+      <div>
+        <h1>Alitec Odoo Flyers</h1>
+        <p class="subtitle">Browse the published flyer pages. Each page includes editable text, draft saving, HTML download, A4 PDF export, and print PNG export.</p>
+        <div class="bar"></div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="Flyer links">
+      <a class="card" href="projects/positive/">
+        <span class="tag">Renovation</span>
+        <h2>Renovation Company</h2>
+        <p>Project operations, quotation detail, purchasing continuity, approvals, and billing visibility.</p>
+      </a>
+
+      <a class="card" href="projects/cleantric/">
+        <span class="tag">Cleaning</span>
+        <h2>Cleaning Service Company</h2>
+        <p>Online booking, cleaner selection, scheduling, address capture, order follow-through, and payment flow.</p>
+      </a>
+
+      <a class="card" href="projects/public-safety/">
+        <span class="tag">Manufacturing</span>
+        <h2>Public Safety Equipment</h2>
+        <p>Firefighting equipment manufacturing, BOM planning, production, QC, serial traceability, and service.</p>
+      </a>
+
+      <a class="card" href="projects/attendance-timesheet-hardware/">
+        <span class="tag">Attendance</span>
+        <h2>Attendance &amp; Timesheet with Hardware</h2>
+        <p>Biometric device connectivity, punch logs, shift control, Excel payroll exports, and timesheet review.</p>
+      </a>
+
+      <a class="card" href="projects/school-uniform-seller/">
+        <span class="tag">Retail</span>
+        <h2>School Uniform Seller</h2>
+        <p>Uniform sales, product sizing, school-linked ordering, inventory control, and customer fulfilment.</p>
+      </a>
+
+      <a class="card" href="projects/scaffolding/">
+        <span class="tag">Rental</span>
+        <h2>Scaffolding Rental &amp; Project Claims</h2>
+        <p>Rental orders, site deliveries, returns, claims, warehouse movement, billing, and project visibility.</p>
+      </a>
+    </section>
+
+    <div class="footer">Published at https://alitecpteltd.github.io/flyers/</div>
+  </main>
+</body>
+</html>
