@@ -35,9 +35,12 @@
   let isEditMode = false;
   let isPdfExporting = false;
   let isPngExporting = false;
+  let isToolbarVisible = true;
+  let toolbarNode = null;
 
   function injectStyles() {
     const style = document.createElement("style");
+    style.setAttribute("data-flyer-editor-style", "1");
     style.textContent = `
       .flyer-editor-toolbar {
         position: fixed;
@@ -56,6 +59,11 @@
         box-shadow: 0 12px 32px rgba(6, 21, 59, 0.28);
         color: #fff;
         font-family: Arial, Helvetica, sans-serif;
+        transition: opacity 0.15s ease, transform 0.15s ease;
+      }
+
+      .flyer-editor-toolbar.is-hidden {
+        display: none;
       }
 
       .flyer-editor-toolbar button {
@@ -224,10 +232,15 @@
     updateStatus(isEditMode ? "Editing on" : "Editing off");
   }
 
-  function cleanedHtml() {
+  function htmlSnapshot(options) {
+    const config = options || {};
     const clone = document.documentElement.cloneNode(true);
     clone.querySelectorAll(".flyer-editor-toolbar").forEach((node) => node.remove());
-    clone.querySelectorAll("script[data-flyer-editor-script]").forEach((node) => node.remove());
+    clone.querySelectorAll("style[data-flyer-editor-style]").forEach((node) => node.remove());
+    clone.querySelectorAll("script[data-flyer-lib]").forEach((node) => node.remove());
+    if (config.removeEditorScript) {
+      clone.querySelectorAll("script[data-flyer-editor-script]").forEach((node) => node.remove());
+    }
     clone.querySelectorAll("*").forEach((node) => {
       TEMP_ATTRS.forEach((attr) => node.removeAttribute(attr));
       node.classList.remove("flyer-editor-editing");
@@ -238,10 +251,54 @@
     return "<!doctype html>\n" + clone.outerHTML;
   }
 
+  function cleanedHtml() {
+    return htmlSnapshot({ removeEditorScript: true });
+  }
+
+  function editableHtml() {
+    return htmlSnapshot({ removeEditorScript: false });
+  }
+
   function downloadHtml() {
     const blob = new Blob([cleanedHtml()], { type: "text/html;charset=utf-8" });
     downloadBlob(blob, (window.location.pathname.split("/").pop() || "index.html").replace(/\.html?$/i, "") + "-edited.html");
     updateStatus("HTML downloaded");
+  }
+
+  async function updateHtmlFile() {
+    const html = editableHtml();
+    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+
+    if (!window.showSaveFilePicker) {
+      downloadBlob(blob, pageName() + "-updated.html");
+      updateStatus("Downloaded HTML");
+      alert("Your browser cannot overwrite a file directly here. I downloaded the updated HTML instead.");
+      return;
+    }
+
+    try {
+      const handle = await window.showSaveFilePicker({
+        suggestedName: "index.html",
+        types: [
+          {
+            description: "HTML file",
+            accept: { "text/html": [".html"] },
+          },
+        ],
+      });
+      const writable = await handle.createWritable();
+      await writable.write(blob);
+      await writable.close();
+      updateStatus("HTML updated");
+    } catch (error) {
+      if (error && error.name === "AbortError") {
+        updateStatus("Save cancelled");
+        return;
+      }
+      console.error(error);
+      updateStatus("Save failed");
+      alert("HTML file update failed. Try Download HTML instead.");
+    }
   }
 
   function downloadBlob(blob, filename) {
@@ -462,6 +519,54 @@
     "-webkit-background-clip",
     "-webkit-text-fill-color",
     "box-sizing",
+    "visibility",
+    "clip-path",
+    "mix-blend-mode",
+    "isolation",
+    "flex-grow",
+    "flex-shrink",
+    "flex-basis",
+    "order",
+    "white-space",
+    "vertical-align",
+  ];
+
+  const PSEUDO_STYLE_PROPS = [
+    "content",
+    "display",
+    "position",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "width",
+    "height",
+    "margin",
+    "padding",
+    "background",
+    "background-color",
+    "background-image",
+    "background-size",
+    "background-position",
+    "background-repeat",
+    "border",
+    "border-radius",
+    "box-shadow",
+    "opacity",
+    "transform",
+    "transform-origin",
+    "color",
+    "font",
+    "font-size",
+    "font-family",
+    "font-weight",
+    "line-height",
+    "flex",
+    "flex-grow",
+    "flex-shrink",
+    "flex-basis",
+    "align-self",
+    "z-index",
   ];
 
   function syncComputedStyles(sourceRoot, cloneRoot) {
@@ -552,12 +657,148 @@
     });
   }
 
+  function flattenPseudoElements(sourceRoot, cloneRoot, clonedDoc) {
+    const sourceNodes = [sourceRoot].concat(Array.from(sourceRoot.querySelectorAll("*")));
+    const cloneNodes = [cloneRoot].concat(Array.from(cloneRoot.querySelectorAll("*")));
+    const limit = Math.min(sourceNodes.length, cloneNodes.length);
+
+    for (let index = 0; index < limit; index += 1) {
+      const source = sourceNodes[index];
+      const clone = cloneNodes[index];
+
+      ["::before", "::after"].forEach(function (pseudo) {
+        const style = window.getComputedStyle(source, pseudo);
+        const content = style.getPropertyValue("content");
+        const hasBox =
+          parseFloat(style.width) > 0 ||
+          parseFloat(style.height) > 0 ||
+          style.getPropertyValue("background-image") !== "none" ||
+          style.getPropertyValue("box-shadow") !== "none";
+
+        if ((!content || content === "none") && !hasBox) {
+          return;
+        }
+        if (content && content !== "none" && content !== '""' && content !== "''") {
+          if (/\\f[0-9a-f]/i.test(content) || /\\[0-9a-f]{1,6}/i.test(content)) {
+            return;
+          }
+        }
+
+        const pseudoEl = clonedDoc.createElement("span");
+        pseudoEl.setAttribute("data-flyer-flat-pseudo", pseudo.slice(2));
+        pseudoEl.setAttribute("aria-hidden", "true");
+
+        PSEUDO_STYLE_PROPS.forEach(function (prop) {
+          const value = style.getPropertyValue(prop);
+          if (value && value !== "none" && value !== "normal" && value !== "auto") {
+            pseudoEl.style.setProperty(prop, value);
+          }
+        });
+
+        pseudoEl.style.pointerEvents = "none";
+        pseudoEl.style.content = "none";
+
+        if (pseudo === "::before") {
+          clone.insertBefore(pseudoEl, clone.firstChild);
+        } else {
+          clone.appendChild(pseudoEl);
+        }
+      });
+    }
+  }
+
+  function rasterizeSvgElements(sourceRoot, cloneRoot, clonedDoc) {
+    const sourceSvgs = Array.from(sourceRoot.querySelectorAll("svg"));
+    const cloneSvgs = Array.from(cloneRoot.querySelectorAll("svg"));
+
+    sourceSvgs.forEach(function (sourceSvg, index) {
+      const cloneSvg = cloneSvgs[index];
+      if (!cloneSvg) {
+        return;
+      }
+
+      const computed = window.getComputedStyle(sourceSvg);
+      let xml = "";
+      try {
+        xml = new XMLSerializer().serializeToString(cloneSvg);
+      } catch (error) {
+        return;
+      }
+
+      const image = clonedDoc.createElement("img");
+      [
+        "width",
+        "height",
+        "min-width",
+        "min-height",
+        "max-width",
+        "max-height",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin",
+        "padding",
+        "display",
+        "transform",
+        "transform-origin",
+        "opacity",
+        "z-index",
+        "overflow",
+      ].forEach(function (prop) {
+        const value = computed.getPropertyValue(prop);
+        if (value) {
+          image.style.setProperty(prop, value);
+        }
+      });
+
+      const rect = sourceSvg.getBoundingClientRect();
+      if (!image.style.width && rect.width) {
+        image.style.width = rect.width + "px";
+      }
+      if (!image.style.height && rect.height) {
+        image.style.height = rect.height + "px";
+      }
+
+      image.setAttribute("alt", "");
+      image.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(xml);
+      cloneSvg.replaceWith(image);
+    });
+  }
+
+  function flattenLayerTree(sourceRoot, cloneRoot) {
+    const sourceNodes = [sourceRoot].concat(Array.from(sourceRoot.querySelectorAll("*")));
+    const cloneNodes = [cloneRoot].concat(Array.from(cloneRoot.querySelectorAll("*")));
+    const limit = Math.min(sourceNodes.length, cloneNodes.length);
+
+    for (let index = 0; index < limit; index += 1) {
+      const computed = window.getComputedStyle(sourceNodes[index]);
+      const clone = cloneNodes[index];
+      const backgroundImage = computed.getPropertyValue("background-image");
+      const hasGradient = backgroundImage && backgroundImage.indexOf("gradient") !== -1;
+      const position = computed.getPropertyValue("position");
+
+      if (hasGradient || position === "absolute" || position === "fixed") {
+        clone.style.setProperty("isolation", "isolate");
+      }
+
+      if (parseFloat(computed.getPropertyValue("opacity")) < 1) {
+        clone.style.setProperty("opacity", computed.getPropertyValue("opacity"));
+      }
+    }
+  }
+
   function prepareCaptureClone(sourcePage, clonedDoc, clonedPage, imageCache) {
     syncComputedStyles(sourcePage, clonedPage);
     applyImageCacheToClone(clonedPage, imageCache);
+    flattenPseudoElements(sourcePage, clonedPage, clonedDoc);
+    rasterizeSvgElements(sourcePage, clonedPage, clonedDoc);
+    flattenLayerTree(sourcePage, clonedPage);
     replaceObjectFitImages(sourcePage, clonedPage, clonedDoc);
     clonedPage.style.margin = "0";
     clonedPage.style.transform = "none";
+    clonedPage.style.backgroundColor = "#ffffff";
   }
 
   function waitForCaptureAssets() {
@@ -642,6 +883,41 @@
     } finally {
       window.scrollTo(previousScrollX, previousScrollY);
     }
+  }
+
+  function createFlattenedCanvas(sourceCanvas) {
+    const flat = document.createElement("canvas");
+    flat.width = sourceCanvas.width;
+    flat.height = sourceCanvas.height;
+    const context = flat.getContext("2d");
+    context.fillStyle = "#ffffff";
+    context.fillRect(0, 0, flat.width, flat.height);
+    context.drawImage(sourceCanvas, 0, 0);
+    return flat;
+  }
+
+  function canvasToDataUrl(canvas) {
+    try {
+      return canvas.toDataURL("image/png", 1);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  async function canvasToDataUrlAsync(canvas) {
+    const direct = canvasToDataUrl(canvas);
+    if (direct) {
+      return direct;
+    }
+    const blob = await canvasToPngBlob(canvas);
+    return new Promise(function (resolve, reject) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        resolve(reader.result);
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(blob);
+    });
   }
 
   function canvasToPngBlob(canvas) {
@@ -743,22 +1019,34 @@
 
   const HTML2CANVAS_CDN =
     "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+  const HTML_TO_IMAGE_CDN =
+    "https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.min.js";
   const JSPDF_CDN =
     "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 
   function ensurePdfTools() {
-    if (window.html2canvas && window.jspdf && window.jspdf.jsPDF) {
+    if (window.htmlToImage && window.jspdf && window.jspdf.jsPDF) {
       return Promise.resolve();
     }
-    const localCanvas = editorBaseUrl
-      ? new URL("vendor/html2canvas.min.js", editorBaseUrl).href
-      : HTML2CANVAS_CDN;
+    const localImage = editorBaseUrl
+      ? new URL("vendor/html-to-image.min.js", editorBaseUrl).href
+      : HTML_TO_IMAGE_CDN;
     const localPdf = editorBaseUrl
       ? new URL("vendor/jspdf.umd.min.js", editorBaseUrl).href
       : JSPDF_CDN;
-    return loadScriptWithFallback(localCanvas, HTML2CANVAS_CDN).then(function () {
+    return loadScriptWithFallback(localImage, HTML_TO_IMAGE_CDN).then(function () {
       return loadScriptWithFallback(localPdf, JSPDF_CDN);
     });
+  }
+
+  function ensureHtmlToImageTool() {
+    if (window.htmlToImage) {
+      return Promise.resolve();
+    }
+    const localImage = editorBaseUrl
+      ? new URL("vendor/html-to-image.min.js", editorBaseUrl).href
+      : HTML_TO_IMAGE_CDN;
+    return loadScriptWithFallback(localImage, HTML_TO_IMAGE_CDN);
   }
 
   function ensureCanvasTool() {
@@ -797,6 +1085,39 @@
     window.setTimeout(restore, 1200);
   }
 
+  async function capturePageAsDataUrl(page, preferredScale) {
+    return await window.htmlToImage.toPng(page, {
+      backgroundColor: "#ffffff",
+      cacheBust: true,
+      pixelRatio: preferredScale,
+      width: page.offsetWidth || page.scrollWidth,
+      height: page.offsetHeight || page.scrollHeight,
+      style: {
+        margin: "0",
+        transform: "none",
+      },
+      filter: function (node) {
+        return !(node.closest && node.closest(".flyer-editor-toolbar"));
+      },
+    });
+  }
+
+  async function capturePageAsDataUrlWithFallback(page, preferredScale) {
+    try {
+      await ensureHtmlToImageTool();
+      return await withCaptureUi(function () {
+        return capturePageAsDataUrl(page, preferredScale);
+      });
+    } catch (htmlToImageError) {
+      console.warn("html-to-image export failed; falling back to html2canvas.", htmlToImageError);
+      await ensureCanvasTool();
+      const capture = await withCaptureUi(function () {
+        return capturePage(page, Math.ceil(preferredScale));
+      });
+      return await canvasToDataUrlAsync(createFlattenedCanvas(capture.canvas));
+    }
+  }
+
   async function downloadPdf() {
     if (isPdfExporting) return;
     isPdfExporting = true;
@@ -807,11 +1128,11 @@
       await waitForCaptureAssets();
 
       const page = document.querySelector(".page") || document.body;
-      const capture = await withCaptureUi(function () {
-        return capturePage(page, 2);
-      });
+      const imageData = await capturePageAsDataUrlWithFallback(page, 2.5);
+      if (!imageData) {
+        throw new Error("Unable to flatten flyer image for PDF export");
+      }
 
-      const imageData = capture.canvas.toDataURL("image/png", 1);
       const jsPDF = window.jspdf.jsPDF;
       const pdf = new jsPDF({
         orientation: "portrait",
@@ -821,14 +1142,17 @@
       });
       const pageWidth = pdf.internal.pageSize.getWidth();
       const pageHeight = pdf.internal.pageSize.getHeight();
-      pdf.addImage(imageData, "PNG", 0, 0, pageWidth, pageHeight, undefined, "FAST");
+      pdf.addImage(imageData, "PNG", 0, 0, pageWidth, pageHeight, undefined, "SLOW");
       const pdfBlob = pdf.output("blob");
-      downloadBlob(pdfBlob, pageName() + "-a4.pdf");
+      downloadBlob(pdfBlob, pageName() + "-a4-flat.pdf");
       updateStatus("PDF downloaded");
     } catch (error) {
       console.error(error);
-      updateStatus("Opening print");
-      openPrintPdf();
+      updateStatus("PDF failed");
+      alert(
+        "PDF export failed. Refresh the page and try again.\n\n" +
+          (error && error.message ? error.message : error)
+      );
     } finally {
       isPdfExporting = false;
     }
@@ -840,15 +1164,12 @@
     updateStatus("Preparing PNG");
 
     try {
-      await ensureCanvasTool();
+      await ensureHtmlToImageTool();
       await waitForCaptureAssets();
 
       const page = document.querySelector(".page") || document.body;
-      const capture = await withCaptureUi(function () {
-        return capturePage(page, 3);
-      });
-      const blob = await canvasToPngBlob(capture.canvas);
-      downloadBlob(blob, pageName() + "-print-" + capture.scale + "x.png");
+      const imageData = await capturePageAsDataUrlWithFallback(page, 3);
+      downloadBlob(dataUrlToBlob(imageData), pageName() + "-print-3x.png");
       updateStatus("PNG downloaded");
     } catch (error) {
       console.error(error);
@@ -878,6 +1199,39 @@
     if (statusNode) statusNode.textContent = text;
   }
 
+  function setToolbarVisible(nextState) {
+    isToolbarVisible = nextState;
+    if (toolbarNode) {
+      toolbarNode.classList.toggle("is-hidden", !isToolbarVisible);
+    }
+    if (!isToolbarVisible && isEditMode) {
+      setEditMode(false);
+    }
+  }
+
+  function toggleToolbarVisible() {
+    setToolbarVisible(!isToolbarVisible);
+    if (isToolbarVisible) {
+      updateStatus("Toolbar shown");
+    }
+  }
+
+  function bindToolbarShortcuts() {
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") {
+        return;
+      }
+      if (isEditMode) {
+        setEditMode(false);
+        updateStatus("Editing off");
+        event.preventDefault();
+        return;
+      }
+      toggleToolbarVisible();
+      event.preventDefault();
+    });
+  }
+
   function buildToolbar() {
     const toolbar = document.createElement("div");
     toolbar.className = "flyer-editor-toolbar";
@@ -888,12 +1242,14 @@
       <button type="button" tabindex="-1" class="secondary" data-flyer-load>Load Draft</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-pdf>Download A4 PDF</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-png>Download Print PNG</button>
+      <button type="button" tabindex="-1" class="secondary" data-flyer-update-html>Update HTML File</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-download>Download HTML</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-copy>Copy HTML</button>
       <button type="button" tabindex="-1" class="warn" data-flyer-clear>Clear Draft</button>
     `;
     toolbar.setAttribute("tabindex", "-1");
     document.body.appendChild(toolbar);
+    toolbarNode = toolbar;
 
     statusNode = toolbar.querySelector(".flyer-editor-status");
 
@@ -904,15 +1260,20 @@
     toolbar.querySelector("[data-flyer-load]").addEventListener("click", loadDraft);
     toolbar.querySelector("[data-flyer-pdf]").addEventListener("click", downloadPdf);
     toolbar.querySelector("[data-flyer-png]").addEventListener("click", downloadPrintPng);
+    toolbar.querySelector("[data-flyer-update-html]").addEventListener("click", updateHtmlFile);
     toolbar.querySelector("[data-flyer-download]").addEventListener("click", downloadHtml);
     toolbar.querySelector("[data-flyer-copy]").addEventListener("click", copyHtml);
     toolbar.querySelector("[data-flyer-clear]").addEventListener("click", clearDraft);
   }
 
   function init() {
+    document.querySelectorAll(".flyer-editor-toolbar-hint").forEach(function (node) {
+      node.remove();
+    });
     injectStyles();
     tagEditables();
     buildToolbar();
+    bindToolbarShortcuts();
     loadDraft();
     setEditMode(false);
   }
