@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scaffolding Rental and Project Claims Flyer</title>
+  <link rel="stylesheet" href="scaffolding-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0a3e94;
+      --ink: #07194f;
+      --blue: #0f86b5;
+      --sky: #eaf5ff;
+      --line: #b9d5f0;
+      --gold: #f6aa17;
+      --green: #2f8f45;
+      --purple: #7a2f8f;
+      --teal: #098da1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1536px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .header {
+      height: 172px;
+      display: grid;
+      grid-template-columns: 150px 1fr 170px;
+      align-items: center;
+      gap: 20px;
+      padding: 24px 30px 14px;
+      border-bottom: 3px solid var(--blue);
+    }
+
+    .logo {
+      width: 116px;
+      height: 116px;
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: .98;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: #4f5460;
+      font-size: 18px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .odoo-wrap {
+      justify-self: end;
+      text-align: right;
+      color: #60646c;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .odoo-logo {
+      display: block;
+      width: 150px;
+      margin-top: 6px;
+    }
+
+    .hero {
+      position: relative;
+      height: 404px;
+      display: grid;
+      grid-template-columns: 38% 62%;
+      overflow: hidden;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 28px 32px;
+      background: linear-gradient(90deg, #fff 0%, #fff 82%, rgba(255,255,255,.72) 100%);
+    }
+
+    .hero-copy h2 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 34px;
+      line-height: 1.04;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .hero-tag {
+      margin: 0 0 14px;
+      color: var(--blue);
+      font-size: 18px;
+      line-height: 1.36;
+      font-weight: 900;
+    }
+
+    .hero-copy p {
+      margin: 0;
+      font-size: 15.5px;
+      line-height: 1.58;
+      color: #0b1a42;
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 682px;
+      height: 404px;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 18px 31px 12px;
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .section-title .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      padding: 0 31px;
+    }
+
+    .capability {
+      min-height: 210px;
+      padding: 12px 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy), #0f68b9);
+      font-size: 30px;
+    }
+
+    .capability:nth-child(2n) .cap-icon,
+    .capability:nth-child(4n) .cap-icon {
+      background: linear-gradient(135deg, #0d7b8c, #0aa9b7);
+    }
+
+    .capability h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 13.8px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #081b50;
+      font-size: 11px;
+      line-height: 1.36;
+      font-weight: 600;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 14px;
+      padding: 0 31px;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 22px 0 6px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .panel-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .panel-sub {
+      margin: 0 0 10px;
+      color: #253858;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+
+    .process-body {
+      display: grid;
+      grid-template-columns: 56% 44%;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .process-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      align-items: center;
+      min-height: 66px;
+      border: 1.4px solid #1976c9;
+      border-radius: 7px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .process-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      width: 2px;
+      height: 12px;
+      background: var(--navy);
+      transform: translateX(-50%);
+    }
+
+    .process-step:nth-child(2) { border-color: var(--green); }
+    .process-step:nth-child(5) { border-color: var(--purple); }
+
+    .process-step i {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      color: var(--teal);
+      font-size: 28px;
+    }
+
+    .process-step:nth-child(5) i { color: var(--purple); }
+
+    .process-step h4 {
+      margin: 0 0 3px;
+      color: var(--navy);
+      font-size: 12.7px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: #14214a;
+      font-size: 10.2px;
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    .control-list {
+      min-height: 374px;
+      margin-top: 0;
+      padding: 22px 10px 52px;
+      border: 1px dashed #83b7e8;
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.86)),
+        url("scaffolding-assets/scaffolding-warehouse.png") center bottom / cover no-repeat;
+    }
+
+    .check-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 7px;
+      align-items: start;
+      margin-bottom: 25px;
+      color: #14214a;
+      font-size: 10.2px;
+      line-height: 1.35;
+    }
+
+    .check-item:last-child { margin-bottom: 0; }
+
+    .check-item i {
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px;
+    }
+
+    .stat {
+      min-height: 77px;
+      padding: 10px 9px 8px;
+      border: 1px solid #d5e1f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 8px;
+      color: #344b74;
+      font-size: 10px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .stat .num {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .stat i { color: #1477d4; font-size: 22px; }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 48% 52%;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      min-height: 168px;
+      padding: 12px;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .donut {
+      width: 92px;
+      height: 92px;
+      overflow: visible;
+    }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 30;
+      transform: rotate(-90deg);
+      transform-origin: 46px 46px;
+    }
+
+    .donut-hole {
+      fill: #fff;
+    }
+
+    .legend {
+      display: grid;
+      gap: 7px;
+      color: #14214a;
+      font-size: 10.2px;
+      font-weight: 700;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 50%;
+      background: #086bc3;
+    }
+
+    .legend div:nth-child(2) span { background: #0ca3a8; }
+    .legend div:nth-child(3) span { background: var(--gold); }
+
+    .line-chart {
+      width: 100%;
+      height: 108px;
+    }
+
+    .mini-table {
+      margin-top: 10px;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      font-size: 9.2px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.4fr .95fr .85fr .85fr;
+      min-height: 24px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e5edf8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #344b74;
+      background: #f7fbff;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      padding: 3px 8px;
+      border-radius: 16px;
+      color: #18672c;
+      background: #d6edce;
+      font-size: 8.6px;
+      font-weight: 900;
+    }
+
+    .benefits-heading {
+      margin: 16px 31px -2px;
+      color: var(--navy);
+      font-size: 22px;
+      line-height: 1;
+      font-weight: 900;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .benefits {
+      margin: 10px 31px 14px;
+      border: 1px solid #82b7ea;
+      border-radius: 8px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
+    }
+
+    .benefit {
+      min-height: 104px;
+      display: grid;
+      grid-template-columns: 74px 1fr;
+      gap: 9px;
+      align-items: center;
+      padding: 13px 14px;
+      border-right: 1px solid #b9d5f0;
+    }
+
+    .benefit:last-child { border-right: 0; }
+
+    .benefit i {
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      color: var(--navy);
+      background: #eef5ff;
+      font-size: 30px;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: var(--navy);
+      font-size: 11.6px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1.6fr 1fr;
+      align-items: center;
+      gap: 16px;
+      padding: 0 34px;
+      color: #fff;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      white-space: nowrap;
+    }
+
+    .footer-center {
+      text-align: center;
+      font-size: 19px;
+      font-weight: 900;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <img class="logo" src="scaffolding-assets/alitec-logo.jpeg" alt="Alitec" />
+      <div>
+        <h1>Scaffolding Rental &amp;<br />Project Claims</h1>
+        <div class="subtitle">End-to-End Rental, Warehouse, Project and Billing Control with Odoo</div>
+      </div>
+      <div class="odoo-wrap">
+        Powered by
+        <img class="odoo-logo" src="scaffolding-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h2>1. Rental Operations &amp;<br />Project Claims</h2>
+        <p class="hero-tag">Manage rental orders, site deliveries, returns, claims, and billing in one platform.</p>
+        <p>
+          This customized solution extends Odoo Sales, Purchase, Inventory and
+          Invoicing for scaffolding businesses. It manages rental quotations,
+          customer POs, rental orders, deliveries, returns, repair and lost
+          charges, work done, claims, intercompany warehouse movements, and
+          statement of account generation.
+        </p>
+      </div>
+      <img class="hero-image" src="scaffolding-assets/scaffolding-hero.png" alt="" />
+    </section>
+
+    <div class="section-title">Key Capabilities <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>1. Rental Order Flow</h3>
+        <p>Quotation, customer PO, rental order, delivery, return, and recurring billing.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-truck"></i></div>
+        <h3>2. Delivery &amp; Return Control</h3>
+        <p>Track site dispatches, return balances, repair, loss, and over-return handling.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+        <h3>3. Project Claims</h3>
+        <p>Manage contracts, work done, erection and dismantling records, claims, and certificates.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-chart-column"></i></div>
+        <h3>4. M3 Rental Billing</h3>
+        <p>Support volume-based rental with density, delivery percentage, and monthly billing.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>5. New / Used Item Logic</h3>
+        <p>Route stock from new or used locations and post revenue to the correct accounts.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>6. Intercompany Warehouse</h3>
+        <p>Mirror pickings across companies and keep project references aligned.</p>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <div>
+        <div class="panel-title">Business Process Flow</div>
+        <p class="panel-sub">Structure your scaffolding operations in a clear operational sequence.</p>
+        <div class="process-body">
+          <div class="process-grid">
+            <div class="process-step"><i class="fa-solid fa-file-contract"></i><div><h4>Rental Quotation</h4><p>Pricing, rental rates, project reference</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-handshake"></i><div><h4>Customer PO</h4><p>Confirm requested quantities</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-calendar-days"></i><div><h4>Rental Order</h4><p>Delivery planning and billing basis</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-truck"></i><div><h4>Delivery / Return</h4><p>Site movement, balance tracking, repair/loss</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-file-invoice-dollar"></i><div><h4>Claim / Invoice</h4><p>Rental billing, project claims, SOA</p></div></div>
+          </div>
+          <div class="control-list">
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Control quantities by delivery and return.</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Link rental activity to project codes.</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Reduce billing leakage and manual tracking.</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Improve warehouse and finance coordination.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-title">Operations Dashboard Overview</div>
+        <p class="panel-sub">Get a real-time view of rental, project, stock, and billing activity.</p>
+        <div class="stats">
+          <div class="stat"><h4>Active Rental Orders</h4><div class="num">128<i class="fa-solid fa-clipboard-list"></i></div></div>
+          <div class="stat"><h4>Open Project Claims</h4><div class="num">24<i class="fa-solid fa-file-signature"></i></div></div>
+          <div class="stat"><h4>Items in Rental</h4><div class="num">5,320<i class="fa-solid fa-tower-observation"></i></div></div>
+          <div class="stat"><h4>Pending Returns</h4><div class="num">164<i class="fa-solid fa-rotate-left"></i></div></div>
+          <div class="stat"><h4>Monthly Billing</h4><div class="num">$368K<i class="fa-solid fa-dollar-sign"></i></div></div>
+        </div>
+
+        <div class="charts">
+          <div class="chart-card">
+            <h4>Rental Status</h4>
+            <div class="donut-wrap">
+              <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Rental status chart">
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#086bc3" stroke-dasharray="124.66 70.12" stroke-dashoffset="0"></circle>
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#0ca3a8" stroke-dasharray="46.75 148.03" stroke-dashoffset="-124.66"></circle>
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#f6aa17" stroke-dasharray="23.37 171.41" stroke-dashoffset="-171.41"></circle>
+                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                </svg>
+              <div class="legend">
+                <div><span></span>On Rent 64.3%</div>
+                <div><span></span>Available 23.5%</div>
+                <div><span></span>Repair / Lost 12.2%</div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h4>Monthly Billing Trend</h4>
+            <svg class="line-chart" viewBox="0 0 300 118" fill="none">
+              <path d="M0 98H300" stroke="#d8e4f3" />
+              <path d="M0 70H300" stroke="#d8e4f3" />
+              <path d="M0 42H300" stroke="#d8e4f3" />
+              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18" stroke="#1263c8" stroke-width="3" fill="none" />
+              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18 L260 98 L20 98Z" fill="rgba(18,99,200,.12)" />
+              <g fill="#1263c8"><circle cx="20" cy="88" r="4"/><circle cx="68" cy="38" r="4"/><circle cx="116" cy="48" r="4"/><circle cx="164" cy="22" r="4"/><circle cx="212" cy="40" r="4"/><circle cx="260" cy="18" r="4"/></g>
+              <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="16" y="114">Jan</text><text x="64" y="114">Feb</text><text x="112" y="114">Mar</text><text x="160" y="114">Apr</text><text x="208" y="114">May</text><text x="256" y="114">Jun</text></g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="mini-table">
+          <div class="row head"><div>Recent Projects</div><div>Type</div><div>Claim Status</div><div>Billing</div></div>
+          <div class="row"><div>Downtown Tower</div><div>Commercial</div><div class="pill">In Progress</div><div>$92,400</div></div>
+          <div class="row"><div>Metro Line Extension</div><div>Infrastructure</div><div class="pill">Approved</div><div>$78,600</div></div>
+          <div class="row"><div>Industrial Plant Expansion</div><div>Industrial</div><div class="pill">In Progress</div><div>$64,800</div></div>
+          <div class="row"><div>Harbor Warehouse</div><div>Commercial</div><div class="pill">Pending</div><div>$48,900</div></div>
+          <div class="row"><div>Residential Complex A</div><div>Residential</div><div class="pill">Approved</div><div>$83,300</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="benefits-heading">Business Benefits</div>
+    <section class="benefits">
+      <div class="benefit"><i class="fa-solid fa-cube"></i><p>Better stock visibility and rental balance control</p></div>
+      <div class="benefit"><i class="fa-solid fa-file-circle-check"></i><p>Faster project claim preparation and certification</p></div>
+      <div class="benefit"><i class="fa-solid fa-calculator"></i><p>More accurate invoicing for rental, repair, and loss</p></div>
+      <div class="benefit"><i class="fa-solid fa-users"></i><p>Stronger coordination across sales, warehouse, and finance</p></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="footer-center">Power Your Scaffolding Business with Odoo</div>
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js" data-flyer-editor-script data-flyer-version="2026-07-07-v1"></script>
+</body>
+</html>

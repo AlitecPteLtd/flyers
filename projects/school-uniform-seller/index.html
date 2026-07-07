@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School Uniform Seller Solution Flyer</title>
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --muted: #4b5f86;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+      --bg: #f7fbff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1536px;
+      overflow: hidden;
+      margin: 0 auto;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(39, 121, 227, .11), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 520px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.98) 28%, rgba(255,255,255,.65) 51%, rgba(255,255,255,.06) 83%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 358px;
+      width: 1120px;
+      height: 92px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 492px;
+      padding: 26px 32px 0 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .mark {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 120px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 4px 0 6px;
+      color: var(--navy);
+      font-size: 54px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 19px;
+      margin-top: 8px;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 16px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 205px;
+    }
+
+    .odoo-logo {
+      width: 205px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 440px;
+      margin-top: 32px;
+      font-size: 17px;
+      line-height: 1.45;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 546px;
+      margin-top: 18px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      height: 128px;
+      padding: 13px 16px 11px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 7px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0 0 7px;
+      font-size: 13px;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.4px;
+      line-height: 1.24;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 14px 22px 18px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 8px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.purple {
+      background: linear-gradient(90deg, #722384, #8d2d92);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow {
+      padding: 15px 13px 8px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9.5px;
+      line-height: 1.32;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 17px 0 11px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 13px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 82px;
+      padding: 10px 4px 8px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 27px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9.5px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 52px;
+      padding: 6px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.5px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard {
+      padding: 13px 12px 12px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 76px;
+      padding: 11px 9px 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 138px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .donut {
+      width: 92px;
+      height: 92px;
+      overflow: visible;
+    }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 30;
+      transform: rotate(-90deg);
+      transform-origin: 46px 46px;
+    }
+
+    .donut-hole {
+      fill: #fff;
+    }
+
+    .legend {
+      display: grid;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    .legend div:last-child span { background: var(--blue); }
+
+    .line-chart {
+      width: 100%;
+      height: 84px;
+    }
+
+    .mini-table {
+      margin-top: 10px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ccebc6;
+      color: #26763a;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .integrations {
+      padding: 2px 43px 0;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 10px 16px 0;
+      min-height: 76px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 19px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 9px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 54px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 44px;
+      font-size: 16px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      height: 28px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 22px; font-size: 19px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="hero-image" src="assets/school-uniform-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>School Uniform<br />Seller</h1>
+            <div class="subtitle">Complete Uniform Retail Solutions with Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec's School Uniform Seller solution on Odoo helps uniform retailers,
+        school shops, and appointed vendors manage every step of the operation,
+        from online ordering and POS sales to inventory, purchasing, invoicing,
+        payments, pickup, and delivery.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Centralized</h3>
+          <p>School, student, sales, stock, and finance data together.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Omnichannel</h3>
+          <p>Run website, POS, quote, and office orders from one catalog.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-check"></i></div>
+          <h3>Accurate</h3>
+          <p>Track variants, stock, orders, invoices, and payments.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Scalable</h3>
+          <p>Support seasons, preorders, promotions, replenishment, and reports.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-school"></i></div>
+        <h3>School &amp; Student Profiles</h3>
+        <p>Capture school, class, student name, and order references.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-shirt"></i></div>
+        <h3>Uniform Catalog &amp; Variants</h3>
+        <p>Manage shirts, PE kits, sizes, bundles, combos, and pricing.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-users"></i></div>
+        <h3>Website &amp; POS Sales</h3>
+        <p>Sell online or in-store with wishlist, loyalty, and stock checks.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>Sales &amp; Invoicing</h3>
+        <p>Create orders, invoices, FAS documents, delivery slips, and notes.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <h3>Inventory &amp; Replenishment</h3>
+        <p>Monitor stock by location, availability, and weekly alerts.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>Purchase &amp; Supplier Flow</h3>
+        <p>Plan procurement, track picking status, and select products fast.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-truck"></i></div>
+        <h3>Pickup, Delivery &amp; Shipping</h3>
+        <p>Configure pickup slots, carriers, SingPost, Shippit, and tracking.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        <h3>Reports &amp; Analytics</h3>
+        <p>Review sales, stock movement, payments, periods, and performance.</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-store"></i> Uniform Sales Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-cart-shopping"></i></div><h4>Online / POS<br />Order</h4><p>Parent, counter, or back-office sale</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-id-card"></i></div><h4>Student<br />Details</h4><p>School, class, name, and references</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-box-open"></i></div><h4>Pick &amp;<br />Pack</h4><p>Variant stock from warehouse or shop</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice"></i></div><h4>Invoice &amp;<br />Payment</h4><p>Invoice, PayNow, cards, and gateways</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-truck-fast"></i></div><h4>Collect /<br />Deliver</h4><p>Pickup slot, carrier delivery, tracking</p></div>
+          </div>
+
+          <div class="sub-title">Flexible Fulfilment Modes</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-calendar-days"></i><h4>Term Sale</h4><p>Back-to-school demand</p></div>
+            <div class="slot"><i class="fa-solid fa-circle-plus"></i><h4>Preorder</h4><p>Seasonal stock planning</p></div>
+            <div class="slot"><i class="fa-solid fa-calendar-check"></i><h4>Collection</h4><p>Appointment-based pickup</p></div>
+            <div class="slot"><i class="fa-solid fa-truck"></i><h4>Delivery</h4><p>Carrier shipping flow</p></div>
+            <div class="slot"><i class="fa-solid fa-circle-xmark"></i><h4>Exchange</h4><p>Controlled replacement orders</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-shield-halved"></i>Product / Variant Control</div>
+            <div class="feature"><i class="fa-solid fa-rotate"></i>Replenishment Reminders</div>
+            <div class="feature"><i class="fa-solid fa-envelope"></i>Payment Notifications</div>
+            <div class="feature"><i class="fa-solid fa-right-left"></i>Product / Unit Replacement</div>
+            <div class="feature"><i class="fa-solid fa-globe"></i>Online Parent Portal</div>
+            <div class="feature"><i class="fa-solid fa-chart-column"></i>Sales &amp; Stock Reports</div>
+            <div class="feature"><i class="fa-solid fa-folder-open"></i>Custom Print Templates</div>
+            <div class="feature"><i class="fa-solid fa-share-nodes"></i>Accounting Integration</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> Real-Time Dashboard</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Schools</h4><div class="number">18<i class="fa-solid fa-school"></i></div></div>
+            <div class="stat"><h4>Uniform SKUs</h4><div class="number">642<i class="fa-solid fa-cube"></i></div></div>
+            <div class="stat"><h4>Online Orders</h4><div class="number">368<i class="fa-solid fa-cart-shopping"></i></div></div>
+            <div class="stat"><h4>Pickup Slots</h4><div class="number">164<i class="fa-solid fa-calendar-days"></i></div></div>
+            <div class="stat"><h4>Stock Accuracy</h4><div class="number">98%<i class="fa-solid fa-check"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Order Channel Overview</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Order channel chart">
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="122.71 72.07" stroke-dashoffset="0"></circle>
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2879e3" stroke-dasharray="72.07 122.71" stroke-dashoffset="-122.71"></circle>
+                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                </svg>
+                <div class="legend">
+                  <div><span></span>Website (232) 63%</div>
+                  <div><span></span>POS / Walk-in (136) 37%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Monthly Uniform Revenue</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 82 L62 50 L100 50 L138 21 L176 42 L214 43 L252 58 L286 24" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 82 L62 50 L100 50 L138 21 L176 42 L214 43 L252 58 L286 24 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f"><circle cx="24" cy="82" r="4"/><circle cx="62" cy="50" r="4"/><circle cx="100" cy="50" r="4"/><circle cx="138" cy="21" r="4"/><circle cx="176" cy="42" r="4"/><circle cx="214" cy="43" r="4"/><circle cx="252" cy="58" r="4"/><circle cx="286" cy="24" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="211" y="99">Jun</text><text x="249" y="99">Jul</text><text x="283" y="99">Aug</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Product Group</div><div>Channel</div><div>Location</div><div>Stock</div><div>Status</div></div>
+            <div class="row"><div>White Shirts</div><div>Website</div><div>Main WH</div><div>320</div><div class="pill">Active</div></div>
+            <div class="row"><div>PE Sets</div><div>POS</div><div>Shop</div><div>145</div><div class="pill">Active</div></div>
+            <div class="row"><div>Blazers</div><div>Preorder</div><div>Supplier</div><div>86</div><div class="pill">Planned</div></div>
+            <div class="row"><div>Accessories</div><div>Both</div><div>Main WH</div><div>410</div><div class="pill">Active</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:16px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-globe"></i></div>eCommerce</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Invoicing</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cube"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-basket-shopping"></i></div>Purchase</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cash-register"></i></div>POS</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-dollar-sign"></i></div>Accounting</div>
+        <div class="app"><div class="circle"><i class="fa-regular fa-credit-card"></i></div>Payments</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-truck-fast"></i></div>Shipping</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-window-maximize"></i></div>Website</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-chart-line"></i><div><h3>Sell Across Every Channel</h3><p>Operate web, POS, quotations, and school campaigns without duplicate data entry.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-boxes-stacked"></i><div><h3>Better Stock Visibility</h3><p>Know available stock, reserved items, supplier needs, and fulfilment status faster.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-dollar-sign"></i><div><h3>Cleaner Finance Flow</h3><p>Connect orders, invoices, DBS QR, online gateways, receipts, and reconciliation.</p></div></div>
+      <div class="bottom-item"><i class="fa-regular fa-face-smile"></i><div><h3>Parent Satisfaction</h3><p>Simpler ordering, pickup slots, delivery tracking, accurate documents, and fast service.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js" data-flyer-editor-script data-flyer-version="2026-07-07-v1"></script>
+</body>
+</html>

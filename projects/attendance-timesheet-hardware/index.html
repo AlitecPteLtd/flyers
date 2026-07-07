@@ -1,0 +1,1265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odoo Attendance &amp; Timesheet with Hardware</title>
+  <link rel="stylesheet" href="attendance-timesheet-hardware-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #072a72;
+      --navy-2: #0b3f9f;
+      --ink: #0d2257;
+      --line: #d6e2f4;
+      --light-line: #c8d8f1;
+      --gold: #f6b01a;
+      --orange: #ef8c16;
+      --purple: #8430a8;
+      --blue: #2f73e5;
+      --green: #2ea85a;
+      --cyan: #12a3c7;
+      --bg: #edf3fb;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1536px;
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 14%, rgba(18, 163, 199, .10), transparent 20%),
+        radial-gradient(circle at 22% 84%, rgba(132, 48, 168, .07), transparent 22%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 56%, #ffffff 100%);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      top: -110px;
+      right: -80px;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      background: rgba(47, 115, 229, .10);
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      left: -140px;
+      bottom: 170px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: rgba(246, 176, 26, .07);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 480px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 528px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 364px;
+      width: 1120px;
+      height: 90px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 492px;
+      padding: 26px 32px 0 34px;
+      overflow: hidden;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .mark {
+      width: 118px;
+      height: 118px;
+      object-fit: contain;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .divider {
+      width: 1px;
+      height: 120px;
+      background: var(--navy);
+      opacity: .88;
+      flex: 0 0 auto;
+    }
+
+    .title-wrap {
+      min-width: 0;
+    }
+
+    h1 {
+      margin: 4px 0 6px;
+      color: var(--navy);
+      font-size: 48px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.23;
+    }
+
+    .short-line {
+      width: 84px;
+      height: 5px;
+      margin-top: 16px;
+      border-radius: 6px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      position: relative;
+      width: 205px;
+      flex: 0 0 205px;
+      text-align: right;
+      z-index: 3;
+    }
+
+    .odoo-logo {
+      width: 205px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+    }
+
+    .intro {
+      width: 520px;
+      margin: 28px 0 0;
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.45;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 548px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,.94);
+      box-shadow: 0 12px 30px rgba(15, 44, 92, .12);
+    }
+
+    .quick-benefit {
+      min-height: 132px;
+      padding: 14px 14px 11px;
+      border-right: 1px dashed #bdd0ea;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .round-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 8px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 13px;
+      line-height: 1.12;
+      font-weight: 900;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: var(--ink);
+      font-size: 9.2px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-visual {
+      display: none;
+    }
+
+    .visual-grid,
+    .device-panel,
+    .sheet-panel,
+    .metric-chip,
+    .flow-chip {
+      display: none;
+    }
+
+    .panel-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.16);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .3px;
+      text-transform: uppercase;
+    }
+
+    .device-terminal {
+      margin: 14px auto 10px;
+      width: 150px;
+      height: 138px;
+      border-radius: 22px;
+      padding: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,.97), rgba(236,244,255,.94));
+      box-shadow: inset 0 0 0 1px rgba(9, 38, 98, .10);
+      color: var(--navy);
+    }
+
+    .terminal-screen {
+      height: 70px;
+      border-radius: 14px;
+      padding: 12px;
+      background: linear-gradient(180deg, #0a3d99 0%, #0d68c4 100%);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1fr 34px;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .terminal-screen h3 {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .terminal-screen p {
+      margin: 2px 0 0;
+      font-size: 8.7px;
+      line-height: 1.15;
+      font-weight: 700;
+      color: rgba(255,255,255,.9);
+    }
+
+    .terminal-body {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 10px;
+    }
+
+    .terminal-dot {
+      height: 11px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #d6e6ff, #aecff4);
+    }
+
+    .device-summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .metric-chip {
+      border-radius: 16px;
+      padding: 10px 10px 9px;
+    }
+
+    .metric-chip h4 {
+      margin: 0 0 4px;
+      font-size: 10px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: rgba(255,255,255,.9);
+    }
+
+    .metric-chip p {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .metric-chip small {
+      display: block;
+      margin-top: 4px;
+      font-size: 8.5px;
+      font-weight: 700;
+      color: rgba(255,255,255,.82);
+    }
+
+    .visual-right {
+      display: grid;
+      grid-template-rows: 132px 1fr;
+      gap: 14px;
+    }
+
+    .flow-chip {
+      border-radius: 24px;
+      padding: 14px 14px 12px;
+    }
+
+    .flow-chip h3 {
+      margin: 0 0 10px;
+      font-size: 13px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .flow-steps {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flow-step {
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.16);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .flow-line {
+      flex: 1;
+      height: 2px;
+      background: rgba(255,255,255,.34);
+    }
+
+    .flow-chip p {
+      margin: 10px 0 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: rgba(255,255,255,.92);
+    }
+
+    .sheet-panel {
+      border-radius: 24px;
+      padding: 14px 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .sheet-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .sheet-head h3 {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .sheet-head p {
+      margin: 4px 0 0;
+      font-size: 9px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: rgba(255,255,255,.88);
+    }
+
+    .status-badge {
+      flex: 0 0 auto;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(246, 176, 26, .95);
+      color: #102964;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .sheet-table {
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(255,255,255,.95);
+      color: var(--ink);
+      box-shadow: inset 0 0 0 1px rgba(8, 40, 101, .08);
+    }
+
+    .sheet-row {
+      display: grid;
+      grid-template-columns: 1.2fr .9fr .7fr;
+      min-height: 36px;
+      align-items: center;
+      padding: 0 12px;
+      border-bottom: 1px solid #e5eefb;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .sheet-row:last-child { border-bottom: 0; }
+    .sheet-row.head { background: #eef5ff; color: #35507f; font-size: 9px; font-weight: 900; }
+
+    .sheet-footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .sheet-stat {
+      border-radius: 16px;
+      padding: 10px 10px 9px;
+      background: rgba(255,255,255,.12);
+    }
+
+    .sheet-stat h4 {
+      margin: 0 0 4px;
+      font-size: 10px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: rgba(255,255,255,.88);
+    }
+
+    .sheet-stat p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 16px 22px 18px;
+      color: var(--navy);
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #a4c2ef;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 126px;
+      padding: 14px 14px 12px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 8px 22px rgba(14, 43, 90, .06);
+    }
+
+    .cap-top {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .cap-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #edf4ff;
+      color: var(--blue);
+      font-size: 19px;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon.cyan { color: var(--cyan); }
+
+    .capability h3 {
+      margin: 1px 0 0;
+      color: var(--navy);
+      font-size: 12px;
+      line-height: 1.12;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 10px 0 0;
+      color: var(--ink);
+      font-size: 9.3px;
+      line-height: 1.28;
+      font-weight: 700;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 47% 53%;
+      gap: 14px;
+      padding: 12px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(15, 41, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 8px 16px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), var(--navy-2));
+      font-size: 16px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .panel-header.purple {
+      background: linear-gradient(90deg, #763195, #8f36b2);
+    }
+
+    .workflow {
+      padding: 12px 12px 10px;
+    }
+
+    .step-track {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+
+    .step-track::before {
+      content: "";
+      position: absolute;
+      left: 34px;
+      right: 34px;
+      top: 18px;
+      height: 2px;
+      background: #a8bfdc;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .step:nth-child(2n) .step-number { background: var(--orange); }
+    .step:nth-child(3n) .step-number { background: var(--purple); }
+
+    .step h4 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 10px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+
+    .workflow-note {
+      margin-top: 6px;
+      color: var(--ink);
+      font-size: 10px;
+      line-height: 1.32;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .sub-title {
+      margin: 12px 0 9px;
+      border-top: 1px solid #dce7f7;
+      padding-top: 10px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 14px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .control-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 7px;
+    }
+
+    .control-box {
+      min-height: 80px;
+      padding: 8px 7px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fbfdff;
+      text-align: center;
+    }
+
+    .control-box i {
+      color: var(--blue);
+      font-size: 22px;
+    }
+
+    .control-box:nth-child(2n) i { color: var(--orange); }
+    .control-box:nth-child(3n) i { color: var(--purple); }
+
+    .control-box h4 {
+      margin: 6px 0 0;
+      color: var(--navy);
+      font-size: 10px;
+      line-height: 1.08;
+      font-weight: 900;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .feature {
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--navy);
+      background: #f8fbff;
+      font-size: 8.8px;
+      line-height: 1.15;
+      font-weight: 900;
+    }
+
+    .feature i {
+      width: 20px;
+      flex: 0 0 20px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .dashboard {
+      padding: 10px 10px 10px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #34517e;
+      font-size: 9.5px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .stat i {
+      font-size: 20px;
+      color: var(--blue);
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      min-height: 136px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .donut {
+      width: 88px;
+      height: 88px;
+      overflow: visible;
+    }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 28;
+      transform: rotate(-90deg);
+      transform-origin: 44px 44px;
+    }
+
+    .donut-hole {
+      fill: #fff;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.4px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: var(--green);
+    }
+
+    .legend div:nth-child(2) span { background: var(--orange); }
+    .legend div:nth-child(3) span { background: var(--purple); }
+
+    .line-chart {
+      width: 100%;
+      height: 84px;
+    }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.15fr .8fr .74fr .58fr .64fr;
+      min-height: 26px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e7eef9;
+    }
+
+    .row:last-child { border-bottom: 0; }
+
+    .row.head {
+      background: #f7fbff;
+      color: #37517a;
+      font-size: 9.4px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: #d6f1d2;
+      color: #23753a;
+      font-size: 8.7px;
+      font-weight: 900;
+    }
+
+    .integrations {
+      padding: 0 42px;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 10.5px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 7px;
+      border-radius: 16px;
+      border: 1px solid var(--light-line);
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(3n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 44px;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 148px repeat(4, 1fr);
+      min-height: 76px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 14px;
+      border-right: 1px solid rgba(255,255,255,.38);
+      color: var(--gold);
+      font-size: 19px;
+      line-height: 1.08;
+      font-weight: 900;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 9px;
+      align-items: center;
+      padding: 10px 12px;
+      border-right: 1px solid rgba(255,255,255,.34);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+
+    .bottom-item i {
+      width: 28px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .bottom-item h3 {
+      margin: 0 0 3px;
+      color: #fff;
+      font-size: 9.4px;
+      line-height: 1.16;
+      font-weight: 900;
+    }
+
+    .bottom-item p {
+      margin: 0;
+      color: rgba(255,255,255,.95);
+      font-size: 7.9px;
+      line-height: 1.16;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      height: 44px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      padding: 0 24px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      min-width: 0;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.45);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 14px; font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="hero-image" src="attendance-timesheet-hardware-assets/attendance-timesheet-hardware-hero.svg" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="top-row">
+          <div class="brand">
+            <img class="mark" src="attendance-timesheet-hardware-assets/alitec-logo.jpeg" alt="Alitec" />
+            <div class="divider"></div>
+            <div class="title-wrap">
+              <h1>Odoo Attendance &amp;<br />Timesheet with<br />Hardware</h1>
+              <div class="subtitle">Biometric capture, daily in/out processing, Excel payroll exports, and site-ready timesheet control</div>
+              <div class="short-line"></div>
+            </div>
+          </div>
+          <div class="odoo">
+            <img class="odoo-logo" src="attendance-timesheet-hardware-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
+          </div>
+        </div>
+
+        <p class="intro">
+          Alitec's attendance and timesheet solution on Odoo helps operations teams connect biometric punch data, employee attendance control, and team-based timesheet work in one managed workflow. It brings device sync, daily in/out processing, and export-ready timesheet control into one cleaner operation flow.
+        </p>
+
+        <div class="quick-benefits">
+          <div class="quick-benefit">
+            <div class="round-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+            <h3>Direct device sync</h3>
+            <p>Bring biometric logs into Odoo with device, area, and connection visibility.</p>
+          </div>
+          <div class="quick-benefit">
+            <div class="round-icon"><i class="fa-solid fa-table-list"></i></div>
+            <h3>Daily attendance control</h3>
+            <p>Build one simple table with in/out time, status, and device traceability.</p>
+          </div>
+          <div class="quick-benefit">
+            <div class="round-icon"><i class="fa-solid fa-moon"></i></div>
+            <h3>Shift-aware processing</h3>
+            <p>Split day and night hours, preserve manual overrides, and review missing punches.</p>
+          </div>
+          <div class="quick-benefit">
+            <div class="round-icon"><i class="fa-solid fa-file-arrow-up"></i></div>
+            <h3>Timesheet-ready operations</h3>
+            <p>Import worker sheets from Excel or CSV and move them through approval.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>ZKTeco device registry</h3>
+        </div>
+        <p>Track devices, area, timezone, connection state, last signal, user count, and attendance count inside Odoo.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon orange"><i class="fa-solid fa-id-badge"></i></div>
+          <h3>Employee code mapping</h3>
+        </div>
+        <p>Match device PIN or code combinations back to Odoo employees for reliable log ownership.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon purple"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h3>Attendance log capture</h3>
+        </div>
+        <p>Download or sync raw punch logs, keep device references, and prepare the records for attendance processing.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon green"><i class="fa-solid fa-arrows-spin"></i></div>
+          <h3>Smart and punch processing</h3>
+        </div>
+        <p>Convert logs into attendance using either shift-aware smart logic or punch-state rules with tolerance handling.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon cyan"><i class="fa-solid fa-table"></i></div>
+          <h3>Simple attendance table</h3>
+        </div>
+        <p>Store one daily record per employee with device in and out details, worked hours, and completion status.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon orange"><i class="fa-solid fa-sun"></i></div>
+          <h3>Shift and team control</h3>
+        </div>
+        <p>Split day and night hours, preserve manual overrides, and apply current or dated team history in output.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon purple"><i class="fa-solid fa-file-excel"></i></div>
+          <h3>Excel export pack</h3>
+        </div>
+        <p>Generate staff and worker attendance sheets with check-in, device name, NT, OT, and period-ready layouts.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-top">
+          <div class="cap-icon"><i class="fa-solid fa-file-import"></i></div>
+          <h3>Bulk timesheet import</h3>
+        </div>
+        <p>Import site timesheets from Excel or CSV, auto-create workers, teams, and positions, then confirm and approve.</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-diagram-project"></i> Attendance Workflow</div>
+        <div class="workflow">
+          <div class="step-track">
+            <div class="step"><div class="step-number">1</div><h4>Connect<br />Device</h4></div>
+            <div class="step"><div class="step-number">2</div><h4>Sync<br />Logs</h4></div>
+            <div class="step"><div class="step-number">3</div><h4>Match<br />Employee</h4></div>
+            <div class="step"><div class="step-number">4</div><h4>Process<br />Daily In/Out</h4></div>
+            <div class="step"><div class="step-number">5</div><h4>Export<br />Attendance</h4></div>
+            <div class="step"><div class="step-number">6</div><h4>Review<br />Timesheets</h4></div>
+          </div>
+          <p class="workflow-note">One operating flow for biometric capture, attendance cleanup, shift handling, export, and team-based timesheet review.</p>
+
+          <div class="sub-title">Operational Controls</div>
+          <div class="control-grid">
+            <div class="control-box"><i class="fa-solid fa-hourglass-half"></i><h4>Late Minutes</h4></div>
+            <div class="control-box"><i class="fa-solid fa-triangle-exclamation"></i><h4>No Check Out</h4></div>
+            <div class="control-box"><i class="fa-solid fa-people-group"></i><h4>Team History</h4></div>
+            <div class="control-box"><i class="fa-solid fa-cloud-moon"></i><h4>Day / Night Split</h4></div>
+            <div class="control-box"><i class="fa-solid fa-gears"></i><h4>Background Jobs</h4></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-download"></i>Download device users</div>
+            <div class="feature"><i class="fa-solid fa-rotate"></i>Global recalculate</div>
+            <div class="feature"><i class="fa-solid fa-pen-to-square"></i>Manual override notes</div>
+            <div class="feature"><i class="fa-solid fa-building-user"></i>Area and timezone setup</div>
+            <div class="feature"><i class="fa-solid fa-user-plus"></i>Auto-create workers</div>
+            <div class="feature"><i class="fa-solid fa-square-check"></i>Approve imported sheets</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> Operational Dashboard</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Connected Devices</h4><div class="number">18<i class="fa-solid fa-server"></i></div></div>
+            <div class="stat"><h4>Daily Punches</h4><div class="number">2.4k<i class="fa-solid fa-fingerprint"></i></div></div>
+            <div class="stat"><h4>No Checkout</h4><div class="number">14<i class="fa-solid fa-triangle-exclamation"></i></div></div>
+            <div class="stat"><h4>Night Shift</h4><div class="number">96<i class="fa-solid fa-moon"></i></div></div>
+            <div class="stat"><h4>Imported Sheets</h4><div class="number">42<i class="fa-solid fa-file-import"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Attendance Status Mix</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 88 88" role="img" aria-label="Attendance status chart">
+                  <circle class="donut-ring" cx="44" cy="44" r="30" stroke="#35a853" stroke-dasharray="114.98 73.51" stroke-dashoffset="0"></circle>
+                  <circle class="donut-ring" cx="44" cy="44" r="30" stroke="#f18717" stroke-dasharray="33.93 154.56" stroke-dashoffset="-114.98"></circle>
+                  <circle class="donut-ring" cx="44" cy="44" r="30" stroke="#7a2f8f" stroke-dasharray="39.58 148.91" stroke-dashoffset="-148.91"></circle>
+                  <circle class="donut-hole" cx="44" cy="44" r="19"></circle>
+                </svg>
+                <div class="legend">
+                  <div><span></span>Complete 61%</div>
+                  <div><span></span>Pending review 18%</div>
+                  <div><span></span>Imported timesheets 21%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <h4>Monthly Processed Attendance</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 76 L76 60 L128 48 L180 42 L232 34 L284 24" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 76 L76 60 L128 48 L180 42 L232 34 L284 24 L284 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f">
+                  <circle cx="24" cy="76" r="4"/><circle cx="76" cy="60" r="4"/><circle cx="128" cy="48" r="4"/>
+                  <circle cx="180" cy="42" r="4"/><circle cx="232" cy="34" r="4"/><circle cx="284" cy="24" r="4"/>
+                </g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700">
+                  <text x="18" y="99">Jan</text><text x="70" y="99">Feb</text><text x="122" y="99">Mar</text>
+                  <text x="174" y="99">Apr</text><text x="226" y="99">May</text><text x="278" y="99">Jun</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Control Area</div><div>Source</div><div>Volume</div><div>Open</div><div>Status</div></div>
+            <div class="row"><div>Biometric Logs</div><div>Devices</div><div>2.4k</div><div>0</div><div class="pill">Stable</div></div>
+            <div class="row"><div>Simple Attendance</div><div>Processing</div><div>842</div><div>14</div><div class="pill">Review</div></div>
+            <div class="row"><div>Worker Export</div><div>Excel</div><div>132</div><div>6</div><div class="pill">Ready</div></div>
+            <div class="row"><div>Imported Timesheets</div><div>XLS / CSV</div><div>42</div><div>4</div><div class="pill">Approve</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:18px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-users"></i></div>Employees</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-user-clock"></i></div>Attendance</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-money-check-dollar"></i></div>Payroll</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-diagram-project"></i></div>Projects</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-lines"></i></div>Documents</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-arrow-up"></i></div>Import Tools</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-square-check"></i></div>Approvals</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Reporting</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-bolt"></i><div><h3>Faster Attendance Consolidation</h3><p>Reduce manual copying from devices and keep employee punch activity in one Odoo-controlled flow.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-file-excel"></i><div><h3>Payroll-Ready Export Output</h3><p>Prepare structured attendance sheets with check times, devices, and working-hour breakdowns.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-shield-halved"></i><div><h3>Better Shift and Exception Control</h3><p>Track late minutes, no-checkout cases, manual overrides, and recalculation across date ranges.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-people-group"></i><div><h3>Stronger Team and Site Visibility</h3><p>Import site timesheets, apply team structure, and move records through review and approval.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js" data-flyer-editor-script data-flyer-version="2026-07-07-v2"></script>
+</body>
+</html>

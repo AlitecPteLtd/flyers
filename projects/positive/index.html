@@ -500,17 +500,18 @@
     .donut {
       width: 92px;
       height: 92px;
-      border-radius: 50%;
-      background: conic-gradient(var(--green) 0 68%, var(--blue) 68% 100%);
-      position: relative;
+      overflow: visible;
     }
 
-    .donut::after {
-      content: "";
-      position: absolute;
-      inset: 25px;
-      border-radius: 50%;
-      background: #fff;
+    .donut-ring {
+      fill: none;
+      stroke-width: 30;
+      transform: rotate(-90deg);
+      transform-origin: 46px 46px;
+    }
+
+    .donut-hole {
+      fill: #fff;
     }
 
     .legend {
@@ -595,7 +596,7 @@
       display: grid;
       place-items: center;
       width: 54px;
-      height: 54px;
+      height: 44px;
       margin: 0 auto 7px;
       border-radius: 15px;
       border: 1px solid #cbd9ef;
@@ -670,20 +671,20 @@
       background: var(--navy);
       color: #fff;
       padding: 0 44px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
     .contact {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      height: 28px;
+      gap: 10px;
+      height: 22px;
       border-right: 1px solid rgba(255,255,255,.55);
     }
 
     .contact:last-child { border-right: 0; }
-    .contact i { width: 22px; font-size: 19px; text-align: center; }
+    .contact i { width: 18px; font-size: 16px; text-align: center; }
   </style>
 </head>
 <body>
@@ -831,7 +832,11 @@
             <div class="chart-card">
               <h4>Project Status Overview</h4>
               <div class="donut-wrap">
-                <div class="donut"></div>
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Project status chart">
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="132.45 62.33" stroke-dashoffset="0"></circle>
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2879e3" stroke-dasharray="62.33 132.45" stroke-dashoffset="-132.45"></circle>
+                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                </svg>
                 <div class="legend">
                   <div><span></span>Ongoing Projects (87) 68%</div>
                   <div><span></span>Closing / Closed (41) 32%</div>
@@ -847,7 +852,7 @@
                 <path d="M24 76 L62 58 L100 44 L138 40 L176 34 L214 30 L252 24 L286 18" stroke="#7a2f8f" stroke-width="3" fill="none"/>
                 <path d="M24 76 L62 58 L100 44 L138 40 L176 34 L214 30 L252 24 L286 18 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
                 <g fill="#7a2f8f"><circle cx="24" cy="76" r="4"/><circle cx="62" cy="58" r="4"/><circle cx="100" cy="44" r="4"/><circle cx="138" cy="40" r="4"/><circle cx="176" cy="34" r="4"/><circle cx="214" cy="30" r="4"/><circle cx="252" cy="24" r="4"/><circle cx="286" cy="18" r="4"/></g>
-                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="252" y="99">Jun</text></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="211" y="99">Jun</text><text x="249" y="99">Jul</text><text x="283" y="99">Aug</text></g>
               </svg>
             </div>
           </div>
@@ -894,5 +899,6 @@
       <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
     </footer>
   </main>
+  <script src="../../editor/flyer-editor.js" data-flyer-editor-script></script>
 </body>
 </html>
