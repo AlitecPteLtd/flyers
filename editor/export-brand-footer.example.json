@@ -1,0 +1,8 @@
+{
+  "contacts": [
+    { "icon": "fa-regular fa-envelope", "text": "hello@client.com" },
+    { "icon": "fa-solid fa-phone", "text": "+65 6000 0000" },
+    { "icon": "fa-solid fa-globe", "text": "www.client.com" },
+    { "icon": "fa-solid fa-location-dot", "text": "Singapore" }
+  ]
+}

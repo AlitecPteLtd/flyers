@@ -94,6 +94,16 @@
         color: #07194f;
       }
 
+      .flyer-editor-toolbar button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+
+      .flyer-editor-toolbar button.pdf-export {
+        font-size: 12px;
+        padding: 8px 9px;
+      }
+
       .flyer-editor-status {
         min-width: 78px;
         font-size: 12px;
@@ -957,6 +967,321 @@
     return new Blob([bytes], { type: mime });
   }
 
+  const PDF_EXPORT_VARIANTS = {
+    full: "full",
+    clean: "clean",
+    alternate: "alternate",
+  };
+
+  function getBrandingElements() {
+    const page = document.querySelector(".page") || document;
+    return {
+      mark: page.querySelector(".mark"),
+      odooWrap: page.querySelector(".odoo"),
+      odooLogo: page.querySelector(".odoo-logo"),
+      footer: page.querySelector(".footer"),
+      divider: page.querySelector(".brand > .divider"),
+    };
+  }
+
+  function snapshotBrandingElements(els) {
+    const snap = {};
+    if (els.mark) {
+      snap.mark = {
+        display: els.mark.style.display,
+        src: els.mark.getAttribute("src"),
+        alt: els.mark.getAttribute("alt"),
+      };
+    }
+    if (els.odooWrap) {
+      snap.odooWrap = { display: els.odooWrap.style.display };
+    }
+    if (els.odooLogo) {
+      snap.odooLogo = {
+        display: els.odooLogo.style.display,
+        src: els.odooLogo.getAttribute("src"),
+        alt: els.odooLogo.getAttribute("alt"),
+      };
+    }
+    if (els.footer) {
+      snap.footer = { display: els.footer.style.display, html: els.footer.innerHTML };
+    }
+    if (els.divider) {
+      snap.divider = { display: els.divider.style.display };
+    }
+    return snap;
+  }
+
+  function restoreBrandingElements(els, snap) {
+    if (els.mark && snap.mark) {
+      els.mark.style.display = snap.mark.display;
+      if (snap.mark.src) {
+        els.mark.setAttribute("src", snap.mark.src);
+      }
+      if (snap.mark.alt) {
+        els.mark.setAttribute("alt", snap.mark.alt);
+      }
+    }
+    if (els.odooWrap && snap.odooWrap) {
+      els.odooWrap.style.display = snap.odooWrap.display;
+    }
+    if (els.odooLogo && snap.odooLogo) {
+      els.odooLogo.style.display = snap.odooLogo.display;
+      if (snap.odooLogo.src) {
+        els.odooLogo.setAttribute("src", snap.odooLogo.src);
+      }
+      if (snap.odooLogo.alt) {
+        els.odooLogo.setAttribute("alt", snap.odooLogo.alt);
+      }
+    }
+    if (els.footer && snap.footer) {
+      els.footer.style.display = snap.footer.display;
+      els.footer.innerHTML = snap.footer.html;
+    }
+    if (els.divider && snap.divider) {
+      els.divider.style.display = snap.divider.display;
+    }
+  }
+
+  function hideBrandingNode(node) {
+    if (node) {
+      node.style.setProperty("display", "none", "important");
+    }
+  }
+
+  function applyCleanExportBranding(els) {
+    hideBrandingNode(els.mark);
+    hideBrandingNode(els.odooWrap);
+    hideBrandingNode(els.odooLogo);
+    hideBrandingNode(els.footer);
+    hideBrandingNode(els.divider);
+  }
+
+  function getAssetsBaseFromMark(mark) {
+    const src = mark.getAttribute("src") || "";
+    const slash = src.lastIndexOf("/");
+    return slash >= 0 ? src.slice(0, slash + 1) : "";
+  }
+
+  function escapeExportHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function parseFooterExportConfig(raw) {
+    if (!raw) {
+      return null;
+    }
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) {
+        return { contacts: parsed };
+      }
+      if (parsed && Array.isArray(parsed.contacts)) {
+        return parsed;
+      }
+    } catch (error) {
+      return null;
+    }
+    return null;
+  }
+
+  function renderFooterExportContacts(footer, contacts) {
+    footer.innerHTML = contacts
+      .map(function (contact) {
+        const icon =
+          contact && contact.icon ? contact.icon : "fa-solid fa-circle";
+        const text =
+          contact && contact.text
+            ? contact.text
+            : typeof contact === "string"
+              ? contact
+              : "";
+        return (
+          '<div class="contact"><i class="' +
+          icon +
+          '"></i>' +
+          escapeExportHtml(text) +
+          "</div>"
+        );
+      })
+      .join("");
+  }
+
+  function imageResourceExists(url) {
+    return new Promise(function (resolve) {
+      const image = new Image();
+      image.onload = function () {
+        resolve(true);
+      };
+      image.onerror = function () {
+        resolve(false);
+      };
+      image.src = url;
+    });
+  }
+
+  function waitForBrandingImage(image) {
+    if (!image || image.complete) {
+      return Promise.resolve();
+    }
+    return new Promise(function (resolve) {
+      image.addEventListener("load", resolve, { once: true });
+      image.addEventListener("error", resolve, { once: true });
+    });
+  }
+
+  async function resolveExportImagePath(basePath, explicitPath, baseName) {
+    if (explicitPath === "") {
+      return "";
+    }
+    const candidates = [];
+    if (explicitPath) {
+      candidates.push(explicitPath);
+    }
+    ["png", "jpg", "jpeg", "webp", "svg"].forEach(function (ext) {
+      candidates.push(basePath + baseName + "." + ext);
+    });
+    for (let i = 0; i < candidates.length; i += 1) {
+      const candidate = candidates[i];
+      const url = new URL(candidate, window.location.href).href;
+      if (await imageResourceExists(url)) {
+        return candidate;
+      }
+    }
+    return null;
+  }
+
+  async function loadAlternateFooterConfig() {
+    const inline =
+      editorScript && editorScript.getAttribute("data-export-alt-footer");
+    if (inline) {
+      const parsed = parseFooterExportConfig(inline);
+      if (parsed) {
+        return parsed;
+      }
+    }
+    const mark = document.querySelector(".mark");
+    if (!mark) {
+      return null;
+    }
+    const base = getAssetsBaseFromMark(mark);
+    const footerUrl = new URL(
+      base + "export-brand-footer.json",
+      window.location.href
+    ).href;
+    try {
+      const response = await fetch(footerUrl);
+      if (response.ok) {
+        return parseFooterExportConfig(await response.text());
+      }
+    } catch (error) {
+      return null;
+    }
+    return null;
+  }
+
+  async function resolveAlternateExportBranding() {
+    const mark = document.querySelector(".mark");
+    const base = mark ? getAssetsBaseFromMark(mark) : "";
+    const altMark =
+      editorScript && editorScript.getAttribute("data-export-alt-mark");
+    const altOdooAttr =
+      editorScript && editorScript.getAttribute("data-export-alt-odoo");
+    const markPath = await resolveExportImagePath(
+      base,
+      altMark,
+      "export-brand-mark"
+    );
+    let odooPath = null;
+    if (altOdooAttr === "") {
+      odooPath = "";
+    } else if (altOdooAttr) {
+      odooPath = await resolveExportImagePath(base, altOdooAttr, "export-brand-odoo");
+    } else {
+      odooPath = await resolveExportImagePath(base, null, "export-brand-odoo");
+    }
+    const footer = await loadAlternateFooterConfig();
+    return {
+      markPath: markPath,
+      odooPath: odooPath,
+      footer: footer,
+    };
+  }
+
+  async function hasAlternateExportBranding() {
+    const branding = await resolveAlternateExportBranding();
+    return !!(
+      branding.markPath ||
+      (branding.footer && branding.footer.contacts && branding.footer.contacts.length)
+    );
+  }
+
+  async function applyAlternateExportBranding(els, branding) {
+    if (branding.markPath && els.mark) {
+      els.mark.setAttribute("src", branding.markPath);
+      els.mark.style.removeProperty("display");
+      if (els.divider) {
+        els.divider.style.removeProperty("display");
+      }
+      await waitForBrandingImage(els.mark);
+    } else {
+      hideBrandingNode(els.mark);
+      hideBrandingNode(els.divider);
+    }
+
+    if (branding.odooPath === "") {
+      hideBrandingNode(els.odooWrap);
+    } else if (branding.odooPath && els.odooLogo) {
+      els.odooLogo.setAttribute("src", branding.odooPath);
+      if (els.odooWrap) {
+        els.odooWrap.style.removeProperty("display");
+      }
+      await waitForBrandingImage(els.odooLogo);
+    } else {
+      hideBrandingNode(els.odooWrap);
+    }
+
+    if (branding.footer && branding.footer.contacts && els.footer) {
+      renderFooterExportContacts(els.footer, branding.footer.contacts);
+      els.footer.style.removeProperty("display");
+    }
+  }
+
+  async function withExportBranding(variant, task) {
+    if (!variant || variant === PDF_EXPORT_VARIANTS.full) {
+      return task();
+    }
+
+    const els = getBrandingElements();
+    const snapshot = snapshotBrandingElements(els);
+
+    try {
+      if (variant === PDF_EXPORT_VARIANTS.clean) {
+        applyCleanExportBranding(els);
+      } else if (variant === PDF_EXPORT_VARIANTS.alternate) {
+        const branding = await resolveAlternateExportBranding();
+        const hasAlternate =
+          branding.markPath ||
+          (branding.footer &&
+            branding.footer.contacts &&
+            branding.footer.contacts.length);
+        if (!hasAlternate) {
+          throw new Error(
+            "No alternate branding found. Add export-brand-mark.png and export-brand-footer.json to the project assets folder, or set data-export-alt-mark / data-export-alt-footer on the editor script tag."
+          );
+        }
+        await applyAlternateExportBranding(els, branding);
+        await waitForCaptureAssets();
+      }
+      return await task();
+    } finally {
+      restoreBrandingElements(els, snapshot);
+    }
+  }
+
   async function withCaptureUi(task) {
     const toolbar = document.querySelector(".flyer-editor-toolbar");
     const wasEditing = isEditMode;
@@ -1102,33 +1427,36 @@
     });
   }
 
-  async function capturePageAsDataUrlWithFallback(page, preferredScale) {
-    try {
-      await ensureHtmlToImageTool();
-      return await withCaptureUi(function () {
-        return capturePageAsDataUrl(page, preferredScale);
-      });
-    } catch (htmlToImageError) {
-      console.warn("html-to-image export failed; falling back to html2canvas.", htmlToImageError);
-      await ensureCanvasTool();
-      const capture = await withCaptureUi(function () {
-        return capturePage(page, Math.ceil(preferredScale));
-      });
-      return await canvasToDataUrlAsync(createFlattenedCanvas(capture.canvas));
-    }
+  async function capturePageAsDataUrlWithFallback(page, preferredScale, exportVariant) {
+    const variant = exportVariant || PDF_EXPORT_VARIANTS.full;
+    const captureTask = async function () {
+      try {
+        await ensureHtmlToImageTool();
+        return await capturePageAsDataUrl(page, preferredScale);
+      } catch (htmlToImageError) {
+        console.warn("html-to-image export failed; falling back to html2canvas.", htmlToImageError);
+        await ensureCanvasTool();
+        const capture = await capturePage(page, Math.ceil(preferredScale));
+        return await canvasToDataUrlAsync(createFlattenedCanvas(capture.canvas));
+      }
+    };
+
+    return await withCaptureUi(function () {
+      return withExportBranding(variant, captureTask);
+    });
   }
 
-  async function downloadPdf() {
+  async function downloadPdfWithVariant(exportVariant, filenameSuffix, statusLabel) {
     if (isPdfExporting) return;
     isPdfExporting = true;
-    updateStatus("Preparing PDF");
+    updateStatus(statusLabel || "Preparing PDF");
 
     try {
       await ensurePdfTools();
       await waitForCaptureAssets();
 
       const page = document.querySelector(".page") || document.body;
-      const imageData = await capturePageAsDataUrlWithFallback(page, 2.5);
+      const imageData = await capturePageAsDataUrlWithFallback(page, 2.5, exportVariant);
       if (!imageData) {
         throw new Error("Unable to flatten flyer image for PDF export");
       }
@@ -1144,7 +1472,7 @@
       const pageHeight = pdf.internal.pageSize.getHeight();
       pdf.addImage(imageData, "PNG", 0, 0, pageWidth, pageHeight, undefined, "SLOW");
       const pdfBlob = pdf.output("blob");
-      downloadBlob(pdfBlob, pageName() + "-a4-flat.pdf");
+      downloadBlob(pdfBlob, pageName() + filenameSuffix + ".pdf");
       updateStatus("PDF downloaded");
     } catch (error) {
       console.error(error);
@@ -1216,6 +1544,18 @@
     }
   }
 
+  async function refreshAlternatePdfButton(toolbar) {
+    const button = toolbar.querySelector("[data-flyer-pdf-alt]");
+    if (!button) {
+      return;
+    }
+    const hasAlternate = await hasAlternateExportBranding();
+    button.disabled = !hasAlternate;
+    button.title = hasAlternate
+      ? "Download PDF with alternate logo and footer from project assets"
+      : "Add export-brand-mark.png and export-brand-footer.json to the project assets folder, or set data-export-alt-mark / data-export-alt-footer on the editor script tag.";
+  }
+
   function bindToolbarShortcuts() {
     document.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") {
@@ -1240,7 +1580,9 @@
       <button type="button" tabindex="-1" data-flyer-toggle>Edit Text</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-save>Save Draft</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-load>Load Draft</button>
-      <button type="button" tabindex="-1" class="secondary" data-flyer-pdf>Download A4 PDF</button>
+      <button type="button" tabindex="-1" class="secondary pdf-export" data-flyer-pdf-full title="Download PDF with Alitec logo, Odoo logo, and footer">PDF (Alitec)</button>
+      <button type="button" tabindex="-1" class="secondary pdf-export" data-flyer-pdf-clean title="Hide Alitec logo, Odoo logo, and footer contacts">PDF (Clean)</button>
+      <button type="button" tabindex="-1" class="secondary pdf-export" data-flyer-pdf-alt title="Use alternate logo and footer from project assets">PDF (Alt Brand)</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-png>Download Print PNG</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-update-html>Update HTML File</button>
       <button type="button" tabindex="-1" class="secondary" data-flyer-download>Download HTML</button>
@@ -1258,7 +1600,22 @@
     });
     toolbar.querySelector("[data-flyer-save]").addEventListener("click", saveDraft);
     toolbar.querySelector("[data-flyer-load]").addEventListener("click", loadDraft);
-    toolbar.querySelector("[data-flyer-pdf]").addEventListener("click", downloadPdf);
+    toolbar.querySelector("[data-flyer-pdf-full]").addEventListener("click", function () {
+      downloadPdfWithVariant(PDF_EXPORT_VARIANTS.full, "-a4-alitec", "Preparing Alitec PDF");
+    });
+    toolbar.querySelector("[data-flyer-pdf-clean]").addEventListener("click", function () {
+      downloadPdfWithVariant(PDF_EXPORT_VARIANTS.clean, "-a4-clean", "Preparing clean PDF");
+    });
+    toolbar
+      .querySelector("[data-flyer-pdf-alt]")
+      .addEventListener("click", function () {
+        downloadPdfWithVariant(
+          PDF_EXPORT_VARIANTS.alternate,
+          "-a4-alt-brand",
+          "Preparing alt-brand PDF"
+        );
+      });
+    refreshAlternatePdfButton(toolbar);
     toolbar.querySelector("[data-flyer-png]").addEventListener("click", downloadPrintPng);
     toolbar.querySelector("[data-flyer-update-html]").addEventListener("click", updateHtmlFile);
     toolbar.querySelector("[data-flyer-download]").addEventListener("click", downloadHtml);
