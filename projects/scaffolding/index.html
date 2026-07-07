@@ -34,29 +34,83 @@
       height: 1536px;
       margin: 0 auto;
       overflow: hidden;
-      background: #fff;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(15, 134, 181, .1), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
     }
 
-    .header {
-      height: 172px;
-      display: grid;
-      grid-template-columns: 150px 1fr 170px;
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 500px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 542px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 35%, rgba(255,255,255,.78) 55%, rgba(255,255,255,.12) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 356px;
+      width: 1120px;
+      height: 92px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 538px;
+      padding: 26px 32px 0 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 24px 30px 14px;
-      border-bottom: 3px solid var(--blue);
+      gap: 18px;
     }
 
-    .logo {
-      width: 116px;
-      height: 116px;
+    .mark {
+      width: 120px;
+      height: 120px;
       object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 120px;
+      background: var(--navy);
+      opacity: .9;
     }
 
     h1 {
-      margin: 0 0 9px;
+      margin: 3px 0 8px;
       color: var(--navy);
-      font-size: 42px;
+      font-size: 46px;
       line-height: .98;
       font-weight: 900;
       text-transform: uppercase;
@@ -64,14 +118,21 @@
     }
 
     .subtitle {
-      color: #4f5460;
+      color: var(--ink);
       font-size: 18px;
-      line-height: 1.25;
+      line-height: 1.28;
       font-weight: 700;
     }
 
-    .odoo-wrap {
-      justify-self: end;
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 15px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      width: 168px;
       text-align: right;
       color: #60646c;
       font-size: 15px;
@@ -80,66 +141,81 @@
 
     .odoo-logo {
       display: block;
-      width: 150px;
+      width: 168px;
+      height: auto;
       margin-top: 6px;
     }
 
-    .hero {
-      position: relative;
-      height: 404px;
+    .intro {
+      width: 450px;
+      margin-top: 34px;
+      font-size: 16px;
+      line-height: 1.45;
+      color: #07194f;
+    }
+
+    .intro strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      font-size: 17px;
+      line-height: 1.34;
+    }
+
+    .quick-benefits {
       display: grid;
-      grid-template-columns: 38% 62%;
+      grid-template-columns: repeat(4, 1fr);
+      width: 548px;
+      margin-top: 16px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
       overflow: hidden;
     }
 
-    .hero-copy {
-      position: relative;
-      z-index: 2;
-      padding: 28px 32px;
-      background: linear-gradient(90deg, #fff 0%, #fff 82%, rgba(255,255,255,.72) 100%);
+    .quick-benefit {
+      min-height: 142px;
+      padding: 11px 14px 10px;
+      border-right: 1px dashed #b7c8e1;
     }
 
-    .hero-copy h2 {
-      margin: 0 0 10px;
+    .quick-benefit:last-child { border-right: 0; }
+
+    .round-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 6px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 16px; }
+
+    .quick-benefit h3 {
+      margin: 0 0 6px;
       color: var(--navy);
-      font-size: 34px;
-      line-height: 1.04;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .hero-tag {
-      margin: 0 0 14px;
-      color: var(--blue);
-      font-size: 18px;
-      line-height: 1.36;
+      font-size: 12.4px;
+      line-height: 1.08;
       font-weight: 900;
     }
 
-    .hero-copy p {
+    .quick-benefit p {
       margin: 0;
-      font-size: 15.5px;
-      line-height: 1.58;
-      color: #0b1a42;
-    }
-
-    .hero-image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 1;
-      width: 682px;
-      height: 404px;
-      object-fit: cover;
-      object-position: center center;
+      color: #07194f;
+      font-size: 8.5px;
+      line-height: 1.18;
+      font-weight: 700;
     }
 
     .section-title {
       display: flex;
       align-items: center;
       gap: 10px;
-      margin: 18px 31px 12px;
+      margin: 14px 31px 12px;
       color: var(--navy);
       font-size: 18px;
       font-weight: 900;
@@ -407,15 +483,10 @@
       overflow: visible;
     }
 
-    .donut-ring {
-      fill: none;
-      stroke-width: 30;
-      transform: rotate(-90deg);
-      transform-origin: 46px 46px;
-    }
-
-    .donut-hole {
-      fill: #fff;
+    .donut-segment {
+      stroke: #fff;
+      stroke-width: .8;
+      stroke-linejoin: round;
     }
 
     .legend {
@@ -479,56 +550,54 @@
       font-weight: 900;
     }
 
-    .benefits-heading {
-      margin: 16px 31px -2px;
-      color: var(--navy);
-      font-size: 22px;
-      line-height: 1;
-      font-weight: 900;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .benefits {
-      margin: 10px 31px 14px;
-      border: 1px solid #82b7ea;
-      border-radius: 8px;
-      background: #fff;
+    .bottom-benefits {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 14px 31px 0;
+      min-height: 74px;
+      border-radius: 11px;
       overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
     }
 
-    .benefit {
-      min-height: 104px;
-      display: grid;
-      grid-template-columns: 74px 1fr;
-      gap: 9px;
-      align-items: center;
-      padding: 13px 14px;
-      border-right: 1px solid #b9d5f0;
-    }
-
-    .benefit:last-child { border-right: 0; }
-
-    .benefit i {
+    .benefit-title {
       display: grid;
       place-items: center;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      color: var(--navy);
-      background: #eef5ff;
-      font-size: 30px;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
     }
 
-    .benefit p {
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .bottom-item p {
       margin: 0;
-      color: var(--navy);
-      font-size: 11.6px;
-      line-height: 1.35;
-      font-weight: 800;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
     }
 
     .footer {
@@ -536,15 +605,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 60px;
+      height: 54px;
       display: grid;
-      grid-template-columns: 1fr 1.6fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
       align-items: center;
-      gap: 16px;
-      padding: 0 34px;
+      padding: 0 44px;
       color: #fff;
-      background: linear-gradient(90deg, #062a6f, #0b3b91);
-      font-size: 18px;
+      background: var(--navy);
+      font-size: 14px;
       font-weight: 800;
     }
 
@@ -552,44 +620,67 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
       white-space: nowrap;
     }
 
-    .footer-center {
-      text-align: center;
-      font-size: 19px;
-      font-weight: 900;
-    }
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 18px; font-size: 16px; text-align: center; }
   </style>
 </head>
 <body>
   <main class="page">
-    <header class="header">
-      <img class="logo" src="scaffolding-assets/alitec-logo.jpeg" alt="Alitec" />
-      <div>
-        <h1>Scaffolding Rental &amp;<br />Project Claims</h1>
-        <div class="subtitle">End-to-End Rental, Warehouse, Project and Billing Control with Odoo</div>
-      </div>
-      <div class="odoo-wrap">
-        Powered by
-        <img class="odoo-logo" src="scaffolding-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
-      </div>
-    </header>
+    <img class="hero-image" src="scaffolding-assets/scaffolding-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
 
     <section class="hero">
-      <div class="hero-copy">
-        <h2>1. Rental Operations &amp;<br />Project Claims</h2>
-        <p class="hero-tag">Manage rental orders, site deliveries, returns, claims, and billing in one platform.</p>
-        <p>
-          This customized solution extends Odoo Sales, Purchase, Inventory and
-          Invoicing for scaffolding businesses. It manages rental quotations,
-          customer POs, rental orders, deliveries, returns, repair and lost
-          charges, work done, claims, intercompany warehouse movements, and
-          statement of account generation.
-        </p>
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="scaffolding-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>Scaffolding Rental &amp;<br />Project Claims</h1>
+            <div class="subtitle">End-to-End Rental, Warehouse, Project and Billing Control with Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo">
+          <img class="odoo-logo" src="scaffolding-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
+        </div>
       </div>
-      <img class="hero-image" src="scaffolding-assets/scaffolding-hero.png" alt="" />
+
+      <p class="intro">
+        <strong>Manage rental orders, site deliveries, returns, claims, and billing in one platform.</strong>
+        Alitec's scaffolding solution on Odoo connects rental quotations, customer POs,
+        rental orders, deliveries, returns, repair and lost charges, project claims,
+        intercompany warehouse movement, and statement of account generation.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+          <h3>Rental Order Flow</h3>
+          <p>Quotation, customer PO, rental order, return, and recurring billing stay linked.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-truck"></i></div>
+          <h3>Delivery Control</h3>
+          <p>Track site dispatches, returns, repair, loss, and over-return handling.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+          <h3>Project Claims</h3>
+          <p>Manage work done, dismantling records, claims, and certificates.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
+          <h3>Billing Visibility</h3>
+          <p>Support rental billing by density, delivery percentage, and monthly cycles.</p>
+        </div>
+      </div>
     </section>
 
     <div class="section-title">Key Capabilities <span class="dot"></span></div>
@@ -663,11 +754,10 @@
             <h4>Rental Status</h4>
             <div class="donut-wrap">
               <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Rental status chart">
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#086bc3" stroke-dasharray="124.66 70.12" stroke-dashoffset="0"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#0ca3a8" stroke-dasharray="46.75 148.03" stroke-dashoffset="-124.66"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#f6aa17" stroke-dasharray="23.37 171.41" stroke-dashoffset="-171.41"></circle>
-                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
-                </svg>
+                <path class="donut-segment" fill="#086bc3" d="M 46.00 4.00 A 42 42 0 1 1 13.14 72.16 L 29.57 59.08 A 21 21 0 1 0 46.00 25.00 Z"></path>
+                <path class="donut-segment" fill="#0ca3a8" d="M 13.14 72.16 A 42 42 0 0 1 16.87 15.75 L 31.43 30.87 A 21 21 0 0 0 29.57 59.08 Z"></path>
+                <path class="donut-segment" fill="#f6aa17" d="M 16.87 15.75 A 42 42 0 0 1 46.00 4.00 L 46.00 25.00 A 21 21 0 0 0 31.43 30.87 Z"></path>
+              </svg>
               <div class="legend">
                 <div><span></span>On Rent 64.3%</div>
                 <div><span></span>Available 23.5%</div>
@@ -700,18 +790,31 @@
       </div>
     </section>
 
-    <div class="benefits-heading">Business Benefits</div>
-    <section class="benefits">
-      <div class="benefit"><i class="fa-solid fa-cube"></i><p>Better stock visibility and rental balance control</p></div>
-      <div class="benefit"><i class="fa-solid fa-file-circle-check"></i><p>Faster project claim preparation and certification</p></div>
-      <div class="benefit"><i class="fa-solid fa-calculator"></i><p>More accurate invoicing for rental, repair, and loss</p></div>
-      <div class="benefit"><i class="fa-solid fa-users"></i><p>Stronger coordination across sales, warehouse, and finance</p></div>
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-cube"></i>
+        <div><h3>Better Stock Visibility</h3><p>Control rental balances, site stock, repair items, and return gaps.</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-file-circle-check"></i>
+        <div><h3>Faster Project Claims</h3><p>Prepare claim documents and certificates with less manual tracking.</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-calculator"></i>
+        <div><h3>More Accurate Billing</h3><p>Invoice rental, repair, loss, and project charges from one flow.</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-users"></i>
+        <div><h3>Stronger Coordination</h3><p>Keep sales, warehouse, project, and finance teams aligned.</p></div>
+      </div>
     </section>
 
     <footer class="footer">
-      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
-      <div class="footer-center">Power Your Scaffolding Business with Odoo</div>
       <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
     </footer>
   </main>
   <script src="../../editor/flyer-editor.js" data-flyer-editor-script data-flyer-version="2026-07-07-v1"></script>

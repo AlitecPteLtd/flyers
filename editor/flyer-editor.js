@@ -34,6 +34,7 @@
   const storageKey = STORAGE_PREFIX + pageKey + ":" + draftVersion;
   let isEditMode = false;
   let isPdfExporting = false;
+  let isPngExporting = false;
 
   function injectStyles() {
     const style = document.createElement("style");
@@ -44,8 +45,11 @@
         bottom: 18px;
         z-index: 9999;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
         gap: 8px;
         align-items: center;
+        max-width: calc(100vw - 36px);
         padding: 10px 12px;
         border-radius: 14px;
         background: rgba(7, 25, 79, 0.94);
@@ -241,12 +245,274 @@
     const link = document.createElement("a");
     link.href = url;
     link.download = filename;
+    link.rel = "noopener";
     document.body.appendChild(link);
-    link.click();
+    link.dispatchEvent(
+      new MouseEvent("click", {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      })
+    );
     link.remove();
     window.setTimeout(function () {
       URL.revokeObjectURL(url);
-    }, 1000);
+    }, 60000);
+  }
+
+  function isFileProtocol() {
+    return window.location.protocol === "file:";
+  }
+
+  function absoluteUrl(url) {
+    try {
+      return new URL(url, window.location.href).href;
+    } catch (error) {
+      return url;
+    }
+  }
+
+  function extractCssUrl(value) {
+    const match = /url\(["']?([^"')]+)["']?\)/.exec(value || "");
+    return match ? match[1] : "";
+  }
+
+  async function imageUrlToDataUrl(url) {
+    if (!url || url.startsWith("data:")) {
+      return url;
+    }
+
+    const absolute = absoluteUrl(url);
+
+    if (!isFileProtocol()) {
+      try {
+        const response = await fetch(absolute);
+        if (response.ok) {
+          const blob = await response.blob();
+          return await new Promise(function (resolve, reject) {
+            const reader = new FileReader();
+            reader.onload = function () {
+              resolve(reader.result);
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(blob);
+          });
+        }
+      } catch (error) {
+        // Fall through to image-element conversion.
+      }
+    }
+
+    return new Promise(function (resolve) {
+      const image = new Image();
+      image.onload = function () {
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = image.naturalWidth || image.width;
+          canvas.height = image.naturalHeight || image.height;
+          canvas.getContext("2d").drawImage(image, 0, 0);
+          resolve(canvas.toDataURL("image/png"));
+        } catch (error) {
+          resolve(absolute);
+        }
+      };
+      image.onerror = function () {
+        resolve(absolute);
+      };
+      if (!isFileProtocol()) {
+        image.crossOrigin = "anonymous";
+      }
+      image.src = absolute;
+    });
+  }
+
+  async function inlineRenderableImages(root) {
+    const restores = [];
+
+    await Promise.all(
+      Array.from(root.querySelectorAll("img[src]")).map(async function (image) {
+        const original = image.getAttribute("src");
+        if (!original || original.startsWith("data:")) {
+          return;
+        }
+        const dataUrl = await imageUrlToDataUrl(original);
+        if (dataUrl && dataUrl !== original) {
+          restores.push(function () {
+            image.setAttribute("src", original);
+          });
+          image.setAttribute("src", dataUrl);
+        }
+      })
+    );
+
+    await Promise.all(
+      Array.from(root.querySelectorAll("*")).map(async function (node) {
+        const backgroundImage = window.getComputedStyle(node).backgroundImage;
+        if (!backgroundImage || backgroundImage === "none" || backgroundImage.indexOf("url(") === -1) {
+          return;
+        }
+
+        const originalUrl = extractCssUrl(backgroundImage);
+        if (!originalUrl || originalUrl.startsWith("data:")) {
+          return;
+        }
+
+        const dataUrl = await imageUrlToDataUrl(originalUrl);
+        if (!dataUrl || dataUrl === originalUrl) {
+          return;
+        }
+
+        const previous = node.style.backgroundImage;
+        restores.push(function () {
+          node.style.backgroundImage = previous;
+        });
+        node.style.backgroundImage = 'url("' + dataUrl + '")';
+      })
+    );
+
+    return function restoreInlinedImages() {
+      restores.reverse().forEach(function (restore) {
+        restore();
+      });
+    };
+  }
+
+  function waitForCaptureAssets() {
+    const waits = [];
+    if (document.fonts && document.fonts.ready) {
+      waits.push(document.fonts.ready);
+    }
+    Array.from(document.images).forEach(function (image) {
+      if (!image.complete) {
+        waits.push(
+          new Promise(function (resolve) {
+            image.addEventListener("load", resolve, { once: true });
+            image.addEventListener("error", resolve, { once: true });
+          })
+        );
+      }
+    });
+    return Promise.all(waits);
+  }
+
+  function getMaxCaptureScale(page, preferredScale) {
+    const width = page.offsetWidth || page.scrollWidth || 1024;
+    const height = page.offsetHeight || page.scrollHeight || 1536;
+    const maxDimension = 4096;
+    const maxArea = 16777216;
+    let scale = preferredScale;
+    while (
+      scale > 1 &&
+      (width * scale > maxDimension ||
+        height * scale > maxDimension ||
+        width * height * scale * scale > maxArea)
+    ) {
+      scale -= 1;
+    }
+    return Math.max(1, scale);
+  }
+
+  function getCaptureOptions(page, scale) {
+    const fileMode = isFileProtocol();
+    return {
+      backgroundColor: "#ffffff",
+      scale: scale,
+      useCORS: !fileMode,
+      allowTaint: fileMode,
+      logging: false,
+      imageTimeout: 15000,
+      ignoreElements: function (node) {
+        return !!node.closest && !!node.closest(".flyer-editor-toolbar");
+      },
+      onclone: function (doc) {
+        doc.querySelectorAll("img").forEach(function (image) {
+          if (!image.getAttribute("src")) return;
+          if (fileMode) {
+            image.removeAttribute("crossorigin");
+            return;
+          }
+          if (!image.getAttribute("crossorigin")) {
+            image.setAttribute("crossorigin", "anonymous");
+          }
+        });
+      },
+    };
+  }
+
+  async function capturePage(page, preferredScale) {
+    let scale = getMaxCaptureScale(page, preferredScale);
+    let lastError = null;
+
+    while (scale >= 1) {
+      try {
+        const canvas = await window.html2canvas(page, getCaptureOptions(page, scale));
+        return { canvas: canvas, scale: scale };
+      } catch (error) {
+        lastError = error;
+        scale -= 1;
+      }
+    }
+
+    throw lastError || new Error("Unable to capture flyer");
+  }
+
+  function canvasToPngBlob(canvas) {
+    return new Promise(function (resolve, reject) {
+      if (canvas.toBlob) {
+        canvas.toBlob(function (blob) {
+          if (blob) {
+            resolve(blob);
+            return;
+          }
+          try {
+            const dataUrl = canvas.toDataURL("image/png");
+            resolve(dataUrlToBlob(dataUrl));
+          } catch (error) {
+            reject(error);
+          }
+        }, "image/png");
+        return;
+      }
+
+      try {
+        resolve(dataUrlToBlob(canvas.toDataURL("image/png")));
+      } catch (error) {
+        reject(error);
+      }
+    });
+  }
+
+  function dataUrlToBlob(dataUrl) {
+    const parts = dataUrl.split(",");
+    const mime = parts[0].match(/:(.*?);/)[1];
+    const binary = atob(parts[1]);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i += 1) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return new Blob([bytes], { type: mime });
+  }
+
+  async function withCaptureUi(task) {
+    const toolbar = document.querySelector(".flyer-editor-toolbar");
+    const wasEditing = isEditMode;
+
+    try {
+      if (toolbar) {
+        toolbar.style.visibility = "hidden";
+      }
+      if (wasEditing) {
+        setEditMode(false);
+      }
+      return await task();
+    } finally {
+      if (toolbar) {
+        toolbar.style.visibility = "";
+      }
+      if (wasEditing) {
+        setEditMode(true);
+      }
+    }
   }
 
   function pageName() {
@@ -294,6 +560,16 @@
       });
   }
 
+  function ensureCanvasTool() {
+    if (window.html2canvas) {
+      return Promise.resolve();
+    }
+    if (!editorBaseUrl) {
+      return Promise.reject(new Error("Editor base URL unavailable"));
+    }
+    return loadScript(new URL("vendor/html2canvas.min.js", editorBaseUrl).href);
+  }
+
   function openPrintPdf() {
     const toolbar = document.querySelector(".flyer-editor-toolbar");
     const wasEditing = isEditMode;
@@ -327,43 +603,14 @@
 
     try {
       await ensurePdfTools();
-      if (document.fonts && document.fonts.ready) {
-        await document.fonts.ready;
-      }
+      await waitForCaptureAssets();
 
       const page = document.querySelector(".page") || document.body;
-      const toolbar = document.querySelector(".flyer-editor-toolbar");
-      const wasEditing = isEditMode;
-      let canvas;
+      const capture = await withCaptureUi(function () {
+        return capturePage(page, 2);
+      });
 
-      try {
-        if (toolbar) {
-          toolbar.style.visibility = "hidden";
-        }
-        if (wasEditing) {
-          setEditMode(false);
-        }
-
-        canvas = await window.html2canvas(page, {
-          backgroundColor: "#ffffff",
-          scale: 2,
-          useCORS: true,
-          allowTaint: false,
-          logging: false,
-          ignoreElements: function (node) {
-            return !!node.closest && !!node.closest(".flyer-editor-toolbar");
-          },
-        });
-      } finally {
-        if (toolbar) {
-          toolbar.style.visibility = "";
-        }
-        if (wasEditing) {
-          setEditMode(true);
-        }
-      }
-
-      const imageData = canvas.toDataURL("image/png", 1);
+      const imageData = capture.canvas.toDataURL("image/png", 1);
       const jsPDF = window.jspdf.jsPDF;
       const pdf = new jsPDF({
         orientation: "portrait",
@@ -383,6 +630,33 @@
       openPrintPdf();
     } finally {
       isPdfExporting = false;
+    }
+  }
+
+  async function downloadPrintPng() {
+    if (isPngExporting) return;
+    isPngExporting = true;
+    updateStatus("Preparing PNG");
+
+    try {
+      await ensureCanvasTool();
+      await waitForCaptureAssets();
+
+      const page = document.querySelector(".page") || document.body;
+      const capture = await withCaptureUi(function () {
+        return capturePage(page, 3);
+      });
+      const blob = await canvasToPngBlob(capture.canvas);
+      downloadBlob(blob, pageName() + "-print-" + capture.scale + "x.png");
+      updateStatus("PNG downloaded");
+    } catch (error) {
+      console.error(error);
+      updateStatus("PNG failed");
+      alert(
+        "Print PNG export failed. Open the flyer through a local web server or refresh and try again."
+      );
+    } finally {
+      isPngExporting = false;
     }
   }
 
@@ -411,6 +685,7 @@
       <button type="button" class="secondary" data-flyer-save>Save Draft</button>
       <button type="button" class="secondary" data-flyer-load>Load Draft</button>
       <button type="button" class="secondary" data-flyer-pdf>Download A4 PDF</button>
+      <button type="button" class="secondary" data-flyer-png>Download Print PNG</button>
       <button type="button" class="secondary" data-flyer-download>Download HTML</button>
       <button type="button" class="secondary" data-flyer-copy>Copy HTML</button>
       <button type="button" class="warn" data-flyer-clear>Clear Draft</button>
@@ -425,6 +700,7 @@
     toolbar.querySelector("[data-flyer-save]").addEventListener("click", saveDraft);
     toolbar.querySelector("[data-flyer-load]").addEventListener("click", loadDraft);
     toolbar.querySelector("[data-flyer-pdf]").addEventListener("click", downloadPdf);
+    toolbar.querySelector("[data-flyer-png]").addEventListener("click", downloadPrintPng);
     toolbar.querySelector("[data-flyer-download]").addEventListener("click", downloadHtml);
     toolbar.querySelector("[data-flyer-copy]").addEventListener("click", copyHtml);
     toolbar.querySelector("[data-flyer-clear]").addEventListener("click", clearDraft);
