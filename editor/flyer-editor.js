@@ -136,10 +136,10 @@
 
         .page {
           width: 1024px !important;
-          height: 1536px !important;
+          height: 1448px !important;
           margin: 0 !important;
           box-shadow: none !important;
-          transform: scale(0.775, 0.731);
+          transform: scale(0.775);
           transform-origin: top left;
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
@@ -821,7 +821,7 @@
 
   function getMaxCaptureScale(page, preferredScale) {
     const width = page.offsetWidth || page.scrollWidth || 1024;
-    const height = page.offsetHeight || page.scrollHeight || 1536;
+    const height = page.offsetHeight || page.scrollHeight || 1448;
     const maxDimension = 4096;
     const maxArea = 16777216;
     let scale = preferredScale;
