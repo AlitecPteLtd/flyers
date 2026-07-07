@@ -24,7 +24,7 @@ Position this project as an Odoo attendance and timesheet solution with biometri
 
 Use:
 
-- `Odoo Attendance & Timesheet with Hardware`
+Attendance & Hardware Integration
 
 Subtitle direction:
 

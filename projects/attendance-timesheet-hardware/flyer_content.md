@@ -2,7 +2,7 @@
 
 ## Title
 
-Odoo Attendance & Timesheet with Hardware
+Attendance & Hardware Integration
 
 ## Subtitle
 

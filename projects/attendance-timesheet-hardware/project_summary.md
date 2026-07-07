@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Attendance and Timesheet Integration with Hardware
+Attendance & Hardware Integration
 
 ## Industry / Business Type
 
