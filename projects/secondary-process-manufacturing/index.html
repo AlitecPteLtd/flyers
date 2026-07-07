@@ -896,74 +896,74 @@
 
     <section class="panels">
       <div class="panel">
-        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Project Workflow</div>
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Production Workflow</div>
         <div class="workflow">
           <div class="steps">
-            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice"></i></div><h4>Quote<br />Client</h4><p>Build quotation with language lines, deadline, and project details</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-rocket"></i></div><h4>Confirm &amp;<br />Kickoff</h4><p>Convert to project, launch the CAT job, and copy project folders</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-user-group"></i></div><h4>Assign<br />Vendors</h4><p>Sync translators and reviewers from translation tool assignments</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-cart-shopping"></i></div><h4>Create<br />Vendor POs</h4><p>Generate POs from weighted word or character counts</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice-dollar"></i></div><h4>Invoice<br />Client</h4><p>Bill completed work with branded quotation and invoice docs</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-dolly"></i></div><h4>Receive<br />Material</h4><p>Log incoming customer parts with specs and traveler mapping</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-industry"></i></div><h4>Create<br />Job</h4><p>Launch MO from customer product to traveler template routing</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-gears"></i></div><h4>Run<br />Operations</h4><p>Execute process stations on the shop floor with work orders</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-clipboard-check"></i></div><h4>IQC / OQC<br />Checks</h4><p>Complete quality checks; reject or rework nonconforming qty</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-truck-fast"></i></div><h4>Release &amp;<br />Return</h4><p>Finish jobs, document quality results, and return to customer</p></div>
           </div>
 
           <div class="sub-title">Control Modes</div>
           <div class="slots">
-            <div class="slot"><i class="fa-solid fa-language"></i><h4>Language Pairs</h4><p>Source and destination validation on every order</p></div>
-            <div class="slot"><i class="fa-solid fa-tags"></i><h4>Service Types</h4><p>TR, TEP, and REV routing for vendor products</p></div>
-            <div class="slot"><i class="fa-solid fa-font"></i><h4>Word / Char</h4><p>Unit pricing with minimum charge fallback rules</p></div>
-            <div class="slot"><i class="fa-solid fa-chart-pie"></i><h4>Analytics</h4><p>Per-project analytic account tracking</p></div>
-            <div class="slot"><i class="fa-solid fa-plug"></i><h4>Tool Sync</h4><p>Scheduled status and document updates from CAT tools</p></div>
+            <div class="slot"><i class="fa-solid fa-clipboard-check"></i><h4>IQC / OQC</h4><p>Phase-tagged work centers for quality gates</p></div>
+            <div class="slot"><i class="fa-solid fa-route"></i><h4>Traveler Route</h4><p>Customer part maps to internal routing template</p></div>
+            <div class="slot"><i class="fa-solid fa-object-group"></i><h4>Combine Batch</h4><p>Merge MOs at the same ready operation</p></div>
+            <div class="slot"><i class="fa-solid fa-screwdriver-wrench"></i><h4>Engineering</h4><p>Hold and repair routing for rejected jobs</p></div>
+            <div class="slot"><i class="fa-solid fa-handshake"></i><h4>IORA Flag</h4><p>Customer agreement path on IQC rejection</p></div>
           </div>
 
           <div class="sub-title">Additional Features</div>
           <div class="feature-grid">
-            <div class="feature"><i class="fa-solid fa-file-excel"></i>Bulk contact and quotation import</div>
-            <div class="feature"><i class="fa-solid fa-print"></i>Custom job order and invoice layouts</div>
-            <div class="feature"><i class="fa-solid fa-folder-open"></i>Auto project folder duplication</div>
-            <div class="feature"><i class="fa-solid fa-envelope"></i>PM alert when CAT project is ready</div>
-            <div class="feature"><i class="fa-solid fa-shield-halved"></i>Sales team data security</div>
-            <div class="feature"><i class="fa-solid fa-truck"></i>Delivery order reports from sales</div>
-            <div class="feature"><i class="fa-solid fa-clock"></i>Turnaround and delivery format fields</div>
-            <div class="feature"><i class="fa-solid fa-users"></i>Vendor contacts mapped to translation tool users</div>
+            <div class="feature"><i class="fa-solid fa-scissors"></i>Shop-floor split production lots</div>
+            <div class="feature"><i class="fa-solid fa-rotate-left"></i>Rework inserted before OQC</div>
+            <div class="feature"><i class="fa-solid fa-barcode"></i>Serial registration on MO</div>
+            <div class="feature"><i class="fa-solid fa-print"></i>Barcoded traveler printouts</div>
+            <div class="feature"><i class="fa-solid fa-file-pdf"></i>Specs and drawings on products</div>
+            <div class="feature"><i class="fa-solid fa-link"></i>Split and combine MO lineage</div>
+            <div class="feature"><i class="fa-solid fa-flask"></i>Material, treatment, and RoHS data</div>
+            <div class="feature"><i class="fa-solid fa-file-shield"></i>Quality records for release docs</div>
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Project Visibility</div>
+        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Shop Floor Visibility</div>
         <div class="dashboard">
           <div class="stats">
-            <div class="stat"><h4>Active Projects</h4><div class="number">38<i class="fa-solid fa-diagram-project"></i></div></div>
-            <div class="stat"><h4>Docs In Progress</h4><div class="number">124<i class="fa-solid fa-file-alt"></i></div></div>
-            <div class="stat"><h4>Live CAT Jobs</h4><div class="number">31<i class="fa-solid fa-plug"></i></div></div>
-            <div class="stat"><h4>Open Vendor POs</h4><div class="number">57<i class="fa-solid fa-cart-shopping"></i></div></div>
-            <div class="stat"><h4>Due This Week</h4><div class="number">12<i class="fa-solid fa-calendar-day"></i></div></div>
+            <div class="stat"><h4>Active MOs</h4><div class="number">42<i class="fa-solid fa-industry"></i></div></div>
+            <div class="stat"><h4>IQC Pending</h4><div class="number">18<i class="fa-solid fa-clipboard-check"></i></div></div>
+            <div class="stat"><h4>OQC Queue</h4><div class="number">24<i class="fa-solid fa-list-check"></i></div></div>
+            <div class="stat"><h4>Combined Jobs</h4><div class="number">7<i class="fa-solid fa-object-group"></i></div></div>
+            <div class="stat"><h4>Engineering</h4><div class="number">5<i class="fa-solid fa-screwdriver-wrench"></i></div></div>
           </div>
 
           <div class="charts">
             <div class="chart-card">
-              <h4>Service Mix</h4>
+              <h4>Phase Mix</h4>
               <div class="donut-wrap">
-                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Service mix chart">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Phase mix chart">
                   <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#e67a22" stroke-dasharray="118.5 76.28" stroke-dashoffset="0"></circle>
                   <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="76.28 118.5" stroke-dashoffset="-118.5"></circle>
                   <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
                 </svg>
                 <div class="legend">
-                  <div><span></span>Translation (186) 58%</div>
-                  <div><span></span>TEP / Review (134) 42%</div>
+                  <div><span></span>Process (156) 58%</div>
+                  <div><span></span>QC Gates (112) 42%</div>
                 </div>
               </div>
             </div>
             <div class="chart-card">
-              <h4>Weekly Project Volume</h4>
+              <h4>Weekly Job Volume</h4>
               <svg class="line-chart" viewBox="0 0 300 100" fill="none">
                 <path d="M0 92H300" stroke="#d8e4f3" />
                 <path d="M0 62H300" stroke="#d8e4f3" />
                 <path d="M0 32H300" stroke="#d8e4f3" />
-                <path d="M24 74 L62 66 L100 58 L138 52 L176 44 L214 36 L252 30 L286 22" stroke="#e67a22" stroke-width="3" fill="none"/>
-                <path d="M24 74 L62 66 L100 58 L138 52 L176 44 L214 36 L252 30 L286 22 L286 92 L24 92Z" fill="rgba(26,138,158,.16)" />
-                <g fill="#e67a22"><circle cx="24" cy="74" r="4"/><circle cx="62" cy="66" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="52" r="4"/><circle cx="176" cy="44" r="4"/><circle cx="214" cy="36" r="4"/><circle cx="252" cy="30" r="4"/><circle cx="286" cy="22" r="4"/></g>
+                <path d="M24 72 L62 64 L100 56 L138 50 L176 42 L214 36 L252 28 L286 20" stroke="#e67a22" stroke-width="3" fill="none"/>
+                <path d="M24 72 L62 64 L100 56 L138 50 L176 42 L214 36 L252 28 L286 20 L286 92 L24 92Z" fill="rgba(230,122,34,.16)" />
+                <g fill="#e67a22"><circle cx="24" cy="72" r="4"/><circle cx="62" cy="64" r="4"/><circle cx="100" cy="56" r="4"/><circle cx="138" cy="50" r="4"/><circle cx="176" cy="42" r="4"/><circle cx="214" cy="36" r="4"/><circle cx="252" cy="28" r="4"/><circle cx="286" cy="20" r="4"/></g>
                 <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Mon</text><text x="58" y="99">Tue</text><text x="96" y="99">Wed</text><text x="134" y="99">Thu</text><text x="173" y="99">Fri</text><text x="211" y="99">Sat</text><text x="249" y="99">Sun</text><text x="283" y="99">Mon</text></g>
               </svg>
             </div>
@@ -971,30 +971,30 @@
 
           <div class="mini-table">
             <div class="row head"><div>Control Area</div><div>Owner</div><div>Status</div><div>Count</div><div>Review</div></div>
-            <div class="row"><div>Tool Sync</div><div>PM Team</div><div>Live</div><div>31</div><div class="pill">Active</div></div>
-            <div class="row"><div>Vendor POs</div><div>Finance</div><div>Open</div><div>57</div><div class="pill">On Track</div></div>
-            <div class="row"><div>Deadlines</div><div>Ops</div><div>Due</div><div>12</div><div class="pill">Watch</div></div>
-            <div class="row"><div>Documents</div><div>Production</div><div>Active</div><div>124</div><div class="pill">Active</div></div>
+            <div class="row"><div>IQC Gate</div><div>Quality</div><div>Open</div><div>18</div><div class="pill">Watch</div></div>
+            <div class="row"><div>Combined MOs</div><div>Production</div><div>Live</div><div>7</div><div class="pill">Active</div></div>
+            <div class="row"><div>OQC Release</div><div>QC Team</div><div>Queue</div><div>24</div><div class="pill">On Track</div></div>
+            <div class="row"><div>Engineering</div><div>Eng</div><div>Hold</div><div>5</div><div class="pill">Watch</div></div>
           </div>
 
           <div class="dashboard-bottom">
             <div class="dash-card">
-              <h4>Top Language Pairs</h4>
+              <h4>Jobs by Phase Status</h4>
               <div class="bar-list">
-                <div class="bar-item"><span>EN→JA</span><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div><span>78%</span></div>
-                <div class="bar-item"><span>EN→ZH</span><div class="bar-track"><div class="bar-fill green" style="width:64%"></div></div><span>64%</span></div>
-                <div class="bar-item"><span>JA→EN</span><div class="bar-track"><div class="bar-fill blue" style="width:52%"></div></div><span>52%</span></div>
-                <div class="bar-item"><span>EN→KO</span><div class="bar-track"><div class="bar-fill purple" style="width:38%"></div></div><span>38%</span></div>
+                <div class="bar-item"><span>In Process</span><div class="bar-track"><div class="bar-fill" style="width:76%"></div></div><span>76%</span></div>
+                <div class="bar-item"><span>IQC Hold</span><div class="bar-track"><div class="bar-fill green" style="width:58%"></div></div><span>58%</span></div>
+                <div class="bar-item"><span>OQC Ready</span><div class="bar-track"><div class="bar-fill blue" style="width:48%"></div></div><span>48%</span></div>
+                <div class="bar-item"><span>Rework</span><div class="bar-track"><div class="bar-fill purple" style="width:32%"></div></div><span>32%</span></div>
               </div>
             </div>
             <div class="dash-card">
-              <h4>Upcoming Deadlines</h4>
+              <h4>Upcoming Releases</h4>
               <div class="queue-table">
-                <div class="queue-row head"><div>Project</div><div>Client</div><div>Due</div><div>Type</div></div>
-                <div class="queue-row"><div>PRJ-2041</div><div>Tech Manual</div><div>Fri 17:00</div><div class="tag">TR</div></div>
-                <div class="queue-row"><div>PRJ-2045</div><div>Legal Contract</div><div>Sat 12:00</div><div class="tag delivery">TEP</div></div>
-                <div class="queue-row"><div>PRJ-2048</div><div>Marketing Site</div><div>Mon 09:00</div><div class="tag">TR</div></div>
-                <div class="queue-row"><div>PRJ-2052</div><div>Annual Report</div><div>Mon 15:00</div><div class="tag delivery">REV</div></div>
+                <div class="queue-row head"><div>MO</div><div>Customer Part</div><div>Due</div><div>Phase</div></div>
+                <div class="queue-row"><div>MO-1182</div><div>Housing Assy</div><div>Fri 14:00</div><div class="tag">OQC</div></div>
+                <div class="queue-row"><div>MO-1186</div><div>Shaft Blank</div><div>Fri 16:30</div><div class="tag delivery">IQC</div></div>
+                <div class="queue-row"><div>MO-1191</div><div>Bracket Set</div><div>Mon 09:00</div><div class="tag">Process</div></div>
+                <div class="queue-row"><div>MO-1194</div><div>Cover Plate</div><div>Mon 11:00</div><div class="tag delivery">OQC</div></div>
               </div>
             </div>
           </div>
