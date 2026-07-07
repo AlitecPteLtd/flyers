@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corporate Hamper Gifting Flyer</title>
+  <link rel="stylesheet" href="corporate-hamper-gifting-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1448px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-bottom: 140px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(123, 45, 78, .10), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 380px;
+      object-fit: cover;
+      object-position: 55% center;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 400px;
+      z-index: 1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 288px;
+      width: 1120px;
+      height: 80px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 400px;
+      padding: 18px 32px 0 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 620px;
+    }
+
+    .mark {
+      width: 96px;
+      height: 96px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 96px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 2px 0 4px;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 16px;
+      margin-top: 6px;
+      max-width: 440px;
+      line-height: 1.25;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 10px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 180px;
+    }
+
+    .odoo-logo {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 446px;
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 1.38;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 720px;
+      margin-top: 12px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      min-height: 96px;
+      padding: 10px 12px 8px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.15;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.2px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 8px 22px 10px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 6px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.orange {
+      background: linear-gradient(90deg, #b85c10, #f18717);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow { padding: 12px 12px 6px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step { position: relative; z-index: 1; text-align: center; }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard { padding: 10px 10px 10px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .donut { width: 92px; height: 92px; overflow: visible; }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 30;
+      transform: rotate(-90deg);
+      transform-origin: 46px 46px;
+    }
+
+    .donut-hole { fill: #fff; }
+
+    .legend {
+      display: grid;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: #7b2d4e;
+    }
+
+    .legend div:last-child span { background: var(--green); }
+
+    .line-chart { width: 100%; height: 84px; }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ffe2bf;
+      color: #9a4f08;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #7b2d4e, #f18717);
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 8px;
+      font-weight: 900;
+      background: #f5e8ed;
+      color: #5a1f35;
+    }
+
+    .tag.delivery {
+      background: #e7f4ea;
+      color: #2d7640;
+    }
+
+    .integrations {
+      padding: 0 43px 0;
+      margin-bottom: 8px;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 44px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 72px;
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 0;
+      min-height: 64px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+      z-index: 4;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 44px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 24px;
+      font-size: 12px;
+      z-index: 5;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 16px; font-size: 14px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <img class="hero-image" src="corporate-hamper-gifting-assets/corporate-hamper-gifting-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="corporate-hamper-gifting-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>Corporate Hamper<br />Gifting</h1>
+            <div class="subtitle">Multi-Recipient Delivery — eCommerce, Counter Sales &amp; Gifting with Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="corporate-hamper-gifting-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec's corporate gifting solution lets customers buy many hampers in one checkout —
+        each with its own delivery address, shipping date, and greeting message — while your
+        team fulfils, invoices, and delivers from one Odoo platform.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-gift"></i></div>
+            <h3>One Checkout, Many Gifts</h3>
+          </div>
+          <p>Assign a different recipient and date to every hamper line.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <h3>Greeting Messages</h3>
+          </div>
+          <p>Card recipient, sender, and greeting carried to fulfilment.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-cash-register"></i></div>
+            <h3>Counter Quick Sale</h3>
+          </div>
+          <p>Cash-and-carry roadshow flow with receipt printing and pricelists.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-truck"></i></div>
+            <h3>Smart Delivery Fees</h3>
+          </div>
+          <p>Shipping costs calculated per address and hamper quantity.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>Multi-Address Checkout</h3>
+        <p>Website cart with per-line delivery recipient and date.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <h3>Greeting Card Fields</h3>
+        <p>Recipient, sender, greeting, and delivery note on each gift.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-file-lines"></i></div>
+        <h3>Greeting Templates</h3>
+        <p>Pre-fill message templates for faster online ordering.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-tags"></i></div>
+        <h3>Pricelist Control</h3>
+        <p>Default pricelists for counter quick-sale and standard sales.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-cash-register"></i></div>
+        <h3>Counter Quick Sale</h3>
+        <p>Roadshow orders with cash-and-carry and payment journals.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-box-open"></i></div>
+        <h3>Pickup Options</h3>
+        <p>Cash &amp; carry, self collection, or ship-to-recipient delivery.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-truck-ramp-box"></i></div>
+        <h3>Split Fulfilment</h3>
+        <p>One order generates multiple deliveries by address and date.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-print"></i></div>
+        <h3>Branded Documents</h3>
+        <p>Custom sales, invoice, and delivery print layouts.</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Gifting Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-cart-shopping"></i></div><h4>Shop or<br />Sell</h4><p>Order online or create a counter quick-sale with the right pricelist</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-gift"></i></div><h4>Assign<br />Recipients</h4><p>Set delivery address, date, and greeting on each hamper line</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-credit-card"></i></div><h4>Pay<br />Once</h4><p>Single payment with delivery fees grouped by shipment</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-boxes-stacked"></i></div><h4>Pick &amp;<br />Pack</h4><p>Greeting details flow to warehouse moves and delivery slips</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-truck"></i></div><h4>Deliver<br />Gifts</h4><p>Multiple gift deliveries from one corporate order</p></div>
+          </div>
+
+          <div class="sub-title">Control Modes</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-location-dot"></i><h4>Per-Line Address</h4><p>Different recipient on every hamper order line</p></div>
+            <div class="slot"><i class="fa-solid fa-calendar-days"></i><h4>Shipping Date</h4><p>Schedule each gift delivery on its own date</p></div>
+            <div class="slot"><i class="fa-solid fa-envelope"></i><h4>Greeting Card</h4><p>Recipient, sender, and message on pick documents</p></div>
+            <div class="slot"><i class="fa-solid fa-store"></i><h4>Pickup Method</h4><p>Cash &amp; carry, self collect, or ship later</p></div>
+            <div class="slot"><i class="fa-solid fa-calendar-xmark"></i><h4>Blocked Dates</h4><p>Control unavailable delivery dates on checkout</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-receipt"></i>Receipt printing for counter sales</div>
+            <div class="feature"><i class="fa-solid fa-barcode"></i>Barcode-to-delivery wizard</div>
+            <div class="feature"><i class="fa-solid fa-file-contract"></i>Multiple terms and conditions</div>
+            <div class="feature"><i class="fa-brands fa-whatsapp"></i>WhatsApp customer messaging</div>
+            <div class="feature"><i class="fa-solid fa-warehouse"></i>Warehouse reporting for fulfilment</div>
+            <div class="feature"><i class="fa-solid fa-user-tag"></i>Reseller vs corporate customer rules</div>
+            <div class="feature"><i class="fa-solid fa-truck"></i>Delivery fee per hamper quantity</div>
+            <div class="feature"><i class="fa-solid fa-check"></i>Customer acknowledgment on ship-later</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Fulfilment Visibility</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Multi-Delivery Orders</h4><div class="number">64<i class="fa-solid fa-gift"></i></div></div>
+            <div class="stat"><h4>Due Today</h4><div class="number">28<i class="fa-solid fa-truck"></i></div></div>
+            <div class="stat"><h4>Greetings Pending</h4><div class="number">41<i class="fa-solid fa-envelope-open-text"></i></div></div>
+            <div class="stat"><h4>Counter Orders</h4><div class="number">19<i class="fa-solid fa-cash-register"></i></div></div>
+            <div class="stat"><h4>Web Orders</h4><div class="number">45<i class="fa-solid fa-globe"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Channel Mix</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Channel mix chart">
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#7b2d4e" stroke-dasharray="118.5 76.28" stroke-dashoffset="0"></circle>
+                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="76.28 118.5" stroke-dashoffset="-118.5"></circle>
+                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                </svg>
+                <div class="legend">
+                  <div><span></span>Web (168) 70%</div>
+                  <div><span></span>Counter (72) 30%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Weekly Gift Orders</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 72 L62 64 L100 58 L138 50 L176 42 L214 34 L252 28 L286 22" stroke="#7b2d4e" stroke-width="3" fill="none"/>
+                <path d="M24 72 L62 64 L100 58 L138 50 L176 42 L214 34 L252 28 L286 22 L286 92 L24 92Z" fill="rgba(123,45,78,.16)" />
+                <g fill="#7b2d4e"><circle cx="24" cy="72" r="4"/><circle cx="62" cy="64" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="50" r="4"/><circle cx="176" cy="42" r="4"/><circle cx="214" cy="34" r="4"/><circle cx="252" cy="28" r="4"/><circle cx="286" cy="22" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Mon</text><text x="58" y="99">Tue</text><text x="96" y="99">Wed</text><text x="134" y="99">Thu</text><text x="173" y="99">Fri</text><text x="211" y="99">Sat</text><text x="249" y="99">Sun</text><text x="283" y="99">Mon</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Control Area</div><div>Owner</div><div>Status</div><div>Count</div><div>Review</div></div>
+            <div class="row"><div>Pack Today</div><div>Warehouse</div><div>Due</div><div>28</div><div class="pill">Active</div></div>
+            <div class="row"><div>Greetings</div><div>CS Team</div><div>Pending</div><div>41</div><div class="pill">On Track</div></div>
+            <div class="row"><div>Multi-Ship</div><div>Logistics</div><div>Open</div><div>64</div><div class="pill">Active</div></div>
+            <div class="row"><div>Counter</div><div>Roadshow</div><div>Live</div><div>19</div><div class="pill">Watch</div></div>
+          </div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>Deliveries by Date</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>Today</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><span>82%</span></div>
+                <div class="bar-item"><span>Tomorrow</span><div class="bar-track"><div class="bar-fill green" style="width:64%"></div></div><span>64%</span></div>
+                <div class="bar-item"><span>Fri</span><div class="bar-track"><div class="bar-fill blue" style="width:48%"></div></div><span>48%</span></div>
+                <div class="bar-item"><span>Next Week</span><div class="bar-track"><div class="bar-fill purple" style="width:36%"></div></div><span>36%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>Hampers to Pack Today</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>Order</div><div>Recipient</div><div>Ship</div><div>Type</div></div>
+                <div class="queue-row"><div>SO-2201</div><div>Acme Corp</div><div>Today</div><div class="tag">Web</div></div>
+                <div class="queue-row"><div>SO-2204</div><div>Lee &amp; Co</div><div>Today</div><div class="tag delivery">Multi</div></div>
+                <div class="queue-row"><div>SO-2208</div><div>Walk-in</div><div>Today</div><div class="tag">Counter</div></div>
+                <div class="queue-row"><div>SO-2212</div><div>Global Pte</div><div>Today</div><div class="tag delivery">Gift</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:4px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-globe"></i></div>eCommerce</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-truck"></i></div>Delivery</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Accounting</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-handshake"></i></div>CRM</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-display"></i></div>Website</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Reporting</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-gift"></i><div><h3>Easier Corporate Orders</h3><p>One payment, dozens of personalised gift deliveries.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-envelope-open-text"></i><div><h3>Personal Touch at Scale</h3><p>Greeting messages on every hamper without spreadsheets.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-store"></i><div><h3>Omnichannel Selling</h3><p>Same catalogue online and at counter quick-sale events.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-truck-ramp-box"></i><div><h3>Cleaner Fulfilment</h3><p>Addresses and dates drive automatic delivery splits.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js?v=20260707-8" data-flyer-editor-script data-flyer-version="2026-07-07-v1"></script>
+</body>
+</html>
