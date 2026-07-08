@@ -1,0 +1,8651 @@
+{
+  "index_order": [
+    "temple-ngo-religious-operations",
+    "industrial-equipment-wholesale",
+    "social-recreational-club",
+    "precision-cnc-manufacturing",
+    "positive",
+    "cleantric",
+    "public-safety",
+    "secondary-process-manufacturing",
+    "food-manufacturing-operations",
+    "attendance-timesheet-hardware",
+    "translation-service-operations",
+    "gym-equipment-sales-service",
+    "specialty-chemical-trading",
+    "school-uniform-seller",
+    "corporate-hamper-gifting",
+    "pet-food-accessories-ecommerce",
+    "scaffolding",
+    "bakery-ecommerce-operations",
+    "lab-testing-process"
+  ],
+  "common": [
+    [
+      "SEAMLESS INTEGRATION WITH ODOO APPS",
+      "与 ODOO 应用无缝集成"
+    ],
+    [
+      "Business<br />Benefits",
+      "商业<br />效益"
+    ],
+    [
+      "Management Visibility",
+      "管理可视化"
+    ],
+    [
+      "Operations Visibility",
+      "运营可视化"
+    ],
+    [
+      "Fulfilment Visibility",
+      "履约可视化"
+    ],
+    [
+      "Operational Dashboard",
+      "运营仪表盘"
+    ],
+    [
+      "Operational Controls",
+      "运营管控"
+    ],
+    [
+      "Real-Time Dashboard",
+      "实时仪表盘"
+    ],
+    [
+      "Additional Features",
+      "附加功能"
+    ],
+    [
+      "Project Visibility",
+      "项目可视化"
+    ],
+    [
+      "Trading Visibility",
+      "贸易可视化"
+    ],
+    [
+      "KEY CAPABILITIES",
+      "核心功能"
+    ],
+    [
+      "Key Capabilities",
+      "核心功能"
+    ],
+    [
+      "Operating Units",
+      "Operating Units"
+    ],
+    [
+      "Operation Area",
+      "作业区域"
+    ],
+    [
+      "Control Modes",
+      "管控模式"
+    ],
+    [
+      "Product Group",
+      "产品分组"
+    ],
+    [
+      "Subscriptions",
+      "Subscriptions"
+    ],
+    [
+      "Manufacturing",
+      "Manufacturing"
+    ],
+    [
+      "Field Service",
+      "Field Service"
+    ],
+    [
+      "Control Area",
+      "管控领域"
+    ],
+    [
+      "Service Type",
+      "服务类型"
+    ],
+    [
+      "Appointments",
+      "Appointments"
+    ],
+    [
+      "Import Tools",
+      "Import Tools"
+    ],
+    [
+      "In Progress",
+      "进行中"
+    ],
+    [
+      "Residential",
+      "住宅"
+    ],
+    [
+      "Work Orders",
+      "Work Orders"
+    ],
+    [
+      "Industrial",
+      "工业"
+    ],
+    [
+      "Production",
+      "生产"
+    ],
+    [
+      "Accounting",
+      "Accounting"
+    ],
+    [
+      "Membership",
+      "Membership"
+    ],
+    [
+      "Dashboards",
+      "Dashboards"
+    ],
+    [
+      "Shop Floor",
+      "Shop Floor"
+    ],
+    [
+      "Scheduled",
+      "已排程"
+    ],
+    [
+      "Afternoon",
+      "下午"
+    ],
+    [
+      "Worksheet",
+      "工单"
+    ],
+    [
+      "Warehouse",
+      "仓库"
+    ],
+    [
+      "Logistics",
+      "物流"
+    ],
+    [
+      "Marketing",
+      "市场"
+    ],
+    [
+      "eCommerce",
+      "eCommerce"
+    ],
+    [
+      "Inventory",
+      "Inventory"
+    ],
+    [
+      "Reporting",
+      "Reporting"
+    ],
+    [
+      "Invoicing",
+      "Invoicing"
+    ],
+    [
+      "Documents",
+      "Documents"
+    ],
+    [
+      "Approvals",
+      "Approvals"
+    ],
+    [
+      "Employees",
+      "Employees"
+    ],
+    [
+      "On Track",
+      "进展顺利"
+    ],
+    [
+      "Tomorrow",
+      "明日"
+    ],
+    [
+      "Flexible",
+      "灵活"
+    ],
+    [
+      "Delivery",
+      "配送"
+    ],
+    [
+      "Finished",
+      "成品"
+    ],
+    [
+      "Location",
+      "库位"
+    ],
+    [
+      "Supplier",
+      "供应商"
+    ],
+    [
+      "Customer",
+      "客户"
+    ],
+    [
+      "Plankton",
+      "浮游生物"
+    ],
+    [
+      "Business",
+      "商业"
+    ],
+    [
+      "Benefits",
+      "效益"
+    ],
+    [
+      "Purchase",
+      "Purchase"
+    ],
+    [
+      "Payments",
+      "Payments"
+    ],
+    [
+      "Helpdesk",
+      "Helpdesk"
+    ],
+    [
+      "Shipping",
+      "Shipping"
+    ],
+    [
+      "Contacts",
+      "Contacts"
+    ],
+    [
+      "Analytic",
+      "Analytic"
+    ],
+    [
+      "API Sync",
+      "API Sync"
+    ],
+    [
+      "Projects",
+      "Projects"
+    ],
+    [
+      "Pending",
+      "待处理"
+    ],
+    [
+      "Planned",
+      "已计划"
+    ],
+    [
+      "Tracked",
+      "已跟踪"
+    ],
+    [
+      "Checked",
+      "已核对"
+    ],
+    [
+      "Approve",
+      "审批"
+    ],
+    [
+      "Install",
+      "安装"
+    ],
+    [
+      "Morning",
+      "上午"
+    ],
+    [
+      "Counter",
+      "柜台"
+    ],
+    [
+      "Collect",
+      "自提"
+    ],
+    [
+      "Picking",
+      "拣货"
+    ],
+    [
+      "Serials",
+      "序列号"
+    ],
+    [
+      "Channel",
+      "渠道"
+    ],
+    [
+      "Main WH",
+      "主仓"
+    ],
+    [
+      "Project",
+      "项目"
+    ],
+    [
+      "Product",
+      "产品"
+    ],
+    [
+      "Finance",
+      "财务"
+    ],
+    [
+      "Quality",
+      "质量"
+    ],
+    [
+      "Website",
+      "Website"
+    ],
+    [
+      "Payroll",
+      "Payroll"
+    ],
+    [
+      "Loyalty",
+      "Loyalty"
+    ],
+    [
+      "Active",
+      "活跃"
+    ],
+    [
+      "Review",
+      "审核"
+    ],
+    [
+      "Stable",
+      "稳定"
+    ],
+    [
+      "Repair",
+      "维修"
+    ],
+    [
+      "Retail",
+      "零售"
+    ],
+    [
+      "Office",
+      "办公"
+    ],
+    [
+      "Ad-hoc",
+      "临时"
+    ],
+    [
+      "Repeat",
+      "重复"
+    ],
+    [
+      "Custom",
+      "定制"
+    ],
+    [
+      "Online",
+      "在线"
+    ],
+    [
+      "Bundle",
+      "套装"
+    ],
+    [
+      "Growth",
+      "增长"
+    ],
+    [
+      "Window",
+      "窗口"
+    ],
+    [
+      "Volume",
+      "数量"
+    ],
+    [
+      "Source",
+      "来源"
+    ],
+    [
+      "Module",
+      "模块"
+    ],
+    [
+      "Output",
+      "产出"
+    ],
+    [
+      "Claims",
+      "索赔"
+    ],
+    [
+      "School",
+      "学校"
+    ],
+    [
+      "Status",
+      "状态"
+    ],
+    [
+      "Client",
+      "客户"
+    ],
+    [
+      "Portal",
+      "Portal"
+    ],
+    [
+      "Expiry",
+      "Expiry"
+    ],
+    [
+      "Ready",
+      "就绪"
+    ],
+    [
+      "Watch",
+      "关注"
+    ],
+    [
+      "Today",
+      "今日"
+    ],
+    [
+      "Alert",
+      "预警"
+    ],
+    [
+      "Queue",
+      "队列"
+    ],
+    [
+      "Maint",
+      "维保"
+    ],
+    [
+      "Named",
+      "指定"
+    ],
+    [
+      "Multi",
+      "多地址"
+    ],
+    [
+      "Slots",
+      "时段"
+    ],
+    [
+      "Stock",
+      "库存"
+    ],
+    [
+      "Mixed",
+      "混合"
+    ],
+    [
+      "Owner",
+      "负责人"
+    ],
+    [
+      "Count",
+      "数量"
+    ],
+    [
+      "Order",
+      "订单"
+    ],
+    [
+      "Venue",
+      "场地"
+    ],
+    [
+      "Event",
+      "活动"
+    ],
+    [
+      "Stage",
+      "阶段"
+    ],
+    [
+      "Batch",
+      "批次"
+    ],
+    [
+      "Water",
+      "水质"
+    ],
+    [
+      "Admin",
+      "行政"
+    ],
+    [
+      "Sales",
+      "销售"
+    ],
+    [
+      "Open",
+      "开放"
+    ],
+    [
+      "Live",
+      "运行中"
+    ],
+    [
+      "Plan",
+      "计划"
+    ],
+    [
+      "Full",
+      "已满"
+    ],
+    [
+      "Recv",
+      "收货"
+    ],
+    [
+      "Ship",
+      "发货"
+    ],
+    [
+      "Deep",
+      "深度"
+    ],
+    [
+      "Move",
+      "搬迁"
+    ],
+    [
+      "Team",
+      "团队"
+    ],
+    [
+      "Both",
+      "双渠道"
+    ],
+    [
+      "Bulk",
+      "批量"
+    ],
+    [
+      "Gift",
+      "礼品"
+    ],
+    [
+      "Food",
+      "食品"
+    ],
+    [
+      "Pack",
+      "包装"
+    ],
+    [
+      "Shop",
+      "门店"
+    ],
+    [
+      "Size",
+      "尺码"
+    ],
+    [
+      "Type",
+      "类型"
+    ],
+    [
+      "Date",
+      "日期"
+    ],
+    [
+      "Site",
+      "现场"
+    ],
+    [
+      "Time",
+      "时间"
+    ],
+    [
+      "Part",
+      "零件"
+    ],
+    [
+      "Slot",
+      "时段"
+    ],
+    [
+      "Mode",
+      "模式"
+    ],
+    [
+      "Farm",
+      "养殖场"
+    ],
+    [
+      "Soil",
+      "土壤"
+    ],
+    [
+      "Due",
+      "到期"
+    ],
+    [
+      "Reg",
+      "报名"
+    ],
+    [
+      "Inv",
+      "开票"
+    ],
+    [
+      "Run",
+      "运行"
+    ],
+    [
+      "Any",
+      "任意"
+    ],
+    [
+      "Web",
+      "网站"
+    ],
+    [
+      "Set",
+      "设置"
+    ],
+    [
+      "New",
+      "新增"
+    ],
+    [
+      "WIP",
+      "在制品"
+    ],
+    [
+      "Job",
+      "工单"
+    ],
+    [
+      "Mon",
+      "周一"
+    ],
+    [
+      "Tue",
+      "周二"
+    ],
+    [
+      "Wed",
+      "周三"
+    ],
+    [
+      "Thu",
+      "周四"
+    ],
+    [
+      "Fri",
+      "周五"
+    ],
+    [
+      "Sat",
+      "周六"
+    ],
+    [
+      "Sun",
+      "周日"
+    ],
+    [
+      "Jan",
+      "1月"
+    ],
+    [
+      "Feb",
+      "2月"
+    ],
+    [
+      "Mar",
+      "3月"
+    ],
+    [
+      "Apr",
+      "4月"
+    ],
+    [
+      "May",
+      "5月"
+    ],
+    [
+      "Jun",
+      "6月"
+    ],
+    [
+      "Jul",
+      "7月"
+    ],
+    [
+      "Aug",
+      "8月"
+    ],
+    [
+      "Ops",
+      "运营"
+    ],
+    [
+      "POS",
+      "POS"
+    ],
+    [
+      "CRM",
+      "CRM"
+    ],
+    [
+      "MRP",
+      "MRP"
+    ],
+    [
+      "QC",
+      "质检"
+    ]
+  ],
+  "projects": {
+    "temple-ngo-religious-operations": [
+      [
+        "Alitec's temple and religious organization solution helps faith-based NGOs run online\n        merit offerings, ceremony scheduling, memorial dedications, donor records, and recurring\n        sponsorships — with bilingual dedications, counter POS, and accounting in one Odoo platform.",
+        "Alitec 寺庙与宗教组织方案帮助信仰类非营利机构在线开展功德供奉、法会排期、追思牌位、捐赠人档案与定期赞助 — 双语回向、柜台 POS 与财务核算统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's temple and religious organization solution helps faith-based NGOs run online merit offerings, ceremony scheduling, memorial dedications, donor records, and recurring sponsorships — with bilingual dedications, counter POS, and accounting in one Odoo platform.",
+        "Alitec 寺庙与宗教组织方案帮助信仰类非营利机构在线开展功德供奉、法会排期、追思牌位、捐赠人档案与定期赞助 — 双语回向、柜台 POS 与财务核算统一于 Odoo 平台。"
+      ],
+      [
+        "Bilingual names, relationships, birth/death dates, and portal quick records.",
+        "双语姓名、关系、生卒日期与门户快捷登记。"
+      ],
+      [
+        "Merit shop for donations, ceremonies, events, and structured dedications.",
+        "功德商城支持捐款、法会、活动与结构化回向。"
+      ],
+      [
+        "Puja and ceremony orders with staff, location, calendar, and reminders.",
+        "法会订单关联人员、地点、日历与提醒。"
+      ],
+      [
+        "Reservations, subscriptions, and daily slot limits on sacred offerings.",
+        "预约、订阅与每日时段上限保护神圣供奉。"
+      ],
+      [
+        "Donations, ceremonies, memorial units, or events online or at counter",
+        "在线或柜台选择捐款、法会、牌位或活动"
+      ],
+      [
+        "Bilingual recipient capture reduces manual re-entry and print errors.",
+        "双语受荐者采集减少手工录入与打印错误。"
+      ],
+      [
+        "Memorial tablets, deity lights, subscriptions, and renewal notices.",
+        "牌位、光明灯、订阅与续费通知。"
+      ],
+      [
+        "Assign staff, location, and calendar; print tablets or certificates",
+        "分配人员、地点与日历；打印牌位或证书"
+      ],
+      [
+        "Donations, ceremonies, events, and dedication capture at checkout.",
+        "结账时采集捐款、法会、活动与回向信息。"
+      ],
+      [
+        "Tablet and light unit tracking, reservations, and wall grid view.",
+        "牌位与光明灯跟踪、预约与墙面网格视图。"
+      ],
+      [
+        "Daily capacity limits, categories, and print-ready fulfillment.",
+        "每日容量上限、分类与可打印履约。"
+      ],
+      [
+        "Subscriptions, partial invoicing, vouchers, and reconciliation.",
+        "订阅、部分开票、凭证与对账。"
+      ],
+      [
+        "Bilingual recipient names, dates, and relationships at checkout",
+        "结账时录入双语受荐者姓名、日期与关系"
+      ],
+      [
+        "Calendars, dashboards, and reminders for ceremony coordination.",
+        "日历、仪表盘与提醒助力法会协调。"
+      ],
+      [
+        "Website, counter, ceremonies, donors, and finance in one flow.",
+        "网站、柜台、法会、捐赠人与财务一体化流程。"
+      ],
+      [
+        "English and local-language recipient and relative records.",
+        "英文与本地语言受荐者及亲属档案。"
+      ],
+      [
+        "Order-to-ceremony with staff, location, and calendar sync.",
+        "订单到法会全流程，人员、地点与日历同步。"
+      ],
+      [
+        "Portal signup with PDPA consent and donor profile creation",
+        "门户注册含 PDPA 同意与捐赠人档案创建"
+      ],
+      [
+        "English and local-language dedication on every order line",
+        "每行订单双语回向信息"
+      ],
+      [
+        "Offerings, Ceremonies, Donors &amp; Accounting with Odoo",
+        "功德供奉、法会、捐赠人与财务 — Odoo 一体化"
+      ],
+      [
+        "Donor categories, PDPA consent, and portal self-service.",
+        "捐赠人分类、PDPA 同意书与门户自助服务。"
+      ],
+      [
+        "Reservations, FIFO assignment, and subscription renewals",
+        "预约、FIFO 分配与订阅续费"
+      ],
+      [
+        "Invoice, subscription renewals, and automated reminders",
+        "开票、订阅续费与自动提醒"
+      ],
+      [
+        "Tablet, certificate, and dedication name plate pipeline",
+        "牌位、证书与回向名牌打印流程"
+      ],
+      [
+        "Guided wizards, customer screen, and branded receipts.",
+        "引导向导、客户显示屏与品牌收据。"
+      ],
+      [
+        "Capacity limits on scheduled offerings before checkout",
+        "结账前限制预约供奉容量"
+      ],
+      [
+        "Recurring light sponsorships with portal stop-renew",
+        "定期光明灯赞助，门户可停止续费"
+      ],
+      [
+        "Visual relic hall wall grid and adoption dashboard",
+        "舍利殿墙面网格与领养仪表盘"
+      ],
+      [
+        "Birthday and renewal email or messaging reminders",
+        "生日与续费邮件或消息提醒"
+      ],
+      [
+        "Stripe subscription and multi-card assignment",
+        "Stripe 订阅与多卡分配"
+      ],
+      [
+        "Puja and ceremony calendar with PDF export",
+        "法会日历支持 PDF 导出"
+      ],
+      [
+        "Ceremony and offering Excel export reports",
+        "法会与供奉 Excel 导出报表"
+      ],
+      [
+        "Temple &amp; Religious<br />Organization",
+        "寺庙与宗教<br />组织"
+      ],
+      [
+        "Dharma publications flipbook on website",
+        "网站佛法出版物翻页书"
+      ],
+      [
+        "OTP signup and PDPA consent capture",
+        "OTP 注册与 PDPA 同意采集"
+      ],
+      [
+        "Mantra counter snippet on website",
+        "网站诵经计数器组件"
+      ],
+      [
+        "Bill &amp;<br />Engage",
+        "开票与<br />互动"
+      ],
+      [
+        "Temple &amp; Religious",
+        "寺庙与宗教"
+      ],
+      [
+        "Register<br />Devotee",
+        "登记<br />信众"
+      ],
+      [
+        "Weekly Offering Trend",
+        "周供奉趋势"
+      ],
+      [
+        "Offering Category Mix",
+        "供奉类别构成"
+      ],
+      [
+        "Donor &amp; Recipient",
+        "捐赠人与受荐者"
+      ],
+      [
+        "Recurring Sponsorship",
+        "定期赞助"
+      ],
+      [
+        "Choose<br />Offering",
+        "选择<br />供奉"
+      ],
+      [
+        "Ceremonies This Week",
+        "本周法会"
+      ],
+      [
+        "Accurate Dedications",
+        "精准回向"
+      ],
+      [
+        "Add<br />Dedication",
+        "添加<br />回向"
+      ],
+      [
+        "One Temple Platform",
+        "统一寺庙平台"
+      ],
+      [
+        "Protected Inventory",
+        "受控库存"
+      ],
+      [
+        "Plan<br />Ceremony",
+        "安排<br />法会"
+      ],
+      [
+        "Bilingual Registry",
+        "双语登记"
+      ],
+      [
+        "Ceremony Planning",
+        "法会排期"
+      ],
+      [
+        "Memorial Services",
+        "追思服务"
+      ],
+      [
+        "Counter &amp; POS",
+        "柜台与 POS"
+      ],
+      [
+        "Online Offerings",
+        "在线供奉"
+      ],
+      [
+        "Staff Visibility",
+        "人员可视化"
+      ],
+      [
+        "Temple Workflow",
+        "寺庙工作流"
+      ],
+      [
+        "Memorial Units",
+        "牌位单元"
+      ],
+      [
+        "Ceremonies Due",
+        "待办法会"
+      ],
+      [
+        "Units Reserved",
+        "已预约单元"
+      ],
+      [
+        "Merit Web Shop",
+        "功德网店"
+      ],
+      [
+        "Offering Slots",
+        "供奉时段"
+      ],
+      [
+        "Temple Finance",
+        "寺庙财务"
+      ],
+      [
+        "Ceremony · 58%",
+        "法会 · 58%"
+      ],
+      [
+        "Donation · 42%",
+        "捐款 · 42%"
+      ],
+      [
+        "Orders Today",
+        "今日订单"
+      ],
+      [
+        "Offering Mix",
+        "供奉构成"
+      ],
+      [
+        "Organization",
+        "组织"
+      ],
+      [
+        "Ceremony Ops",
+        "法会运营"
+      ],
+      [
+        "Daily Slots",
+        "每日时段"
+      ],
+      [
+        "Print Queue",
+        "打印队列"
+      ],
+      [
+        "Print Jobs",
+        "打印任务"
+      ],
+      [
+        "Dedication",
+        "回向"
+      ],
+      [
+        "Bill &amp;",
+        "开票与"
+      ],
+      [
+        "Ceremonies",
+        "法会"
+      ],
+      [
+        "Bilingual",
+        "双语"
+      ],
+      [
+        "Donor CRM",
+        "捐赠人 CRM"
+      ],
+      [
+        "Donations",
+        "捐款"
+      ],
+      [
+        "Register",
+        "登记"
+      ],
+      [
+        "Offering",
+        "供奉"
+      ],
+      [
+        "Ceremony",
+        "法会"
+      ],
+      [
+        "Reserved",
+        "已预约"
+      ],
+      [
+        "Printing",
+        "打印"
+      ],
+      [
+        "Memorial",
+        "追思"
+      ],
+      [
+        "Devotee",
+        "信众"
+      ],
+      [
+        "SO-1842",
+        "SO-1842"
+      ],
+      [
+        "SO-1847",
+        "SO-1847"
+      ],
+      [
+        "SO-1851",
+        "SO-1851"
+      ],
+      [
+        "SO-1854",
+        "SO-1854"
+      ],
+      [
+        "Choose",
+        "选择"
+      ],
+      [
+        "Engage",
+        "互动"
+      ],
+      [
+        "Events",
+        "活动"
+      ],
+      [
+        "Gongde",
+        "功德"
+      ],
+      [
+        "Nectar",
+        "供品"
+      ],
+      [
+        "Renew",
+        "续费"
+      ],
+      [
+        "Light",
+        "光明灯"
+      ],
+      [
+        "Print",
+        "打印"
+      ],
+      [
+        "Puja",
+        "法会"
+      ],
+      [
+        "Add",
+        "添加"
+      ]
+    ],
+    "industrial-equipment-wholesale": [
+      [
+        "Alitec's industrial equipment wholesale solution helps B2B distributors sync portal\n        orders, manage model and part-number catalogs, raise vendor POs from sales lines,\n        track stock and delivery modes, and issue package-aware GST invoices — all in one Odoo platform.",
+        "Alitec 工业设备批发方案帮助 B2B 分销商同步门户订单、管理型号与料号目录、从销售行生成供应商 PO、跟踪库存与交付模式，并开具分组 GST 发票 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's industrial equipment wholesale solution helps B2B distributors sync portal orders, manage model and part-number catalogs, raise vendor POs from sales lines, track stock and delivery modes, and issue package-aware GST invoices — all in one Odoo platform.",
+        "Alitec 工业设备批发方案帮助 B2B 分销商同步门户订单、管理型号与料号目录、从销售行生成供应商 PO、跟踪库存与交付模式，并开具分组 GST 发票 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Model, part number, serial tracking, and last purchase price on products.",
+        "产品记录型号、料号、序列号跟踪与最近采购价。"
+      ],
+      [
+        "Import sales and purchase orders with customers, vendors, and products.",
+        "导入销售与采购订单及客户、供应商与产品。"
+      ],
+      [
+        "Self collection, local delivery, ex-works, and sales-engineer handoff.",
+        "自提、本地配送、工厂交货与销售工程师交接。"
+      ],
+      [
+        "B2B Distribution — Portal Sync, Procurement &amp; Invoicing with Odoo",
+        "B2B 分销 — 门户同步、采购与开票"
+      ],
+      [
+        "Wizard to create vendor POs from sales lines with line-level linkage.",
+        "向导从销售行创建供应商 PO，行级关联。"
+      ],
+      [
+        "Model, part number, freight charge, and serial tracking on products.",
+        "产品记录型号、料号、运费与序列号跟踪。"
+      ],
+      [
+        "On-hand, committed, incoming, and available qty on the sales order.",
+        "销售单显示在手、已承诺、在途与可用数量。"
+      ],
+      [
+        "SO synced with customer PO ref, shipping note, and analytic account",
+        "SO 同步客户 PO 参考、发货备注与分析账户"
+      ],
+      [
+        "Grouped invoice lines with model/part numbers on branded tax PDFs.",
+        "分组发票行含型号/料号，品牌税务 PDF。"
+      ],
+      [
+        "Portal sync keeps sales, purchase, stock, and accounting aligned.",
+        "门户同步保持销售、采购、库存与财务一致。"
+      ],
+      [
+        "Landed costs, analytic per order, and negative-stock prevention.",
+        "到岸成本、订单分析账户与负库存防护。"
+      ],
+      [
+        "Products, customers, and suppliers imported from external portal",
+        "从外部门户导入产品、客户与供应商"
+      ],
+      [
+        "Bundle lines on invoices; hide internal lines on customer PDFs.",
+        "发票行分组；客户 PDF 隐藏内部行。"
+      ],
+      [
+        "Custom tax invoice and purchase order PDFs with payment terms.",
+        "定制税务发票与采购订单 PDF，含付款条款。"
+      ],
+      [
+        "Create or extend PO from SO lines with line-level traceability",
+        "从 SO 行创建或扩展 PO，行级可追溯"
+      ],
+      [
+        "Package-aware PDFs with model and part numbers for B2B buyers.",
+        "分组 PDF 含型号与料号，服务 B2B 买家。"
+      ],
+      [
+        "Batch and on-demand import of SO, PO, products, and partners.",
+        "批量与按需导入 SO、PO、产品与合作伙伴。"
+      ],
+      [
+        "Landed costs, analytics, and no-negative stock on every move.",
+        "到岸成本、分析与每次移动负库存防护。"
+      ],
+      [
+        "Create or extend vendor POs directly from sales order lines.",
+        "直接从销售订单行创建或扩展供应商 PO。"
+      ],
+      [
+        "Goods receipt, delivery with mode and shipping instructions",
+        "收货与交付，含模式与发货说明"
+      ],
+      [
+        "Model, part number, and ERP reference on every product line",
+        "每行产品含型号、料号与 ERP 参考"
+      ],
+      [
+        "Package-aware GST invoice, landed costs, and payment modes",
+        "分组 GST 发票、到岸成本与付款方式"
+      ],
+      [
+        "On-hand, incoming, outgoing, and available on sales orders",
+        "销售单在手、在途、出库与可用数量"
+      ],
+      [
+        "Self collection, local, ex-works, and sales-engineer modes",
+        "自提、本地、工厂交货与销售工程师模式"
+      ],
+      [
+        "Group invoice lines; hide internal or discount rows on PDF",
+        "发票行分组；PDF 隐藏内部或折扣行"
+      ],
+      [
+        "Order-level analytic accounts through stock and invoicing",
+        "库存与开票贯穿订单级分析账户"
+      ],
+      [
+        "Raise vendor POs from SO lines without re-keying.",
+        "从 SO 行生成供应商 PO，无需重复录入。"
+      ],
+      [
+        "Daily batch sync for sales and purchase orders",
+        "销售与采购订单每日批量同步"
+      ],
+      [
+        "Unit freight charge and landed cost allocation",
+        "单位运费与到岸成本分摊"
+      ],
+      [
+        "Stock quantity API for external portal queries",
+        "外部门户查询库存数量 API"
+      ],
+      [
+        "Negative inventory prevention on stock moves",
+        "库存移动负库存防护"
+      ],
+      [
+        "Vendor deposit invoices from purchase orders",
+        "采购订单供应商预付款发票"
+      ],
+      [
+        "Serial-number tracking on stocked products",
+        "库存产品序列号跟踪"
+      ],
+      [
+        "Product purchase history and last PO price",
+        "产品采购历史与最近 PO 价格"
+      ],
+      [
+        "Branded tax invoice and PO PDF layouts",
+        "品牌税务发票与 PO PDF 版式"
+      ],
+      [
+        "Industrial Equipment<br />Wholesale",
+        "工业设备<br />批发"
+      ],
+      [
+        "Receive<br />&amp; Deliver",
+        "收货<br />与交付"
+      ],
+      [
+        "Receive<br />Sales Order",
+        "接收<br />销售订单"
+      ],
+      [
+        "Invoice<br />&amp; Pay",
+        "开票<br />与付款"
+      ],
+      [
+        "Sync<br />Master Data",
+        "同步<br />主数据"
+      ],
+      [
+        "Weekly Shipment Trend",
+        "周发货趋势"
+      ],
+      [
+        "Distribution Workflow",
+        "分销工作流"
+      ],
+      [
+        "Raise<br />Vendor PO",
+        "生成<br />供应商 PO"
+      ],
+      [
+        "SOs Awaiting PO Link",
+        "待关联 PO 的 SO"
+      ],
+      [
+        "Industrial Equipment",
+        "工业设备"
+      ],
+      [
+        "SO-to-PO Procurement",
+        "SO 转 PO 采购"
+      ],
+      [
+        "Part-Number Catalog",
+        "料号目录"
+      ],
+      [
+        "Industrial SKU Data",
+        "工业 SKU 数据"
+      ],
+      [
+        "Category Sales Mix",
+        "品类销售构成"
+      ],
+      [
+        "Confirmed (62%) 77",
+        "已确认 (62%) 77"
+      ],
+      [
+        "Faster Quote-to-PO",
+        "更快报价到 PO"
+      ],
+      [
+        "Open Sales Orders",
+        "开放销售订单"
+      ],
+      [
+        "Portal Order Sync",
+        "门户订单同步"
+      ],
+      [
+        "Package Invoicing",
+        "分组开票"
+      ],
+      [
+        "Branded Documents",
+        "品牌文档"
+      ],
+      [
+        "Deliveries Today",
+        "今日交付"
+      ],
+      [
+        "Order Status Mix",
+        "订单状态构成"
+      ],
+      [
+        "Package Invoices",
+        "分组发票"
+      ],
+      [
+        "Finance Controls",
+        "财务管控"
+      ],
+      [
+        "Partial (38%) 47",
+        "部分 (38%) 47"
+      ],
+      [
+        "Cleaner Invoices",
+        "更清晰发票"
+      ],
+      [
+        "Outstanding Qty",
+        "未清数量"
+      ],
+      [
+        "Portal/API Sync",
+        "门户/API 同步"
+      ],
+      [
+        "One Order Truth",
+        "单一订单真相"
+      ],
+      [
+        "POs to Receive",
+        "待收货 PO"
+      ],
+      [
+        "Stock on Sales",
+        "销售单库存"
+      ],
+      [
+        "Delivery Modes",
+        "交付模式"
+      ],
+      [
+        "Controlled Ops",
+        "受控运营"
+      ],
+      [
+        "&amp; Deliver",
+        "与交付"
+      ],
+      [
+        "Part Numbers",
+        "料号"
+      ],
+      [
+        "Invoices Due",
+        "待开票"
+      ],
+      [
+        "Master Data",
+        "主数据"
+      ],
+      [
+        "Sales Order",
+        "销售订单"
+      ],
+      [
+        "Portal Sync",
+        "门户同步"
+      ],
+      [
+        "Procurement",
+        "采购"
+      ],
+      [
+        "Spare Parts",
+        "备件"
+      ],
+      [
+        "Stock View",
+        "库存视图"
+      ],
+      [
+        "Automation",
+        "自动化"
+      ],
+      [
+        "Analytics",
+        "分析"
+      ],
+      [
+        "Wholesale",
+        "批发"
+      ],
+      [
+        "Vendor PO",
+        "供应商 PO"
+      ],
+      [
+        "&amp; Pay",
+        "与付款"
+      ],
+      [
+        "Packages",
+        "包装"
+      ],
+      [
+        "SO to PO",
+        "SO 转 PO"
+      ],
+      [
+        "Accounts",
+        "账务"
+      ],
+      [
+        "Controls",
+        "管控"
+      ],
+      [
+        "Receive",
+        "接收"
+      ],
+      [
+        "Invoice",
+        "开票"
+      ],
+      [
+        "Sensors",
+        "传感器"
+      ],
+      [
+        "SO-4821",
+        "SO-4821"
+      ],
+      [
+        "Plant A",
+        "工厂 A"
+      ],
+      [
+        "SO-4826",
+        "SO-4826"
+      ],
+      [
+        "Plant B",
+        "工厂 B"
+      ],
+      [
+        "SO-4830",
+        "SO-4830"
+      ],
+      [
+        "Plant C",
+        "工厂 C"
+      ],
+      [
+        "SO-4834",
+        "SO-4834"
+      ],
+      [
+        "Plant D",
+        "工厂 D"
+      ],
+      [
+        "Buying",
+        "采购"
+      ],
+      [
+        "Raise",
+        "生成"
+      ],
+      [
+        "Sync",
+        "同步"
+      ],
+      [
+        "IT",
+        "IT"
+      ],
+      [
+        "SO",
+        "SO"
+      ],
+      [
+        "PO",
+        "PO"
+      ]
+    ],
+    "social-recreational-club": [
+      [
+        "Alitec's social and recreational club solution helps membership clubs run enrolment,\n        facility booking, events and banquets, restaurant POS, and levy billing — with a member\n        portal, digital QR cards, and one connected record from signup to accounting.",
+        "Alitec 社交与休闲俱乐部方案帮助会员制俱乐部管理入会、设施预约、活动与宴会、餐厅 POS 及征费账单 — 配备会员门户、数字 QR 卡，从注册到财务一条记录贯通。"
+      ],
+      [
+        "Alitec's social and recreational club solution helps membership clubs run enrolment, facility booking, events and banquets, restaurant POS, and levy billing — with a member portal, digital QR cards, and one connected record from signup to accounting.",
+        "Alitec 社交与休闲俱乐部方案帮助会员制俱乐部管理入会、设施预约、活动与宴会、餐厅 POS 及征费账单 — 配备会员门户、数字 QR 卡，从注册到财务一条记录贯通。"
+      ],
+      [
+        "Online signup, digital QR membership card, and self-service account access.",
+        "在线注册、数字 QR 会员卡与自助账户访问。"
+      ],
+      [
+        "Restaurant POS with member ID, split bills, service charges, and table QR.",
+        "餐厅 POS 识别会员、分单、服务费与桌边 QR。"
+      ],
+      [
+        "Resource-based appointments with capacity, peak pricing, and web booking.",
+        "基于资源的预约，含容量、高峰定价与网站预订。"
+      ],
+      [
+        "Registration, group booking, barcode attendance, and proposal documents.",
+        "报名、团体预订、条码签到与方案文档。"
+      ],
+      [
+        "Student, ordinary, life, social, corporate, and family membership types.",
+        "学生、普通、终身、社交、企业与家庭会员类型。"
+      ],
+      [
+        "Membership applications routed through Odoo Approvals before activation.",
+        "会员申请经 Odoo Approvals 审批后激活。"
+      ],
+      [
+        "Book courts, rooms, and venues with capacity and holiday pricing rules.",
+        "预约球场、会议室与场地，含容量与节假日定价。"
+      ],
+      [
+        "Split bills, service charges, kitchen printing, and member on receipts.",
+        "分单、服务费、厨房打印与收据显示会员。"
+      ],
+      [
+        "Minimum spending levy calculated from POS consumption by member group.",
+        "按会员分组从 POS 消费计算最低消费征费。"
+      ],
+      [
+        "Online signup, booking, QR card, and helpdesk reduce front-desk load.",
+        "在线注册、预约、QR 卡与 Helpdesk 减轻前台负担。"
+      ],
+      [
+        "Web registration, group members, LOF/LOC workflow, and seminar PDFs.",
+        "网站报名、团体成员、LOF/LOC 流程与研讨会 PDF。"
+      ],
+      [
+        "Subscriptions, facility invoices, bulk payments, and export reports.",
+        "订阅、设施发票、批量付款与导出报表。"
+      ],
+      [
+        "Membership signup with documents, PDPA consent, and payment details",
+        "会员注册含文件、PDPA 同意与付款信息"
+      ],
+      [
+        "Portal, POS, events, facilities, and billing linked to one profile.",
+        "门户、POS、活动、设施与账单关联同一档案。"
+      ],
+      [
+        "Subscriptions, MSL from POS spend, and facility invoicing in Odoo.",
+        "订阅、POS 消费 MSL 与设施开票统一于 Odoo。"
+      ],
+      [
+        "Banquet, F&amp;B, facility, and recruitment reports for club ops.",
+        "宴会、餐饮、设施与招募报表服务俱乐部运营。"
+      ],
+      [
+        "Membership, Facilities, Events &amp; F&amp;B — Managed with Odoo",
+        "会员、设施、活动与餐饮 — Odoo 一体化管理"
+      ],
+      [
+        "Facility slots and event registration with group booking support",
+        "设施时段与活动报名，支持团体预订"
+      ],
+      [
+        "Portal QR membership card with transaction and levy visibility.",
+        "门户 QR 会员卡，可查看交易与征费。"
+      ],
+      [
+        "Approval workflow activates membership and subscription billing",
+        "审批流程激活会员资格与订阅账单"
+      ],
+      [
+        "Digital QR card, transactions, MSL view, and helpdesk services",
+        "数字 QR 卡、交易、MSL 视图与 Helpdesk 服务"
+      ],
+      [
+        "Student, ordinary, life, social, corporate, and family tiers",
+        "学生、普通、终身、社交、企业与家庭层级"
+      ],
+      [
+        "POS identifies members; spend feeds MSL and club accounting",
+        "POS 识别会员；消费计入 MSL 与俱乐部财务"
+      ],
+      [
+        "Resource capacity, peak charges, and unpaid booking timeout",
+        "资源容量、高峰费用与未付款预约超时"
+      ],
+      [
+        "Minimum spending levy rules by member group from POS spend",
+        "按会员分组从 POS 消费应用最低消费征费规则"
+      ],
+      [
+        "Proposal, confirmation, and sectioned banquet order lines",
+        "方案、确认书与分段宴会订单行"
+      ],
+      [
+        "Visitor check-in, reception desk, and member verification",
+        "访客签到、接待台与会员核验"
+      ],
+      [
+        "Banquet, F&amp;B, and facility booking Excel exports",
+        "宴会、餐饮与设施预约 Excel 导出"
+      ],
+      [
+        "Split bills and service charges in restaurant POS",
+        "餐厅 POS 分单与服务费"
+      ],
+      [
+        "Event barcode attendance and group registration",
+        "活动条码签到与团体报名"
+      ],
+      [
+        "Two-factor authentication and password policy",
+        "双因素认证与密码策略"
+      ],
+      [
+        "Table QR ordering for club dining outlets",
+        "俱乐部餐饮门店桌边 QR 点餐"
+      ],
+      [
+        "Recruitment and member activity reporting",
+        "招募与会员活动报表"
+      ],
+      [
+        "Promotions and notices CMS for members",
+        "会员促销与公告 CMS"
+      ],
+      [
+        "Facility cancellation loyalty coupons",
+        "设施取消忠诚优惠券"
+      ],
+      [
+        "Social/Recreational<br />Club",
+        "社交/休闲<br />俱乐部"
+      ],
+      [
+        "Book &amp;<br />Register",
+        "预约与<br />报名"
+      ],
+      [
+        "Weekly Facility Usage",
+        "周设施使用率"
+      ],
+      [
+        "Events &amp; Banquets",
+        "活动与宴会"
+      ],
+      [
+        "Multi-Tier Membership",
+        "多级会员"
+      ],
+      [
+        "Dine &amp;<br />Bill",
+        "用餐与<br />结账"
+      ],
+      [
+        "Facility Utilisation",
+        "设施利用率"
+      ],
+      [
+        "Approve<br />Member",
+        "审批<br />会员"
+      ],
+      [
+        "Event Registrations",
+        "活动报名"
+      ],
+      [
+        "Social/Recreational",
+        "社交/休闲"
+      ],
+      [
+        "Approval Onboarding",
+        "审批入会"
+      ],
+      [
+        "Digital Member Card",
+        "数字会员卡"
+      ],
+      [
+        "Portal<br />Access",
+        "门户<br />访问"
+      ],
+      [
+        "Facility Resources",
+        "设施资源"
+      ],
+      [
+        "Apply<br />Online",
+        "在线<br />申请"
+      ],
+      [
+        "Facility Bookings",
+        "设施预约"
+      ],
+      [
+        "Pending Approvals",
+        "待审批"
+      ],
+      [
+        "Corporate Banquet",
+        "企业宴会"
+      ],
+      [
+        "One Member Record",
+        "统一会员档案"
+      ],
+      [
+        "Self-Service Club",
+        "自助式俱乐部"
+      ],
+      [
+        "POS Covers Today",
+        "今日 POS 人次"
+      ],
+      [
+        "Facility Booking",
+        "设施预约"
+      ],
+      [
+        "Club F&amp;B POS",
+        "俱乐部餐饮 POS"
+      ],
+      [
+        "Member Type Mix",
+        "会员类型构成"
+      ],
+      [
+        "Upcoming Events",
+        "即将举行的活动"
+      ],
+      [
+        "Corporate · 42%",
+        "企业 · 42%"
+      ],
+      [
+        "Revenue Control",
+        "收入管控"
+      ],
+      [
+        "Active Members",
+        "活跃会员"
+      ],
+      [
+        "Restaurant POS",
+        "餐厅 POS"
+      ],
+      [
+        "Ordinary · 58%",
+        "普通 · 58%"
+      ],
+      [
+        "Function Rooms",
+        "多功能厅"
+      ],
+      [
+        "Dining Outlets",
+        "餐饮门店"
+      ],
+      [
+        "Seminar Series",
+        "系列研讨会"
+      ],
+      [
+        "Club Workflow",
+        "俱乐部工作流"
+      ],
+      [
+        "Member Portal",
+        "会员门户"
+      ],
+      [
+        "Tennis Courts",
+        "网球场"
+      ],
+      [
+        "Annual Dinner",
+        "年度晚宴"
+      ],
+      [
+        "Member Types",
+        "会员类型"
+      ],
+      [
+        "Club Finance",
+        "俱乐部财务"
+      ],
+      [
+        "MSL Billing",
+        "MSL 账单"
+      ],
+      [
+        "Events Team",
+        "活动团队"
+      ],
+      [
+        "F&amp;B POS",
+        "餐饮 POS"
+      ],
+      [
+        "Facilities",
+        "设施"
+      ],
+      [
+        "MSL Groups",
+        "MSL 分组"
+      ],
+      [
+        "Book &amp;",
+        "预约与"
+      ],
+      [
+        "Dine &amp;",
+        "用餐与"
+      ],
+      [
+        "Operations",
+        "运营"
+      ],
+      [
+        "Game Rooms",
+        "游戏室"
+      ],
+      [
+        "Family Day",
+        "家庭日"
+      ],
+      [
+        "Reception",
+        "接待"
+      ],
+      [
+        "Banquets",
+        "宴会"
+      ],
+      [
+        "Register",
+        "报名"
+      ],
+      [
+        "Ballroom",
+        "宴会厅"
+      ],
+      [
+        "Outlets",
+        "门店"
+      ],
+      [
+        "Member",
+        "会员"
+      ],
+      [
+        "Access",
+        "访问"
+      ],
+      [
+        "Events",
+        "活动"
+      ],
+      [
+        "Room A",
+        "A 室"
+      ],
+      [
+        "Apply",
+        "申请"
+      ],
+      [
+        "Club",
+        "俱乐部"
+      ],
+      [
+        "Bill",
+        "结账"
+      ],
+      [
+        "3.8k",
+        "3.8k"
+      ],
+      [
+        "Lawn",
+        "草坪"
+      ],
+      [
+        "LOF",
+        "LOF"
+      ]
+    ],
+    "precision-cnc-manufacturing": [
+      [
+        "Alitec's precision CNC manufacturing solution helps job shops run high-mix, low-volume\n        orders from quotation to shop floor — with operation routing, material tracking, multi-level\n        MRP planning, in-process QC, and billing linked to sales, delivery, and production.",
+        "Alitec 精密 CNC 制造方案帮助机加工车间管理多品种小批量订单，从报价到车间 — 含工艺路线、物料跟踪、多级 MRP 计划、过程质检，以及关联销售、交付与生产的开票。"
+      ],
+      [
+        "Alitec's precision CNC manufacturing solution helps job shops run high-mix, low-volume orders from quotation to shop floor — with operation routing, material tracking, multi-level MRP planning, in-process QC, and billing linked to sales, delivery, and production.",
+        "Alitec 精密 CNC 制造方案帮助机加工车间管理多品种小批量订单，从报价到车间 — 含工艺路线、物料跟踪、多级 MRP 计划、过程质检，以及关联销售、交付与生产的开票。"
+      ],
+      [
+        "In-process checks, shop-floor controls, and Certificate of Conformance on delivery.",
+        "过程检验、车间管控与交付 CoC。"
+      ],
+      [
+        "Route parts through work centers, process notes, and step-specific QC rules.",
+        "零件经工作中心流转，含工艺备注与逐步质检规则。"
+      ],
+      [
+        "Sales orders spawn MOs with commitment-driven scheduling and live progress.",
+        "销售订单生成 MO，按承诺交期排程并实时跟踪进度。"
+      ],
+      [
+        "Parent and child manufacturing orders with hierarchy chart and scheduling.",
+        "父子制造订单，含层级图与排程。"
+      ],
+      [
+        "Named processes, work centers, process notes, and sequenced routing steps.",
+        "命名工序、工作中心、工艺备注与顺序路线步骤。"
+      ],
+      [
+        "Operation routing, timers, and controlled partial completion on the floor.",
+        "工艺路线、计时与车间受控部分完工。"
+      ],
+      [
+        "Multi-level scheduler, planned orders, and warehouse calendar lead times.",
+        "多级排程器、计划订单与仓库日历提前期。"
+      ],
+      [
+        "Shop-floor execution, per-operation QC, and controlled partial completion",
+        "车间执行、逐工序质检与受控部分完工"
+      ],
+      [
+        "Quotation and SO with commitment dates, credit check, and QMS references",
+        "报价与 SO 含承诺交期、信用检查与 QMS 参考"
+      ],
+      [
+        "Work order barcodes, timers, assignments, and gated partial completion.",
+        "工单条码、计时、派工与受控部分完工。"
+      ],
+      [
+        "Stock by location, BoM consumption, PO balance, and component warnings.",
+        "按库位库存、BoM 耗用、PO 余额与组件预警。"
+      ],
+      [
+        "MO travelers, BoM overview, and Certificate of Conformance on delivery.",
+        "MO 流转单、BoM 概览与交付 CoC。"
+      ],
+      [
+        "Quality checks linked to operations with scrap and alert traceability.",
+        "质检关联工序，报废与预警可追溯。"
+      ],
+      [
+        "SO, MO, delivery, and invoice traceability with branded document pack.",
+        "SO、MO、交付与发票可追溯，品牌文档包。"
+      ],
+      [
+        "Multi-level MRP, warehouse calendars, and hierarchical MO visibility.",
+        "多级 MRP、仓库日历与层级 MO 可视化。"
+      ],
+      [
+        "Work orders with barcodes, QC rules, process notes, and assignments",
+        "工单含条码、质检规则、工艺备注与派工"
+      ],
+      [
+        "From sales order through MO, QC, delivery, and invoice in one flow.",
+        "从销售订单经 MO、质检、交付到发票一体化流程。"
+      ],
+      [
+        "BoM routing, MRP scheduler, MO planning status, and schedule dates",
+        "BoM 路线、MRP 排程、MO 计划状态与排程日期"
+      ],
+      [
+        "Delivery with CoC, barcode labels, and invoice linked to SO and DO",
+        "交付含 CoC、条码标签与关联 SO、DO 的发票"
+      ],
+      [
+        "Operation-linked quality rules and supervisor partial-qty control",
+        "工序关联质检规则与主管部分数量管控"
+      ],
+      [
+        "High-Mix Job Shop — Materials, Planning &amp; Billing with Odoo",
+        "多品种机加工 — 物料、计划与开票"
+      ],
+      [
+        "Per-step QC and Certificate of Conformance on every delivery.",
+        "逐步质检与每次交付 CoC。"
+      ],
+      [
+        "Multi-level MRP and hierarchical MOs for high-mix assemblies.",
+        "多级 MRP 与层级 MO 服务多品种装配。"
+      ],
+      [
+        "Parent and child MO scheduling with days-to-produce rollup",
+        "父子 MO 排程含生产天数汇总"
+      ],
+      [
+        "Part numbers, lot dates, and barcode labels on delivery",
+        "交付含料号、批次日期与条码标签"
+      ],
+      [
+        "Pending RM, assembly, and ready states on work orders",
+        "工单待料、装配与就绪状态"
+      ],
+      [
+        "Back-scheduling from customer line dates to MO finish",
+        "从客户行交期倒排至 MO 完工"
+      ],
+      [
+        "Smart warnings on sales and manufacturing docs",
+        "销售与制造文档智能预警"
+      ],
+      [
+        "BoM structure export and change audit trail",
+        "BoM 结构导出与变更审计"
+      ],
+      [
+        "Branded MO travelers and CoC PDF layouts",
+        "品牌 MO 流转单与 CoC PDF 版式"
+      ],
+      [
+        "Direct and indirect purchase order types",
+        "直接与间接采购订单类型"
+      ],
+      [
+        "Planned vs actual minutes per operation",
+        "每工序计划与实际分钟"
+      ],
+      [
+        "Manufacturing timesheet on work orders",
+        "工单制造工时表"
+      ],
+      [
+        "MO progress percent on sales orders",
+        "销售订单 MO 进度百分比"
+      ],
+      [
+        "Multi-level MO hierarchy navigator",
+        "多级 MO 层级导航"
+      ],
+      [
+        "Precision CNC<br />Manufacturing",
+        "精密 CNC<br />制造"
+      ],
+      [
+        "Engineer<br />&amp; Plan",
+        "工程<br />与计划"
+      ],
+      [
+        "Make &amp;<br />Inspect",
+        "生产与<br />检验"
+      ],
+      [
+        "Release<br />to Floor",
+        "下达<br />车间"
+      ],
+      [
+        "In Progress (142) 58%",
+        "进行中 (142) 58%"
+      ],
+      [
+        "Shop-Floor Discipline",
+        "车间纪律"
+      ],
+      [
+        "Ship &amp;<br />Bill",
+        "发货与<br />开票"
+      ],
+      [
+        "Ship with Confidence",
+        "放心发货"
+      ],
+      [
+        "CoC &amp; Travelers",
+        "CoC 与流转单"
+      ],
+      [
+        "Pending RM (91) 42%",
+        "待料 (91) 42%"
+      ],
+      [
+        "Shop Floor Control",
+        "车间管控"
+      ],
+      [
+        "MOs Due This Week",
+        "本周到期 MO"
+      ],
+      [
+        "Job Shop Workflow",
+        "机加工工作流"
+      ],
+      [
+        "Operation Control",
+        "工序管控"
+      ],
+      [
+        "Operation Routing",
+        "工艺路线"
+      ],
+      [
+        "Per-Step QC Rules",
+        "逐步质检规则"
+      ],
+      [
+        "Material Tracking",
+        "物料跟踪"
+      ],
+      [
+        "Plan Complex Jobs",
+        "复杂工单计划"
+      ],
+      [
+        "Win<br />the Job",
+        "赢得<br />订单"
+      ],
+      [
+        "Commitment Dates",
+        "承诺交期"
+      ],
+      [
+        "Weekly MO Output",
+        "周 MO 产出"
+      ],
+      [
+        "Work Center Load",
+        "工作中心负荷"
+      ],
+      [
+        "Material States",
+        "物料状态"
+      ],
+      [
+        "Quality to Ship",
+        "质检到发货"
+      ],
+      [
+        "Multi-Level MOs",
+        "多级 MO"
+      ],
+      [
+        "Sub-Assemblies",
+        "子装配"
+      ],
+      [
+        "WO In Progress",
+        "WO 进行中"
+      ],
+      [
+        "Material Short",
+        "缺料"
+      ],
+      [
+        "Work Order Mix",
+        "工单构成"
+      ],
+      [
+        "Quote to Floor",
+        "报价到车间"
+      ],
+      [
+        "One Job Record",
+        "单一工单档案"
+      ],
+      [
+        "Due This Week",
+        "本周到期"
+      ],
+      [
+        "Precision CNC",
+        "精密 CNC"
+      ],
+      [
+        "Plan with MRP",
+        "MRP 计划"
+      ],
+      [
+        "Traceability",
+        "追溯"
+      ],
+      [
+        "MRP Planning",
+        "MRP 计划"
+      ],
+      [
+        "Sell to Bill",
+        "销售到开票"
+      ],
+      [
+        "Procurement",
+        "采购"
+      ],
+      [
+        "QC Pending",
+        "待质检"
+      ],
+      [
+        "&amp; Plan",
+        "与计划"
+      ],
+      [
+        "Make &amp;",
+        "生产与"
+      ],
+      [
+        "Ship &amp;",
+        "发货与"
+      ],
+      [
+        "QC Checks",
+        "质检"
+      ],
+      [
+        "CoC Issue",
+        "CoC 签发"
+      ],
+      [
+        "Bracket A",
+        "支架 A"
+      ],
+      [
+        "Housing C",
+        "壳体 C"
+      ],
+      [
+        "QC Gates",
+        "质检关卡"
+      ],
+      [
+        "Open MOs",
+        "开放 MO"
+      ],
+      [
+        "Engineer",
+        "工程"
+      ],
+      [
+        "to Floor",
+        "车间"
+      ],
+      [
+        "CNC Mill",
+        "CNC 铣床"
+      ],
+      [
+        "Grinding",
+        "磨削"
+      ],
+      [
+        "Assembly",
+        "装配"
+      ],
+      [
+        "the Job",
+        "订单"
+      ],
+      [
+        "Release",
+        "下达"
+      ],
+      [
+        "Inspect",
+        "检验"
+      ],
+      [
+        "MO-2842",
+        "MO-2842"
+      ],
+      [
+        "MO-2847",
+        "MO-2847"
+      ],
+      [
+        "Shaft B",
+        "轴 B"
+      ],
+      [
+        "MO-2851",
+        "MO-2851"
+      ],
+      [
+        "MO-2854",
+        "MO-2854"
+      ],
+      [
+        "Plate D",
+        "板 D"
+      ],
+      [
+        "Buying",
+        "采购"
+      ],
+      [
+        "Lathe",
+        "车床"
+      ],
+      [
+        "Bill",
+        "开票"
+      ],
+      [
+        "Win",
+        "赢得"
+      ],
+      [
+        "MO",
+        "MO"
+      ]
+    ],
+    "positive": [
+      [
+        "Alitec's Renovation Company solution on Odoo helps project-led businesses\n        manage the full commercial lifecycle, from quotation detail and project\n        account setup to purchasing continuity, approvals, branch governance,\n        invoicing, and billing completion visibility.",
+        "Alitec 装修公司 Odoo 方案帮助项目驱动型企业管理完整商业生命周期，从报价明细与项目账户设置到采购延续、审批、分支治理、开票与完工可视化。"
+      ],
+      [
+        "Alitec's Renovation Company solution on Odoo helps project-led businesses manage the full commercial lifecycle, from quotation detail and project account setup to purchasing continuity, approvals, branch governance, invoicing, and billing completion visibility.",
+        "Alitec 装修公司 Odoo 方案帮助项目驱动型企业管理完整商业生命周期，从报价明细与项目账户设置到采购延续、审批、分支治理、开票与完工可视化。"
+      ],
+      [
+        "Turn confirmed quotations into job-linked analytic accounts for clearer execution.",
+        "将确认报价转为项目关联分析账户，执行更清晰。"
+      ],
+      [
+        "Capture operational detail early so downstream teams work with stronger context.",
+        "早期采集运营明细，下游团队上下文更充分。"
+      ],
+      [
+        "Route reviews through configured approval levels and source-document callbacks.",
+        "按配置审批层级与源单据回调路由审核。"
+      ],
+      [
+        "Deliver more structured customer and vendor documentation throughout the job.",
+        "项目全程提供更结构化的客户与供应商文档。"
+      ],
+      [
+        "Enforce branch consistency across purchasing and vendor billing processes.",
+        "在采购与供应商开票流程中强制分支一致性。"
+      ],
+      [
+        "Duplicate and split quotations for partner-sharing scenarios when needed.",
+        "按需复制与拆分报价，支持合作伙伴共享。"
+      ],
+      [
+        "Operating-unit checks reduce cross-branch purchasing and billing errors.",
+        "Operating Unit 检查减少跨分支采购与开票错误。"
+      ],
+      [
+        "Confirmed sales can create or link a dedicated job account immediately.",
+        "确认销售后可立即创建或关联专用项目账户。"
+      ],
+      [
+        "Capture subject, contact, lead time, handover, packing, and dimensions.",
+        "采集主题、联系人、交期、移交、包装与尺寸。"
+      ],
+      [
+        "Carry analytic references from sales into supplier purchasing activity.",
+        "将分析参考从销售延续至供应商采购。"
+      ],
+      [
+        "Keep sales, buying, finance, and handover working from one job record.",
+        "销售、采购、财务与移交基于同一项目记录协同。"
+      ],
+      [
+        "Reduce branch mistakes and improve approval discipline across teams.",
+        "减少分支差错，提升跨团队审批纪律。"
+      ],
+      [
+        "Produce cleaner quotation, purchase, invoice, and document outputs.",
+        "输出更清晰的报价、采购、发票与文档。"
+      ],
+      [
+        "Track project status, budget, and billing completion more cleanly.",
+        "更清晰跟踪项目状态、预算与开票完成度。"
+      ],
+      [
+        "Review project status, budget, and billing progress more clearly.",
+        "更清晰审阅项目状态、预算与开票进度。"
+      ],
+      [
+        "Pass project, subject, and contact details through to invoicing.",
+        "项目、主题与联系人信息延续至开票。"
+      ],
+      [
+        "Invoice with project continuity and review billing completion",
+        "开票含项目延续并审核完工"
+      ],
+      [
+        "Create or link the matching project account on confirmation",
+        "确认时创建或关联匹配项目账户"
+      ],
+      [
+        "Run purchasing with analytic continuity and OU validation",
+        "采购含分析延续与 OU 校验"
+      ],
+      [
+        "Record contact, subject, lead time, and execution detail",
+        "记录联系人、主题、交期与执行明细"
+      ],
+      [
+        "Manage dates, budget, ownership, and project status",
+        "管理日期、预算、负责人与项目状态"
+      ],
+      [
+        "Analytic project accounts tied to confirmed sales",
+        "分析项目账户关联确认销售"
+      ],
+      [
+        "Complete Project Operations Solutions with Odoo",
+        "完整项目运营 Odoo 方案"
+      ],
+      [
+        "Track ownership and project responsibility",
+        "跟踪负责人与项目责任"
+      ],
+      [
+        "Cleaner customer and vendor documentation",
+        "更清晰的客户与供应商文档"
+      ],
+      [
+        "Configured approval levels and callbacks",
+        "配置审批层级与回调"
+      ],
+      [
+        "Operating-unit validation across teams",
+        "跨团队 Operating Unit 校验"
+      ],
+      [
+        "Tailored commercial print formats",
+        "定制商务打印格式"
+      ],
+      [
+        "Partner-sharing quotation split",
+        "合作伙伴共享报价拆分"
+      ],
+      [
+        "Approval callback traceability",
+        "审批回调可追溯"
+      ],
+      [
+        "Lead-time and handover detail",
+        "交期与移交明细"
+      ],
+      [
+        "Dimensions and packing notes",
+        "尺寸与包装备注"
+      ],
+      [
+        "Confirm &amp;<br />Link Job",
+        "确认并<br />关联项目"
+      ],
+      [
+        "Quotation Detail Management",
+        "报价明细管理"
+      ],
+      [
+        "Analytic and tag continuity",
+        "分析与标签延续"
+      ],
+      [
+        "Buy with<br />Branch Rules",
+        "按分支<br />规则采购"
+      ],
+      [
+        "Approval &amp; Governance",
+        "审批与治理"
+      ],
+      [
+        "Supplier purchase linkage",
+        "供应商采购关联"
+      ],
+      [
+        "Ongoing Projects (87) 68%",
+        "进行中项目 (87) 68%"
+      ],
+      [
+        "Closing / Closed (41) 32%",
+        "收尾/已结案 (41) 32%"
+      ],
+      [
+        "Monthly Billing Progress",
+        "月度开票进度"
+      ],
+      [
+        "Shared Quotation Support",
+        "共享报价支持"
+      ],
+      [
+        "Billing completion flags",
+        "开票完成标记"
+      ],
+      [
+        "Renovation<br />Company",
+        "装修<br />公司"
+      ],
+      [
+        "Plan &amp;<br />Control",
+        "计划与<br />管控"
+      ],
+      [
+        "Project Status Overview",
+        "项目状态概览"
+      ],
+      [
+        "Projects Needing Action",
+        "待处理项目"
+      ],
+      [
+        "Project Account Control",
+        "项目账户管控"
+      ],
+      [
+        "Operating Unit Control",
+        "Operating Unit 管控"
+      ],
+      [
+        "Bill &amp;<br />Close",
+        "开票与<br />结案"
+      ],
+      [
+        "Purchasing Continuity",
+        "采购延续"
+      ],
+      [
+        "Cleaner Communication",
+        "更清晰沟通"
+      ],
+      [
+        "Custom Print Layouts",
+        "定制打印版式"
+      ],
+      [
+        "Detailed Quotations",
+        "详细报价"
+      ],
+      [
+        "Connected Execution",
+        "贯通执行"
+      ],
+      [
+        "Prepare<br />Quote",
+        "准备<br />报价"
+      ],
+      [
+        "Billing Continuity",
+        "开票延续"
+      ],
+      [
+        "Billing Completion",
+        "开票完成"
+      ],
+      [
+        "Pending Approvals",
+        "待审批"
+      ],
+      [
+        "Project Stage Mix",
+        "项目阶段构成"
+      ],
+      [
+        "Better Visibility",
+        "更好可视化"
+      ],
+      [
+        "Project Workflow",
+        "项目工作流"
+      ],
+      [
+        "Project Accounts",
+        "项目账户"
+      ],
+      [
+        "Stronger Control",
+        "更强管控"
+      ],
+      [
+        "Document Output",
+        "文档输出"
+      ],
+      [
+        "Visible Closure",
+        "可视结案"
+      ],
+      [
+        "Branch Control",
+        "分支管控"
+      ],
+      [
+        "Open Purchases",
+        "开放采购"
+      ],
+      [
+        "Project-Linked",
+        "项目关联"
+      ],
+      [
+        "Vendor Billing",
+        "供应商开票"
+      ],
+      [
+        "Approval Flow",
+        "审批流程"
+      ],
+      [
+        "Confirm &amp;",
+        "确认并"
+      ],
+      [
+        "Manager View",
+        "经理视图"
+      ],
+      [
+        "Branch Rules",
+        "分支采购"
+      ],
+      [
+        "Active Jobs",
+        "活跃项目"
+      ],
+      [
+        "Open Quotes",
+        "开放报价"
+      ],
+      [
+        "Billed Jobs",
+        "已开票项目"
+      ],
+      [
+        "Branch-Safe",
+        "分支安全"
+      ],
+      [
+        "Job-Linked",
+        "关联项目"
+      ],
+      [
+        "Renovation",
+        "装修"
+      ],
+      [
+        "Plan &amp;",
+        "计划与"
+      ],
+      [
+        "Bill &amp;",
+        "开票与"
+      ],
+      [
+        "Retail Fit",
+        "零售装修"
+      ],
+      [
+        "Link Job",
+        "关联项目"
+      ],
+      [
+        "Buy with",
+        "按规则"
+      ],
+      [
+        "Managers",
+        "经理"
+      ],
+      [
+        "Accounts",
+        "账务"
+      ],
+      [
+        "Handover",
+        "移交"
+      ],
+      [
+        "PRJ-1842",
+        "PRJ-1842"
+      ],
+      [
+        "Unit 12A",
+        "12A 单元"
+      ],
+      [
+        "PRJ-1847",
+        "PRJ-1847"
+      ],
+      [
+        "Office B",
+        "B 办公室"
+      ],
+      [
+        "PRJ-1851",
+        "PRJ-1851"
+      ],
+      [
+        "PRJ-1854",
+        "PRJ-1854"
+      ],
+      [
+        "Condo 8F",
+        "公寓 8F"
+      ],
+      [
+        "Company",
+        "公司"
+      ],
+      [
+        "Prepare",
+        "准备"
+      ],
+      [
+        "Control",
+        "管控"
+      ],
+      [
+        "Quote",
+        "报价"
+      ],
+      [
+        "Close",
+        "结案"
+      ],
+      [
+        "Claim",
+        "索赔"
+      ]
+    ],
+    "cleantric": [
+      [
+        "Alitec's Cleaning Service Company solution on Odoo helps cleaning\n        operators manage the full booking lifecycle, from website enquiry and\n        cleaner selection to repeat sessions, appointment slots, address\n        capture, portal follow-up, sales orders, and payment continuity.",
+        "Alitec 清洁服务公司 Odoo 方案帮助清洁运营商管理完整预约生命周期，从网站咨询与保洁员选择到重复服务、预约时段、地址采集、门户跟进、销售订单与支付延续。"
+      ],
+      [
+        "Alitec's Cleaning Service Company solution on Odoo helps cleaning operators manage the full booking lifecycle, from website enquiry and cleaner selection to repeat sessions, appointment slots, address capture, portal follow-up, sales orders, and payment continuity.",
+        "Alitec 清洁服务公司 Odoo 方案帮助清洁运营商管理完整预约生命周期，从网站咨询与保洁员选择到重复服务、预约时段、地址采集、门户跟进、销售订单与支付延续。"
+      ],
+      [
+        "Give customers clearer scheduling, saved addresses, and better follow-up after confirmation.",
+        "提供更清晰排程、地址保存与确认后跟进。"
+      ],
+      [
+        "Support local payment-provider flows such as HitPay and related online checkout options.",
+        "支持 HitPay 等本地支付网关与在线结账。"
+      ],
+      [
+        "Save service locations, contact names, phones, and postal details before confirmation.",
+        "确认前保存服务地点、联系人、电话与邮编。"
+      ],
+      [
+        "Reduce manual back-and-forth by letting customers start and complete bookings online.",
+        "客户在线完成预约，减少人工往返。"
+      ],
+      [
+        "Carry the booking into orders, payment status, and invoice-ready follow-through.",
+        "预约延续至订单、支付状态与可开票跟进。"
+      ],
+      [
+        "Generate time slots from calendars, service duration, and actual availability.",
+        "基于日历、服务时长与实际可用性生成时段。"
+      ],
+      [
+        "Keep address, slot, order, and payment details connected across the full flow.",
+        "地址、时段、订单与支付全链路贯通。"
+      ],
+      [
+        "Match real helper availability to service demand and repeat-session planning.",
+        "将真实可用性与服务需求及重复服务计划匹配。"
+      ],
+      [
+        "Guide customers through a structured self-service cleaning reservation flow.",
+        "引导客户完成结构化自助清洁预约流程。"
+      ],
+      [
+        "Give customers a cleaner portal experience after booking and confirmation.",
+        "预约确认后提供清晰的客户门户体验。"
+      ],
+      [
+        "Offer service types, session counts, and repeat-cleaning choices clearly.",
+        "清晰展示服务类型、次数与重复清洁选项。"
+      ],
+      [
+        "Carry bookings forward into order review, portal follow-up, and payment.",
+        "预约延续至订单确认、门户跟进与支付。"
+      ],
+      [
+        "Search service windows from real calendars, duration, and availability.",
+        "基于真实日历、时长与可用性搜索服务窗口。"
+      ],
+      [
+        "Match bookings to a selected helper or the next available resource.",
+        "将预约匹配至指定或下一可用保洁员。"
+      ],
+      [
+        "Start the booking flow from service address or postal details.",
+        "从服务地址或邮编开始预约流程。"
+      ],
+      [
+        "Support preferred-cleaner requests or any available cleaner.",
+        "支持指定保洁员或任意可用保洁员。"
+      ],
+      [
+        "Continue to order review, portal follow-up, and payment",
+        "继续订单确认、门户跟进与支付"
+      ],
+      [
+        "Search dates and confirm available appointment windows",
+        "搜索日期并确认可用预约窗口"
+      ],
+      [
+        "Pick a helper or request any available cleaner",
+        "选择保洁员或请求任意可用人员"
+      ],
+      [
+        "Complete Cleaning Booking Solutions with Odoo",
+        "完整清洁预约 Odoo 方案"
+      ],
+      [
+        "Choose service type and package or sessions",
+        "选择服务类型、套餐或次数"
+      ],
+      [
+        "Enter service address or postal code first",
+        "先输入服务地址或邮编"
+      ],
+      [
+        "Single cleaning appointments on demand",
+        "按需单次清洁预约"
+      ],
+      [
+        "Reuse stored service-location details",
+        "复用已存服务地点信息"
+      ],
+      [
+        "Support customer helper preference",
+        "支持客户指定保洁员"
+      ],
+      [
+        "Auto-match by available resource",
+        "按可用资源自动匹配"
+      ],
+      [
+        "Session-based cleaning packages",
+        "按次清洁套餐"
+      ],
+      [
+        "Sales &amp; Payment Continuity",
+        "销售与支付延续"
+      ],
+      [
+        "Cleaning Service<br />Company",
+        "清洁服务<br />公司"
+      ],
+      [
+        "Service Catalog &amp; Options",
+        "服务目录与选项"
+      ],
+      [
+        "Custom sales or invoice print",
+        "定制销售或发票打印"
+      ],
+      [
+        "Find &amp;<br />Confirm Slot",
+        "查找并<br />确认时段"
+      ],
+      [
+        "Slot Search &amp; Scheduling",
+        "时段搜索与排程"
+      ],
+      [
+        "Smoother Customer Experience",
+        "更顺畅客户体验"
+      ],
+      [
+        "Portal and order continuity",
+        "门户与订单延续"
+      ],
+      [
+        "Faster Self-Service Booking",
+        "更快自助预约"
+      ],
+      [
+        "One-Time Service (124) 39%",
+        "单次服务 (124) 39%"
+      ],
+      [
+        "Better Cleaner Utilization",
+        "更优保洁员利用率"
+      ],
+      [
+        "Cleaning Booking Workflow",
+        "清洁预约工作流"
+      ],
+      [
+        "Postal-code booking start",
+        "邮编起始预约"
+      ],
+      [
+        "Calendar-based slot logic",
+        "基于日历的时段逻辑"
+      ],
+      [
+        "Payment status visibility",
+        "支付状态可视化"
+      ],
+      [
+        "Repeat Cleaning (194) 61%",
+        "重复清洁 (194) 61%"
+      ],
+      [
+        "Customer contact capture",
+        "客户联系信息采集"
+      ],
+      [
+        "Cleaner Order Continuity",
+        "清洁订单延续"
+      ],
+      [
+        "Website Booking Journey",
+        "网站预约旅程"
+      ],
+      [
+        "Session package control",
+        "次数套餐管控"
+      ],
+      [
+        "Monthly Booking Volume",
+        "月度预约量"
+      ],
+      [
+        "Booking summary review",
+        "预约摘要确认"
+      ],
+      [
+        "Flexible Booking Modes",
+        "灵活预约模式"
+      ],
+      [
+        "Review &amp;<br />Pay",
+        "确认并<br />支付"
+      ],
+      [
+        "Booking Type Overview",
+        "预约类型概览"
+      ],
+      [
+        "Jobs Scheduled Today",
+        "今日排程工单"
+      ],
+      [
+        "Address Book Control",
+        "地址簿管控"
+      ],
+      [
+        "Residential Cleaning",
+        "住宅清洁"
+      ],
+      [
+        "Select<br />Service",
+        "选择<br />服务"
+      ],
+      [
+        "Choose<br />Cleaner",
+        "选择<br />保洁员"
+      ],
+      [
+        "Gateway Integration",
+        "支付网关集成"
+      ],
+      [
+        "Address<br />Start",
+        "地址<br />开始"
+      ],
+      [
+        "Preferred Helper",
+        "指定保洁员"
+      ],
+      [
+        "Service Type Mix",
+        "服务类型构成"
+      ],
+      [
+        "Cleaning Service",
+        "清洁服务"
+      ],
+      [
+        "Cleaner Matching",
+        "保洁员匹配"
+      ],
+      [
+        "Portal Follow-Up",
+        "门户跟进"
+      ],
+      [
+        "Move-Out Service",
+        "搬出清洁"
+      ],
+      [
+        "Repeat Sessions",
+        "重复服务"
+      ],
+      [
+        "Active Cleaners",
+        "在岗保洁员"
+      ],
+      [
+        "Online Bookings",
+        "在线预约"
+      ],
+      [
+        "Cleaner Choice",
+        "保洁员选择"
+      ],
+      [
+        "Accurate Slots",
+        "精准时段"
+      ],
+      [
+        "Weekly Package",
+        "周套餐"
+      ],
+      [
+        "Saved Address",
+        "已存地址"
+      ],
+      [
+        "Service Types",
+        "服务类型"
+      ],
+      [
+        "Payment Ready",
+        "待支付"
+      ],
+      [
+        "Address-First",
+        "地址优先"
+      ],
+      [
+        "Payment-Ready",
+        "支付就绪"
+      ],
+      [
+        "Deep Cleaning",
+        "深度清洁"
+      ],
+      [
+        "Future Slots",
+        "未来时段"
+      ],
+      [
+        "Confirm Slot",
+        "确认时段"
+      ],
+      [
+        "Review &amp;",
+        "确认并"
+      ],
+      [
+        "Any Cleaner",
+        "任意保洁员"
+      ],
+      [
+        "Find &amp;",
+        "查找并"
+      ],
+      [
+        "One-Time",
+        "单次"
+      ],
+      [
+        "Company",
+        "公司"
+      ],
+      [
+        "Address",
+        "地址"
+      ],
+      [
+        "Service",
+        "服务"
+      ],
+      [
+        "Cleaner",
+        "保洁员"
+      ],
+      [
+        "CL-2842",
+        "CL-2842"
+      ],
+      [
+        "Tower A",
+        "A 座"
+      ],
+      [
+        "CL-2847",
+        "CL-2847"
+      ],
+      [
+        "Factory",
+        "工厂"
+      ],
+      [
+        "CL-2851",
+        "CL-2851"
+      ],
+      [
+        "CL-2854",
+        "CL-2854"
+      ],
+      [
+        "Unit 5C",
+        "5C 单元"
+      ],
+      [
+        "Select",
+        "选择"
+      ],
+      [
+        "Choose",
+        "选择"
+      ],
+      [
+        "Mall B",
+        "B 商场"
+      ],
+      [
+        "Start",
+        "开始"
+      ],
+      [
+        "09:00",
+        "09:00"
+      ],
+      [
+        "11:30",
+        "11:30"
+      ],
+      [
+        "14:00",
+        "14:00"
+      ],
+      [
+        "16:00",
+        "16:00"
+      ],
+      [
+        "Pay",
+        "支付"
+      ]
+    ],
+    "public-safety": [
+      [
+        "Alitec's Public Safety and Firefighting Equipment Manufacturing solution on Odoo helps manufacturers and service teams manage the full lifecycle, from sales demand and BOM planning to shop-floor production, QC, serial traceability, field service, invoicing, and compliance documents.",
+        "Alitec 公共安全与消防设备制造 Odoo 方案帮助制造商与服务团队管理全生命周期，从销售需求与 BOM 计划到车间生产、质检、序列号追溯、现场服务、开票与合规文档。"
+      ],
+      [
+        "Track manufactured units, Setsco/TUV references, barcodes, transfers, and service history.",
+        "跟踪制造单元、Setsco/TUV 参考、条码、调拨与服务历史。"
+      ],
+      [
+        "Turn field worksheets into service products, delivery demand, reports, and invoices.",
+        "将现场作业单转为服务产品、交付需求、报告与发票。"
+      ],
+      [
+        "Track operators, terminals, work sessions, quantities, components, and backorders.",
+        "跟踪操作员、终端、作业会话、数量、组件与欠单。"
+      ],
+      [
+        "Manage Service IDs, Setsco serials, QR labels, ranges, scanning, and transfers.",
+        "管理 Service ID、Setsco 序列号、QR 标签、范围、扫描与调拨。"
+      ],
+      [
+        "Control stock, no-negative rules, barcode demand, serial ranges, and shortages.",
+        "管控库存、禁负规则、条码需求、序列号范围与缺货。"
+      ],
+      [
+        "Generate certificates, invoices, packing lists, warranties, and tier approvals.",
+        "生成证书、发票、装箱单、保修与分级审批。"
+      ],
+      [
+        "Standardize QC, certificates, warranties, approvals, and audit-ready documents.",
+        "标准化 QC、证书、保修、审批与审计就绪文档。"
+      ],
+      [
+        "Handle SCBA, hose reel, hydrant, dry rising, installation, and bus servicing.",
+        "处理 SCBA、卷盘、消防栓、干式立管、安装与车辆维保。"
+      ],
+      [
+        "Extend BOMs with routes, area IDs, SID prefixes, and component-change tools.",
+        "扩展 BOM 含路线、区域 ID、SID 前缀与组件变更工具。"
+      ],
+      [
+        "Connect quotations, demand planning, work orders, procurement, and delivery.",
+        "贯通报价、需求计划、工单、采购与交付。"
+      ],
+      [
+        "Create manufacturing demand and production work orders directly from sales.",
+        "直接从销售创建制造需求与生产工单。"
+      ],
+      [
+        "Track Service IDs, Setsco/TUV serials, barcodes, transfers, and delivery.",
+        "跟踪 Service ID、Setsco/TUV 序列号、条码、调拨与交付。"
+      ],
+      [
+        "Reuse QC spreadsheet templates by procurement group and produce QC PDFs.",
+        "按采购组复用 QC 表格模板并生成 QC PDF。"
+      ],
+      [
+        "Turn sales demand into work orders, serials, worksheets, and invoices.",
+        "将销售需求转为工单、序列号、作业单与发票。"
+      ],
+      [
+        "Support approvals, QC checks, backdate controls, and compliance packs.",
+        "支持审批、质检、倒填日期管控与合规文档包。"
+      ],
+      [
+        "Sales, projects, MRP, QC, inventory, service, and finance together.",
+        "销售、项目、MRP、质检、库存、服务与财务一体化。"
+      ],
+      [
+        "Delivery orders, service reports, invoices, certificates",
+        "交付单、服务报告、发票与证书"
+      ],
+      [
+        "Complete Firefighting Manufacturing Solutions with Odoo",
+        "完整消防制造 Odoo 方案"
+      ],
+      [
+        "Work sessions, quantities, components, and MOs",
+        "作业会话、数量、组件与 MO"
+      ],
+      [
+        "Service IDs, Setsco, barcode labels, QC sheets",
+        "Service ID、Setsco、条码标签与 QC 表"
+      ],
+      [
+        "Quotation, order, project, and delivery split",
+        "报价、订单、项目与交付拆分"
+      ],
+      [
+        "Routes, procurement, deposits, and approvals",
+        "路线、采购、定金与审批"
+      ],
+      [
+        "Monthly Output &amp; Service Revenue",
+        "月产出与服务收入"
+      ],
+      [
+        "Serial &amp; Barcode Traceability",
+        "序列号与条码追溯"
+      ],
+      [
+        "Quality &amp; Compliance Control",
+        "质量与合规管控"
+      ],
+      [
+        "Serial and distribution control",
+        "序列号与分销管控"
+      ],
+      [
+        "Better Sales to Production Flow",
+        "更优销售到生产流程"
+      ],
+      [
+        "Product &amp; BOM Engineering",
+        "产品与 BOM 工程"
+      ],
+      [
+        "Inventory &amp; Replenishment",
+        "库存与补货"
+      ],
+      [
+        "Public Safety<br />Equipment",
+        "公共安全<br />设备"
+      ],
+      [
+        "Testing and service products",
+        "检测与服务产品"
+      ],
+      [
+        "Fire Safety Operation Areas",
+        "消防安全作业区域"
+      ],
+      [
+        "Shop Floor<br />Production",
+        "车间<br />生产"
+      ],
+      [
+        "Deliver &amp;<br />Invoice",
+        "交付与<br />开票"
+      ],
+      [
+        "Service worksheet tracking",
+        "服务作业单跟踪"
+      ],
+      [
+        "Labour and component usage",
+        "人工与组件耗用"
+      ],
+      [
+        "Documents &amp; Approvals",
+        "文档与审批"
+      ],
+      [
+        "Testing and field records",
+        "检测与现场记录"
+      ],
+      [
+        "Field Service Worksheets",
+        "现场服务作业单"
+      ],
+      [
+        "Full Serial Traceability",
+        "完整序列号追溯"
+      ],
+      [
+        "BOM &amp;<br />Planning",
+        "BOM<br />与计划"
+      ],
+      [
+        "Quality &amp; QC Sheets",
+        "质量与 QC 表格"
+      ],
+      [
+        "Min/Max Shortage Alerts",
+        "最小/最大缺货预警"
+      ],
+      [
+        "Service Team Efficiency",
+        "服务团队效率"
+      ],
+      [
+        "Manufacturing Workflow",
+        "制造工作流"
+      ],
+      [
+        "Invoice From Delivery",
+        "按交付开票"
+      ],
+      [
+        "Compliance Print Pack",
+        "合规打印包"
+      ],
+      [
+        "Serial &amp;<br />QC",
+        "序列号<br />与质检"
+      ],
+      [
+        "Sales to Work Orders",
+        "销售到工单"
+      ],
+      [
+        "Shop Floor Execution",
+        "车间执行"
+      ],
+      [
+        "XLSX Service Reports",
+        "XLSX 服务报告"
+      ],
+      [
+        "Mobile Barcode Scan",
+        "移动条码扫描"
+      ],
+      [
+        "Operation Area Mix",
+        "作业区域构成"
+      ],
+      [
+        "Sales<br />Demand",
+        "销售<br />需求"
+      ],
+      [
+        "Milestone Billing",
+        "里程碑开票"
+      ],
+      [
+        "Manufacturing 58%",
+        "制造 58%"
+      ],
+      [
+        "Field Service 24%",
+        "现场服务 24%"
+      ],
+      [
+        "Fire Extinguisher",
+        "灭火器"
+      ],
+      [
+        "Open Work Orders",
+        "开放工单"
+      ],
+      [
+        "Tier Validation",
+        "分级校验"
+      ],
+      [
+        "SG Payment File",
+        "新加坡付款文件"
+      ],
+      [
+        "Project Billing",
+        "项目开票"
+      ],
+      [
+        "Extinguishers",
+        "灭火器"
+      ],
+      [
+        "Operation Mix",
+        "作业构成"
+      ],
+      [
+        "Public Safety",
+        "公共安全"
+      ],
+      [
+        "Deliver &amp;",
+        "交付与"
+      ],
+      [
+        "QC Inspection",
+        "QC 检验"
+      ],
+      [
+        "Serial Units",
+        "序列号单元"
+      ],
+      [
+        "QC Pass Rate",
+        "质检通过率"
+      ],
+      [
+        "Service Jobs",
+        "服务工单"
+      ],
+      [
+        "Serial &amp;",
+        "序列号与"
+      ],
+      [
+        "Projects 18%",
+        "项目 18%"
+      ],
+      [
+        "SCBA Testing",
+        "SCBA 检测"
+      ],
+      [
+        "Bus Service",
+        "车辆服务"
+      ],
+      [
+        "Centralized",
+        "集中化"
+      ],
+      [
+        "Hose Reels",
+        "消防卷盘"
+      ],
+      [
+        "Active MOs",
+        "活跃 MO"
+      ],
+      [
+        "Controlled",
+        "受控"
+      ],
+      [
+        "Contract C",
+        "合同 C"
+      ],
+      [
+        "Equipment",
+        "设备"
+      ],
+      [
+        "Automated",
+        "自动化"
+      ],
+      [
+        "Traceable",
+        "可追溯"
+      ],
+      [
+        "BOM &amp;",
+        "BOM 与"
+      ],
+      [
+        "Hydrants",
+        "消防栓"
+      ],
+      [
+        "Planning",
+        "计划"
+      ],
+      [
+        "PDF/XLSX",
+        "PDF/XLSX"
+      ],
+      [
+        "Client B",
+        "客户 B"
+      ],
+      [
+        "PRJ-1854",
+        "PRJ-1854"
+      ],
+      [
+        "Invoice",
+        "开票"
+      ],
+      [
+        "Service",
+        "服务"
+      ],
+      [
+        "MO-1842",
+        "MO-1842"
+      ],
+      [
+        "SO-1847",
+        "SO-1847"
+      ],
+      [
+        "QC-1851",
+        "QC-1851"
+      ],
+      [
+        "Reports",
+        "Reports"
+      ],
+      [
+        "Demand",
+        "需求"
+      ],
+      [
+        "Site A",
+        "现场 A"
+      ],
+      [
+        "SCBA",
+        "SCBA"
+      ],
+      [
+        "1.8k",
+        "1.8k"
+      ]
+    ],
+    "secondary-process-manufacturing": [
+      [
+        "Alitec's manufacturing solution helps secondary-process factories receive customer\n        materials, run traveler-based production jobs, control IQC and OQC quality gates,\n        merge and split shop orders, and track every job from intake to release in one Odoo platform.",
+        "Alitec 制造方案帮助二次加工工厂接收客供料、运行流转单生产作业、管控 IQC 与 OQC 质量关卡、合并拆分车间订单，并在 Odoo 平台跟踪从入厂到放行的每一票作业。"
+      ],
+      [
+        "Alitec's manufacturing solution helps secondary-process factories receive customer materials, run traveler-based production jobs, control IQC and OQC quality gates, merge and split shop orders, and track every job from intake to release in one Odoo platform.",
+        "Alitec 制造方案帮助二次加工工厂接收客供料、运行流转单生产作业、管控 IQC 与 OQC 质量关卡、合并拆分车间订单，并在 Odoo 平台跟踪从入厂到放行的每一票作业。"
+      ],
+      [
+        "Incoming and outgoing quality phases with reject, rework, and engineering holds.",
+        "来料与出货质量阶段，含拒收、返工与工程冻结。"
+      ],
+      [
+        "Customer parts drive production through traveler templates and phased routings.",
+        "客户零件经流转单模板与分阶段路线驱动生产。"
+      ],
+      [
+        "Combine manufacturing orders at the next shared ready shop-floor operation.",
+        "在下一相同就绪车间工序合并制造订单。"
+      ],
+      [
+        "Split, combine, serial, and lineage tracking across every production job.",
+        "拆批、合并、序列号与谱系跟踪贯穿每票生产作业。"
+      ],
+      [
+        "Specs, quality records, and barcoded travelers for customer release.",
+        "规格、质量记录与条码流转单供客户放行。"
+      ],
+      [
+        "Track splits, combines, and documentation for customer conformance.",
+        "跟踪拆分、合并与文档以满足客户符合性。"
+      ],
+      [
+        "Route rejected qty to repair, engineering, and quality stations.",
+        "将拒收数量路由至维修、工程与质量工位。"
+      ],
+      [
+        "Turn incoming customer material into structured production jobs.",
+        "将来料客户物料转为结构化生产作业。"
+      ],
+      [
+        "Tag work centers for incoming and outgoing quality checkpoints.",
+        "为来料与出货质检点标记工作中心。"
+      ],
+      [
+        "Split quantities while preserving work order and check history.",
+        "拆分数量同时保留工单与检验历史。"
+      ],
+      [
+        "Register serials and trace split, combine, and origin MO links.",
+        "登记序列号并追溯拆分、合并与源 MO 关联。"
+      ],
+      [
+        "Register received parts and launch jobs from material intake.",
+        "登记收料零件并从入厂启动作业。"
+      ],
+      [
+        "Finish jobs, document quality results, and return to customer",
+        "完成作业、记录质量结果并退回客户"
+      ],
+      [
+        "Launch MO from customer product to traveler template routing",
+        "从客户产品按流转单模板路线启动 MO"
+      ],
+      [
+        "Log incoming customer parts with specs and traveler mapping",
+        "记录来料客户零件含规格与流转单映射"
+      ],
+      [
+        "Execute process stations on the shop floor with work orders",
+        "用工单在车间执行工艺工位"
+      ],
+      [
+        "Complete quality checks; reject or rework nonconforming qty",
+        "完成质量检验；拒收或返工不合格数量"
+      ],
+      [
+        "Link customer parts to internal BoM and routing templates.",
+        "将客户零件关联内部 BoM 与路线模板。"
+      ],
+      [
+        "Merge orders only when they share the same next operation.",
+        "仅在共享下一工序时合并订单。"
+      ],
+      [
+        "Incoming Jobs, IQC/OQC &amp; Shop Floor Control with Odoo",
+        "来料加工、IQC/OQC 与车间管控"
+      ],
+      [
+        "IQC and OQC phases with clear reject and rework paths.",
+        "IQC 与 OQC 阶段含清晰拒收与返工路径。"
+      ],
+      [
+        "Batch orders at the same ready shop-floor operation.",
+        "在相同就绪车间工序批量合并订单。"
+      ],
+      [
+        "Customer part maps to internal routing template",
+        "客户零件映射内部路线模板"
+      ],
+      [
+        "Phase-tagged work centers for quality gates",
+        "质量关卡阶段标记工作中心"
+      ],
+      [
+        "Hold and repair routing for rejected jobs",
+        "拒收作业冻结与返修路线"
+      ],
+      [
+        "Customer agreement path on IQC rejection",
+        "IQC 拒收客户确认路径"
+      ],
+      [
+        "Merge MOs at the same ready operation",
+        "在相同就绪工序合并 MO"
+      ],
+      [
+        "Secondary Process<br />Manufacturing",
+        "二次加工<br />制造"
+      ],
+      [
+        "Material, treatment, and RoHS data",
+        "材料、处理与 RoHS 数据"
+      ],
+      [
+        "Shop-floor split production lots",
+        "车间拆分生产批次"
+      ],
+      [
+        "Quality records for release docs",
+        "放行文档质量记录"
+      ],
+      [
+        "Specs and drawings on products",
+        "产品规格与图纸"
+      ],
+      [
+        "Split and combine MO lineage",
+        "拆分与合并 MO 谱系"
+      ],
+      [
+        "Barcoded traveler printouts",
+        "条码流转单打印"
+      ],
+      [
+        "Rework inserted before OQC",
+        "OQC 前插入返工"
+      ],
+      [
+        "Release &amp;<br />Return",
+        "放行与<br />退回"
+      ],
+      [
+        "Serial registration on MO",
+        "MO 序列号登记"
+      ],
+      [
+        "Receive<br />Material",
+        "接收<br />物料"
+      ],
+      [
+        "IQC / OQC<br />Checks",
+        "IQC / OQC<br />检验"
+      ],
+      [
+        "Split Production Lots",
+        "拆分生产批次"
+      ],
+      [
+        "Quality at Every Gate",
+        "每道关卡质量"
+      ],
+      [
+        "Shop Floor Visibility",
+        "车间可视化"
+      ],
+      [
+        "Jobs by Phase Status",
+        "按阶段状态作业"
+      ],
+      [
+        "IQC &amp; OQC Phases",
+        "IQC 与 OQC 阶段"
+      ],
+      [
+        "Serial &amp; Lineage",
+        "序列号与谱系"
+      ],
+      [
+        "Run<br />Operations",
+        "运行<br />工序"
+      ],
+      [
+        "Production Workflow",
+        "生产工作流"
+      ],
+      [
+        "Rework &amp; Reject",
+        "返工与拒收"
+      ],
+      [
+        "Traveler Templates",
+        "流转单模板"
+      ],
+      [
+        "QC Gates (112) 42%",
+        "质检关卡 (112) 42%"
+      ],
+      [
+        "Weekly Job Volume",
+        "周作业量"
+      ],
+      [
+        "Upcoming Releases",
+        "即将放行"
+      ],
+      [
+        "Secondary Process",
+        "二次加工"
+      ],
+      [
+        "Merge Shop Orders",
+        "合并车间订单"
+      ],
+      [
+        "Full Job Tracking",
+        "完整作业跟踪"
+      ],
+      [
+        "Incoming Material",
+        "来料"
+      ],
+      [
+        "Process (156) 58%",
+        "加工 (156) 58%"
+      ],
+      [
+        "Controlled Intake",
+        "受控入厂"
+      ],
+      [
+        "Traceable Release",
+        "可追溯放行"
+      ],
+      [
+        "Traveler Routing",
+        "流转单路线"
+      ],
+      [
+        "Smarter Batching",
+        "更智能合批"
+      ],
+      [
+        "Create<br />Job",
+        "创建<br />作业"
+      ],
+      [
+        "IQC / OQC Gates",
+        "IQC / OQC 关卡"
+      ],
+      [
+        "Compliance Docs",
+        "合规文档"
+      ],
+      [
+        "Traveler Route",
+        "流转单路线"
+      ],
+      [
+        "Combine Batch",
+        "合并批次"
+      ],
+      [
+        "Combined Jobs",
+        "合并作业"
+      ],
+      [
+        "Release &amp;",
+        "放行与"
+      ],
+      [
+        "Customer Part",
+        "客户零件"
+      ],
+      [
+        "Combined MOs",
+        "合并 MO"
+      ],
+      [
+        "Housing Assy",
+        "壳体组件"
+      ],
+      [
+        "Engineering",
+        "工程"
+      ],
+      [
+        "IQC Pending",
+        "IQC 待检"
+      ],
+      [
+        "OQC Release",
+        "OQC 放行"
+      ],
+      [
+        "Shaft Blank",
+        "轴坯"
+      ],
+      [
+        "Bracket Set",
+        "支架组"
+      ],
+      [
+        "Cover Plate",
+        "盖板"
+      ],
+      [
+        "Active MOs",
+        "活跃 MO"
+      ],
+      [
+        "Operations",
+        "工序"
+      ],
+      [
+        "In Process",
+        "加工中"
+      ],
+      [
+        "IQC / OQC",
+        "IQC / OQC"
+      ],
+      [
+        "IORA Flag",
+        "IORA 标记"
+      ],
+      [
+        "OQC Queue",
+        "OQC 队列"
+      ],
+      [
+        "Phase Mix",
+        "阶段构成"
+      ],
+      [
+        "OQC Ready",
+        "OQC 就绪"
+      ],
+      [
+        "Fri 14:00",
+        "周五 14:00"
+      ],
+      [
+        "Fri 16:30",
+        "周五 16:30"
+      ],
+      [
+        "Mon 09:00",
+        "周一 09:00"
+      ],
+      [
+        "Mon 11:00",
+        "周一 11:00"
+      ],
+      [
+        "Material",
+        "物料"
+      ],
+      [
+        "IQC Gate",
+        "IQC 关卡"
+      ],
+      [
+        "IQC Hold",
+        "IQC 冻结"
+      ],
+      [
+        "Receive",
+        "接收"
+      ],
+      [
+        "QC Team",
+        "质检团队"
+      ],
+      [
+        "MO-1182",
+        "MO-1182"
+      ],
+      [
+        "MO-1186",
+        "MO-1186"
+      ],
+      [
+        "MO-1191",
+        "MO-1191"
+      ],
+      [
+        "Process",
+        "加工"
+      ],
+      [
+        "MO-1194",
+        "MO-1194"
+      ],
+      [
+        "Create",
+        "创建"
+      ],
+      [
+        "Checks",
+        "检验"
+      ],
+      [
+        "Return",
+        "退回"
+      ],
+      [
+        "Rework",
+        "返工"
+      ],
+      [
+        "Phase",
+        "阶段"
+      ],
+      [
+        "Hold",
+        "冻结"
+      ],
+      [
+        "Eng",
+        "工程"
+      ],
+      [
+        "OQC",
+        "OQC"
+      ],
+      [
+        "IQC",
+        "IQC"
+      ],
+      [
+        "MO",
+        "MO"
+      ]
+    ],
+    "food-manufacturing-operations": [
+      [
+        "Alitec's food manufacturing solution helps fresh-food producers plan daily\n        outlet production, generate manufacturing and delivery orders together,\n        enforce outlet-level cost control, and reconcile commission sales in one Odoo platform.",
+        "Alitec 食品制造方案帮助鲜食生产商计划每日门店生产、同步生成制造与交付订单、强制门店级成本管控，并在 Odoo 平台对账代销销售。"
+      ],
+      [
+        "Alitec's food manufacturing solution helps fresh-food producers plan daily outlet production, generate manufacturing and delivery orders together, enforce outlet-level cost control, and reconcile commission sales in one Odoo platform.",
+        "Alitec 食品制造方案帮助鲜食生产商计划每日门店生产、同步生成制造与交付订单、强制门店级成本管控，并在 Odoo 平台对账代销销售。"
+      ],
+      [
+        "Production templates generate manufacturing orders and delivery orders together for each outlet.",
+        "生产模板为各门店同步生成制造订单与交付订单。"
+      ],
+      [
+        "Delivery slips and invoices print lot, serial, and expiration dates for perishable goods.",
+        "交付单与发票打印批次、序列号与效期。"
+      ],
+      [
+        "Enforce outlet cost centers on sales, purchases, MOs, invoices, and inventory moves.",
+        "在销售、采购、MO、发票与库存移动强制门店成本中心。"
+      ],
+      [
+        "Analytic accounts are required across sales, purchases, production, and invoicing.",
+        "销售、采购、生产与开票均强制分析账户。"
+      ],
+      [
+        "Excel sales imports create customer invoices and matching commission credit notes.",
+        "Excel 销售导入生成客户发票与匹配代销贷项通知单。"
+      ],
+      [
+        "Plan daily production by outlet, location, analytic account, and product quantity.",
+        "按门店、库位、分析账户与产品数量计划日生产。"
+      ],
+      [
+        "Map third-party sales lines to products and outlets from spreadsheet uploads.",
+        "从电子表格映射第三方销售行至产品与门店。"
+      ],
+      [
+        "Carry lot and expiry detail through documents customers and auditors expect.",
+        "在客户与审计所需文档中贯穿批次与效期。"
+      ],
+      [
+        "Generate customer invoices and commission credit notes from imported sales.",
+        "从导入销售生成客户发票与代销贷项通知单。"
+      ],
+      [
+        "Link planning, manufacturing, delivery, sales, and billing on one platform.",
+        "计划、制造、交付、销售与开票统一于平台。"
+      ],
+      [
+        "Create manufacturing orders and outlet deliveries from one wizard action.",
+        "一个向导动作同时创建制造订单与门店交付。"
+      ],
+      [
+        "Support per-line delivery addresses and separate pickings by destination.",
+        "支持按行交付地址与按目的地拆分拣货。"
+      ],
+      [
+        "Print sales, purchase, delivery, invoice, receipt, and statement layouts.",
+        "打印销售、采购、交付、发票、收据与对账单版式。"
+      ],
+      [
+        "Show manufacturing and expiration detail on delivery slips and invoices.",
+        "交付单与发票显示生产与效期明细。"
+      ],
+      [
+        "Turn spreadsheet sales into invoice and credit note pairs automatically.",
+        "自动将电子表格销售转为发票与贷项通知单对。"
+      ],
+      [
+        "Fresh Food &amp; Sushi Production — From Kitchen to Outlet with Odoo",
+        "鲜食与寿司生产 — 从厨房到门店"
+      ],
+      [
+        "Import commission sales, post invoices, and print documents",
+        "导入代销销售、过账发票并打印文档"
+      ],
+      [
+        "Set products, analytic accounts, and production templates",
+        "设置产品、分析账户与生产模板"
+      ],
+      [
+        "See cost, revenue, and fulfillment performance by outlet.",
+        "按门店查看成本、收入与履约绩效。"
+      ],
+      [
+        "Launch daily production for the scheduled outlet plan",
+        "按排程门店计划启动日生产"
+      ],
+      [
+        "Process sales and purchases with mandatory analytics",
+        "处理强制分析账户的销售与采购"
+      ],
+      [
+        "Complete MOs and ship finished goods to outlets",
+        "完成 MO 并将成品发至门店"
+      ],
+      [
+        "Partner credit governance on transactions",
+        "交易合作伙伴信用治理"
+      ],
+      [
+        "Cost centers enforced across operations",
+        "运营全程强制成本中心"
+      ],
+      [
+        "Control customer and partner activation",
+        "管控客户与合作伙伴激活"
+      ],
+      [
+        "Schedule production templates by day",
+        "按日排程生产模板"
+      ],
+      [
+        "Gate scrap validation before posting",
+        "过账前门禁报废校验"
+      ],
+      [
+        "Food Manufacturing<br />Operations",
+        "食品制造<br />运营"
+      ],
+      [
+        "Manned location visibility on MOs",
+        "MO 显示有人值守库位"
+      ],
+      [
+        "B2B website cart with UoM display",
+        "B2B 网站购物车显示计量单位"
+      ],
+      [
+        "Lot manufacturing date tracking",
+        "批次生产日期跟踪"
+      ],
+      [
+        "Manufacture<br />&amp; Deliver",
+        "制造与<br />交付"
+      ],
+      [
+        "Mandatory sales delivery dates",
+        "强制销售交付日期"
+      ],
+      [
+        "Inventory adjustment analytics",
+        "库存调整分析"
+      ],
+      [
+        "Custom aged balance reporting",
+        "定制账龄余额报表"
+      ],
+      [
+        "Auto product SKU by category",
+        "按类别自动生成 SKU"
+      ],
+      [
+        "Faster Commission Processing",
+        "更快代销处理"
+      ],
+      [
+        "Outlet Production Templates",
+        "门店生产模板"
+      ],
+      [
+        "Per-line delivery addresses",
+        "按行交付地址"
+      ],
+      [
+        "Reconcile<br />&amp; Bill",
+        "对账与<br />开票"
+      ],
+      [
+        "Central Kitchen (148) 62%",
+        "中央厨房 (148) 62%"
+      ],
+      [
+        "Connected Production Flow",
+        "贯通生产流程"
+      ],
+      [
+        "Weekly Production Volume",
+        "周生产量"
+      ],
+      [
+        "MO + Delivery Generation",
+        "MO 与交付生成"
+      ],
+      [
+        "Outlet Dispatch (91) 38%",
+        "门店配送 (91) 38%"
+      ],
+      [
+        "Sell &amp;<br />Procure",
+        "销售与<br />采购"
+      ],
+      [
+        "Fresh-Food Traceability",
+        "鲜食追溯"
+      ],
+      [
+        "Configure<br />Outlets",
+        "配置<br />门店"
+      ],
+      [
+        "Commission Automation",
+        "代销自动化"
+      ],
+      [
+        "Lot &amp; Expiry Docs",
+        "批次与效期文档"
+      ],
+      [
+        "Production by Outlet",
+        "按门店生产"
+      ],
+      [
+        "Outlet-Level Control",
+        "门店级管控"
+      ],
+      [
+        "Production Workflow",
+        "生产工作流"
+      ],
+      [
+        "Expiry Traceability",
+        "效期追溯"
+      ],
+      [
+        "Commission Imports",
+        "代销导入"
+      ],
+      [
+        "Food Manufacturing",
+        "食品制造"
+      ],
+      [
+        "Commission Billing",
+        "代销开票"
+      ],
+      [
+        "Excel Sales Import",
+        "Excel 销售导入"
+      ],
+      [
+        "Branded PDF Output",
+        "品牌 PDF 输出"
+      ],
+      [
+        "MOs Due This Week",
+        "本周到期 MO"
+      ],
+      [
+        "Produce to Outlet",
+        "生产至门店"
+      ],
+      [
+        "Run<br />Produce",
+        "运行<br />生产"
+      ],
+      [
+        "Outlet Analytics",
+        "门店分析"
+      ],
+      [
+        "Finance Approval",
+        "财务审批"
+      ],
+      [
+        "Components Ready",
+        "组件就绪"
+      ],
+      [
+        "Margin by Outlet",
+        "按门店毛利"
+      ],
+      [
+        "Analytic Control",
+        "分析管控"
+      ],
+      [
+        "Split Deliveries",
+        "拆分交付"
+      ],
+      [
+        "Open Deliveries",
+        "开放交付"
+      ],
+      [
+        "Scrap Approval",
+        "报废审批"
+      ],
+      [
+        "Production Mix",
+        "生产构成"
+      ],
+      [
+        "Credit Limits",
+        "信用额度"
+      ],
+      [
+        "MOs Due Today",
+        "今日到期 MO"
+      ],
+      [
+        "Scrap Pending",
+        "待报废"
+      ],
+      [
+        "&amp; Deliver",
+        "与交付"
+      ],
+      [
+        "Day Planning",
+        "日计划"
+      ],
+      [
+        "Manufacture",
+        "制造"
+      ],
+      [
+        "Supervisors",
+        "主管"
+      ],
+      [
+        "Operations",
+        "运营"
+      ],
+      [
+        "Sell &amp;",
+        "销售与"
+      ],
+      [
+        "&amp; Bill",
+        "与开票"
+      ],
+      [
+        "Outlet MOs",
+        "门店 MO"
+      ],
+      [
+        "Deliveries",
+        "交付"
+      ],
+      [
+        "Configure",
+        "配置"
+      ],
+      [
+        "Reconcile",
+        "对账"
+      ],
+      [
+        "Outlets",
+        "门店"
+      ],
+      [
+        "Produce",
+        "生产"
+      ],
+      [
+        "Procure",
+        "采购"
+      ],
+      [
+        "QC Hold",
+        "质检冻结"
+      ],
+      [
+        "MO-2842",
+        "MO-2842"
+      ],
+      [
+        "SKU-101",
+        "SKU-101"
+      ],
+      [
+        "MO-2847",
+        "MO-2847"
+      ],
+      [
+        "SKU-204",
+        "SKU-204"
+      ],
+      [
+        "MO-2851",
+        "MO-2851"
+      ],
+      [
+        "SKU-318",
+        "SKU-318"
+      ],
+      [
+        "MO-2854",
+        "MO-2854"
+      ],
+      [
+        "SKU-422",
+        "SKU-422"
+      ],
+      [
+        "MO",
+        "MO"
+      ]
+    ],
+    "attendance-timesheet-hardware": [
+      [
+        "Alitec's attendance and timesheet solution on Odoo helps operations teams connect biometric punch data, employee attendance control, and team-based timesheet work in one managed workflow. It brings device sync, daily in/out processing, and export-ready timesheet control into one cleaner operation flow.",
+        "Alitec 考勤与工时表 Odoo 方案帮助运营团队将生物识别打卡数据、员工考勤管控与团队工时表工作纳入统一流程，实现设备同步、每日进出处理与可导出工时表管控。"
+      ],
+      [
+        "One operating flow for biometric capture, attendance cleanup, shift handling, export, and team-based timesheet review.",
+        "生物识别采集、考勤整理、班次处理、导出与团队工时表审核一体化流程。"
+      ],
+      [
+        "Convert logs into attendance using either shift-aware smart logic or punch-state rules with tolerance handling.",
+        "用班次感知智能逻辑或打卡状态规则（含容差）将日志转为考勤。"
+      ],
+      [
+        "Import site timesheets from Excel or CSV, auto-create workers, teams, and positions, then confirm and approve.",
+        "从 Excel/CSV 导入现场工时表，自动创建工人、团队与岗位后确认审批。"
+      ],
+      [
+        "Track devices, area, timezone, connection state, last signal, user count, and attendance count inside Odoo.",
+        "在 Odoo 内跟踪设备、区域、时区、连接状态、最后信号、用户数与考勤数。"
+      ],
+      [
+        "Download or sync raw punch logs, keep device references, and prepare the records for attendance processing.",
+        "下载或同步原始打卡日志，保留设备参考并准备考勤处理。"
+      ],
+      [
+        "Generate staff and worker attendance sheets with check-in, device name, NT, OT, and period-ready layouts.",
+        "生成员工考勤表，含签到、设备名、NT、OT 与期间版式。"
+      ],
+      [
+        "Store one daily record per employee with device in and out details, worked hours, and completion status.",
+        "每员工每日一条记录，含设备进出明细、工时与完成状态。"
+      ],
+      [
+        "Split day and night hours, preserve manual overrides, and apply current or dated team history in output.",
+        "拆分白班夜班，保留手工覆盖，输出应用当前或历史团队。"
+      ],
+      [
+        "Biometric capture, daily in/out processing, Excel payroll exports, and site-ready timesheet control",
+        "生物识别采集、每日进出处理、Excel 薪资导出与现场就绪工时表管控"
+      ],
+      [
+        "Reduce manual copying from devices and keep employee punch activity in one Odoo-controlled flow.",
+        "减少从设备手工复制，将员工打卡活动纳入 Odoo 管控流程。"
+      ],
+      [
+        "Track late minutes, no-checkout cases, manual overrides, and recalculation across date ranges.",
+        "跟踪迟到、未签退、手工覆盖与跨日期重算。"
+      ],
+      [
+        "Prepare structured attendance sheets with check times, devices, and working-hour breakdowns.",
+        "准备结构化考勤表，含打卡时间、设备与工时拆分。"
+      ],
+      [
+        "Import site timesheets, apply team structure, and move records through review and approval.",
+        "导入现场工时表，应用团队结构并走审核审批。"
+      ],
+      [
+        "Match device PIN or code combinations back to Odoo employees for reliable log ownership.",
+        "将设备 PIN 或编码组合映射回 Odoo 员工，确保日志归属准确。"
+      ],
+      [
+        "Split day and night hours, preserve manual overrides, and review missing punches.",
+        "拆分白班夜班工时，保留手工覆盖并审核缺卡。"
+      ],
+      [
+        "Bring biometric logs into Odoo with device, area, and connection visibility.",
+        "将生物识别日志导入 Odoo，含设备、区域与连接状态可视化。"
+      ],
+      [
+        "Build one simple table with in/out time, status, and device traceability.",
+        "构建含进出时间、状态与设备追溯的简洁表格。"
+      ],
+      [
+        "Import worker sheets from Excel or CSV and move them through approval.",
+        "从 Excel 或 CSV 导入工时表并走审批流程。"
+      ],
+      [
+        "Attendance &amp; Hardware Integration",
+        "考勤与硬件集成"
+      ],
+      [
+        "Better Shift and Exception Control",
+        "更优班次与异常管控"
+      ],
+      [
+        "Stronger Team and Site Visibility",
+        "更强团队与现场可视化"
+      ],
+      [
+        "Faster Attendance Consolidation",
+        "更快考勤汇总"
+      ],
+      [
+        "Monthly Processed Attendance",
+        "月度已处理考勤"
+      ],
+      [
+        "Payroll-Ready Export Output",
+        "薪资就绪导出"
+      ],
+      [
+        "Timesheet-ready operations",
+        "工时表就绪运营"
+      ],
+      [
+        "Smart and punch processing",
+        "智能与打卡处理"
+      ],
+      [
+        "Process<br />Daily In/Out",
+        "处理<br />每日进出"
+      ],
+      [
+        "Daily attendance control",
+        "每日考勤管控"
+      ],
+      [
+        "Simple attendance table",
+        "简洁考勤表"
+      ],
+      [
+        "Area and timezone setup",
+        "区域与时区设置"
+      ],
+      [
+        "Approve imported sheets",
+        "审批导入工时表"
+      ],
+      [
+        "Imported timesheets 21%",
+        "已导入工时表 21%"
+      ],
+      [
+        "Export<br />Attendance",
+        "导出<br />考勤"
+      ],
+      [
+        "Review<br />Timesheets",
+        "审核<br />工时表"
+      ],
+      [
+        "Shift-aware processing",
+        "班次感知处理"
+      ],
+      [
+        "ZKTeco device registry",
+        "ZKTeco 设备注册"
+      ],
+      [
+        "Attendance log capture",
+        "考勤日志采集"
+      ],
+      [
+        "Shift and team control",
+        "班次与团队管控"
+      ],
+      [
+        "Attendance Status Mix",
+        "考勤状态构成"
+      ],
+      [
+        "Employee code mapping",
+        "员工编码映射"
+      ],
+      [
+        "Bulk timesheet import",
+        "批量工时表导入"
+      ],
+      [
+        "Download device users",
+        "下载设备用户"
+      ],
+      [
+        "Manual override notes",
+        "手工覆盖备注"
+      ],
+      [
+        "Connect<br />Device",
+        "连接<br />设备"
+      ],
+      [
+        "Match<br />Employee",
+        "匹配<br />员工"
+      ],
+      [
+        "Attendance Workflow",
+        "考勤工作流"
+      ],
+      [
+        "Auto-create workers",
+        "自动创建工人"
+      ],
+      [
+        "Imported Timesheets",
+        "已导入工时表"
+      ],
+      [
+        "Direct device sync",
+        "直连设备同步"
+      ],
+      [
+        "Global recalculate",
+        "全局重算"
+      ],
+      [
+        "Pending review 18%",
+        "待审核 18%"
+      ],
+      [
+        "Day / Night Split",
+        "白班/夜班拆分"
+      ],
+      [
+        "Connected Devices",
+        "已连接设备"
+      ],
+      [
+        "Excel export pack",
+        "Excel 导出包"
+      ],
+      [
+        "Simple Attendance",
+        "简洁考勤"
+      ],
+      [
+        "Background Jobs",
+        "后台任务"
+      ],
+      [
+        "Imported Sheets",
+        "已导入工时表"
+      ],
+      [
+        "Sync<br />Logs",
+        "同步<br />日志"
+      ],
+      [
+        "Biometric Logs",
+        "生物识别日志"
+      ],
+      [
+        "Daily Punches",
+        "每日打卡"
+      ],
+      [
+        "Worker Export",
+        "工人导出"
+      ],
+      [
+        "Late Minutes",
+        "迟到分钟"
+      ],
+      [
+        "No Check Out",
+        "未签退"
+      ],
+      [
+        "Team History",
+        "团队历史"
+      ],
+      [
+        "Daily In/Out",
+        "每日进出"
+      ],
+      [
+        "Complete 61%",
+        "完成 61%"
+      ],
+      [
+        "No Checkout",
+        "未签退"
+      ],
+      [
+        "Night Shift",
+        "夜班"
+      ],
+      [
+        "Attendance",
+        "考勤"
+      ],
+      [
+        "Timesheets",
+        "工时表"
+      ],
+      [
+        "Processing",
+        "处理中"
+      ],
+      [
+        "XLS / CSV",
+        "XLS / CSV"
+      ],
+      [
+        "Employee",
+        "员工"
+      ],
+      [
+        "Connect",
+        "连接"
+      ],
+      [
+        "Process",
+        "处理"
+      ],
+      [
+        "Devices",
+        "设备"
+      ],
+      [
+        "Device",
+        "设备"
+      ],
+      [
+        "Export",
+        "导出"
+      ],
+      [
+        "Match",
+        "匹配"
+      ],
+      [
+        "Excel",
+        "Excel"
+      ],
+      [
+        "Sync",
+        "同步"
+      ],
+      [
+        "Logs",
+        "日志"
+      ],
+      [
+        "2.4k",
+        "2.4k"
+      ]
+    ],
+    "translation-service-operations": [
+      [
+        "Alitec's translation solution helps language service providers manage client quotes,\n        translation projects, vendor assignments, and billing — with third-party translation\n        tool integration, document-level vendor POs, and language-pair product catalogs in one Odoo platform.",
+        "Alitec 翻译方案帮助语言服务商管理客户报价、翻译项目、供应商分配与开票 — 含第三方翻译工具集成、文档级供应商 PO 与语言对产品目录，统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's translation solution helps language service providers manage client quotes, translation projects, vendor assignments, and billing — with third-party translation tool integration, document-level vendor POs, and language-pair product catalogs in one Odoo platform.",
+        "Alitec 翻译方案帮助语言服务商管理客户报价、翻译项目、供应商分配与开票 — 含第三方翻译工具集成、文档级供应商 PO 与语言对产品目录，统一于 Odoo 平台。"
+      ],
+      [
+        "Connect third-party translation tools and pull document assignments and weighted counts.",
+        "连接第三方翻译工具，拉取文档分配与加权计数。"
+      ],
+      [
+        "Connect your CAT or translation platform and sync document status and assignments.",
+        "连接 CAT 或翻译平台，同步文档状态与分配。"
+      ],
+      [
+        "Create purchase orders from documents with word, character, or min-charge pricing.",
+        "按字数、字符数或最低收费从文档创建采购订单。"
+      ],
+      [
+        "Auto-create projects with deadlines, PM, and analytic accounts from orders.",
+        "从订单自动创建含截止日期、PM 与分析账户的项目。"
+      ],
+      [
+        "Products mapped by source language, target language, and TR/TEP/REV type.",
+        "产品按源语言、目标语言与 TR/TEP/REV 类型映射。"
+      ],
+      [
+        "Pre-fill memo notes, turnaround time, and delivery format on new quotes.",
+        "新报价预填备注、周转时间与交付格式。"
+      ],
+      [
+        "Track translators, reviewers, status, and weighted words or characters.",
+        "跟踪译员、审校、状态与加权字数/字符。"
+      ],
+      [
+        "Deadlines, PMs, turnaround times, and delivery formats on every job.",
+        "每票作业含截止日期、PM、周转时间与交付格式。"
+      ],
+      [
+        "Build quotation with language lines, deadline, and project details",
+        "构建含语言行、截止日期与项目明细的报价"
+      ],
+      [
+        "Generate POs from document assignments using supplier pricelists.",
+        "按供应商价目表从文档分配生成 PO。"
+      ],
+      [
+        "Catalog products by source, target, and translation service type.",
+        "按源语言、目标语言与翻译服务类型编目产品。"
+      ],
+      [
+        "Auto-copy folder structure when a new translation project starts.",
+        "新翻译项目启动时自动复制文件夹结构。"
+      ],
+      [
+        "Move from confirmed quote to CAT project and folders in one flow.",
+        "从确认报价到 CAT 项目与文件夹一步完成。"
+      ],
+      [
+        "Convert to project, launch the CAT job, and copy project folders",
+        "转为项目、启动 CAT 作业并复制项目文件夹"
+      ],
+      [
+        "Sync translators and reviewers from translation tool assignments",
+        "从翻译工具分配同步译员与审校"
+      ],
+      [
+        "Print quotations, invoices, and job orders with custom layouts.",
+        "以定制版式打印报价、发票与作业单。"
+      ],
+      [
+        "PO lines based on real document word counts and vendor rates.",
+        "PO 行基于真实文档字数与供应商费率。"
+      ],
+      [
+        "Deadlines, assignments, and CAT tool status in one dashboard.",
+        "截止日期、分配与 CAT 工具状态一屏掌握。"
+      ],
+      [
+        "Bill completed work with branded quotation and invoice docs",
+        "以品牌报价与发票文档对已完成工作开票"
+      ],
+      [
+        "Branded quotations, job orders, and invoices every time.",
+        "每次输出品牌报价、作业单与发票。"
+      ],
+      [
+        "Language Projects — From Quote to Delivery with Odoo",
+        "语言项目 — 从报价到交付"
+      ],
+      [
+        "Scheduled status and document updates from CAT tools",
+        "CAT 工具定时状态与文档更新"
+      ],
+      [
+        "Generate POs from weighted word or character counts",
+        "按加权字数或字符数生成 PO"
+      ],
+      [
+        "Source and destination validation on every order",
+        "每单校验源语言与目标语言"
+      ],
+      [
+        "Vendor contacts mapped to translation tool users",
+        "供应商联系人映射翻译工具用户"
+      ],
+      [
+        "Unit pricing with minimum charge fallback rules",
+        "单价含最低收费回退规则"
+      ],
+      [
+        "TR, TEP, and REV routing for vendor products",
+        "供应商产品 TR、TEP、REV 路由"
+      ],
+      [
+        "Per-project analytic account tracking",
+        "按项目分析账户跟踪"
+      ],
+      [
+        "Turnaround and delivery format fields",
+        "周转与交付格式字段"
+      ],
+      [
+        "Custom job order and invoice layouts",
+        "定制作业单与发票版式"
+      ],
+      [
+        "Translation Service<br />Operations",
+        "翻译服务<br />运营"
+      ],
+      [
+        "PM alert when CAT project is ready",
+        "CAT 项目就绪时 PM 提醒"
+      ],
+      [
+        "Bulk contact and quotation import",
+        "批量联系人与报价导入"
+      ],
+      [
+        "Delivery order reports from sales",
+        "从销售生成交付单报告"
+      ],
+      [
+        "Auto project folder duplication",
+        "自动复制项目文件夹"
+      ],
+      [
+        "Confirm &amp;<br />Kickoff",
+        "确认并<br />启动"
+      ],
+      [
+        "Sales team data security",
+        "销售团队数据安全"
+      ],
+      [
+        "Accurate Vendor Billing",
+        "精准供应商开票"
+      ],
+      [
+        "Create<br />Vendor POs",
+        "创建<br />供应商 PO"
+      ],
+      [
+        "Vendor Purchase Orders",
+        "供应商采购订单"
+      ],
+      [
+        "Language-Pair Products",
+        "语言对产品"
+      ],
+      [
+        "TEP / Review (134) 42%",
+        "TEP / 审校 (134) 42%"
+      ],
+      [
+        "Weekly Project Volume",
+        "周项目量"
+      ],
+      [
+        "Translation Documents",
+        "翻译文档"
+      ],
+      [
+        "Translation (186) 58%",
+        "翻译 (186) 58%"
+      ],
+      [
+        "CAT Tool Integration",
+        "CAT 工具集成"
+      ],
+      [
+        "Project File Folders",
+        "项目文件夹"
+      ],
+      [
+        "Consistent Documents",
+        "一致文档"
+      ],
+      [
+        "Assign<br />Vendors",
+        "分配<br />供应商"
+      ],
+      [
+        "Invoice<br />Client",
+        "向客户<br />开票"
+      ],
+      [
+        "Translation Service",
+        "翻译服务"
+      ],
+      [
+        "Quotation Templates",
+        "报价模板"
+      ],
+      [
+        "Top Language Pairs",
+        "热门语言对"
+      ],
+      [
+        "Upcoming Deadlines",
+        "即将到期"
+      ],
+      [
+        "Quote<br />Client",
+        "向客户<br />报价"
+      ],
+      [
+        "Third-Party Tools",
+        "第三方工具"
+      ],
+      [
+        "Job Order Reports",
+        "作业单报告"
+      ],
+      [
+        "Docs In Progress",
+        "进行中文档"
+      ],
+      [
+        "Project Workflow",
+        "项目工作流"
+      ],
+      [
+        "Language Catalog",
+        "语言目录"
+      ],
+      [
+        "Active Projects",
+        "活跃项目"
+      ],
+      [
+        "Open Vendor POs",
+        "开放供应商 PO"
+      ],
+      [
+        "Project Control",
+        "项目管控"
+      ],
+      [
+        "Sale to Project",
+        "销售转项目"
+      ],
+      [
+        "Language Pairs",
+        "语言对"
+      ],
+      [
+        "Vendor PO Auto",
+        "供应商 PO 自动"
+      ],
+      [
+        "Legal Contract",
+        "法律合同"
+      ],
+      [
+        "Marketing Site",
+        "营销网站"
+      ],
+      [
+        "Faster Kickoff",
+        "更快启动"
+      ],
+      [
+        "Service Types",
+        "服务类型"
+      ],
+      [
+        "Live CAT Jobs",
+        "运行中 CAT 作业"
+      ],
+      [
+        "Due This Week",
+        "本周到期"
+      ],
+      [
+        "Confirm &amp;",
+        "确认并"
+      ],
+      [
+        "Annual Report",
+        "年报"
+      ],
+      [
+        "Word / Char",
+        "字数/字符"
+      ],
+      [
+        "Service Mix",
+        "服务构成"
+      ],
+      [
+        "Tech Manual",
+        "技术手册"
+      ],
+      [
+        "Operations",
+        "运营"
+      ],
+      [
+        "Vendor POs",
+        "供应商 PO"
+      ],
+      [
+        "Analytics",
+        "分析"
+      ],
+      [
+        "Tool Sync",
+        "工具同步"
+      ],
+      [
+        "Deadlines",
+        "截止日期"
+      ],
+      [
+        "Fri 17:00",
+        "周五 17:00"
+      ],
+      [
+        "Sat 12:00",
+        "周六 12:00"
+      ],
+      [
+        "Mon 09:00",
+        "周一 09:00"
+      ],
+      [
+        "Mon 15:00",
+        "周一 15:00"
+      ],
+      [
+        "PRJ-2041",
+        "PRJ-2041"
+      ],
+      [
+        "PRJ-2045",
+        "PRJ-2045"
+      ],
+      [
+        "PRJ-2048",
+        "PRJ-2048"
+      ],
+      [
+        "PRJ-2052",
+        "PRJ-2052"
+      ],
+      [
+        "Kickoff",
+        "启动"
+      ],
+      [
+        "Vendors",
+        "供应商"
+      ],
+      [
+        "Invoice",
+        "开票"
+      ],
+      [
+        "PM Team",
+        "PM 团队"
+      ],
+      [
+        "Assign",
+        "分配"
+      ],
+      [
+        "Create",
+        "创建"
+      ],
+      [
+        "Quote",
+        "报价"
+      ],
+      [
+        "EN→JA",
+        "英→日"
+      ],
+      [
+        "EN→ZH",
+        "英→中"
+      ],
+      [
+        "JA→EN",
+        "日→英"
+      ],
+      [
+        "EN→KO",
+        "英→韩"
+      ],
+      [
+        "TEP",
+        "TEP"
+      ],
+      [
+        "REV",
+        "REV"
+      ],
+      [
+        "TR",
+        "TR"
+      ]
+    ],
+    "gym-equipment-sales-service": [
+      [
+        "Alitec's gym equipment solution helps distributors sell through B2B and online channels,\n        register installed machines on delivery, run maintenance contracts, and complete signed\n        field service visits — all in one Odoo platform.",
+        "Alitec 健身器材方案帮助分销商通过 B2B 与在线渠道销售、在交付时登记安装设备、运行维保合同并完成签字现场服务 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's gym equipment solution helps distributors sell through B2B and online channels, register installed machines on delivery, run maintenance contracts, and complete signed field service visits — all in one Odoo platform.",
+        "Alitec 健身器材方案帮助分销商通过 B2B 与在线渠道销售、在交付时登记安装设备、运行维保合同并完成签字现场服务 — 统一于 Odoo 平台。"
+      ],
+      [
+        "B2B &amp; B2C Distribution — Sales, Delivery &amp; Maintenance with Odoo",
+        "B2B 与 B2C 分销 — 销售、交付与维保"
+      ],
+      [
+        "Subcategories, brands, dimensions, and footprints on equipment products.",
+        "设备产品含子类、品牌、尺寸与占地面积。"
+      ],
+      [
+        "Target discounts, delivery contacts, and after-sales quotation types.",
+        "目标折扣、交付联系人与售后报价类型。"
+      ],
+      [
+        "Register serial-numbered assets when equipment is delivered on site.",
+        "现场交付时登记序列号资产。"
+      ],
+      [
+        "Track every machine by customer, serial number, and site location.",
+        "按客户、序列号与现场位置跟踪每台设备。"
+      ],
+      [
+        "Maintenance, repair, troubleshooting, commissioning, and shifting.",
+        "维保、维修、故障排查、调试与搬迁。"
+      ],
+      [
+        "Checklists, parts used, and signed maintenance or repair reports.",
+        "检查清单、使用零件与签字维保/维修报告。"
+      ],
+      [
+        "Link machines to maintenance contract with billing and frequency",
+        "将设备关联维保合同含账单与频率"
+      ],
+      [
+        "Online fitness shop with brands, filters, and checkout options.",
+        "在线健身商城含品牌、筛选与结账选项。"
+      ],
+      [
+        "Signed delivery, serial capture, push equipment to after-sales",
+        "签字交付、序列号采集并推送至售后"
+      ],
+      [
+        "Run B2B quotes and B2C web orders from one equipment catalog.",
+        "从统一设备目录运行 B2B 报价与 B2C 网站订单。"
+      ],
+      [
+        "Lump sum, per-service, leasing, and renewal quotation flows.",
+        "包干、按次、租赁与续费报价流程。"
+      ],
+      [
+        "B2B quotation or web order with brand catalog and warranties",
+        "B2B 报价或含品牌目录与保修的网站订单"
+      ],
+      [
+        "Checklists, signatures, service PDFs, and follow-up invoices",
+        "检查清单、签名、服务 PDF 与跟进发票"
+      ],
+      [
+        "Schedule recurring visits and batch monthly service orders.",
+        "排程定期拜访并批量生成月度服务订单。"
+      ],
+      [
+        "Product-linked templates completed on every service visit.",
+        "每次服务拜访完成产品关联模板。"
+      ],
+      [
+        "Lump sum, per service, leasing, and free service contracts",
+        "包干、按次、租赁与免费服务合同"
+      ],
+      [
+        "Digital signatures on delivery and service PDF documents.",
+        "交付与服务 PDF 数字签名。"
+      ],
+      [
+        "Contracts drive next visit dates and monthly scheduling.",
+        "合同驱动下次拜访日期与月度排程。"
+      ],
+      [
+        "Generate monthly maintenance or on-demand repair orders",
+        "生成月度维保或按需维修订单"
+      ],
+      [
+        "Maintenance, repair, troubleshooting, and commissioning",
+        "维保、维修、故障排查与调试"
+      ],
+      [
+        "Time-in/time-out and scheduled visit windows on orders",
+        "订单含进出时间与预约拜访窗口"
+      ],
+      [
+        "Serve gyms, dealers, and retail buyers in one system.",
+        "在同一系统服务健身房、经销商与零售买家。"
+      ],
+      [
+        "Warranty codes and extensions on installed equipment",
+        "已安装设备保修码与延期"
+      ],
+      [
+        "From sale and delivery through every service visit.",
+        "从销售交付到每次服务拜访。"
+      ],
+      [
+        "Standard vs after-sales team routing on quotations",
+        "报价标准团队与售后团队路由"
+      ],
+      [
+        "Signed checklists and PDFs for every job.",
+        "每票作业签字检查清单与 PDF。"
+      ],
+      [
+        "Branded sales and delivery print layouts",
+        "品牌销售与交付打印版式"
+      ],
+      [
+        "Parts replacement list on service orders",
+        "服务订单零件更换清单"
+      ],
+      [
+        "Gym Equipment<br />Sales &amp; Service",
+        "健身器材<br />销售与服务"
+      ],
+      [
+        "Consignment picking linked to sales",
+        "寄售拣货关联销售"
+      ],
+      [
+        "Target discount on B2B quotations",
+        "B2B 报价目标折扣"
+      ],
+      [
+        "Monthly maintenance batch wizard",
+        "月度维保批量向导"
+      ],
+      [
+        "Subscription billing UI support",
+        "订阅账单 UI 支持"
+      ],
+      [
+        "Email service PDFs to customers",
+        "邮件发送服务 PDF 给客户"
+      ],
+      [
+        "Brand &amp; Category Catalog",
+        "品牌与品类目录"
+      ],
+      [
+        "CRM and inventory dashboards",
+        "CRM 与库存仪表盘"
+      ],
+      [
+        "Deliver &amp;<br />Register",
+        "交付与<br />登记"
+      ],
+      [
+        "Professional Field Reports",
+        "专业现场报告"
+      ],
+      [
+        "Complete<br />&amp; Bill",
+        "完成与<br />开票"
+      ],
+      [
+        "Upcoming Service Visits",
+        "即将服务拜访"
+      ],
+      [
+        "Repair / Other (91) 39%",
+        "维修/其他 (91) 39%"
+      ],
+      [
+        "Predictable Maintenance",
+        "可预期维保"
+      ],
+      [
+        "Equipment Registration",
+        "设备登记"
+      ],
+      [
+        "Signed Service Reports",
+        "签字服务报告"
+      ],
+      [
+        "Quote<br />&amp; Sell",
+        "报价<br />与销售"
+      ],
+      [
+        "Schedule<br />Service",
+        "排程<br />服务"
+      ],
+      [
+        "Weekly Service Volume",
+        "周服务量"
+      ],
+      [
+        "Maintenance Contracts",
+        "维保合同"
+      ],
+      [
+        "Maintenance (142) 61%",
+        "维保 (142) 61%"
+      ],
+      [
+        "Contract Maintenance",
+        "合同维保"
+      ],
+      [
+        "eCommerce Storefront",
+        "eCommerce 店面"
+      ],
+      [
+        "One Equipment Record",
+        "统一设备档案"
+      ],
+      [
+        "Open Service Orders",
+        "开放服务订单"
+      ],
+      [
+        "Sales &amp; Service",
+        "销售与服务"
+      ],
+      [
+        "Dual Sales Channels",
+        "双销售渠道"
+      ],
+      [
+        "Installed Equipment",
+        "已安装设备"
+      ],
+      [
+        "Channel Flexibility",
+        "渠道灵活性"
+      ],
+      [
+        "Open<br />Contract",
+        "开通<br />合同"
+      ],
+      [
+        "Field Service Docs",
+        "现场服务文档"
+      ],
+      [
+        "Service Checklists",
+        "服务检查清单"
+      ],
+      [
+        "Equipment On Site",
+        "现场设备"
+      ],
+      [
+        "Sales Channel Mix",
+        "销售渠道构成"
+      ],
+      [
+        "Service Workflow",
+        "服务工作流"
+      ],
+      [
+        "City Sports Club",
+        "城市体育俱乐部"
+      ],
+      [
+        "B2B Sales Tools",
+        "B2B 销售工具"
+      ],
+      [
+        "Service Orders",
+        "服务订单"
+      ],
+      [
+        "Hotel Wellness",
+        "酒店康体"
+      ],
+      [
+        "Billing Types",
+        "账单类型"
+      ],
+      [
+        "Service Types",
+        "服务类型"
+      ],
+      [
+        "Contracts Due",
+        "合同到期"
+      ],
+      [
+        "Due This Week",
+        "本周到期"
+      ],
+      [
+        "Gym Equipment",
+        "健身器材"
+      ],
+      [
+        "Deliver &amp;",
+        "交付与"
+      ],
+      [
+        "Renewals Due",
+        "续费到期"
+      ],
+      [
+        "Service Team",
+        "服务团队"
+      ],
+      [
+        "Retail Buyer",
+        "零售买家"
+      ],
+      [
+        "Sales Teams",
+        "销售团队"
+      ],
+      [
+        "Service Mix",
+        "服务构成"
+      ],
+      [
+        "Maintenance",
+        "维保"
+      ],
+      [
+        "After-Sales",
+        "售后"
+      ],
+      [
+        "FitZone Gym",
+        "FitZone 健身房"
+      ],
+      [
+        "&amp; Sell",
+        "与销售"
+      ],
+      [
+        "&amp; Bill",
+        "与开票"
+      ],
+      [
+        "Deliveries",
+        "交付"
+      ],
+      [
+        "Field Ops",
+        "现场运营"
+      ],
+      [
+        "Contracts",
+        "合同"
+      ],
+      [
+        "Fri 10:00",
+        "周五 10:00"
+      ],
+      [
+        "Sat 09:30",
+        "周六 09:30"
+      ],
+      [
+        "Mon 14:00",
+        "周一 14:00"
+      ],
+      [
+        "Tue 11:00",
+        "周二 11:00"
+      ],
+      [
+        "Warranty",
+        "保修"
+      ],
+      [
+        "Register",
+        "登记"
+      ],
+      [
+        "Contract",
+        "合同"
+      ],
+      [
+        "Schedule",
+        "排程"
+      ],
+      [
+        "Complete",
+        "完成"
+      ],
+      [
+        "Renewals",
+        "续费"
+      ],
+      [
+        "Service",
+        "服务"
+      ],
+      [
+        "Repairs",
+        "维修"
+      ],
+      [
+        "B2C Web",
+        "B2C 网站"
+      ],
+      [
+        "SO-1842",
+        "SO-1842"
+      ],
+      [
+        "SO-1847",
+        "SO-1847"
+      ],
+      [
+        "SO-1851",
+        "SO-1851"
+      ],
+      [
+        "SO-1854",
+        "SO-1854"
+      ],
+      [
+        "Quote",
+        "报价"
+      ],
+      [
+        "B2B",
+        "B2B"
+      ]
+    ],
+    "specialty-chemical-trading": [
+      [
+        "Alitec's chemical trading solution helps distributors manage indent and ex-stock sales,\n        margin-controlled quotations, batch traceability, landed import costs, and multi-level\n        approvals — across sales, warehouse, and finance in one Odoo platform.",
+        "Alitec 化学品贸易方案帮助分销商管理订货与现货销售、毛利管控报价、批次追溯、进口到岸成本与多级审批 — 销售、仓库与财务统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's chemical trading solution helps distributors manage indent and ex-stock sales, margin-controlled quotations, batch traceability, landed import costs, and multi-level approvals — across sales, warehouse, and finance in one Odoo platform.",
+        "Alitec 化学品贸易方案帮助分销商管理订货与现货销售、毛利管控报价、批次追溯、进口到岸成本与多级审批 — 销售、仓库与财务统一于 Odoo 平台。"
+      ],
+      [
+        "Lots, shelf life, and expiration on receipts, deliveries, and invoices.",
+        "收货、交付与发票含批次、保质期与效期。"
+      ],
+      [
+        "Indent and ex-stock flows with ports, incoterms, and shipment terms.",
+        "订货与现货流程含港口、贸易术语与装运条款。"
+      ],
+      [
+        "Invoices with lot/expiration lines, delivery notes, and statements.",
+        "发票含批次/效期行、送货单与对账单。"
+      ],
+      [
+        "Confirm indent purchase or ex-stock allocation with shipping terms",
+        "确认订货采购或现货分配含装运条款"
+      ],
+      [
+        "Grading, segments, credit limits, and trade vs non-trade routing.",
+        "分级、细分、信用额度与贸易/非贸易路由。"
+      ],
+      [
+        "Regional Distribution — Sales, Import &amp; Compliance with Odoo",
+        "区域分销 — 销售、进口与合规"
+      ],
+      [
+        "Tier validation on sales, purchases, stock moves, and invoices.",
+        "销售、采购、库存移动与发票分级校验。"
+      ],
+      [
+        "COO, manufacturer, business unit, and strategic BU on products.",
+        "产品含原产国、制造商、业务单元与战略 BU。"
+      ],
+      [
+        "Build quotation with margin checks and tier validation sign-off",
+        "构建含毛利检查与分级审批签字的报价"
+      ],
+      [
+        "Order types with RCC partners, agency fees, and shipping data.",
+        "订单类型含 RCC 伙伴、代理费与装运数据。"
+      ],
+      [
+        "VOC, min selling price, and blocked quote send until approved.",
+        "VOC、最低售价与未审批禁止发送报价。"
+      ],
+      [
+        "Shelf-life and lot data carried through to customer invoices.",
+        "保质期与批次数据延续至客户发票。"
+      ],
+      [
+        "VOC and minimum price checks before quotations are released.",
+        "报价发布前 VOC 与最低售价检查。"
+      ],
+      [
+        "Goods receipt with shelf-life checks and landed cost posting",
+        "收货含保质期检查与到岸成本过账"
+      ],
+      [
+        "Landed costs allocated to the right business unit and batch.",
+        "到岸成本分摊至正确业务单元与批次。"
+      ],
+      [
+        "GR validation when batch shelf-life conflicts are detected.",
+        "检测批次保质期冲突时 GR 校验。"
+      ],
+      [
+        "eCommerce catalog with grouped products and quote checkout.",
+        "eCommerce 目录含分组产品与询价结账。"
+      ],
+      [
+        "Ship with lot traceability and print branded trade invoices",
+        "发货含批次追溯并打印品牌贸易发票"
+      ],
+      [
+        "Import cost splits by business unit onto chemical batches.",
+        "进口成本按业务单元分摊至化工批次。"
+      ],
+      [
+        "Margin and credit rules before orders reach the warehouse.",
+        "订单到仓前执行毛利与信用规则。"
+      ],
+      [
+        "Trade, non-trade, agency, and RCC partner classifications",
+        "贸易、非贸易、代理与 RCC 伙伴分类"
+      ],
+      [
+        "Purchase blocks and flagged sales lines on aged inventory",
+        "账龄库存采购冻结与标记销售行"
+      ],
+      [
+        "Route orders by stock strategy and import sourcing rules",
+        "按库存策略与进口寻源规则路由订单"
+      ],
+      [
+        "Approvals on sales, purchases, deliveries, and billing.",
+        "销售、采购、交付与开票审批。"
+      ],
+      [
+        "Track credit, slow movers, commissions, and AR aging",
+        "跟踪信用、滞销、佣金与应收账龄"
+      ],
+      [
+        "Credit limit and available limit by customer grading",
+        "按客户分级信用额度与可用额度"
+      ],
+      [
+        "Business unit and strategic BU distribution on lines",
+        "行级业务单元与战略 BU 分配"
+      ],
+      [
+        "Trade interest, VAT, and lead time reports",
+        "贸易利息、VAT 与交期报表"
+      ],
+      [
+        "Consignee and notify party on deliveries",
+        "交付含收货人与通知方"
+      ],
+      [
+        "Split deliveries by line delivery dates",
+        "按行交付日期拆分交付"
+      ],
+      [
+        "Agency fee and commission sale handling",
+        "代理费与佣金销售处理"
+      ],
+      [
+        "Purchase-from-sale for indent sourcing",
+        "订货寻源按销售采购"
+      ],
+      [
+        "Contact approval before transactions",
+        "交易前联系人审批"
+      ],
+      [
+        "Sales contract generation from DOCX",
+        "从 DOCX 生成销售合同"
+      ],
+      [
+        "Slow-moving and shelf-life alerts",
+        "滞销与保质期预警"
+      ],
+      [
+        "Specialty Chemical<br />Trading",
+        "特种化学品<br />贸易"
+      ],
+      [
+        "Quotations Awaiting Approval",
+        "待审批报价"
+      ],
+      [
+        "Indent &amp; Ex-Stock Sales",
+        "订货与现货销售"
+      ],
+      [
+        "Price &amp; Margin Approval",
+        "价格与毛利审批"
+      ],
+      [
+        "Deliver &amp;<br />Invoice",
+        "交付与<br />开票"
+      ],
+      [
+        "Monitor &amp;<br />Report",
+        "监控与<br />报表"
+      ],
+      [
+        "Quote &amp;<br />Approve",
+        "报价与<br />审批"
+      ],
+      [
+        "Chemical Product Catalog",
+        "化工产品目录"
+      ],
+      [
+        "Order &amp;<br />Source",
+        "下单与<br />寻源"
+      ],
+      [
+        "Receive &amp;<br />Cost",
+        "收货与<br />成本"
+      ],
+      [
+        "Weekly Quotation Volume",
+        "周报价量"
+      ],
+      [
+        "Customer Trade Profiles",
+        "客户贸易档案"
+      ],
+      [
+        "Branded Trade Documents",
+        "品牌贸易文档"
+      ],
+      [
+        "Shelf-Life Enforcement",
+        "保质期强制"
+      ],
+      [
+        "Landed Cost Allocation",
+        "到岸成本分摊"
+      ],
+      [
+        "Website Quote Requests",
+        "网站询价"
+      ],
+      [
+        "Business Unit Volume",
+        "业务单元量"
+      ],
+      [
+        "Trade Order Control",
+        "贸易订单管控"
+      ],
+      [
+        "Import Cost Clarity",
+        "进口成本清晰"
+      ],
+      [
+        "Governed Operations",
+        "受控运营"
+      ],
+      [
+        "Specialty Chemical",
+        "特种化学品"
+      ],
+      [
+        "Batch Traceability",
+        "批次追溯"
+      ],
+      [
+        "Approval Workflows",
+        "审批工作流"
+      ],
+      [
+        "Controlled Quoting",
+        "受控报价"
+      ],
+      [
+        "Indent / Ex-Stock",
+        "订货 / 现货"
+      ],
+      [
+        "Slow Moving Stock",
+        "滞销库存"
+      ],
+      [
+        "Shelf-Life Alerts",
+        "保质期预警"
+      ],
+      [
+        "Margin Governance",
+        "毛利治理"
+      ],
+      [
+        "Ex-Stock (92) 37%",
+        "现货 (92) 37%"
+      ],
+      [
+        "Trading Workflow",
+        "贸易工作流"
+      ],
+      [
+        "Indent (156) 63%",
+        "订货 (156) 63%"
+      ],
+      [
+        "Batch Integrity",
+        "批次完整性"
+      ],
+      [
+        "Customer Grade",
+        "客户等级"
+      ],
+      [
+        "Under Approval",
+        "审批中"
+      ],
+      [
+        "Receive &amp;",
+        "收货与"
+      ],
+      [
+        "Deliver &amp;",
+        "交付与"
+      ],
+      [
+        "Monitor &amp;",
+        "监控与"
+      ],
+      [
+        "Open Indents",
+        "开放订货"
+      ],
+      [
+        "Trade Types",
+        "贸易类型"
+      ],
+      [
+        "Quote &amp;",
+        "报价与"
+      ],
+      [
+        "Order &amp;",
+        "下单与"
+      ],
+      [
+        "Care Brands",
+        "护理品牌"
+      ],
+      [
+        "AR Due 30d",
+        "30 天应收"
+      ],
+      [
+        "Quotations",
+        "报价"
+      ],
+      [
+        "Shelf Life",
+        "保质期"
+      ],
+      [
+        "Paints Co.",
+        "涂料公司"
+      ],
+      [
+        "Analytics",
+        "分析"
+      ],
+      [
+        "Below VOC",
+        "低于 VOC"
+      ],
+      [
+        "Order Mix",
+        "订单构成"
+      ],
+      [
+        "Trade Ops",
+        "贸易运营"
+      ],
+      [
+        "Home Care",
+        "家居护理"
+      ],
+      [
+        "BuildChem",
+        "BuildChem"
+      ],
+      [
+        "Food Ing.",
+        "食品原料"
+      ],
+      [
+        "Coatings",
+        "涂料"
+      ],
+      [
+        "Food Sci",
+        "食品科学"
+      ],
+      [
+        "Personal",
+        "个人护理"
+      ],
+      [
+        "Approval",
+        "审批"
+      ],
+      [
+        "Trading",
+        "贸易"
+      ],
+      [
+        "Invoice",
+        "开票"
+      ],
+      [
+        "Indents",
+        "订货"
+      ],
+      [
+        "SO-3921",
+        "SO-3921"
+      ],
+      [
+        "SO-3928",
+        "SO-3928"
+      ],
+      [
+        "SO-3934",
+        "SO-3934"
+      ],
+      [
+        "SO-3939",
+        "SO-3939"
+      ],
+      [
+        "Report",
+        "报表"
+      ],
+      [
+        "Credit",
+        "信用"
+      ],
+      [
+        "Margin",
+        "毛利"
+      ],
+      [
+        "Tier 2",
+        "二级"
+      ],
+      [
+        "Quote",
+        "报价"
+      ],
+      [
+        "Issue",
+        "问题"
+      ],
+      [
+        "Limit",
+        "额度"
+      ],
+      [
+        "Price",
+        "价格"
+      ],
+      [
+        "Cost",
+        "成本"
+      ]
+    ],
+    "school-uniform-seller": [
+      [
+        "Alitec's School Uniform Seller solution on Odoo helps uniform retailers,\n        school shops, and appointed vendors manage every step of the operation,\n        from online ordering and POS sales to inventory, purchasing, invoicing,\n        payments, pickup, and delivery.",
+        "Alitec 校服销售 Odoo 方案帮助校服零售商、校内店与指定供应商管理全流程，从在线订购与 POS 销售到库存、采购、开票、支付、自提与配送。"
+      ],
+      [
+        "Alitec's School Uniform Seller solution on Odoo helps uniform retailers, school shops, and appointed vendors manage every step of the operation, from online ordering and POS sales to inventory, purchasing, invoicing, payments, pickup, and delivery.",
+        "Alitec 校服销售 Odoo 方案帮助校服零售商、校内店与指定供应商管理全流程，从在线订购与 POS 销售到库存、采购、开票、支付、自提与配送。"
+      ],
+      [
+        "Simpler ordering, pickup slots, delivery tracking, accurate documents, and fast service.",
+        "更简单订购、自提时段、配送跟踪、准确文档与快速服务。"
+      ],
+      [
+        "Know available stock, reserved items, supplier needs, and fulfilment status faster.",
+        "更快掌握可用库存、预留、供应商需求与履约状态。"
+      ],
+      [
+        "Operate web, POS, quotations, and school campaigns without duplicate data entry.",
+        "网站、POS、报价与学校活动无需重复录入。"
+      ],
+      [
+        "Connect orders, invoices, DBS QR, online gateways, receipts, and reconciliation.",
+        "贯通订单、发票、DBS QR、在线网关、收据与对账。"
+      ],
+      [
+        "Support seasons, preorders, promotions, replenishment, and reports.",
+        "支持学期、预订、促销、补货与报表。"
+      ],
+      [
+        "Create orders, invoices, FAS documents, delivery slips, and notes.",
+        "创建订单、发票、FAS 文档、送货单与备注。"
+      ],
+      [
+        "Configure pickup slots, carriers, SingPost, Shippit, and tracking.",
+        "配置自提时段、承运商、SingPost、Shippit 与跟踪。"
+      ],
+      [
+        "Sell online or in-store with wishlist, loyalty, and stock checks.",
+        "在线或门店销售，含心愿单、积分与库存检查。"
+      ],
+      [
+        "Plan procurement, track picking status, and select products fast.",
+        "计划采购、跟踪拣货状态并快速选品。"
+      ],
+      [
+        "Review sales, stock movement, payments, periods, and performance.",
+        "审阅销售、库存移动、支付、期间与绩效。"
+      ],
+      [
+        "Run website, POS, quote, and office orders from one catalog.",
+        "从统一目录运行网站、POS、报价与办公室订单。"
+      ],
+      [
+        "Manage shirts, PE kits, sizes, bundles, combos, and pricing.",
+        "管理衬衫、体育服、尺码、套装、组合与定价。"
+      ],
+      [
+        "Monitor stock by location, availability, and weekly alerts.",
+        "按库位、可用性与周预警监控库存。"
+      ],
+      [
+        "Capture school, class, student name, and order references.",
+        "采集学校、班级、学生姓名与订单参考。"
+      ],
+      [
+        "School, student, sales, stock, and finance data together.",
+        "学校、学生、销售、库存与财务数据一体化。"
+      ],
+      [
+        "Track variants, stock, orders, invoices, and payments.",
+        "跟踪变体、库存、订单、发票与支付。"
+      ],
+      [
+        "Complete Uniform Retail Solutions with Odoo",
+        "完整校服零售 Odoo 方案"
+      ],
+      [
+        "Pickup slot, carrier delivery, tracking",
+        "自提时段、承运配送、跟踪"
+      ],
+      [
+        "Parent, counter, or back-office sale",
+        "家长、柜台或后台销售"
+      ],
+      [
+        "Variant stock from warehouse or shop",
+        "从仓库或门店拣选变体库存"
+      ],
+      [
+        "Invoice, PayNow, cards, and gateways",
+        "发票、PayNow、银行卡与支付网关"
+      ],
+      [
+        "School, class, name, and references",
+        "学校、班级、姓名与参考"
+      ],
+      [
+        "Pickup, Delivery &amp; Shipping",
+        "自提、配送与发货"
+      ],
+      [
+        "Uniform Catalog &amp; Variants",
+        "校服目录与变体"
+      ],
+      [
+        "School &amp; Student Profiles",
+        "学校与学生档案"
+      ],
+      [
+        "Inventory &amp; Replenishment",
+        "库存与补货"
+      ],
+      [
+        "Controlled replacement orders",
+        "受控换货订单"
+      ],
+      [
+        "Purchase &amp; Supplier Flow",
+        "采购与供应商流程"
+      ],
+      [
+        "School Uniform<br />Seller",
+        "校服<br />销售"
+      ],
+      [
+        "Invoice &amp;<br />Payment",
+        "开票与<br />支付"
+      ],
+      [
+        "Orders Awaiting Fulfilment",
+        "待履约订单"
+      ],
+      [
+        "Product / Unit Replacement",
+        "产品/单位换货"
+      ],
+      [
+        "Product / Variant Control",
+        "产品/变体管控"
+      ],
+      [
+        "Sales &amp; Stock Reports",
+        "销售与库存报表"
+      ],
+      [
+        "Sell Across Every Channel",
+        "全渠道销售"
+      ],
+      [
+        "Flexible Fulfilment Modes",
+        "灵活履约模式"
+      ],
+      [
+        "Appointment-based pickup",
+        "预约自提"
+      ],
+      [
+        "Online / POS<br />Order",
+        "在线 / POS<br />订购"
+      ],
+      [
+        "Monthly Uniform Revenue",
+        "月度校服收入"
+      ],
+      [
+        "Website &amp; POS Sales",
+        "网站与 POS 销售"
+      ],
+      [
+        "Reports &amp; Analytics",
+        "报表与分析"
+      ],
+      [
+        "Seasonal stock planning",
+        "季节性库存计划"
+      ],
+      [
+        "Replenishment Reminders",
+        "补货提醒"
+      ],
+      [
+        "POS / Walk-in (136) 37%",
+        "POS / 到店 (136) 37%"
+      ],
+      [
+        "Better Stock Visibility",
+        "更好库存可视化"
+      ],
+      [
+        "Collect /<br />Deliver",
+        "自提 /<br />配送"
+      ],
+      [
+        "Order Channel Overview",
+        "订单渠道概览"
+      ],
+      [
+        "Uniform Sales Workflow",
+        "校服销售工作流"
+      ],
+      [
+        "Custom Print Templates",
+        "定制打印模板"
+      ],
+      [
+        "Accounting Integration",
+        "财务集成"
+      ],
+      [
+        "Sales &amp; Invoicing",
+        "销售与开票"
+      ],
+      [
+        "Back-to-school demand",
+        "开学季需求"
+      ],
+      [
+        "Carrier shipping flow",
+        "承运发货流程"
+      ],
+      [
+        "Payment Notifications",
+        "支付通知"
+      ],
+      [
+        "Student<br />Details",
+        "学生<br />信息"
+      ],
+      [
+        "Pick &amp;<br />Pack",
+        "拣货与<br />包装"
+      ],
+      [
+        "Online Parent Portal",
+        "在线家长门户"
+      ],
+      [
+        "Cleaner Finance Flow",
+        "更清晰财务流程"
+      ],
+      [
+        "Parent Satisfaction",
+        "家长满意度"
+      ],
+      [
+        "Order Channel Mix",
+        "订单渠道构成"
+      ],
+      [
+        "Website (232) 63%",
+        "网站 (232) 63%"
+      ],
+      [
+        "Stock Accuracy",
+        "库存准确率"
+      ],
+      [
+        "School Uniform",
+        "校服"
+      ],
+      [
+        "Online Orders",
+        "在线订单"
+      ],
+      [
+        "Invoice &amp;",
+        "开票与"
+      ],
+      [
+        "Uniform SKUs",
+        "校服 SKU"
+      ],
+      [
+        "Pickup Slots",
+        "自提时段"
+      ],
+      [
+        "Online / POS",
+        "在线 / POS"
+      ],
+      [
+        "White Shirts",
+        "白衬衫"
+      ],
+      [
+        "Centralized",
+        "集中化"
+      ],
+      [
+        "Omnichannel",
+        "全渠道"
+      ],
+      [
+        "Accessories",
+        "配饰"
+      ],
+      [
+        "Collection",
+        "自提"
+      ],
+      [
+        "Pick &amp;",
+        "拣货与"
+      ],
+      [
+        "Term Sale",
+        "学期销售"
+      ],
+      [
+        "Collect /",
+        "自提 /"
+      ],
+      [
+        "North Pri",
+        "北部小学"
+      ],
+      [
+        "Preorder",
+        "预订"
+      ],
+      [
+        "Exchange",
+        "换货"
+      ],
+      [
+        "Accurate",
+        "精准"
+      ],
+      [
+        "Scalable",
+        "可扩展"
+      ],
+      [
+        "East Sec",
+        "东部中学"
+      ],
+      [
+        "West Pri",
+        "西部小学"
+      ],
+      [
+        "Schools",
+        "学校"
+      ],
+      [
+        "Student",
+        "学生"
+      ],
+      [
+        "Details",
+        "信息"
+      ],
+      [
+        "Payment",
+        "支付"
+      ],
+      [
+        "Deliver",
+        "配送"
+      ],
+      [
+        "PE Sets",
+        "体育服套装"
+      ],
+      [
+        "Blazers",
+        "西装外套"
+      ],
+      [
+        "SO-1842",
+        "SO-1842"
+      ],
+      [
+        "SO-1847",
+        "SO-1847"
+      ],
+      [
+        "SO-1851",
+        "SO-1851"
+      ],
+      [
+        "SO-1854",
+        "SO-1854"
+      ],
+      [
+        "Central",
+        "中部"
+      ],
+      [
+        "Seller",
+        "销售"
+      ]
+    ],
+    "corporate-hamper-gifting": [
+      [
+        "Alitec's corporate gifting solution lets customers buy many hampers in one checkout —\n        each with its own delivery address, shipping date, and greeting message — while your\n        team fulfils, invoices, and delivers from one Odoo platform.",
+        "Alitec 企业礼品方案让客户一次结账购买多份礼盒 — 每份独立配送地址、发货日期与贺卡留言 — 团队在同一 Odoo 平台履约、开票与配送。"
+      ],
+      [
+        "Alitec's corporate gifting solution lets customers buy many hampers in one checkout — each with its own delivery address, shipping date, and greeting message — while your team fulfils, invoices, and delivers from one Odoo platform.",
+        "Alitec 企业礼品方案让客户一次结账购买多份礼盒 — 每份独立配送地址、发货日期与贺卡留言 — 团队在同一 Odoo 平台履约、开票与配送。"
+      ],
+      [
+        "Multi-Recipient Delivery — eCommerce, Counter Sales &amp; Gifting with Odoo",
+        "多收件人配送 — eCommerce、柜台销售与礼品"
+      ],
+      [
+        "Order online or create a counter quick-sale with the right pricelist",
+        "在线订购或以正确价目表创建柜台快销"
+      ],
+      [
+        "Cash-and-carry roadshow flow with receipt printing and pricelists.",
+        "现金提货路演流程含收据打印与价目表。"
+      ],
+      [
+        "Cash &amp; carry, self collection, or ship-to-recipient delivery.",
+        "现金提货、自提或配送给收件人。"
+      ],
+      [
+        "Default pricelists for counter quick-sale and standard sales.",
+        "柜台快销与标准销售默认价目表。"
+      ],
+      [
+        "Recipient, sender, greeting, and delivery note on each gift.",
+        "每份礼品含收件人、寄件人、留言与配送备注。"
+      ],
+      [
+        "One order generates multiple deliveries by address and date.",
+        "一单按地址与日期生成多笔交付。"
+      ],
+      [
+        "Set delivery address, date, and greeting on each hamper line",
+        "每行礼盒设置地址、日期与贺卡留言"
+      ],
+      [
+        "Assign a different recipient and date to every hamper line.",
+        "每行礼盒指定不同收件人与日期。"
+      ],
+      [
+        "Card recipient, sender, and greeting carried to fulfilment.",
+        "贺卡收件人、寄件人与留言延续至履约。"
+      ],
+      [
+        "Greeting details flow to warehouse moves and delivery slips",
+        "贺卡信息延续至仓库移动与送货单"
+      ],
+      [
+        "Shipping costs calculated per address and hamper quantity.",
+        "按地址与礼盒数量计算运费。"
+      ],
+      [
+        "Roadshow orders with cash-and-carry and payment journals.",
+        "路演订单含现金提货与付款日记账。"
+      ],
+      [
+        "Website cart with per-line delivery recipient and date.",
+        "网站购物车按行指定收件人与日期。"
+      ],
+      [
+        "Greeting messages on every hamper without spreadsheets.",
+        "每份礼盒贺卡留言，无需电子表格。"
+      ],
+      [
+        "Same catalogue online and at counter quick-sale events.",
+        "在线与柜台快销活动同一目录。"
+      ],
+      [
+        "Pre-fill message templates for faster online ordering.",
+        "预填留言模板加速在线订购。"
+      ],
+      [
+        "Single payment with delivery fees grouped by shipment",
+        "一次支付，运费按发货分组"
+      ],
+      [
+        "One payment, dozens of personalised gift deliveries.",
+        "一次支付，数十份个性化礼品配送。"
+      ],
+      [
+        "Addresses and dates drive automatic delivery splits.",
+        "地址与日期驱动自动交付拆分。"
+      ],
+      [
+        "Custom sales, invoice, and delivery print layouts.",
+        "定制销售、发票与交付打印版式。"
+      ],
+      [
+        "Multiple gift deliveries from one corporate order",
+        "一笔企业订单多份礼品配送"
+      ],
+      [
+        "Recipient, sender, and message on pick documents",
+        "拣货单含收件人、寄件人与留言"
+      ],
+      [
+        "Different recipient on every hamper order line",
+        "每行礼盒不同收件人"
+      ],
+      [
+        "Control unavailable delivery dates on checkout",
+        "结账管控不可配送日期"
+      ],
+      [
+        "Cash &amp; carry, self collect, or ship later",
+        "现金提货、自提或稍后发货"
+      ],
+      [
+        "Schedule each gift delivery on its own date",
+        "每份礼品独立排程发货日期"
+      ],
+      [
+        "Customer acknowledgment on ship-later",
+        "稍后发货客户确认"
+      ],
+      [
+        "Reseller vs corporate customer rules",
+        "经销商与企业客户规则"
+      ],
+      [
+        "Receipt printing for counter sales",
+        "柜台销售收据打印"
+      ],
+      [
+        "Warehouse reporting for fulfilment",
+        "仓库履约报表"
+      ],
+      [
+        "Delivery fee per hamper quantity",
+        "按礼盒数量计费配送"
+      ],
+      [
+        "Corporate Hamper<br />Gifting",
+        "企业礼盒<br />馈赠"
+      ],
+      [
+        "Multiple terms and conditions",
+        "多份条款条件"
+      ],
+      [
+        "WhatsApp customer messaging",
+        "WhatsApp 客户消息"
+      ],
+      [
+        "Barcode-to-delivery wizard",
+        "条码转交付向导"
+      ],
+      [
+        "One Checkout, Many Gifts",
+        "一次结账，多份礼品"
+      ],
+      [
+        "Easier Corporate Orders",
+        "更简单企业订购"
+      ],
+      [
+        "Personal Touch at Scale",
+        "规模化个性关怀"
+      ],
+      [
+        "Assign<br />Recipients",
+        "指定<br />收件人"
+      ],
+      [
+        "Multi-Address Checkout",
+        "多地址结账"
+      ],
+      [
+        "Multi-Delivery Orders",
+        "多地址订单"
+      ],
+      [
+        "Hampers to Pack Today",
+        "今日待包装礼盒"
+      ],
+      [
+        "Pick &amp;<br />Pack",
+        "拣货与<br />包装"
+      ],
+      [
+        "Greeting Card Fields",
+        "贺卡字段"
+      ],
+      [
+        "Smart Delivery Fees",
+        "智能配送费"
+      ],
+      [
+        "Omnichannel Selling",
+        "全渠道销售"
+      ],
+      [
+        "Deliver<br />Gifts",
+        "配送<br />礼品"
+      ],
+      [
+        "Weekly Gift Orders",
+        "周礼品订单"
+      ],
+      [
+        "Deliveries by Date",
+        "按日期配送"
+      ],
+      [
+        "Counter Quick Sale",
+        "柜台快速销售"
+      ],
+      [
+        "Greeting Templates",
+        "贺卡模板"
+      ],
+      [
+        "Cleaner Fulfilment",
+        "更清晰履约"
+      ],
+      [
+        "Shop or<br />Sell",
+        "选购或<br />销售"
+      ],
+      [
+        "Greetings Pending",
+        "待写贺卡"
+      ],
+      [
+        "Greeting Messages",
+        "贺卡留言"
+      ],
+      [
+        "Pricelist Control",
+        "价目表管控"
+      ],
+      [
+        "Branded Documents",
+        "品牌文档"
+      ],
+      [
+        "Per-Line Address",
+        "按行地址"
+      ],
+      [
+        "Gifting Workflow",
+        "礼品工作流"
+      ],
+      [
+        "Corporate Hamper",
+        "企业礼盒"
+      ],
+      [
+        "Split Fulfilment",
+        "拆分履约"
+      ],
+      [
+        "Counter (72) 30%",
+        "柜台 (72) 30%"
+      ],
+      [
+        "Counter Orders",
+        "柜台订单"
+      ],
+      [
+        "Pickup Options",
+        "取货选项"
+      ],
+      [
+        "Pay<br />Once",
+        "一次<br />支付"
+      ],
+      [
+        "Shipping Date",
+        "发货日期"
+      ],
+      [
+        "Greeting Card",
+        "贺卡"
+      ],
+      [
+        "Pickup Method",
+        "取货方式"
+      ],
+      [
+        "Blocked Dates",
+        "不可选日期"
+      ],
+      [
+        "Web (168) 70%",
+        "网站 (168) 70%"
+      ],
+      [
+        "Lee &amp; Co",
+        "李氏公司"
+      ],
+      [
+        "Channel Mix",
+        "渠道构成"
+      ],
+      [
+        "Web Orders",
+        "网站订单"
+      ],
+      [
+        "Recipients",
+        "收件人"
+      ],
+      [
+        "Pick &amp;",
+        "拣货与"
+      ],
+      [
+        "Pack Today",
+        "今日包装"
+      ],
+      [
+        "Multi-Ship",
+        "多地址发货"
+      ],
+      [
+        "Global Pte",
+        "Global Pte"
+      ],
+      [
+        "Due Today",
+        "今日到期"
+      ],
+      [
+        "Greetings",
+        "贺卡"
+      ],
+      [
+        "Next Week",
+        "下周"
+      ],
+      [
+        "Recipient",
+        "收件人"
+      ],
+      [
+        "Acme Corp",
+        "Acme 公司"
+      ],
+      [
+        "Roadshow",
+        "路演"
+      ],
+      [
+        "Gifting",
+        "馈赠"
+      ],
+      [
+        "Shop or",
+        "选购或"
+      ],
+      [
+        "Deliver",
+        "配送"
+      ],
+      [
+        "CS Team",
+        "客服团队"
+      ],
+      [
+        "SO-2201",
+        "SO-2201"
+      ],
+      [
+        "SO-2204",
+        "SO-2204"
+      ],
+      [
+        "SO-2208",
+        "SO-2208"
+      ],
+      [
+        "Walk-in",
+        "到店"
+      ],
+      [
+        "SO-2212",
+        "SO-2212"
+      ],
+      [
+        "Assign",
+        "指定"
+      ],
+      [
+        "Gifts",
+        "礼品"
+      ],
+      [
+        "Sell",
+        "销售"
+      ],
+      [
+        "Once",
+        "一次"
+      ],
+      [
+        "Pay",
+        "支付"
+      ]
+    ],
+    "pet-food-accessories-ecommerce": [
+      [
+        "Alitec's pet retail eCommerce solution helps premium online stores sell food and accessories,\n        capture pet member profiles, run loyalty and referral programmes, bundle products on the\n        website, and fulfil orders with local shipping — all in one Odoo platform.",
+        "Alitec 宠物零售电商方案帮助高端在线商店销售食品与用品、采集宠物会员档案、运行积分与推荐计划、网站套装销售并以本地物流履约 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's pet retail eCommerce solution helps premium online stores sell food and accessories, capture pet member profiles, run loyalty and referral programmes, bundle products on the website, and fulfil orders with local shipping — all in one Odoo platform.",
+        "Alitec 宠物零售电商方案帮助高端在线商店销售食品与用品、采集宠物会员档案、运行积分与推荐计划、网站套装销售并以本地物流履约 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Theme Prime storefront with brands, bundles, wishlist, and mobile shopping.",
+        "Theme Prime 店面含品牌、套装、心愿单与移动购物。"
+      ],
+      [
+        "EasyParcel labels, tracking, and shipping updates after order confirmation.",
+        "EasyParcel 面单、跟踪与确认后物流更新。"
+      ],
+      [
+        "Register cats and dogs with breed, birthday, and owner details at signup.",
+        "注册时登记猫狗品种、生日与主人信息。"
+      ],
+      [
+        "Browse brands, bundles, wishlist, and apply loyalty rewards at checkout",
+        "浏览品牌、套装、心愿单并在结账使用积分"
+      ],
+      [
+        "Rates, labels, tracking, and post-confirm carrier changes on pickings.",
+        "费率、面单、跟踪与确认后承运商变更。"
+      ],
+      [
+        "Signup points, refer-a-friend codes, and shop redemption at checkout.",
+        "注册积分、推荐好友码与结账兑换。"
+      ],
+      [
+        "Public signup form with PDPA consent and acquisition source tracking.",
+        "公开注册表单含 PDPA 同意与获客来源跟踪。"
+      ],
+      [
+        "Referral codes, friend signup points, and discount redemption online.",
+        "推荐码、好友注册积分与在线折扣兑换。"
+      ],
+      [
+        "Sell food and accessory kits across web, sales, stock, and invoices.",
+        "网站、销售、库存与发票销售食品与用品套装。"
+      ],
+      [
+        "Signup rewards, promotion rules, limits, and multi-product criteria.",
+        "注册奖励、促销规则、上限与多产品条件。"
+      ],
+      [
+        "Premium Online Retail — Loyalty, Bundles &amp; Fulfilment with Odoo",
+        "高端在线零售 — 积分、套装与履约"
+      ],
+      [
+        "Member signup with pet profiles, consent, and signup loyalty points",
+        "会员注册含宠物档案、同意书与注册积分"
+      ],
+      [
+        "Theme Prime shop with brands, filters, quick view, and comparison.",
+        "Theme Prime 商店含品牌、筛选、快速查看与对比。"
+      ],
+      [
+        "Warehouse fulfilment with bundle lines and delivery order creation",
+        "仓库履约含套装行与交付单创建"
+      ],
+      [
+        "Pet lines with name, breed, type, and DOB on partners and portal.",
+        "合作伙伴与门户宠物行含名称、品种、类型与生日。"
+      ],
+      [
+        "Member profiles with breed and birthday for personalised retail.",
+        "会员档案含品种与生日，支持个性化零售。"
+      ],
+      [
+        "Cat and dog profiles with breed and birthday on member accounts",
+        "会员账户猫狗档案含品种与生日"
+      ],
+      [
+        "EasyParcel labels, tracking links, and branded order documents",
+        "EasyParcel 面单、跟踪链接与品牌订单文档"
+      ],
+      [
+        "Combo packs for food, treats, and grooming accessories online",
+        "在线食品、零食与美容用品组合装"
+      ],
+      [
+        "Card checkout with Singapore PayNow on the web payment flow.",
+        "网站支付流程支持银行卡与新加坡 PayNow。"
+      ],
+      [
+        "Exclude shipping from points and cap promotions per customer",
+        "积分不含运费并限制每客户促销"
+      ],
+      [
+        "Loyalty and referral programmes built into the web checkout.",
+        "积分与推荐计划内置网站结账。"
+      ],
+      [
+        "Change carrier on confirmed orders before pickings complete",
+        "拣货完成前可更改已确认订单承运商"
+      ],
+      [
+        "Friend codes, signup credits, and shop discount redemption",
+        "好友码、注册额度与商店折扣兑换"
+      ],
+      [
+        "Orders, pickings, EasyParcel labels, and tracking in Odoo.",
+        "订单、拣货、EasyParcel 面单与跟踪在 Odoo。"
+      ],
+      [
+        "Brands, bundles, and stock-aware shopping in one catalog.",
+        "品牌、套装与库存感知购物同一目录。"
+      ],
+      [
+        "Stripe card payment with PayNow for Singapore customers",
+        "新加坡客户 Stripe 卡支付与 PayNow"
+      ],
+      [
+        "Pet Food &amp;<br />Accessories eCommerce",
+        "宠物食品与<br />用品电商"
+      ],
+      [
+        "Promotion start dates and loyalty limits",
+        "促销开始日期与积分上限"
+      ],
+      [
+        "Wishlist and product comparison on shop",
+        "商店心愿单与产品对比"
+      ],
+      [
+        "Branded sales and invoice PDF layouts",
+        "品牌销售与发票 PDF 版式"
+      ],
+      [
+        "Acquisition source tracking on signup",
+        "注册获客来源跟踪"
+      ],
+      [
+        "Stock-aware web catalog and reporting",
+        "库存感知网店目录与报表"
+      ],
+      [
+        "PDPA and marketing consent capture",
+        "PDPA 与营销同意采集"
+      ],
+      [
+        "Portal pet management for members",
+        "会员门户宠物管理"
+      ],
+      [
+        "Smart warnings on sales documents",
+        "销售文档智能预警"
+      ],
+      [
+        "Join &amp;<br />Register",
+        "加入与<br />注册"
+      ],
+      [
+        "Orders Awaiting Dispatch",
+        "待发货订单"
+      ],
+      [
+        "Loyalty &amp; Referrals",
+        "积分与推荐"
+      ],
+      [
+        "Ship &amp;<br />Track",
+        "发货与<br />跟踪"
+      ],
+      [
+        "Accessories eCommerce",
+        "用品电商"
+      ],
+      [
+        "Accessories (36%) 124",
+        "用品 (36%) 124"
+      ],
+      [
+        "Pick &amp;<br />Pack",
+        "拣货与<br />包装"
+      ],
+      [
+        "Pet Member Profiles",
+        "宠物会员档案"
+      ],
+      [
+        "Member Registration",
+        "会员注册"
+      ],
+      [
+        "EasyParcel Shipping",
+        "EasyParcel 物流"
+      ],
+      [
+        "Rewards That Retain",
+        "留住客户的积分"
+      ],
+      [
+        "Weekly Web Revenue",
+        "周网站收入"
+      ],
+      [
+        "Top Category Sales",
+        "热门品类销售"
+      ],
+      [
+        "Loyalty Programmes",
+        "积分计划"
+      ],
+      [
+        "Pet Food (64%) 218",
+        "宠物食品 (64%) 218"
+      ],
+      [
+        "Premium Storefront",
+        "高端店面"
+      ],
+      [
+        "Pay<br />Securely",
+        "安全<br />支付"
+      ],
+      [
+        "Premium Web Store",
+        "高端网店"
+      ],
+      [
+        "Premium eCommerce",
+        "高端 eCommerce"
+      ],
+      [
+        "Click to Doorstep",
+        "点击到门"
+      ],
+      [
+        "Shop<br />Online",
+        "在线<br />选购"
+      ],
+      [
+        "Web Orders Today",
+        "今日网站订单"
+      ],
+      [
+        "Loyalty Redeemed",
+        "已兑换积分"
+      ],
+      [
+        "Local Fulfilment",
+        "本地履约"
+      ],
+      [
+        "Refer &amp; Earn",
+        "推荐有礼"
+      ],
+      [
+        "Retail Workflow",
+        "零售工作流"
+      ],
+      [
+        "Pet Member Data",
+        "宠物会员数据"
+      ],
+      [
+        "Product Bundles",
+        "产品套装"
+      ],
+      [
+        "Stripe + PayNow",
+        "Stripe + PayNow"
+      ],
+      [
+        "Active Members",
+        "活跃会员"
+      ],
+      [
+        "Pet Food &amp;",
+        "宠物食品与"
+      ],
+      [
+        "Know Every Pet",
+        "了解每只宠物"
+      ],
+      [
+        "Loyalty Rules",
+        "积分规则"
+      ],
+      [
+        "Category Mix",
+        "品类构成"
+      ],
+      [
+        "Accessories",
+        "用品"
+      ],
+      [
+        "Ship Today",
+        "今日发货"
+      ],
+      [
+        "Join &amp;",
+        "加入与"
+      ],
+      [
+        "Pick &amp;",
+        "拣货与"
+      ],
+      [
+        "Ship &amp;",
+        "发货与"
+      ],
+      [
+        "Web Orders",
+        "网站订单"
+      ],
+      [
+        "Fulfilment",
+        "履约"
+      ],
+      [
+        "Pet Types",
+        "宠物类型"
+      ],
+      [
+        "Referrals",
+        "推荐"
+      ],
+      [
+        "Register",
+        "注册"
+      ],
+      [
+        "Securely",
+        "安全"
+      ],
+      [
+        "Dog Food",
+        "狗粮"
+      ],
+      [
+        "Cat Food",
+        "猫粮"
+      ],
+      [
+        "Grooming",
+        "美容"
+      ],
+      [
+        "Bundles",
+        "套装"
+      ],
+      [
+        "SO-2842",
+        "SO-2842"
+      ],
+      [
+        "SO-2847",
+        "SO-2847"
+      ],
+      [
+        "SO-2851",
+        "SO-2851"
+      ],
+      [
+        "K. Wong",
+        "K. Wong"
+      ],
+      [
+        "SO-2854",
+        "SO-2854"
+      ],
+      [
+        "L. Tan",
+        "L. Tan"
+      ],
+      [
+        "M. Lee",
+        "M. Lee"
+      ],
+      [
+        "S. Lim",
+        "S. Lim"
+      ],
+      [
+        "Track",
+        "跟踪"
+      ],
+      [
+        "4.2k",
+        "4.2k"
+      ],
+      [
+        "Pay",
+        "支付"
+      ]
+    ],
+    "scaffolding": [
+      [
+        "<strong>Manage rental orders, site deliveries, returns, claims, and billing in one platform.</strong> Alitec's scaffolding solution on Odoo connects rental quotations, customer POs, rental orders, deliveries, returns, repair and lost charges, project claims, intercompany warehouse movement, and statement of account generation.",
+        "<strong>在一个平台管理租赁订单、现场交付、归还、索赔与开票。</strong> Alitec 脚手架 Odoo 方案贯通租赁报价、客户 PO、租赁订单、交付、归还、维修与丢失费用、项目索赔、跨公司仓库调拨与对账单生成。"
+      ],
+      [
+        "Alitec's scaffolding solution on Odoo connects rental quotations, customer POs,\n        rental orders, deliveries, returns, repair and lost charges, project claims,\n        intercompany warehouse movement, and statement of account generation.",
+        "Alitec 脚手架 Odoo 方案贯通租赁报价、客户 PO、租赁订单、交付、归还、维修与丢失费用、项目索赔、跨公司仓库调拨与对账单生成。"
+      ],
+      [
+        "Manage contracts, work done, erection and dismantling records, claims, and certificates.",
+        "管理合同、工程量、搭设与拆除记录、索赔与证书。"
+      ],
+      [
+        "Manage rental orders, site deliveries, returns, claims, and billing in one platform.",
+        "在一个平台管理租赁订单、现场交付、归还、索赔与开票。"
+      ],
+      [
+        "Support volume-based rental with density, delivery percentage, and monthly billing.",
+        "支持按密度、交付比例与月度开票的体积租赁。"
+      ],
+      [
+        "Quotation, customer PO, rental order, return, and recurring billing stay linked.",
+        "报价、客户 PO、租赁订单、归还与周期性开票保持关联。"
+      ],
+      [
+        "Route stock from new or used locations and post revenue to the correct accounts.",
+        "从新/旧库位调拨库存并将收入过账至正确科目。"
+      ],
+      [
+        "Track site dispatches, return balances, repair, loss, and over-return handling.",
+        "跟踪现场发运、归还余额、维修、丢失与超还处理。"
+      ],
+      [
+        "Quotation, customer PO, rental order, delivery, return, and recurring billing.",
+        "报价、客户 PO、租赁订单、交付、归还与周期性开票。"
+      ],
+      [
+        "Support rental billing by density, delivery percentage, and monthly cycles.",
+        "支持按密度、交付比例与月度周期的租赁开票。"
+      ],
+      [
+        "Track site dispatches, returns, repair, loss, and over-return handling.",
+        "跟踪现场发运、归还、维修、丢失与超还处理。"
+      ],
+      [
+        "Structure your scaffolding operations in a clear operational sequence.",
+        "以清晰运营顺序组织脚手架业务。"
+      ],
+      [
+        "Mirror pickings across companies and keep project references aligned.",
+        "跨公司镜像拣货并保持项目参考一致。"
+      ],
+      [
+        "Get a real-time view of rental, project, stock, and billing activity.",
+        "实时查看租赁、项目、库存与开票活动。"
+      ],
+      [
+        "End-to-End Rental, Warehouse, Project and Billing Control with Odoo",
+        "端到端租赁、仓库、项目与开票管控"
+      ],
+      [
+        "Control rental balances, site stock, repair items, and return gaps.",
+        "管控租赁余额、现场库存、维修件与归还差异。"
+      ],
+      [
+        "Prepare claim documents and certificates with less manual tracking.",
+        "更少手工跟踪即可准备索赔文档与证书。"
+      ],
+      [
+        "Manage work done, dismantling records, claims, and certificates.",
+        "管理工程量、拆除记录、索赔与证书。"
+      ],
+      [
+        "Invoice rental, repair, loss, and project charges from one flow.",
+        "从同一流程开票租赁、维修、丢失与项目费用。"
+      ],
+      [
+        "Keep sales, warehouse, project, and finance teams aligned.",
+        "保持销售、仓库、项目与财务团队一致。"
+      ],
+      [
+        "Scaffolding Rental &amp;<br />Project Claims",
+        "脚手架租赁与<br />项目索赔"
+      ],
+      [
+        "Site movement, balance tracking, repair/loss",
+        "现场移动、余额跟踪、维修/丢失"
+      ],
+      [
+        "Reduce billing leakage and manual tracking.",
+        "减少开票流失与手工跟踪。"
+      ],
+      [
+        "Improve warehouse and finance coordination.",
+        "改善仓库与财务协同。"
+      ],
+      [
+        "Control quantities by delivery and return.",
+        "按交付与归还管控数量。"
+      ],
+      [
+        "Pricing, rental rates, project reference",
+        "定价、租赁费率、项目参考"
+      ],
+      [
+        "Link rental activity to project codes.",
+        "将租赁活动关联项目编码。"
+      ],
+      [
+        "Delivery planning and billing basis",
+        "交付计划与计费基础"
+      ],
+      [
+        "Rental billing, project claims, SOA",
+        "租赁开票、项目索赔、对账单"
+      ],
+      [
+        "2. Delivery &amp; Return Control",
+        "2. 交付与归还管控"
+      ],
+      [
+        "Operations Dashboard Overview",
+        "运营仪表盘概览"
+      ],
+      [
+        "Confirm requested quantities",
+        "确认需求数量"
+      ],
+      [
+        "Industrial Plant Expansion",
+        "工厂扩建"
+      ],
+      [
+        "6. Intercompany Warehouse",
+        "6. 跨公司仓库"
+      ],
+      [
+        "Scaffolding Rental &amp;",
+        "脚手架租赁与"
+      ],
+      [
+        "5. New / Used Item Logic",
+        "5. 新/旧物料逻辑"
+      ],
+      [
+        "Better Stock Visibility",
+        "更好库存可视化"
+      ],
+      [
+        "Monthly Billing Trend",
+        "月度开票趋势"
+      ],
+      [
+        "Business Process Flow",
+        "业务流程"
+      ],
+      [
+        "Residential Complex A",
+        "住宅综合体 A"
+      ],
+      [
+        "Faster Project Claims",
+        "更快项目索赔"
+      ],
+      [
+        "More Accurate Billing",
+        "更准确开票"
+      ],
+      [
+        "Stronger Coordination",
+        "更强协同"
+      ],
+      [
+        "Active Rental Orders",
+        "活跃租赁订单"
+      ],
+      [
+        "1. Rental Order Flow",
+        "1. 租赁订单流程"
+      ],
+      [
+        "4. M3 Rental Billing",
+        "4. 立方米租赁开票"
+      ],
+      [
+        "Metro Line Extension",
+        "地铁延伸线"
+      ],
+      [
+        "Open Project Claims",
+        "开放项目索赔"
+      ],
+      [
+        "Repair / Lost 12.2%",
+        "维修/丢失 12.2%"
+      ],
+      [
+        "Billing Visibility",
+        "开票可视化"
+      ],
+      [
+        "Delivery / Return",
+        "交付 / 归还"
+      ],
+      [
+        "Rental Order Flow",
+        "租赁订单流程"
+      ],
+      [
+        "3. Project Claims",
+        "3. 项目索赔"
+      ],
+      [
+        "Rental Quotation",
+        "租赁报价"
+      ],
+      [
+        "Delivery Control",
+        "交付管控"
+      ],
+      [
+        "Harbor Warehouse",
+        "港口仓库"
+      ],
+      [
+        "Claim / Invoice",
+        "索赔 / 开票"
+      ],
+      [
+        "Items in Rental",
+        "在租物料"
+      ],
+      [
+        "Pending Returns",
+        "待归还"
+      ],
+      [
+        "Monthly Billing",
+        "月度开票"
+      ],
+      [
+        "Available 23.5%",
+        "可用 23.5%"
+      ],
+      [
+        "Recent Projects",
+        "近期项目"
+      ],
+      [
+        "Project Claims",
+        "项目索赔"
+      ],
+      [
+        "Downtown Tower",
+        "市中心大厦"
+      ],
+      [
+        "Infrastructure",
+        "基础设施"
+      ],
+      [
+        "Rental Status",
+        "租赁状态"
+      ],
+      [
+        "On Rent 64.3%",
+        "在租 64.3%"
+      ],
+      [
+        "Rental Order",
+        "租赁订单"
+      ],
+      [
+        "Claim Status",
+        "索赔状态"
+      ],
+      [
+        "Customer PO",
+        "客户 PO"
+      ],
+      [
+        "Commercial",
+        "商业"
+      ],
+      [
+        "Approved",
+        "已批准"
+      ],
+      [
+        "Billing",
+        "开票"
+      ],
+      [
+        "$92,400",
+        "$92,400"
+      ],
+      [
+        "$78,600",
+        "$78,600"
+      ],
+      [
+        "$64,800",
+        "$64,800"
+      ],
+      [
+        "$48,900",
+        "$48,900"
+      ],
+      [
+        "$83,300",
+        "$83,300"
+      ],
+      [
+        "5,320",
+        "5,320"
+      ],
+      [
+        "$368K",
+        "$368K"
+      ]
+    ],
+    "bakery-ecommerce-operations": [
+      [
+        "Alitec's bakery solution helps cake and patisserie businesses sell online\n        and in-store with daily production capacity control, delivery and collection\n        scheduling, customized product options, and member loyalty in one Odoo platform.",
+        "Alitec 烘焙方案帮助蛋糕与西点企业在线与门店销售，含每日产能管控、配送与自提排程、定制产品选项与会员积分 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's bakery solution helps cake and patisserie businesses sell online and in-store with daily production capacity control, delivery and collection scheduling, customized product options, and member loyalty in one Odoo platform.",
+        "Alitec 烘焙方案帮助蛋糕与西点企业在线与门店销售，含每日产能管控、配送与自提排程、定制产品选项与会员积分 — 统一于 Odoo 平台。"
+      ],
+      [
+        "Delivery, collection, holidays, and delicate-product time rules stay aligned.",
+        "配送、自提、节假日与精致产品时段规则保持一致。"
+      ],
+      [
+        "Paid memberships auto-issue coupons and tiered pricing online and in-store.",
+        "付费会员自动发放优惠券与分级定价，线上线下通用。"
+      ],
+      [
+        "Daily kitchen lists and delivery or collection reports drive production.",
+        "每日厨房清单与配送/自提报告驱动生产。"
+      ],
+      [
+        "Category daily maximums block orders when the kitchen is already full.",
+        "品类每日上限在厨房已满时阻止下单。"
+      ],
+      [
+        "Support home delivery and outlet self-collection with carrier rules.",
+        "支持送货上门与门店自提，含承运规则。"
+      ],
+      [
+        "Let customers choose fulfillment dates and time slots at checkout.",
+        "结账时让客户选择履约日期与时段。"
+      ],
+      [
+        "Give buyers clear delivery and collection date and time choices.",
+        "为买家提供清晰的配送与自提日期时间选择。"
+      ],
+      [
+        "Turn confirmed orders into date-based production and run sheets.",
+        "将确认订单转为按日生产与运行表。"
+      ],
+      [
+        "Cakes &amp; Cookies Online — From Web Shop to Kitchen with Odoo",
+        "蛋糕与饼干在线 — 从网店到厨房"
+      ],
+      [
+        "Sell cakes and patisserie products with stock-aware e-commerce.",
+        "库存感知 eCommerce 销售蛋糕与西点。"
+      ],
+      [
+        "Handle variants and product options for customized cake orders.",
+        "处理定制蛋糕订单的变体与选项。"
+      ],
+      [
+        "Stop orders on holiday blackout days and full-capacity dates.",
+        "节假日与满产能日期停止接单。"
+      ],
+      [
+        "Match online demand to real daily bakery production capacity.",
+        "将在线需求匹配真实每日烘焙产能。"
+      ],
+      [
+        "Manage production limits by product category and order date.",
+        "按产品品类与订单日期管理产能上限。"
+      ],
+      [
+        "Export kitchen lists and delivery or collection run sheets.",
+        "导出厨房清单与配送/自提运行表。"
+      ],
+      [
+        "Issue annual or lifetime membership rewards automatically.",
+        "自动发放年度或终身会员奖励。"
+      ],
+      [
+        "Logged-in customers choose products, variants, and options",
+        "登录客户选择产品、变体与选项"
+      ],
+      [
+        "Connect website and POS loyalty in one membership program.",
+        "网站与 POS 积分纳入同一会员计划。"
+      ],
+      [
+        "Coupons, tiers, and birthday offers bring customers back",
+        "优惠券、等级与生日优惠促进复购"
+      ],
+      [
+        "Kitchen lists and fulfillment reports drive daily work",
+        "厨房清单与履约报告驱动每日工作"
+      ],
+      [
+        "Checkout validates capacity before payment completes",
+        "支付完成前校验产能"
+      ],
+      [
+        "Pick delivery or collection, date, and time slot",
+        "选择配送或自提、日期与时段"
+      ],
+      [
+        "Cart and checkout for registered customers",
+        "注册用户购物车与结账"
+      ],
+      [
+        "Meringue and non-meringue slot rules",
+        "蛋白霜与非蛋白霜时段规则"
+      ],
+      [
+        "Category production limits by date",
+        "按日期品类产能上限"
+      ],
+      [
+        "Redeem rewards in-store and online",
+        "门店与线上兑换奖励"
+      ],
+      [
+        "Bakery E-Commerce<br />Operations",
+        "烘焙电商<br />运营"
+      ],
+      [
+        "Branded invoice and delivery docs",
+        "品牌发票与交付文档"
+      ],
+      [
+        "Auto coupons and tiered pricing",
+        "自动优惠券与分级定价"
+      ],
+      [
+        "Portal membership and coupons",
+        "门户会员与优惠券"
+      ],
+      [
+        "Birthday-month notifications",
+        "生日月通知"
+      ],
+      [
+        "Produce &amp;<br />Dispatch",
+        "生产与<br />发运"
+      ],
+      [
+        "Collection outlet addresses",
+        "自提门店地址"
+      ],
+      [
+        "Kitchen ordered list export",
+        "厨房排序清单导出"
+      ],
+      [
+        "Shop &amp;<br />Customize",
+        "选购与<br />定制"
+      ],
+      [
+        "Schedule<br />Fulfillment",
+        "排程<br />履约"
+      ],
+      [
+        "Membership &amp; Coupons",
+        "会员与优惠券"
+      ],
+      [
+        "Made-to-order lead times",
+        "按单生产提前期"
+      ],
+      [
+        "Sell Without Overbooking",
+        "不超卖销售"
+      ],
+      [
+        "Date &amp; Time Booking",
+        "日期与时间预约"
+      ],
+      [
+        "Payment gateway support",
+        "支付网关支持"
+      ],
+      [
+        "Delivery or Collection",
+        "配送或自提"
+      ],
+      [
+        "Daily Capacity Control",
+        "每日产能管控"
+      ],
+      [
+        "Custom Product Options",
+        "定制产品选项"
+      ],
+      [
+        "Holiday blackout dates",
+        "节假日封锁日期"
+      ],
+      [
+        "Capacity by Category",
+        "按品类产能"
+      ],
+      [
+        "Upcoming Fulfillment",
+        "即将履约"
+      ],
+      [
+        "Collection (142) 58%",
+        "自提 (142) 58%"
+      ],
+      [
+        "Smoother Kitchen Ops",
+        "更顺畅厨房运营"
+      ],
+      [
+        "Retain<br />Members",
+        "留住<br />会员"
+      ],
+      [
+        "Weekly Order Volume",
+        "周订单量"
+      ],
+      [
+        "Online Bakery Shop",
+        "在线烘焙店"
+      ],
+      [
+        "Delivery (103) 42%",
+        "配送 (103) 42%"
+      ],
+      [
+        "Stronger Retention",
+        "更强留存"
+      ],
+      [
+        "Pay<br />Securely",
+        "安全<br />支付"
+      ],
+      [
+        "Bakery E-Commerce",
+        "烘焙电商"
+      ],
+      [
+        "Assorted Pastries",
+        "什锦西点"
+      ],
+      [
+        "Better Scheduling",
+        "更好排程"
+      ],
+      [
+        "Bakery Visibility",
+        "烘焙可视化"
+      ],
+      [
+        "Celebration Cake",
+        "庆典蛋糕"
+      ],
+      [
+        "Orders Tomorrow",
+        "明日订单"
+      ],
+      [
+        "Fulfillment Mix",
+        "履约构成"
+      ],
+      [
+        "Kitchen Reports",
+        "厨房报表"
+      ],
+      [
+        "Tomorrow Orders",
+        "明日订单"
+      ],
+      [
+        "Login Required",
+        "需登录"
+      ],
+      [
+        "Active Members",
+        "活跃会员"
+      ],
+      [
+        "Order Workflow",
+        "订单工作流"
+      ],
+      [
+        "Never Oversell",
+        "绝不超卖"
+      ],
+      [
+        "Member Loyalty",
+        "会员积分"
+      ],
+      [
+        "Daily Capacity",
+        "每日产能"
+      ],
+      [
+        "Member Coupons",
+        "会员优惠券"
+      ],
+      [
+        "Capacity Used",
+        "已用产能"
+      ],
+      [
+        "Blocked Dates",
+        "封锁日期"
+      ],
+      [
+        "Produce &amp;",
+        "生产与"
+      ],
+      [
+        "Time Windows",
+        "时间窗口"
+      ],
+      [
+        "Coupons Used",
+        "已用优惠券"
+      ],
+      [
+        "POS Loyalty",
+        "POS 积分"
+      ],
+      [
+        "Smart Slots",
+        "智能时段"
+      ],
+      [
+        "Fulfillment",
+        "履约"
+      ],
+      [
+        "Custom Cake",
+        "定制蛋糕"
+      ],
+      [
+        "Daily Caps",
+        "每日上限"
+      ],
+      [
+        "Collection",
+        "自提"
+      ],
+      [
+        "Operations",
+        "运营"
+      ],
+      [
+        "Shop &amp;",
+        "选购与"
+      ],
+      [
+        "Cookie Box",
+        "饼干礼盒"
+      ],
+      [
+        "Customize",
+        "定制"
+      ],
+      [
+        "Schedule",
+        "排程"
+      ],
+      [
+        "Securely",
+        "安全"
+      ],
+      [
+        "Dispatch",
+        "发运"
+      ],
+      [
+        "Planning",
+        "计划"
+      ],
+      [
+        "Meringue",
+        "蛋白霜"
+      ],
+      [
+        "Members",
+        "会员"
+      ],
+      [
+        "Kitchen",
+        "厨房"
+      ],
+      [
+        "Cookies",
+        "饼干"
+      ],
+      [
+        "SO-1042",
+        "SO-1042"
+      ],
+      [
+        "SO-1048",
+        "SO-1048"
+      ],
+      [
+        "SO-1051",
+        "SO-1051"
+      ],
+      [
+        "SO-1056",
+        "SO-1056"
+      ],
+      [
+        "Retain",
+        "留住"
+      ],
+      [
+        "Cakes",
+        "蛋糕"
+      ],
+      [
+        "10:30",
+        "10:30"
+      ],
+      [
+        "11:00",
+        "11:00"
+      ],
+      [
+        "11:30",
+        "11:30"
+      ],
+      [
+        "12:00",
+        "12:00"
+      ],
+      [
+        "Pay",
+        "支付"
+      ]
+    ],
+    "lab-testing-process": [
+      [
+        "Alitec's lab testing solution helps aquaculture service providers\n        manage farmers, field samples, five test types, treatment recommendations,\n        and branded reports in one Odoo platform — from sample intake to billing.",
+        "Alitec 实验室检测方案帮助水产服务商管理养殖户、现场样品、五类检测、处理建议与品牌报告 — 从样品接收到开票，统一于 Odoo 平台。"
+      ],
+      [
+        "Alitec's lab testing solution helps aquaculture service providers manage farmers, field samples, five test types, treatment recommendations, and branded reports in one Odoo platform — from sample intake to billing.",
+        "Alitec 实验室检测方案帮助水产服务商管理养殖户、现场样品、五类检测、处理建议与品牌报告 — 从样品接收到开票，统一于 Odoo 平台。"
+      ],
+      [
+        "Confirmed sales orders open the correct water, soil, seed, PCR, or microbiology tests.",
+        "确认销售订单自动开启对应水质、土壤、种苗、PCR 或微生物检测。"
+      ],
+      [
+        "Turn lab findings into structured treatment recommendations and upsell opportunities.",
+        "将实验发现转为结构化处理建议与增销机会。"
+      ],
+      [
+        "Track farmers, species, membership, and sample batches with farm and pond detail.",
+        "跟踪养殖户、物种、会员与样品批次含农场池塘明细。"
+      ],
+      [
+        "Register farmers with district, cluster, farm, and pond context for every batch.",
+        "每批次登记养殖户含区域、集群、养殖场与池塘信息。"
+      ],
+      [
+        "Convert completed recommendations into quotation options for treatment products.",
+        "将完成建议转为处理产品报价选项。"
+      ],
+      [
+        "Attach treatment recommendations to completed tests and push them to quotations.",
+        "将处理建议附加于完成检测并推送至报价。"
+      ],
+      [
+        "Maintain parameter libraries with optimum values for consistent interpretation.",
+        "维护参数库含最佳值以一致解读。"
+      ],
+      [
+        "Configure test parameters, optimum ranges, and default panels for faster entry.",
+        "配置检测参数、最佳范围与默认面板加速录入。"
+      ],
+      [
+        "Keep farmers, samples, lab work, recommendations, and billing on one platform.",
+        "养殖户、样品、实验、建议与开票同一平台。"
+      ],
+      [
+        "Run water, soil, seed quality, PCR diagnostics, and microbiology workflows.",
+        "运行水质、土壤、种苗质量、PCR 诊断与微生物流程。"
+      ],
+      [
+        "Reduce manual setup by creating lab records directly from confirmed orders.",
+        "从确认订单直接创建实验记录，减少手工设置。"
+      ],
+      [
+        "Handle plankton analysis and flexible PCR disease panel setup in lab work.",
+        "实验工作支持浮游生物分析与灵活 PCR 疾病面板。"
+      ],
+      [
+        "Produce customer-ready PDF outputs with lab manager and signature support.",
+        "生成客户就绪 PDF，含实验室主管与签名。"
+      ],
+      [
+        "Connect testing to sales, inventory, membership, delivery, and invoicing.",
+        "检测关联销售、库存、会员、交付与开票。"
+      ],
+      [
+        "Create lab jobs automatically when test products are sold and confirmed.",
+        "检测产品销售确认后自动创建实验作业。"
+      ],
+      [
+        "Standardize parameters, ranges, and report outputs across teams.",
+        "跨团队标准化参数、范围与报告输出。"
+      ],
+      [
+        "Build quotations with linked samples and required test products",
+        "构建含关联样品与所需检测产品的报价"
+      ],
+      [
+        "Record prescription products based on lab findings where needed",
+        "按需根据实验结果记录处方产品"
+      ],
+      [
+        "Process tests through receipt, testing, review, and completion",
+        "检测经接收、实验、审核至完成"
+      ],
+      [
+        "Create farmer records and collect farm or pond sample batches",
+        "创建养殖户档案并采集农场或池塘样品批次"
+      ],
+      [
+        "Issue branded reports, convert options, and complete billing",
+        "出具品牌报告、转化选项并完成开票"
+      ],
+      [
+        "Aquaculture Testing — From Sample to Solution with Odoo",
+        "水产检测 — 从样品到方案"
+      ],
+      [
+        "Single or multiple sample sales order handling",
+        "单或多样品销售订单处理"
+      ],
+      [
+        "Structured state tracking from new to complete",
+        "从新到完成的结构化状态跟踪"
+      ],
+      [
+        "Farm, pond, and species linked to every batch",
+        "每批次关联农场、池塘与物种"
+      ],
+      [
+        "Individual and combined branded PDF reports",
+        "单独与合并品牌 PDF 报告"
+      ],
+      [
+        "Completed tests feed quotation options",
+        "完成检测馈入报价选项"
+      ],
+      [
+        "Default PCR and microbiology panels",
+        "默认 PCR 与微生物面板"
+      ],
+      [
+        "Quick-open test actions from sales",
+        "从销售快速开启检测"
+      ],
+      [
+        "Plankton analysis in water tests",
+        "水质检测浮游生物分析"
+      ],
+      [
+        "District and cluster farmer IDs",
+        "区域与集群养殖户 ID"
+      ],
+      [
+        "Optimum range parameter control",
+        "最佳范围参数管控"
+      ],
+      [
+        "Membership-aware farmer records",
+        "感知会员的养殖户档案"
+      ],
+      [
+        "Species and batch traceability",
+        "物种与批次追溯"
+      ],
+      [
+        "Lab manager name and signature",
+        "实验室主管姓名与签名"
+      ],
+      [
+        "Farmer &amp; Sample Registry",
+        "养殖户与样品登记"
+      ],
+      [
+        "Register &amp;<br />Sample",
+        "登记与<br />采样"
+      ],
+      [
+        "Plankton &amp; PCR Support",
+        "浮游生物与 PCR 支持"
+      ],
+      [
+        "Water &amp; Soil (214) 62%",
+        "水质与土壤 (214) 62%"
+      ],
+      [
+        "Recommend<br />Treatments",
+        "推荐<br />处理"
+      ],
+      [
+        "PCR &amp; Micro (138) 38%",
+        "PCR 与微生物 (138) 38%"
+      ],
+      [
+        "Lab Testing<br />Process",
+        "实验室检测<br />流程"
+      ],
+      [
+        "Connected Lab Operations",
+        "贯通实验室运营"
+      ],
+      [
+        "Deliver &amp;<br />Bill",
+        "交付与<br />开票"
+      ],
+      [
+        "Sales-Triggered Testing",
+        "销售触发检测"
+      ],
+      [
+        "Stronger Follow-Through",
+        "更强跟进"
+      ],
+      [
+        "Water &amp; Soil Tests",
+        "水质与土壤检测"
+      ],
+      [
+        "Consistent Lab Quality",
+        "一致实验质量"
+      ],
+      [
+        "Monthly Sample Intake",
+        "月度样品接收"
+      ],
+      [
+        "Tests Awaiting Review",
+        "待审核检测"
+      ],
+      [
+        "Farmer-Linked Samples",
+        "关联养殖户样品"
+      ],
+      [
+        "Prescription Workflow",
+        "处方工作流"
+      ],
+      [
+        "Commercial Continuity",
+        "商务延续"
+      ],
+      [
+        "Prescription Options",
+        "处方选项"
+      ],
+      [
+        "Sample Traceability",
+        "样品追溯"
+      ],
+      [
+        "Multi-Sample Orders",
+        "多样品订单"
+      ],
+      [
+        "Range-Based Control",
+        "范围管控"
+      ],
+      [
+        "Prescription Upsell",
+        "处方增销"
+      ],
+      [
+        "Five Lab Test Types",
+        "五类实验室检测"
+      ],
+      [
+        "Parameter Libraries",
+        "参数库"
+      ],
+      [
+        "Branded Lab Reports",
+        "品牌实验报告"
+      ],
+      [
+        "Out-of-Range Alerts",
+        "超范围预警"
+      ],
+      [
+        "Six-Stage Lab Flow",
+        "六阶段实验流程"
+      ],
+      [
+        "Samples This Month",
+        "本月样品"
+      ],
+      [
+        "Faster Test Launch",
+        "更快启动检测"
+      ],
+      [
+        "Prescription Push",
+        "处方推送"
+      ],
+      [
+        "Prescription Rate",
+        "处方率"
+      ],
+      [
+        "Test Category Mix",
+        "检测类别构成"
+      ],
+      [
+        "Auto Lab Creation",
+        "自动创建实验"
+      ],
+      [
+        "Order<br />Tests",
+        "下单<br />检测"
+      ],
+      [
+        "PCR Diagnostics",
+        "PCR 诊断"
+      ],
+      [
+        "Open Lab Tests",
+        "开放检测"
+      ],
+      [
+        "Avg Turnaround",
+        "平均周转"
+      ],
+      [
+        "Register &amp;",
+        "登记与"
+      ],
+      [
+        "Lab Visibility",
+        "实验室可视化"
+      ],
+      [
+        "Report Output",
+        "报告输出"
+      ],
+      [
+        "PCR Completed",
+        "PCR 完成"
+      ],
+      [
+        "Tests by Type",
+        "按类型检测"
+      ],
+      [
+        "Deliver &amp;",
+        "交付与"
+      ],
+      [
+        "Run<br />Lab",
+        "运行<br />实验"
+      ],
+      [
+        "Lab Workflow",
+        "实验室工作流"
+      ],
+      [
+        "Lab Testing",
+        "实验室检测"
+      ],
+      [
+        "Supervisors",
+        "主管"
+      ],
+      [
+        "Treatments",
+        "处理"
+      ],
+      [
+        "Recommend",
+        "推荐"
+      ],
+      [
+        "Lab Team",
+        "实验室团队"
+      ],
+      [
+        "Process",
+        "流程"
+      ],
+      [
+        "LT-2842",
+        "LT-2842"
+      ],
+      [
+        "LT-2847",
+        "LT-2847"
+      ],
+      [
+        "LT-2851",
+        "LT-2851"
+      ],
+      [
+        "LT-2854",
+        "LT-2854"
+      ],
+      [
+        "Sample",
+        "采样"
+      ],
+      [
+        "Pond A",
+        "池塘 A"
+      ],
+      [
+        "Farm B",
+        "养殖场 B"
+      ],
+      [
+        "Pond C",
+        "池塘 C"
+      ],
+      [
+        "Farm D",
+        "养殖场 D"
+      ],
+      [
+        "Tests",
+        "检测"
+      ],
+      [
+        "Bill",
+        "开票"
+      ],
+      [
+        "3.2d",
+        "3.2 天"
+      ],
+      [
+        "Lab",
+        "实验"
+      ],
+      [
+        "PCR",
+        "PCR"
+      ]
+    ]
+  },
+  "index_cards": {
+    "temple-ngo-religious-operations": {
+      "tag_en": "Temple / NGO",
+      "tag_zh": "寺庙 / 非营利",
+      "title_en": "Temple & Religious Organization",
+      "title_zh": "寺庙与宗教组织",
+      "desc_en": "Online merit offerings, ceremony scheduling, memorial dedications, donor CRM, subscriptions, and temple accounting.",
+      "desc_zh": "在线功德供奉、法会排期、追思牌位、捐赠人 CRM、订阅续费与寺庙财务一体化管理。"
+    },
+    "industrial-equipment-wholesale": {
+      "tag_en": "Wholesale",
+      "tag_zh": "批发分销",
+      "title_en": "Industrial Equipment Wholesale",
+      "title_zh": "工业设备批发",
+      "desc_en": "Portal order sync, part-number catalog, SO-to-PO procurement, delivery modes, and package GST invoicing.",
+      "desc_zh": "门户订单同步、料号目录、SO 转 PO 采购、交付模式与分组 GST 开票。"
+    },
+    "social-recreational-club": {
+      "tag_en": "Club",
+      "tag_zh": "俱乐部",
+      "title_en": "Social/Recreational Club",
+      "title_zh": "社交/休闲俱乐部",
+      "desc_en": "Membership enrolment, facility booking, events and banquets, restaurant POS, MSL billing, and member portal.",
+      "desc_zh": "会员入会、设施预约、活动与宴会、餐厅 POS、MSL 账单与会员门户。"
+    },
+    "precision-cnc-manufacturing": {
+      "tag_en": "Manufacturing",
+      "tag_zh": "制造",
+      "title_en": "Precision CNC Manufacturing",
+      "title_zh": "精密 CNC 制造",
+      "desc_en": "High-mix job shop — operation routing, material tracking, multi-level MRP, shop-floor QC, CoC, and billing with Odoo.",
+      "desc_zh": "多品种小批量机加工 — 工艺路线、物料跟踪、多级 MRP、车间质检、CoC 与 Odoo 一体化开票。"
+    },
+    "positive": {
+      "tag_en": "Renovation",
+      "tag_zh": "装修",
+      "title_en": "Renovation Company",
+      "title_zh": "装修公司",
+      "desc_en": "Project operations, quotation detail, purchasing continuity, approvals, and billing visibility.",
+      "desc_zh": "项目运营、报价明细、采购延续、审批流程与开票可视化。"
+    },
+    "cleantric": {
+      "tag_en": "Cleaning",
+      "tag_zh": "清洁服务",
+      "title_en": "Cleaning Service Company",
+      "title_zh": "清洁服务公司",
+      "desc_en": "Online booking, cleaner selection, scheduling, address capture, order follow-through, and payment flow.",
+      "desc_zh": "在线预约、保洁员选择、排班调度、地址采集、订单跟进与支付流程。"
+    },
+    "public-safety": {
+      "tag_en": "Manufacturing",
+      "tag_zh": "制造",
+      "title_en": "Public Safety Equipment",
+      "title_zh": "公共安全设备",
+      "desc_en": "Firefighting equipment manufacturing, BOM planning, production, QC, serial traceability, and service.",
+      "desc_zh": "消防设备制造、BOM 计划、生产、质检、序列号追溯与现场服务。"
+    },
+    "secondary-process-manufacturing": {
+      "tag_en": "Manufacturing",
+      "tag_zh": "制造",
+      "title_en": "Secondary Process Manufacturing",
+      "title_zh": "二次加工制造",
+      "desc_en": "Customer-supplied material control, traveler-based routing, IQC/OQC, split and rework handling, and return documentation.",
+      "desc_zh": "客供料管控、流转单工艺路线、IQC/OQC、拆批返工处理与退货文档。"
+    },
+    "food-manufacturing-operations": {
+      "tag_en": "Food Manufacturing",
+      "tag_zh": "食品制造",
+      "title_en": "Food Manufacturing Operations",
+      "title_zh": "食品制造运营",
+      "desc_en": "Fresh food and sushi production, kitchen-to-outlet planning, traceability, replenishment, and reporting.",
+      "desc_zh": "鲜食与寿司生产、中央厨房到门店计划、追溯、补货与报表。"
+    },
+    "attendance-timesheet-hardware": {
+      "tag_en": "Attendance",
+      "tag_zh": "考勤",
+      "title_en": "Attendance & Hardware Integration",
+      "title_zh": "考勤与硬件集成",
+      "desc_en": "Biometric device connectivity, punch logs, shift control, Excel payroll exports, and timesheet review.",
+      "desc_zh": "生物识别设备对接、打卡日志、班次管控、Excel 薪资导出与工时表审核。"
+    },
+    "translation-service-operations": {
+      "tag_en": "Translation",
+      "tag_zh": "翻译",
+      "title_en": "Translation Service Operations",
+      "title_zh": "翻译服务运营",
+      "desc_en": "Language project quoting, job control, delivery tracking, reviewer coordination, invoicing, and customer follow-through.",
+      "desc_zh": "语言项目报价、作业管控、交付跟踪、审校协调、开票与客户跟进。"
+    },
+    "gym-equipment-sales-service": {
+      "tag_en": "Gym Equipment",
+      "tag_zh": "健身器材",
+      "title_en": "Gym Equipment Sales & Service",
+      "title_zh": "健身器材销售与服务",
+      "desc_en": "B2B and B2C equipment sales, delivery coordination, maintenance service, warranty tracking, and customer support.",
+      "desc_zh": "B2B 与 B2C 设备销售、交付协调、维保服务、保修跟踪与客户支持。"
+    },
+    "specialty-chemical-trading": {
+      "tag_en": "Chemical Trading",
+      "tag_zh": "化工贸易",
+      "title_en": "Specialty Chemical Trading",
+      "title_zh": "特种化学品贸易",
+      "desc_en": "Chemical sales, procurement, stock visibility, compliance documents, delivery follow-up, and customer account control.",
+      "desc_zh": "化学品销售、采购、库存可视化、合规文档、交付跟进与客户账期管控。"
+    },
+    "school-uniform-seller": {
+      "tag_en": "Retail",
+      "tag_zh": "零售",
+      "title_en": "School Uniform Seller",
+      "title_zh": "校服销售",
+      "desc_en": "Uniform sales, product sizing, school-linked ordering, inventory control, and customer fulfilment.",
+      "desc_zh": "校服销售、尺码管理、学校关联订购、库存管控与客户履约。"
+    },
+    "corporate-hamper-gifting": {
+      "tag_en": "Gifting",
+      "tag_zh": "礼品",
+      "title_en": "Corporate Hamper Gifting",
+      "title_zh": "企业礼盒馈赠",
+      "desc_en": "Multi-recipient hamper ordering, eCommerce and counter sales, delivery control, gifting messages, and follow-up.",
+      "desc_zh": "多收件人礼盒订购、eCommerce 与柜台销售、配送管控、贺卡留言与跟进。"
+    },
+    "pet-food-accessories-ecommerce": {
+      "tag_en": "Pet Retail",
+      "tag_zh": "宠物零售",
+      "title_en": "Pet Food & Accessories eCommerce",
+      "title_zh": "宠物食品与用品电商",
+      "desc_en": "Premium online retail, product bundles, loyalty, fulfilment, delivery tracking, and customer account follow-up.",
+      "desc_zh": "高端在线零售、产品套装、会员积分、履约配送、物流跟踪与客户跟进。"
+    },
+    "scaffolding": {
+      "tag_en": "Rental",
+      "tag_zh": "租赁",
+      "title_en": "Scaffolding Rental & Project Claims",
+      "title_zh": "脚手架租赁与项目索赔",
+      "desc_en": "Rental orders, site deliveries, returns, claims, warehouse movement, billing, and project visibility.",
+      "desc_zh": "租赁订单、现场交付、归还、索赔、仓库调拨、开票与项目可视化。"
+    },
+    "bakery-ecommerce-operations": {
+      "tag_en": "Bakery",
+      "tag_zh": "烘焙",
+      "title_en": "Bakery E-Commerce & Production Control",
+      "title_zh": "烘焙电商与生产管控",
+      "desc_en": "Online cake ordering, delivery or collection slots, kitchen capacity control, memberships, and loyalty.",
+      "desc_zh": "在线蛋糕订购、配送或自提时段、厨房产能管控、会员与积分忠诚计划。"
+    },
+    "lab-testing-process": {
+      "tag_en": "Lab Testing",
+      "tag_zh": "实验室检测",
+      "title_en": "Lab Testing Process",
+      "title_zh": "实验室检测流程",
+      "desc_en": "Lab testing workflow, sample tracking, quality checks, result reporting, and operational follow-through.",
+      "desc_zh": "检测工作流、样品跟踪、质量检查、结果报告与运营跟进。"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pet Food &amp; Accessories eCommerce Flyer</title>
-  <link rel="stylesheet" href="pet-food-accessories-ecommerce-assets/fontawesome/css/all.min.css" />
+  <title>装修 公司 Solution 宣传单</title>
+  <link rel="stylesheet" href="positive-assets/fontawesome/css/all.min.css" />
   <style>
     :root {
       --navy: #062a6f;
@@ -24,7 +24,7 @@
       margin: 0;
       background: #e8eef7;
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
     }
 
     .page {
@@ -32,11 +32,11 @@
       width: 1024px;
       height: 1448px;
       overflow: hidden;
-      margin: 0 auto;
-      padding-bottom: 140px;
+      padding-bottom: 175px;
       box-sizing: border-box;
+      margin: 0 auto;
       background:
-        radial-gradient(circle at 78% 11%, rgba(0, 121, 107, .10), transparent 18%),
+        radial-gradient(circle at 78% 11%, rgba(39, 121, 227, .11), transparent 18%),
         linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
     }
 
@@ -115,7 +115,6 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      max-width: 620px;
     }
 
     .mark {
@@ -133,9 +132,9 @@
     }
 
     h1 {
-      margin: 2px 0 4px;
+      margin: 4px 0 6px;
       color: var(--navy);
-      font-size: 42px;
+      font-size: 38px;
       line-height: .96;
       font-weight: 900;
       letter-spacing: 0;
@@ -144,35 +143,35 @@
 
     .subtitle {
       color: var(--ink);
-      font-size: 16px;
-      margin-top: 6px;
+      font-size: 15px;
+      margin-top: 4px;
       max-width: 440px;
-      line-height: 1.25;
+      line-height: 1.2;
     }
 
     .short-line {
       width: 64px;
       height: 4px;
-      margin-top: 10px;
+      margin-top: 8px;
       background: var(--gold);
     }
 
     .odoo {
       text-align: right;
-      width: 180px;
+      width: 170px;
     }
 
     .odoo-logo {
-      width: 180px;
+      width: 170px;
       height: auto;
       display: block;
     }
 
     .intro {
       width: 720px;
-      margin-top: 16px;
-      font-size: 16px;
-      line-height: 1.38;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
       color: #07194f;
     }
 
@@ -180,7 +179,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
-      margin-top: 12px;
+      margin-top: 8px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
       background: rgba(255,255,255,.95);
@@ -189,8 +188,8 @@
     }
 
     .quick-benefit {
-      min-height: 96px;
-      padding: 10px 12px 8px;
+      min-height: 88px;
+      padding: 8px 10px 6px;
       border-right: 1px dashed #b7c8e1;
     }
 
@@ -238,7 +237,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      margin: 8px 22px 10px;
+      margin: 6px 22px 8px;
       color: var(--navy);
       font-size: 24px;
       font-weight: 900;
@@ -271,7 +270,7 @@
     }
 
     .capability {
-      min-height: 142px;
+      min-height: 120px;
       padding: 0 9px;
       text-align: center;
       border-right: 1px dashed #b9cce5;
@@ -341,13 +340,15 @@
       text-transform: uppercase;
     }
 
-    .panel-header.orange {
-      background: linear-gradient(90deg, #b85c10, #f18717);
+    .panel-header.purple {
+      background: linear-gradient(90deg, #722384, #8d2d92);
     }
 
     .panel-header i { width: 28px; font-size: 22px; text-align: center; }
 
-    .workflow { padding: 12px 12px 6px; }
+    .workflow {
+      padding: 12px 12px 6px;
+    }
 
     .steps {
       display: grid;
@@ -367,7 +368,11 @@
       opacity: .9;
     }
 
-    .step { position: relative; z-index: 1; text-align: center; }
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
 
     .step-box {
       display: grid;
@@ -442,7 +447,7 @@
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-top: 12px;
+      margin-top: 8px;
       border-top: 1px solid #d8e4f3;
     }
 
@@ -462,7 +467,9 @@
     .feature:nth-child(4n) { border-right: 0; }
     .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
 
-    .dashboard { padding: 10px 10px 10px; }
+    .dashboard {
+      padding: 10px 10px 10px;
+    }
 
     .stats {
       display: grid;
@@ -519,17 +526,26 @@
     }
 
     .donut-wrap {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 96px 1fr;
       align-items: center;
-      gap: 6px;
+      gap: 13px;
     }
 
     .donut {
-      width: 72px;
-      height: 72px;
-      display: block;
-      flex: 0 0 auto;
+      width: 92px;
+      height: 80px;
+      overflow: visible;
+    }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 22;
+      stroke-linecap: butt;
+    }
+
+    .donut-hole {
+      fill: #fff;
     }
 
     .legend {
@@ -555,12 +571,15 @@
       height: 10px;
       margin-right: 6px;
       border-radius: 2px;
-      background: #00796b;
+      background: var(--green);
     }
 
-    .legend div:last-child span { background: var(--green); }
+    .legend div:last-child span { background: var(--blue); }
 
-    .line-chart { width: 100%; height: 84px; }
+    .line-chart {
+      width: 100%;
+      height: 84px;
+    }
 
     .mini-table {
       margin-top: 8px;
@@ -592,12 +611,13 @@
       justify-self: start;
       border-radius: 20px;
       padding: 4px 9px;
-      background: #ffe2bf;
-      color: #9a4f08;
+      background: #ccebc6;
+      color: #26763a;
       font-size: 9px;
       font-weight: 900;
     }
 
+    
     .dashboard-bottom {
       display: grid;
       grid-template-columns: 46% 54%;
@@ -608,9 +628,9 @@
     .dash-card {
       border: 1px solid #d7e2f1;
       border-radius: 8px;
-      padding: 10px;
+      padding: 8px;
       background: #fff;
-      min-height: 118px;
+      min-height: 108px;
     }
 
     .dash-card h4 {
@@ -620,10 +640,7 @@
       font-weight: 900;
     }
 
-    .bar-list {
-      display: grid;
-      gap: 7px;
-    }
+    .bar-list { display: grid; gap: 7px; }
 
     .bar-item {
       display: grid;
@@ -645,7 +662,7 @@
     .bar-fill {
       height: 100%;
       border-radius: 999px;
-      background: linear-gradient(90deg, #00796b, #f18717);
+      background: linear-gradient(90deg, var(--blue), var(--orange));
     }
 
     .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
@@ -683,25 +700,21 @@
       justify-self: start;
       border-radius: 999px;
       padding: 2px 7px;
+      background: #dbeafe;
+      color: #1d4f91;
       font-size: 8px;
       font-weight: 900;
-      background: #fde8e8;
-      color: #8b1a1a;
     }
 
-    .tag.delivery {
-      background: #e7f4ea;
-      color: #2d7640;
-    }
+    .tag.delivery { background: #ffe2bf; color: #9a4f08; }
 
     .integrations {
       padding: 0 43px 0;
-      margin-bottom: 8px;
     }
 
     .integration-grid {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(10, 1fr);
       gap: 11px;
       align-items: start;
     }
@@ -736,17 +749,17 @@
       position: absolute;
       left: 16px;
       right: 16px;
-      bottom: 87px;
+      bottom: 99px;
+      z-index: 4;
       display: grid;
       grid-template-columns: 132px repeat(4, 1fr);
       gap: 0;
       margin: 0;
-      min-height: 64px;
+      min-height: 58px;
       border-radius: 11px;
       overflow: hidden;
       background: linear-gradient(90deg, #062a6f, #0b3b91);
       color: #fff;
-      z-index: 4;
     }
 
     .benefit-title {
@@ -791,28 +804,27 @@
       left: 0;
       right: 0;
       bottom: 0;
-      height: 44px;
+      height: 54px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       align-items: center;
       background: var(--navy);
       color: #fff;
-      padding: 0 24px;
-      font-size: 12px;
-      z-index: 5;
+      padding: 0 44px;
+      font-size: 14px;
     }
 
     .contact {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
       height: 22px;
       border-right: 1px solid rgba(255,255,255,.55);
     }
 
     .contact:last-child { border-right: 0; }
-    .contact i { width: 16px; font-size: 14px; text-align: center; }
+    .contact i { width: 18px; font-size: 16px; text-align: center; }
   
     .lang-switcher {
       position: fixed;
@@ -848,244 +860,242 @@
 <body>
   <nav class="lang-switcher" aria-label="Language"><a class="is-active" href="index.html">English</a><a href="index-zh.html">中文</a></nav>
   <main class="page">
-    <img class="hero-image" src="pet-food-accessories-ecommerce-assets/pet-food-accessories-ecommerce-hero.png" alt="" />
+    <img class="hero-image" src="positive-assets/positive-hero.png" alt="" />
     <div class="hero-fade"></div>
     <div class="curve"></div>
 
     <section class="hero">
       <div class="top-row">
         <div class="brand">
-          <img class="mark" src="pet-food-accessories-ecommerce-assets/alitec-logo.jpeg" alt="Alitec" />
+          <img class="mark" src="positive-assets/alitec-logo.jpeg" alt="Alitec" />
           <div class="divider"></div>
           <div>
-            <h1>Pet Food &amp;<br />Accessories eCommerce</h1>
-            <div class="subtitle">Premium Online Retail — Loyalty, Bundles &amp; Fulfilment with Odoo</div>
+            <h1>装修<br />公司</h1>
+            <div class="subtitle">完整项目运营 Odoo 方案</div>
             <div class="short-line"></div>
           </div>
         </div>
-        <div class="odoo"><img class="odoo-logo" src="pet-food-accessories-ecommerce-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+        <div class="odoo"><img class="odoo-logo" src="positive-assets/odoo-gold-partner.png" alt="Odoo Gold 零件ner" /></div>
       </div>
 
       <p class="intro">
-        Alitec's pet retail eCommerce solution helps premium online stores sell food and accessories,
-        capture pet member profiles, run loyalty and referral programmes, bundle products on the
-        website, and fulfil orders with local shipping — all in one Odoo platform.
+        Alitec 装修公司 Odoo 方案帮助项目驱动型企业管理完整商业生命周期，从报价明细与项目账户设置到采购延续、审批、分支治理、开票与完工可视化。
       </p>
 
       <div class="quick-benefits">
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-paw"></i></div>
-            <h3>Pet Member Profiles</h3>
+            <div class="round-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>项目关联</h3>
           </div>
-          <p>Register cats and dogs with breed, birthday, and owner details at signup.</p>
+          <p>确认销售后可立即创建或关联专用项目账户。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-gift"></i></div>
-            <h3>Loyalty &amp; Referrals</h3>
+            <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h3>详细报价</h3>
           </div>
-          <p>Signup points, refer-a-friend codes, and shop redemption at checkout.</p>
+          <p>采集主题、联系人、交期、移交、包装与尺寸。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-store"></i></div>
-            <h3>Premium Web Store</h3>
+            <div class="round-icon"><i class="fa-solid fa-building-shield"></i></div>
+            <h3>分支安全</h3>
           </div>
-          <p>Theme Prime storefront with brands, bundles, wishlist, and mobile shopping.</p>
+          <p>Operating Unit 检查减少跨分支采购与开票错误。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-truck-fast"></i></div>
-            <h3>Local Fulfilment</h3>
+            <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <h3>可视结案</h3>
           </div>
-          <p>EasyParcel labels, tracking, and shipping updates after order confirmation.</p>
+          <p>更清晰跟踪项目状态、预算与开票完成度。</p>
         </div>
       </div>
     </section>
 
-    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <div class="section-title"><span class="dot"></span> 核心功能 <span class="dot"></span></div>
     <section class="capabilities">
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-paw"></i></div>
-        <h3>Pet Member Data</h3>
-        <p>Pet lines with name, breed, type, and DOB on partners and portal.</p>
+        <div class="cap-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>项目账户管控</h3>
+        <p>将确认报价转为项目关联分析账户，执行更清晰。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon orange"><i class="fa-solid fa-user-plus"></i></div>
-        <h3>Member Registration</h3>
-        <p>Public signup form with PDPA consent and acquisition source tracking.</p>
+        <div class="cap-icon orange"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h3>报价明细管理</h3>
+        <p>早期采集运营明细，下游团队上下文更充分。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon purple"><i class="fa-solid fa-store"></i></div>
-        <h3>Premium eCommerce</h3>
-        <p>Theme Prime shop with brands, filters, quick view, and comparison.</p>
+        <div class="cap-icon purple"><i class="fa-solid fa-copy"></i></div>
+        <h3>共享报价支持</h3>
+        <p>按需复制与拆分报价，支持合作伙伴共享。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-box-open"></i></div>
-        <h3>Product Bundles</h3>
-        <p>Sell food and accessory kits across web, sales, stock, and invoices.</p>
+        <div class="cap-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>采购延续</h3>
+        <p>将分析参考从销售延续至供应商采购。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon green"><i class="fa-solid fa-star"></i></div>
-        <h3>Loyalty Programmes</h3>
-        <p>Signup rewards, promotion rules, limits, and multi-product criteria.</p>
+        <div class="cap-icon green"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h3>开票延续</h3>
+        <p>项目、主题与联系人信息延续至开票。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon orange"><i class="fa-solid fa-user-group"></i></div>
-        <h3>Refer &amp; Earn</h3>
-        <p>Referral codes, friend signup points, and discount redemption online.</p>
+        <div class="cap-icon orange"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>审批与治理</h3>
+        <p>按配置审批层级与源单据回调路由审核。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon purple"><i class="fa-solid fa-truck"></i></div>
-        <h3>EasyParcel Shipping</h3>
-        <p>Rates, labels, tracking, and post-confirm carrier changes on pickings.</p>
+        <div class="cap-icon purple"><i class="fa-solid fa-code-branch"></i></div>
+        <h3>Operating Unit 管控</h3>
+        <p>在采购与供应商开票流程中强制分支一致性。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-credit-card"></i></div>
-        <h3>Stripe + PayNow</h3>
-        <p>Card checkout with Singapore PayNow on the web payment flow.</p>
+        <div class="cap-icon"><i class="fa-solid fa-print"></i></div>
+        <h3>定制打印版式</h3>
+        <p>输出更清晰的报价、采购、发票与文档。</p>
       </div>
     </section>
 
     <section class="panels">
       <div class="panel">
-        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Retail Workflow</div>
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> 项目工作流</div>
         <div class="workflow">
           <div class="steps">
-            <div class="step"><div class="step-box"><i class="fa-solid fa-user-plus"></i></div><h4>Join &amp;<br />Register</h4><p>Member signup with pet profiles, consent, and signup loyalty points</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-cart-shopping"></i></div><h4>Shop<br />Online</h4><p>Browse brands, bundles, wishlist, and apply loyalty rewards at checkout</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-credit-card"></i></div><h4>Pay<br />Securely</h4><p>Stripe card payment with PayNow for Singapore customers</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-box"></i></div><h4>Pick &amp;<br />Pack</h4><p>Warehouse fulfilment with bundle lines and delivery order creation</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-truck-fast"></i></div><h4>Ship &amp;<br />Track</h4><p>EasyParcel labels, tracking links, and branded order documents</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>准备<br />报价</h4><p>记录联系人、主题、交期与执行明细</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-diagram-project"></i></div><h4>确认并<br />关联项目</h4><p>确认时创建或关联匹配项目账户</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-calendar-check"></i></div><h4>计划与<br />管控</h4><p>管理日期、预算、负责人与项目状态</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-basket-shopping"></i></div><h4>按分支<br />规则采购</h4><p>采购含分析延续与 OU 校验</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice-dollar"></i></div><h4>开票与<br />结案</h4><p>开票含项目延续并审核完工</p></div>
           </div>
 
-          <div class="sub-title">Control Modes</div>
+          <div class="sub-title">管控模式</div>
           <div class="slots">
-            <div class="slot"><i class="fa-solid fa-paw"></i><h4>Pet Types</h4><p>Cat and dog profiles with breed and birthday on member accounts</p></div>
-            <div class="slot"><i class="fa-solid fa-gift"></i><h4>Loyalty Rules</h4><p>Exclude shipping from points and cap promotions per customer</p></div>
-            <div class="slot"><i class="fa-solid fa-share-nodes"></i><h4>Referrals</h4><p>Friend codes, signup credits, and shop discount redemption</p></div>
-            <div class="slot"><i class="fa-solid fa-boxes-stacked"></i><h4>Bundles</h4><p>Combo packs for food, treats, and grooming accessories online</p></div>
-            <div class="slot"><i class="fa-solid fa-truck"></i><h4>Shipping</h4><p>Change carrier on confirmed orders before pickings complete</p></div>
+            <div class="slot"><i class="fa-solid fa-briefcase"></i><h4>关联项目</h4><p>分析项目账户关联确认销售</p></div>
+            <div class="slot"><i class="fa-solid fa-building"></i><h4>分支管控</h4><p>跨团队 Operating Unit 校验</p></div>
+            <div class="slot"><i class="fa-solid fa-user-tie"></i><h4>经理视图</h4><p>跟踪负责人与项目责任</p></div>
+            <div class="slot"><i class="fa-solid fa-check-double"></i><h4>审批流程</h4><p>配置审批层级与回调</p></div>
+            <div class="slot"><i class="fa-solid fa-folder-open"></i><h4>文档输出</h4><p>更清晰的客户与供应商文档</p></div>
           </div>
 
-          <div class="sub-title">Additional Features</div>
+          <div class="sub-title">附加功能</div>
           <div class="feature-grid">
-            <div class="feature"><i class="fa-solid fa-print"></i>Branded sales and invoice PDF layouts</div>
-            <div class="feature"><i class="fa-solid fa-id-card"></i>Portal pet management for members</div>
-            <div class="feature"><i class="fa-solid fa-heart"></i>Wishlist and product comparison on shop</div>
-            <div class="feature"><i class="fa-solid fa-bullhorn"></i>Acquisition source tracking on signup</div>
-            <div class="feature"><i class="fa-solid fa-shield-halved"></i>PDPA and marketing consent capture</div>
-            <div class="feature"><i class="fa-solid fa-percent"></i>Promotion start dates and loyalty limits</div>
-            <div class="feature"><i class="fa-solid fa-bell"></i>Smart warnings on sales documents</div>
-            <div class="feature"><i class="fa-solid fa-chart-line"></i>Stock-aware web catalog and reporting</div>
+            <div class="feature"><i class="fa-solid fa-tags"></i>分析与标签延续</div>
+            <div class="feature"><i class="fa-solid fa-truck-ramp-box"></i>供应商采购关联</div>
+            <div class="feature"><i class="fa-solid fa-ruler-combined"></i>尺寸与包装备注</div>
+            <div class="feature"><i class="fa-solid fa-handshake"></i>合作伙伴共享报价拆分</div>
+            <div class="feature"><i class="fa-solid fa-clock"></i>交期与移交明细</div>
+            <div class="feature"><i class="fa-solid fa-wallet"></i>开票完成标记</div>
+            <div class="feature"><i class="fa-solid fa-print"></i>定制商务打印格式</div>
+            <div class="feature"><i class="fa-solid fa-arrows-rotate"></i>审批回调可追溯</div>
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Operations Visibility</div>
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> 管理可视化</div>
         <div class="dashboard">
           <div class="stats">
-            <div class="stat"><h4>Web Orders Today</h4><div class="number">86<i class="fa-solid fa-cart-shopping"></i></div></div>
-            <div class="stat"><h4>Active Members</h4><div class="number">4.2k<i class="fa-solid fa-paw"></i></div></div>
-            <div class="stat"><h4>Loyalty Redeemed</h4><div class="number">312<i class="fa-solid fa-gift"></i></div></div>
-            <div class="stat"><h4>Referrals</h4><div class="number">47<i class="fa-solid fa-user-group"></i></div></div>
-            <div class="stat"><h4>Ship Today</h4><div class="number">58<i class="fa-solid fa-truck"></i></div></div>
+            <div class="stat"><h4>活跃项目</h4><div class="number">128<i class="fa-solid fa-briefcase"></i></div></div>
+            <div class="stat"><h4>开放报价</h4><div class="number">84<i class="fa-solid fa-file-signature"></i></div></div>
+            <div class="stat"><h4>待审批</h4><div class="number">19<i class="fa-solid fa-circle-check"></i></div></div>
+            <div class="stat"><h4>开放采购</h4><div class="number">63<i class="fa-solid fa-basket-shopping"></i></div></div>
+            <div class="stat"><h4>已开票项目</h4><div class="number">76%<i class="fa-solid fa-file-invoice-dollar"></i></div></div>
           </div>
 
           <div class="charts">
             <div class="chart-card">
-              <h4>Category Mix</h4>
+              <h4>项目状态概览</h4>
               <div class="donut-wrap">
-                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Category mix chart">
-                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#00796b"></path>
-                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#35a853"></path>
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="项目 status chart">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 17.95 59.20 L 27.90 54.52 A 20 20 0 1 0 46.00 26.00 Z" fill="#35a853"></path>
+                  <path d="M 17.95 59.20 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 27.90 54.52 Z" fill="#2879e3"></path>
                 </svg>
                 <div class="legend">
-                  <div><span></span>Pet Food (64%) 218</div>
-                  <div><span></span>Accessories (36%) 124</div>
+                  <div><span></span>进行中项目 (87) 68%</div>
+                  <div><span></span>收尾/已结案 (41) 32%</div>
                 </div>
               </div>
             </div>
             <div class="chart-card">
-              <h4>Weekly Web Revenue</h4>
+              <h4>月度开票进度</h4>
               <svg class="line-chart" viewBox="0 0 300 100" fill="none">
                 <path d="M0 92H300" stroke="#d8e4f3" />
                 <path d="M0 62H300" stroke="#d8e4f3" />
                 <path d="M0 32H300" stroke="#d8e4f3" />
-                <path d="M24 82 L62 74 L100 66 L138 58 L176 48 L214 40 L252 34 L286 28" stroke="#00796b" stroke-width="3" fill="none"/>
-                <path d="M24 82 L62 74 L100 66 L138 58 L176 48 L214 40 L252 34 L286 28 L286 92 L24 92Z" fill="rgba(0,121,107,.16)" />
-                <g fill="#00796b"><circle cx="24" cy="82" r="4"/><circle cx="62" cy="74" r="4"/><circle cx="100" cy="66" r="4"/><circle cx="138" cy="58" r="4"/><circle cx="176" cy="48" r="4"/><circle cx="214" cy="40" r="4"/><circle cx="252" cy="34" r="4"/><circle cx="286" cy="28" r="4"/></g>
-                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Mon</text><text x="58" y="99">Tue</text><text x="96" y="99">Wed</text><text x="134" y="99">Thu</text><text x="173" y="99">Fri</text><text x="211" y="99">Sat</text><text x="249" y="99">Sun</text><text x="283" y="99">Mon</text></g>
+                <path d="M24 76 L62 58 L100 44 L138 40 L176 34 L214 30 L252 24 L286 18" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 76 L62 58 L100 44 L138 40 L176 34 L214 30 L252 24 L286 18 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f"><circle cx="24" cy="76" r="4"/><circle cx="62" cy="58" r="4"/><circle cx="100" cy="44" r="4"/><circle cx="138" cy="40" r="4"/><circle cx="176" cy="34" r="4"/><circle cx="214" cy="30" r="4"/><circle cx="252" cy="24" r="4"/><circle cx="286" cy="18" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">1月</text><text x="58" y="99">2月</text><text x="96" y="99">3月</text><text x="134" y="99">4月</text><text x="173" y="99">5月</text><text x="211" y="99">6月</text><text x="249" y="99">7月</text><text x="283" y="99">8月</text></g>
               </svg>
             </div>
           </div>
 
           <div class="mini-table">
-            <div class="row head"><div>Control Area</div><div>Owner</div><div>Status</div><div>Count</div><div>Review</div></div>
-            <div class="row"><div>Loyalty</div><div>Marketing</div><div>Active</div><div>12</div><div class="pill">Live</div></div>
-            <div class="row"><div>Web Orders</div><div>eCommerce</div><div>Open</div><div>86</div><div class="pill">On Track</div></div>
-            <div class="row"><div>Fulfilment</div><div>Warehouse</div><div>Picking</div><div>58</div><div class="pill">Active</div></div>
-            <div class="row"><div>Referrals</div><div>Growth</div><div>New</div><div>47</div><div class="pill">Watch</div></div>
-          </div>
+            <div class="row head"><div>管控领域</div><div>负责人</div><div>状态</div><div>数量</div><div>审核</div></div>
+            <div class="row"><div>项目账户</div><div>销售</div><div>开放</div><div>128</div><div class="pill">活跃</div></div>
+            <div class="row"><div>供应商开票</div><div>财务</div><div>已核对</div><div>63</div><div class="pill">活跃</div></div>
+            <div class="row"><div>Approvals</div><div>经理</div><div>待处理</div><div>19</div><div class="pill">已计划</div></div>
+            <div class="row"><div>开票完成</div><div>账务</div><div>已跟踪</div><div>76%</div><div class="pill">活跃</div></div>
 
           <div class="dashboard-bottom">
             <div class="dash-card">
-              <h4>Top Category Sales</h4>
+              <h4>项目阶段构成</h4>
               <div class="bar-list">
-                <div class="bar-item"><span>Dog Food</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span>68%</span></div>
-                <div class="bar-item"><span>Cat Food</span><div class="bar-track"><div class="bar-fill green" style="width:54%"></div></div><span>54%</span></div>
-                <div class="bar-item"><span>Grooming</span><div class="bar-track"><div class="bar-fill blue" style="width:42%"></div></div><span>42%</span></div>
-                <div class="bar-item"><span>Bundles</span><div class="bar-track"><div class="bar-fill purple" style="width:36%"></div></div><span>36%</span></div>
+                <div class="bar-item"><span>报价</span><div class="bar-track"><div class="bar-fill" style="width:34%"></div></div><span>34%</span></div>
+                <div class="bar-item"><span>活跃</span><div class="bar-track"><div class="bar-fill green" style="width:58%"></div></div><span>58%</span></div>
+                <div class="bar-item"><span>移交</span><div class="bar-track"><div class="bar-fill blue" style="width:28%"></div></div><span>28%</span></div>
+                <div class="bar-item"><span>索赔</span><div class="bar-track"><div class="bar-fill purple" style="width:22%"></div></div><span>22%</span></div>
               </div>
             </div>
             <div class="dash-card">
-              <h4>Orders Awaiting Dispatch</h4>
+              <h4>待处理项目</h4>
               <div class="queue-table">
-                <div class="queue-row head"><div>Order</div><div>Customer</div><div>Due</div><div>Type</div></div>
-                <div class="queue-row"><div>SO-2842</div><div>L. Tan</div><div>Today</div><div class="tag">Food</div></div>
-                <div class="queue-row"><div>SO-2847</div><div>M. Lee</div><div>Today</div><div class="tag delivery">Bundle</div></div>
-                <div class="queue-row"><div>SO-2851</div><div>K. Wong</div><div>Tomorrow</div><div class="tag">Grooming</div></div>
-                <div class="queue-row"><div>SO-2854</div><div>S. Lim</div><div>Tomorrow</div><div class="tag delivery">Accessories</div></div>
+                <div class="queue-row head"><div>项目</div><div>客户</div><div>到期</div><div>阶段</div></div>
+                <div class="queue-row"><div>PRJ-1842</div><div>12A 单元</div><div>今日</div><div class="tag">现场</div></div>
+                <div class="queue-row"><div>PRJ-1847</div><div>B 办公室</div><div>今日</div><div class="tag delivery">索赔</div></div>
+                <div class="queue-row"><div>PRJ-1851</div><div>零售装修</div><div>周五</div><div class="tag">报价</div></div>
+                <div class="queue-row"><div>PRJ-1854</div><div>公寓 8F</div><div>周一</div><div class="tag delivery">移交</div></div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> 与 ODOO 应用无缝集成 <span class="dot"></span></div>
     <section class="integrations">
       <div class="integration-grid">
-        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-store"></i></div>eCommerce</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>Inventory</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Accounting</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-gift"></i></div>Loyalty</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-truck"></i></div>Delivery</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-credit-card"></i></div>Payments</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Reporting</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>销售</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-basket-shopping"></i></div>Purchase</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-boxes-stacked"></i></div>开票entory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>开票oicing</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-dollar-sign"></i></div>Accounting</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-briefcase"></i></div>Analytic</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-folder-open"></i></div>Documents</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Dashboards</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-clipboard-check"></i></div>Approvals</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-building"></i></div>Operating Units</div>
       </div>
     </section>
 
     <section class="bottom-benefits">
-      <div class="benefit-title">Business<br />Benefits</div>
-      <div class="bottom-item"><i class="fa-solid fa-paw"></i><div><h3>Know Every Pet</h3><p>Member profiles with breed and birthday for personalised retail.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-gift"></i><div><h3>Rewards That Retain</h3><p>Loyalty and referral programmes built into the web checkout.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-store"></i><div><h3>Premium Storefront</h3><p>Brands, bundles, and stock-aware shopping in one catalog.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-truck-fast"></i><div><h3>Click to Doorstep</h3><p>Orders, pickings, EasyParcel labels, and tracking in Odoo.</p></div></div>
+      <div class="benefit-title">商业<br />效益</div>
+      <div class="bottom-item"><i class="fa-solid fa-link"></i><div><h3>贯通执行</h3><p>销售、采购、财务与移交基于同一项目记录协同。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-shield-halved"></i><div><h3>更强管控</h3><p>减少分支差错，提升跨团队审批纪律。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-eye"></i><div><h3>更好可视化</h3><p>更清晰审阅项目状态、预算与开票进度。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-file-lines"></i><div><h3>更清晰沟通</h3><p>项目全程提供更结构化的客户与供应商文档。</p></div></div>
     </section>
 
     <footer class="footer">
-      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
       <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
-      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
-      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
       <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
-      <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
     </footer>
   </main>
-  <script src="../../editor/flyer-editor.js?v=20260707-12" data-flyer-editor-script data-flyer-version="2026-07-07-pet-v1"></script>
+  <script src="../../editor/flyer-editor.js?v=20260707-12" data-flyer-editor-script></script>
 </body>
 </html>

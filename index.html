@@ -11,7 +11,6 @@
       --gold: #f6aa17;
       --ink: #07194f;
       --line: #cbd9ef;
-      --paper: #ffffff;
     }
 
     * { box-sizing: border-box; }
@@ -20,7 +19,7 @@
       margin: 0;
       min-height: 100vh;
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
       background:
         radial-gradient(circle at 82% 12%, rgba(40, 121, 227, .16), transparent 22%),
         radial-gradient(circle at 8% 86%, rgba(246, 170, 23, .16), transparent 24%),
@@ -28,269 +27,109 @@
     }
 
     .page {
-      width: min(1120px, calc(100% - 40px));
+      width: min(920px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 52px 0 64px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 116px 1fr;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 34px;
-      padding: 28px;
-      border: 1px solid rgba(203, 217, 239, .9);
-      border-radius: 24px;
-      background: rgba(255,255,255,.88);
-      box-shadow: 0 18px 46px rgba(6, 42, 111, .12);
+      padding: 72px 0 80px;
+      text-align: center;
     }
 
     .logo {
       width: 116px;
       height: 116px;
       object-fit: contain;
+      margin-bottom: 24px;
     }
 
     h1 {
       margin: 0;
       color: var(--navy);
-      font-size: clamp(38px, 6vw, 72px);
+      font-size: clamp(38px, 6vw, 68px);
       line-height: .95;
       text-transform: uppercase;
       letter-spacing: -.03em;
     }
 
     .subtitle {
-      margin: 14px 0 0;
-      max-width: 740px;
+      margin: 18px auto 0;
+      max-width: 680px;
       font-size: 18px;
-      line-height: 1.45;
+      line-height: 1.5;
       color: #33476f;
     }
 
     .bar {
       width: 86px;
       height: 5px;
-      margin-top: 18px;
+      margin: 22px auto 34px;
       border-radius: 99px;
       background: var(--gold);
     }
 
-    .grid {
+    .lang-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
+      margin-top: 10px;
     }
 
-    .card {
-      position: relative;
-      min-height: 178px;
-      padding: 22px;
+    .lang-card {
+      display: block;
+      padding: 34px 28px;
       border: 1px solid var(--line);
-      border-radius: 20px;
+      border-radius: 24px;
       background: rgba(255,255,255,.95);
-      box-shadow: 0 14px 34px rgba(6, 42, 111, .08);
+      box-shadow: 0 18px 42px rgba(6, 42, 111, .1);
       text-decoration: none;
       color: var(--ink);
-      overflow: hidden;
     }
 
-    .card::after {
-      content: "";
-      position: absolute;
-      right: -34px;
-      bottom: -48px;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: rgba(40, 121, 227, .09);
-    }
-
-    .card:hover {
+    .lang-card:hover {
       transform: translateY(-2px);
       border-color: #8bb9ef;
-      box-shadow: 0 18px 42px rgba(6, 42, 111, .14);
     }
 
-    .tag {
-      display: inline-block;
-      margin-bottom: 16px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #eef5ff;
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-    }
-
-    .card h2 {
-      position: relative;
-      z-index: 1;
-      margin: 0 0 12px;
+    .lang-card h2 {
+      margin: 0 0 10px;
       color: var(--navy);
-      font-size: 24px;
-      line-height: 1.08;
+      font-size: 34px;
     }
 
-    .card p {
-      position: relative;
-      z-index: 1;
+    .lang-card p {
       margin: 0;
       color: #33476f;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.45;
       font-weight: 700;
     }
 
     .footer {
-      margin-top: 28px;
+      margin-top: 30px;
       color: #597094;
       font-size: 14px;
-      text-align: center;
     }
 
-    @media (max-width: 860px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 720px) {
+      .lang-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <main class="page">
-    <section class="hero">
-      <img class="logo" src="projects/positive/positive-assets/alitec-logo.jpeg" alt="Alitec" />
-      <div>
-        <h1>Alitec Odoo Flyers</h1>
-        <p class="subtitle">Browse the published flyer pages. Each page includes editable text, draft saving, HTML download, A4 PDF export, and print PNG export.</p>
-        <div class="bar"></div>
-      </div>
-    </section>
-
-    <section class="grid" aria-label="Flyer links">
-      <a class="card" href="projects/temple-ngo-religious-operations/">
-        <span class="tag">Temple / NGO</span>
-        <h2>Temple &amp; Religious Organization</h2>
-        <p>Online merit offerings, ceremony scheduling, memorial dedications, donor CRM, subscriptions, and temple accounting.</p>
+    <img class="logo" src="projects/positive/positive-assets/alitec-logo.jpeg" alt="Alitec" />
+    <h1>Alitec Odoo Flyers</h1>
+    <p class="subtitle">Choose a language to browse all industry solution flyers. Each page supports editing, draft saving, HTML download, A4 PDF export, and print PNG export.</p>
+    <p class="subtitle">选择语言浏览全部行业方案宣传单。每个页面均支持编辑、草稿保存、HTML 下载、A4 PDF 导出与打印 PNG 导出。</p>
+    <div class="bar"></div>
+    <section class="lang-grid" aria-label="Language selection">
+      <a class="lang-card" href="en/index.html">
+        <h2>English</h2>
+        <p>Browse all 19 industry solution flyers in English.</p>
       </a>
-
-      <a class="card" href="projects/industrial-equipment-wholesale/">
-        <span class="tag">Wholesale</span>
-        <h2>Industrial Equipment Wholesale</h2>
-        <p>Portal order sync, part-number catalog, SO-to-PO procurement, delivery modes, and package GST invoicing.</p>
-      </a>
-
-      <a class="card" href="projects/social-recreational-club/">
-        <span class="tag">Club</span>
-        <h2>Social/Recreational Club</h2>
-        <p>Membership enrolment, facility booking, events and banquets, restaurant POS, MSL billing, and member portal.</p>
-      </a>
-
-      <a class="card" href="projects/precision-cnc-manufacturing/">
-        <span class="tag">Manufacturing</span>
-        <h2>Precision CNC Manufacturing</h2>
-        <p>High-mix job shop — operation routing, material tracking, multi-level MRP, shop-floor QC, CoC, and billing with Odoo.</p>
-      </a>
-
-      <a class="card" href="projects/positive/">
-        <span class="tag">Renovation</span>
-        <h2>Renovation Company</h2>
-        <p>Project operations, quotation detail, purchasing continuity, approvals, and billing visibility.</p>
-      </a>
-
-      <a class="card" href="projects/cleantric/">
-        <span class="tag">Cleaning</span>
-        <h2>Cleaning Service Company</h2>
-        <p>Online booking, cleaner selection, scheduling, address capture, order follow-through, and payment flow.</p>
-      </a>
-
-      <a class="card" href="projects/public-safety/">
-        <span class="tag">Manufacturing</span>
-        <h2>Public Safety Equipment</h2>
-        <p>Firefighting equipment manufacturing, BOM planning, production, QC, serial traceability, and service.</p>
-      </a>
-
-      <a class="card" href="projects/secondary-process-manufacturing/">
-        <span class="tag">Manufacturing</span>
-        <h2>Secondary Process Manufacturing</h2>
-        <p>Customer-supplied material control, traveler-based routing, IQC/OQC, split and rework handling, and return documentation.</p>
-      </a>
-
-      <a class="card" href="projects/food-manufacturing-operations/">
-        <span class="tag">Food Manufacturing</span>
-        <h2>Food Manufacturing Operations</h2>
-        <p>Fresh food and sushi production, kitchen-to-outlet planning, traceability, replenishment, and reporting.</p>
-      </a>
-
-      <a class="card" href="projects/attendance-timesheet-hardware/">
-        <span class="tag">Attendance</span>
-        <h2>Attendance &amp; Hardware Integration</h2>
-        <p>Biometric device connectivity, punch logs, shift control, Excel payroll exports, and timesheet review.</p>
-      </a>
-
-      <a class="card" href="projects/translation-service-operations/">
-        <span class="tag">Translation</span>
-        <h2>Translation Service Operations</h2>
-        <p>Language project quoting, job control, delivery tracking, reviewer coordination, invoicing, and customer follow-through.</p>
-      </a>
-
-      <a class="card" href="projects/gym-equipment-sales-service/">
-        <span class="tag">Gym Equipment</span>
-        <h2>Gym Equipment Sales &amp; Service</h2>
-        <p>B2B and B2C equipment sales, delivery coordination, maintenance service, warranty tracking, and customer support.</p>
-      </a>
-
-      <a class="card" href="projects/specialty-chemical-trading/">
-        <span class="tag">Chemical Trading</span>
-        <h2>Specialty Chemical Trading</h2>
-        <p>Chemical sales, procurement, stock visibility, compliance documents, delivery follow-up, and customer account control.</p>
-      </a>
-
-      <a class="card" href="projects/school-uniform-seller/">
-        <span class="tag">Retail</span>
-        <h2>School Uniform Seller</h2>
-        <p>Uniform sales, product sizing, school-linked ordering, inventory control, and customer fulfilment.</p>
-      </a>
-
-      <a class="card" href="projects/corporate-hamper-gifting/">
-        <span class="tag">Gifting</span>
-        <h2>Corporate Hamper Gifting</h2>
-        <p>Multi-recipient hamper ordering, eCommerce and counter sales, delivery control, gifting messages, and follow-up.</p>
-      </a>
-
-      <a class="card" href="projects/pet-food-accessories-ecommerce/">
-        <span class="tag">Pet Retail</span>
-        <h2>Pet Food &amp; Accessories eCommerce</h2>
-        <p>Premium online retail, product bundles, loyalty, fulfilment, delivery tracking, and customer account follow-up.</p>
-      </a>
-
-      <a class="card" href="projects/scaffolding/">
-        <span class="tag">Rental</span>
-        <h2>Scaffolding Rental &amp; Project Claims</h2>
-        <p>Rental orders, site deliveries, returns, claims, warehouse movement, billing, and project visibility.</p>
-      </a>
-
-      <a class="card" href="projects/bakery-ecommerce-operations/">
-        <span class="tag">Bakery</span>
-        <h2>Bakery E-Commerce &amp; Production Control</h2>
-        <p>Online cake ordering, delivery or collection slots, kitchen capacity control, memberships, and loyalty.</p>
-      </a>
-
-      <a class="card" href="projects/lab-testing-process/">
-        <span class="tag">Lab Testing</span>
-        <h2>Lab Testing Process</h2>
-        <p>Lab testing workflow, sample tracking, quality checks, result reporting, and operational follow-through.</p>
+      <a class="lang-card" href="zh/index.html">
+        <h2>中文</h2>
+        <p>浏览全部 19 个行业方案中文宣传单。</p>
       </a>
     </section>
-
     <div class="footer">Published at https://alitecpteltd.github.io/flyers/</div>
   </main>
 </body>

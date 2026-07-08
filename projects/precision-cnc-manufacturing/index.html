@@ -813,9 +813,40 @@
 
     .contact:last-child { border-right: 0; }
     .contact i { width: 16px; font-size: 14px; text-align: center; }
+  
+    .lang-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #cbd9ef;
+      box-shadow: 0 8px 24px rgba(6, 42, 111, 0.12);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .lang-switcher a {
+      color: #062a6f;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher a.is-active {
+      background: #062a6f;
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
+  <nav class="lang-switcher" aria-label="Language"><a class="is-active" href="index.html">English</a><a href="index-zh.html">中文</a></nav>
   <main class="page">
     <img class="hero-image" src="precision-cnc-manufacturing-assets/precision-cnc-manufacturing-hero.png" alt="" />
     <div class="hero-fade"></div>

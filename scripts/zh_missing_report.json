@@ -1,0 +1,96 @@
+{
+  "social-recreational-club": [
+    "Events"
+  ],
+  "precision-cnc-manufacturing": [
+    "Bill",
+    "Procurement"
+  ],
+  "positive": [
+    "Pending Approvals"
+  ],
+  "cleantric": [
+    "Company",
+    "09:00",
+    "11:30",
+    "14:00",
+    "16:00"
+  ],
+  "public-safety": [
+    "Service",
+    "Reports"
+  ],
+  "secondary-process-manufacturing": [
+    "Active MOs",
+    "QC Team",
+    "MO",
+    "Process"
+  ],
+  "food-manufacturing-operations": [
+    "MOs Due This Week",
+    "Production Workflow",
+    "Deliveries",
+    "QC Hold",
+    "MO",
+    "MO-2842",
+    "MO-2847",
+    "MO-2851",
+    "MO-2854"
+  ],
+  "translation-service-operations": [
+    "Service Types",
+    "Analytics",
+    "Due This Week",
+    "Project Workflow",
+    "Operations",
+    "Create",
+    "Invoice",
+    "Mon 09:00"
+  ],
+  "gym-equipment-sales-service": [
+    "Due This Week",
+    "Quote",
+    "Deliver &amp;",
+    "Maintenance",
+    "Service Team"
+  ],
+  "specialty-chemical-trading": [
+    "Analytics",
+    "Invoice",
+    "Quote"
+  ],
+  "school-uniform-seller": [
+    "SO-1847",
+    "SO-1851",
+    "SO-1854"
+  ],
+  "corporate-hamper-gifting": [
+    "Pick &amp;<br />Pack",
+    "Branded Documents",
+    "Custom sales, invoice, and delivery print layouts.",
+    "Pick &amp;",
+    "Greeting details flow to warehouse moves and delivery slips"
+  ],
+  "pet-food-accessories-ecommerce": [
+    "Pay<br />Securely",
+    "Register",
+    "Pick &amp;",
+    "Warehouse fulfilment with bundle lines and delivery order creation"
+  ],
+  "bakery-ecommerce-operations": [
+    "Pay<br />Securely",
+    "Collection",
+    "Active Members",
+    "Operations",
+    "Shop &amp;",
+    "Schedule",
+    "Pay",
+    "Securely",
+    "Produce &amp;",
+    "Retain"
+  ],
+  "lab-testing-process": [
+    "Bill",
+    "Supervisors"
+  ]
+}

@@ -1,30 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pet Food &amp; Accessories eCommerce Flyer</title>
-  <link rel="stylesheet" href="pet-food-accessories-ecommerce-assets/fontawesome/css/all.min.css" />
+  <title>Aquaculture 实验室检测 流程 Flyer</title>
+  <link rel="stylesheet" href="lab-testing-process-assets/fontawesome/css/all.min.css" />
   <style>
     :root {
-      --navy: #062a6f;
-      --navy-2: #0b3b91;
-      --ink: #07194f;
-      --line: #cbd9ef;
-      --gold: #f6aa17;
-      --orange: #f18717;
-      --purple: #7a2f8f;
-      --blue: #2879e3;
-      --green: #35a853;
+      --navy: #053a6b;
+      --navy-2: #0a5a8f;
+      --ink: #0a2f52;
+      --line: #b8d9ea;
+      --gold: #f6b01a;
+      --orange: #ef8c16;
+      --purple: #2d7a9a;
+      --blue: #1a8fc9;
+      --green: #2ea85a;
+      --cyan: #12a3c7;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: #e8eef7;
+      background: #e6f2f8;
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
     }
 
     .page {
@@ -32,11 +33,11 @@
       width: 1024px;
       height: 1448px;
       overflow: hidden;
-      margin: 0 auto;
       padding-bottom: 140px;
       box-sizing: border-box;
+      margin: 0 auto;
       background:
-        radial-gradient(circle at 78% 11%, rgba(0, 121, 107, .10), transparent 18%),
+        radial-gradient(circle at 78% 11%, rgba(18, 163, 199, .12), transparent 18%),
         linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
     }
 
@@ -57,24 +58,8 @@
       height: 360px;
       z-index: 1;
       background:
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 1) 0%,
-          rgba(255, 255, 255, 1) 52%,
-          rgba(255, 255, 255, .98) 56%,
-          rgba(255, 255, 255, .92) 60%,
-          rgba(255, 255, 255, .78) 66%,
-          rgba(255, 255, 255, .45) 74%,
-          rgba(255, 255, 255, .12) 82%,
-          rgba(255, 255, 255, 0) 92%
-        ),
-        radial-gradient(
-          ellipse 240px 120px at 90% 14%,
-          rgba(255, 255, 255, .96) 0%,
-          rgba(255, 255, 255, .82) 58%,
-          rgba(255, 255, 255, 0) 100%
-        ),
-        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
     }
 
     .curve {
@@ -115,7 +100,6 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      max-width: 620px;
     }
 
     .mark {
@@ -133,7 +117,7 @@
     }
 
     h1 {
-      margin: 2px 0 4px;
+      margin: 4px 0 6px;
       color: var(--navy);
       font-size: 42px;
       line-height: .96;
@@ -144,26 +128,26 @@
 
     .subtitle {
       color: var(--ink);
-      font-size: 16px;
-      margin-top: 6px;
-      max-width: 440px;
+      font-size: 18px;
+      margin-top: 8px;
+      max-width: 430px;
       line-height: 1.25;
     }
 
     .short-line {
       width: 64px;
       height: 4px;
-      margin-top: 10px;
+      margin-top: 16px;
       background: var(--gold);
     }
 
     .odoo {
       text-align: right;
-      width: 180px;
+      width: 205px;
     }
 
     .odoo-logo {
-      width: 180px;
+      width: 205px;
       height: auto;
       display: block;
     }
@@ -173,7 +157,7 @@
       margin-top: 16px;
       font-size: 16px;
       line-height: 1.38;
-      color: #07194f;
+      color: #0a2f52;
     }
 
     .quick-benefits {
@@ -181,17 +165,17 @@
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
       margin-top: 12px;
-      border: 1px solid #d7e2f1;
+      border: 1px solid #c5dde9;
       border-radius: 18px;
       background: rgba(255,255,255,.95);
-      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      box-shadow: 0 12px 32px rgba(5, 58, 107, .12);
       overflow: hidden;
     }
 
     .quick-benefit {
-      min-height: 96px;
-      padding: 10px 12px 8px;
-      border-right: 1px dashed #b7c8e1;
+      min-height: 108px;
+      padding: 12px 14px 10px;
+      border-right: 1px dashed #9ec8dd;
     }
 
     .quick-benefit:last-child { border-right: 0; }
@@ -226,7 +210,7 @@
 
     .quick-benefit p {
       margin: 0;
-      color: #07194f;
+      color: #0a2f52;
       font-size: 9.2px;
       line-height: 1.28;
       font-weight: 600;
@@ -238,7 +222,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      margin: 8px 22px 10px;
+      margin: 12px 22px 14px;
       color: var(--navy);
       font-size: 24px;
       font-weight: 900;
@@ -251,7 +235,7 @@
       content: "";
       flex: 1;
       height: 1px;
-      background: #9fc0ee;
+      background: #8ec6df;
     }
 
     .dot {
@@ -274,7 +258,7 @@
       min-height: 142px;
       padding: 0 9px;
       text-align: center;
-      border-right: 1px dashed #b9cce5;
+      border-right: 1px dashed #9ec8dd;
     }
 
     .capability:last-child { border-right: 0; }
@@ -287,7 +271,7 @@
       margin: 0 auto 8px;
       border-radius: 50%;
       border: 1.8px solid currentColor;
-      color: var(--blue);
+      color: var(--cyan);
       background: #fff;
     }
 
@@ -307,7 +291,7 @@
 
     .capability p {
       margin: 0;
-      color: #07194f;
+      color: #0a2f52;
       font-size: 10px;
       line-height: 1.35;
       font-weight: 600;
@@ -321,11 +305,11 @@
     }
 
     .panel {
-      border: 1px solid #d5e1f1;
+      border: 1px solid #c5dde9;
       border-radius: 10px;
       background: #fff;
       overflow: hidden;
-      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+      box-shadow: 0 5px 14px rgba(5, 58, 107, .06);
     }
 
     .panel-header {
@@ -335,19 +319,21 @@
       height: 47px;
       padding: 0 18px;
       color: #fff;
-      background: linear-gradient(90deg, var(--navy), #093b8d);
+      background: linear-gradient(90deg, var(--navy), #0a5a8f);
       font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;
     }
 
-    .panel-header.orange {
-      background: linear-gradient(90deg, #b85c10, #f18717);
+    .panel-header.cyan {
+      background: linear-gradient(90deg, #0a6f8f, #12a3c7);
     }
 
     .panel-header i { width: 28px; font-size: 22px; text-align: center; }
 
-    .workflow { padding: 12px 12px 6px; }
+    .workflow {
+      padding: 12px 12px 6px;
+    }
 
     .steps {
       display: grid;
@@ -367,7 +353,11 @@
       opacity: .9;
     }
 
-    .step { position: relative; z-index: 1; text-align: center; }
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
 
     .step-box {
       display: grid;
@@ -375,7 +365,7 @@
       width: 57px;
       height: 57px;
       margin: 0 auto 8px;
-      border: 1px solid #cbd9ef;
+      border: 1px solid #b8d9ea;
       border-radius: 9px;
       background: #fff;
       color: var(--navy);
@@ -400,7 +390,7 @@
 
     .sub-title {
       margin: 14px 0 10px;
-      border-top: 1px solid #d8e4f3;
+      border-top: 1px solid #d0e7f2;
       padding-top: 11px;
       color: var(--navy);
       text-align: center;
@@ -419,12 +409,12 @@
       min-height: 76px;
       padding: 8px 4px 6px;
       text-align: center;
-      border: 1px solid #d5e1f1;
+      border: 1px solid #c5dde9;
       border-radius: 8px;
       background: #fbfdff;
     }
 
-    .slot i { color: var(--blue); font-size: 24px; }
+    .slot i { color: var(--cyan); font-size: 24px; }
     .slot:nth-child(5) i { color: var(--purple); }
     .slot h4 {
       margin: 5px 0 3px;
@@ -443,7 +433,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       margin-top: 12px;
-      border-top: 1px solid #d8e4f3;
+      border-top: 1px solid #d0e7f2;
     }
 
     .feature {
@@ -452,7 +442,7 @@
       gap: 8px;
       min-height: 46px;
       padding: 5px 8px;
-      border-right: 1px dashed #b9cce5;
+      border-right: 1px dashed #9ec8dd;
       color: var(--navy);
       font-size: 9.1px;
       line-height: 1.25;
@@ -462,7 +452,9 @@
     .feature:nth-child(4n) { border-right: 0; }
     .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
 
-    .dashboard { padding: 10px 10px 10px; }
+    .dashboard {
+      padding: 10px 10px 10px;
+    }
 
     .stats {
       display: grid;
@@ -473,14 +465,14 @@
     .stat {
       min-height: 68px;
       padding: 9px 8px 7px;
-      border: 1px solid #d7e2f1;
+      border: 1px solid #c5dde9;
       border-radius: 7px;
       background: #fff;
     }
 
     .stat h4 {
       margin: 0 0 10px;
-      color: #2a4777;
+      color: #2a5f7d;
       font-size: 9.8px;
       font-weight: 800;
     }
@@ -494,7 +486,7 @@
       font-weight: 900;
     }
 
-    .stat i { font-size: 22px; color: var(--blue); }
+    .stat i { font-size: 22px; color: var(--cyan); }
 
     .charts {
       display: grid;
@@ -504,7 +496,7 @@
     }
 
     .chart-card {
-      border: 1px solid #d7e2f1;
+      border: 1px solid #c5dde9;
       border-radius: 8px;
       padding: 11px;
       min-height: 130px;
@@ -519,17 +511,26 @@
     }
 
     .donut-wrap {
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 96px 1fr;
       align-items: center;
-      gap: 6px;
+      gap: 13px;
     }
 
     .donut {
-      width: 72px;
-      height: 72px;
-      display: block;
-      flex: 0 0 auto;
+      width: 92px;
+      height: 80px;
+      overflow: visible;
+    }
+
+    .donut-ring {
+      fill: none;
+      stroke-width: 22;
+      stroke-linecap: butt;
+    }
+
+    .donut-hole {
+      fill: #fff;
     }
 
     .legend {
@@ -555,16 +556,19 @@
       height: 10px;
       margin-right: 6px;
       border-radius: 2px;
-      background: #00796b;
+      background: var(--cyan);
     }
 
     .legend div:last-child span { background: var(--green); }
 
-    .line-chart { width: 100%; height: 84px; }
+    .line-chart {
+      width: 100%;
+      height: 84px;
+    }
 
     .mini-table {
       margin-top: 8px;
-      border: 1px solid #d7e2f1;
+      border: 1px solid #c5dde9;
       border-radius: 8px;
       overflow: hidden;
       font-size: 10px;
@@ -577,13 +581,13 @@
       min-height: 25px;
       align-items: center;
       padding: 0 10px;
-      border-bottom: 1px solid #e6eef8;
+      border-bottom: 1px solid #e3f0f6;
     }
 
     .row:last-child { border-bottom: 0; }
     .row.head {
-      color: #39547d;
-      background: #f7fbff;
+      color: #2a5f7d;
+      background: #f4fbff;
       font-size: 9.5px;
       font-weight: 900;
     }
@@ -592,12 +596,13 @@
       justify-self: start;
       border-radius: 20px;
       padding: 4px 9px;
-      background: #ffe2bf;
-      color: #9a4f08;
+      background: #c8ebf5;
+      color: #0a5a8f;
       font-size: 9px;
       font-weight: 900;
     }
 
+    
     .dashboard-bottom {
       display: grid;
       grid-template-columns: 46% 54%;
@@ -620,10 +625,7 @@
       font-weight: 900;
     }
 
-    .bar-list {
-      display: grid;
-      gap: 7px;
-    }
+    .bar-list { display: grid; gap: 7px; }
 
     .bar-item {
       display: grid;
@@ -645,7 +647,7 @@
     .bar-fill {
       height: 100%;
       border-radius: 999px;
-      background: linear-gradient(90deg, #00796b, #f18717);
+      background: linear-gradient(90deg, var(--blue), var(--orange));
     }
 
     .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
@@ -683,20 +685,16 @@
       justify-self: start;
       border-radius: 999px;
       padding: 2px 7px;
+      background: #dbeafe;
+      color: #1d4f91;
       font-size: 8px;
       font-weight: 900;
-      background: #fde8e8;
-      color: #8b1a1a;
     }
 
-    .tag.delivery {
-      background: #e7f4ea;
-      color: #2d7640;
-    }
+    .tag.delivery { background: #ffe2bf; color: #9a4f08; }
 
     .integrations {
       padding: 0 43px 0;
-      margin-bottom: 8px;
     }
 
     .integration-grid {
@@ -721,10 +719,10 @@
       height: 44px;
       margin: 0 auto 7px;
       border-radius: 15px;
-      border: 1px solid #cbd9ef;
+      border: 1px solid #b8d9ea;
       background: #fff;
-      color: var(--blue);
-      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+      color: var(--cyan);
+      box-shadow: 0 4px 10px rgba(5, 58, 107, .07);
     }
 
     .app:nth-child(2n) .circle { color: var(--orange); }
@@ -737,6 +735,7 @@
       left: 16px;
       right: 16px;
       bottom: 87px;
+      z-index: 4;
       display: grid;
       grid-template-columns: 132px repeat(4, 1fr);
       gap: 0;
@@ -744,9 +743,8 @@
       min-height: 64px;
       border-radius: 11px;
       overflow: hidden;
-      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      background: linear-gradient(90deg, #053a6b, #0a5a8f);
       color: #fff;
-      z-index: 4;
     }
 
     .benefit-title {
@@ -799,7 +797,6 @@
       color: #fff;
       padding: 0 24px;
       font-size: 12px;
-      z-index: 5;
     }
 
     .contact {
@@ -848,233 +845,231 @@
 <body>
   <nav class="lang-switcher" aria-label="Language"><a class="is-active" href="index.html">English</a><a href="index-zh.html">中文</a></nav>
   <main class="page">
-    <img class="hero-image" src="pet-food-accessories-ecommerce-assets/pet-food-accessories-ecommerce-hero.png" alt="" />
+    <img class="hero-image" src="lab-testing-process-assets/lab-testing-process-hero.png" alt="" />
     <div class="hero-fade"></div>
     <div class="curve"></div>
 
     <section class="hero">
       <div class="top-row">
         <div class="brand">
-          <img class="mark" src="pet-food-accessories-ecommerce-assets/alitec-logo.jpeg" alt="Alitec" />
+          <img class="mark" src="lab-testing-process-assets/alitec-logo.jpeg" alt="Alitec" />
           <div class="divider"></div>
           <div>
-            <h1>Pet Food &amp;<br />Accessories eCommerce</h1>
-            <div class="subtitle">Premium Online Retail — Loyalty, Bundles &amp; Fulfilment with Odoo</div>
+            <h1>实验室检测<br />流程</h1>
+            <div class="subtitle">水产检测 — 从样品到方案</div>
             <div class="short-line"></div>
           </div>
         </div>
-        <div class="odoo"><img class="odoo-logo" src="pet-food-accessories-ecommerce-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+        <div class="odoo"><img class="odoo-logo" src="lab-testing-process-assets/odoo-gold-partner.png" alt="Odoo Gold 零件ner" /></div>
       </div>
 
       <p class="intro">
-        Alitec's pet retail eCommerce solution helps premium online stores sell food and accessories,
-        capture pet member profiles, run loyalty and referral programmes, bundle products on the
-        website, and fulfil orders with local shipping — all in one Odoo platform.
+        Alitec 实验室检测方案帮助水产服务商管理养殖户、现场样品、五类检测、处理建议与品牌报告 — 从样品接收到开票，统一于 Odoo 平台。
       </p>
 
       <div class="quick-benefits">
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-paw"></i></div>
-            <h3>Pet Member Profiles</h3>
+            <div class="round-icon"><i class="fa-solid fa-user-group"></i></div>
+            <h3>关联养殖户样品</h3>
           </div>
-          <p>Register cats and dogs with breed, birthday, and owner details at signup.</p>
+          <p>每批次登记养殖户含区域、集群、养殖场与池塘信息。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-gift"></i></div>
-            <h3>Loyalty &amp; Referrals</h3>
+            <div class="round-icon"><i class="fa-solid fa-flask"></i></div>
+            <h3>自动创建实验</h3>
           </div>
-          <p>Signup points, refer-a-friend codes, and shop redemption at checkout.</p>
+          <p>确认销售订单自动开启对应水质、土壤、种苗、PCR 或微生物检测。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-store"></i></div>
-            <h3>Premium Web Store</h3>
+            <div class="round-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h3>范围管控</h3>
           </div>
-          <p>Theme Prime storefront with brands, bundles, wishlist, and mobile shopping.</p>
+          <p>维护参数库含最佳值以一致解读。</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-truck-fast"></i></div>
-            <h3>Local Fulfilment</h3>
+            <div class="round-icon"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+            <h3>处方增销</h3>
           </div>
-          <p>EasyParcel labels, tracking, and shipping updates after order confirmation.</p>
+          <p>将完成建议转为处理产品报价选项。</p>
         </div>
       </div>
     </section>
 
-    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <div class="section-title"><span class="dot"></span> 核心功能 <span class="dot"></span></div>
     <section class="capabilities">
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-paw"></i></div>
-        <h3>Pet Member Data</h3>
-        <p>Pet lines with name, breed, type, and DOB on partners and portal.</p>
+        <div class="cap-icon"><i class="fa-solid fa-address-card"></i></div>
+        <h3>养殖户与样品登记</h3>
+        <p>跟踪养殖户、物种、会员与样品批次含农场池塘明细。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon orange"><i class="fa-solid fa-user-plus"></i></div>
-        <h3>Member Registration</h3>
-        <p>Public signup form with PDPA consent and acquisition source tracking.</p>
+        <div class="cap-icon orange"><i class="fa-solid fa-vial-circle-check"></i></div>
+        <h3>五类实验室检测</h3>
+        <p>运行水质、土壤、种苗质量、PCR 诊断与微生物流程。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon purple"><i class="fa-solid fa-store"></i></div>
-        <h3>Premium eCommerce</h3>
-        <p>Theme Prime shop with brands, filters, quick view, and comparison.</p>
+        <div class="cap-icon purple"><i class="fa-solid fa-cart-plus"></i></div>
+        <h3>销售触发检测</h3>
+        <p>检测产品销售确认后自动创建实验作业。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-box-open"></i></div>
-        <h3>Product Bundles</h3>
-        <p>Sell food and accessory kits across web, sales, stock, and invoices.</p>
+        <div class="cap-icon"><i class="fa-solid fa-table-list"></i></div>
+        <h3>参数库</h3>
+        <p>配置检测参数、最佳范围与默认面板加速录入。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon green"><i class="fa-solid fa-star"></i></div>
-        <h3>Loyalty Programmes</h3>
-        <p>Signup rewards, promotion rules, limits, and multi-product criteria.</p>
+        <div class="cap-icon green"><i class="fa-solid fa-dna"></i></div>
+        <h3>浮游生物与 PCR 支持</h3>
+        <p>实验工作支持浮游生物分析与灵活 PCR 疾病面板。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon orange"><i class="fa-solid fa-user-group"></i></div>
-        <h3>Refer &amp; Earn</h3>
-        <p>Referral codes, friend signup points, and discount redemption online.</p>
+        <div class="cap-icon orange"><i class="fa-solid fa-pills"></i></div>
+        <h3>处方工作流</h3>
+        <p>将处理建议附加于完成检测并推送至报价。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon purple"><i class="fa-solid fa-truck"></i></div>
-        <h3>EasyParcel Shipping</h3>
-        <p>Rates, labels, tracking, and post-confirm carrier changes on pickings.</p>
+        <div class="cap-icon purple"><i class="fa-solid fa-file-pdf"></i></div>
+        <h3>品牌实验报告</h3>
+        <p>生成客户就绪 PDF，含实验室主管与签名。</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-credit-card"></i></div>
-        <h3>Stripe + PayNow</h3>
-        <p>Card checkout with Singapore PayNow on the web payment flow.</p>
+        <div class="cap-icon"><i class="fa-solid fa-link"></i></div>
+        <h3>商务延续</h3>
+        <p>检测关联销售、库存、会员、交付与开票。</p>
       </div>
     </section>
 
     <section class="panels">
       <div class="panel">
-        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Retail Workflow</div>
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> 实验室工作流</div>
         <div class="workflow">
           <div class="steps">
-            <div class="step"><div class="step-box"><i class="fa-solid fa-user-plus"></i></div><h4>Join &amp;<br />Register</h4><p>Member signup with pet profiles, consent, and signup loyalty points</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-cart-shopping"></i></div><h4>Shop<br />Online</h4><p>Browse brands, bundles, wishlist, and apply loyalty rewards at checkout</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-credit-card"></i></div><h4>Pay<br />Securely</h4><p>Stripe card payment with PayNow for Singapore customers</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-box"></i></div><h4>Pick &amp;<br />Pack</h4><p>Warehouse fulfilment with bundle lines and delivery order creation</p></div>
-            <div class="step"><div class="step-box"><i class="fa-solid fa-truck-fast"></i></div><h4>Ship &amp;<br />Track</h4><p>EasyParcel labels, tracking links, and branded order documents</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-user-plus"></i></div><h4>登记与<br />采样</h4><p>创建养殖户档案并采集农场或池塘样品批次</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>下单<br />检测</h4><p>构建含关联样品与所需检测产品的报价</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-microscope"></i></div><h4>运行<br />实验</h4><p>检测经接收、实验、审核至完成</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-prescription"></i></div><h4>推荐<br />处理</h4><p>按需根据实验结果记录处方产品</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice-dollar"></i></div><h4>交付与<br />开票</h4><p>出具品牌报告、转化选项并完成开票</p></div>
           </div>
 
-          <div class="sub-title">Control Modes</div>
+          <div class="sub-title">管控模式</div>
           <div class="slots">
-            <div class="slot"><i class="fa-solid fa-paw"></i><h4>Pet Types</h4><p>Cat and dog profiles with breed and birthday on member accounts</p></div>
-            <div class="slot"><i class="fa-solid fa-gift"></i><h4>Loyalty Rules</h4><p>Exclude shipping from points and cap promotions per customer</p></div>
-            <div class="slot"><i class="fa-solid fa-share-nodes"></i><h4>Referrals</h4><p>Friend codes, signup credits, and shop discount redemption</p></div>
-            <div class="slot"><i class="fa-solid fa-boxes-stacked"></i><h4>Bundles</h4><p>Combo packs for food, treats, and grooming accessories online</p></div>
-            <div class="slot"><i class="fa-solid fa-truck"></i><h4>Shipping</h4><p>Change carrier on confirmed orders before pickings complete</p></div>
+            <div class="slot"><i class="fa-solid fa-fish"></i><h4>样品追溯</h4><p>每批次关联农场、池塘与物种</p></div>
+            <div class="slot"><i class="fa-solid fa-layer-group"></i><h4>多样品订单</h4><p>单或多样品销售订单处理</p></div>
+            <div class="slot"><i class="fa-solid fa-route"></i><h4>六阶段实验流程</h4><p>从新到完成的结构化状态跟踪</p></div>
+            <div class="slot"><i class="fa-solid fa-arrow-right-arrow-left"></i><h4>处方推送</h4><p>完成检测馈入报价选项</p></div>
+            <div class="slot"><i class="fa-solid fa-print"></i><h4>报告输出</h4><p>单独与合并品牌 PDF 报告</p></div>
           </div>
 
-          <div class="sub-title">Additional Features</div>
+          <div class="sub-title">附加功能</div>
           <div class="feature-grid">
-            <div class="feature"><i class="fa-solid fa-print"></i>Branded sales and invoice PDF layouts</div>
-            <div class="feature"><i class="fa-solid fa-id-card"></i>Portal pet management for members</div>
-            <div class="feature"><i class="fa-solid fa-heart"></i>Wishlist and product comparison on shop</div>
-            <div class="feature"><i class="fa-solid fa-bullhorn"></i>Acquisition source tracking on signup</div>
-            <div class="feature"><i class="fa-solid fa-shield-halved"></i>PDPA and marketing consent capture</div>
-            <div class="feature"><i class="fa-solid fa-percent"></i>Promotion start dates and loyalty limits</div>
-            <div class="feature"><i class="fa-solid fa-bell"></i>Smart warnings on sales documents</div>
-            <div class="feature"><i class="fa-solid fa-chart-line"></i>Stock-aware web catalog and reporting</div>
+            <div class="feature"><i class="fa-solid fa-map-location-dot"></i>区域与集群养殖户 ID</div>
+            <div class="feature"><i class="fa-solid fa-fish-fins"></i>物种与批次追溯</div>
+            <div class="feature"><i class="fa-solid fa-bacteria"></i>默认 PCR 与微生物面板</div>
+            <div class="feature"><i class="fa-solid fa-signature"></i>实验室主管姓名与签名</div>
+            <div class="feature"><i class="fa-solid fa-gauge-high"></i>最佳范围参数管控</div>
+            <div class="feature"><i class="fa-solid fa-water"></i>水质检测浮游生物分析</div>
+            <div class="feature"><i class="fa-solid fa-bolt"></i>从销售快速开启检测</div>
+            <div class="feature"><i class="fa-solid fa-id-card"></i>感知会员的养殖户档案</div>
           </div>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Operations Visibility</div>
+        <div class="panel-header cyan"><i class="fa-solid fa-chart-line"></i> 实验室可视化</div>
         <div class="dashboard">
           <div class="stats">
-            <div class="stat"><h4>Web Orders Today</h4><div class="number">86<i class="fa-solid fa-cart-shopping"></i></div></div>
-            <div class="stat"><h4>Active Members</h4><div class="number">4.2k<i class="fa-solid fa-paw"></i></div></div>
-            <div class="stat"><h4>Loyalty Redeemed</h4><div class="number">312<i class="fa-solid fa-gift"></i></div></div>
-            <div class="stat"><h4>Referrals</h4><div class="number">47<i class="fa-solid fa-user-group"></i></div></div>
-            <div class="stat"><h4>Ship Today</h4><div class="number">58<i class="fa-solid fa-truck"></i></div></div>
+            <div class="stat"><h4>开放检测</h4><div class="number">142<i class="fa-solid fa-flask"></i></div></div>
+            <div class="stat"><h4>本月样品</h4><div class="number">318<i class="fa-solid fa-vial"></i></div></div>
+            <div class="stat"><h4>平均周转</h4><div class="number">3.2 天<i class="fa-solid fa-clock"></i></div></div>
+            <div class="stat"><h4>PCR 完成</h4><div class="number">86<i class="fa-solid fa-dna"></i></div></div>
+            <div class="stat"><h4>处方率</h4><div class="number">41%<i class="fa-solid fa-pills"></i></div></div>
           </div>
 
           <div class="charts">
             <div class="chart-card">
-              <h4>Category Mix</h4>
+              <h4>按类型检测</h4>
               <div class="donut-wrap">
-                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Category mix chart">
-                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#00796b"></path>
-                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#35a853"></path>
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="检测 by type chart">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#12a3c7"></path>
+                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#2ea85a"></path>
                 </svg>
                 <div class="legend">
-                  <div><span></span>Pet Food (64%) 218</div>
-                  <div><span></span>Accessories (36%) 124</div>
+                  <div><span></span>水质与土壤 (214) 62%</div>
+                  <div><span></span>PCR 与微生物 (138) 38%</div>
                 </div>
               </div>
             </div>
             <div class="chart-card">
-              <h4>Weekly Web Revenue</h4>
+              <h4>月度样品接收</h4>
               <svg class="line-chart" viewBox="0 0 300 100" fill="none">
-                <path d="M0 92H300" stroke="#d8e4f3" />
-                <path d="M0 62H300" stroke="#d8e4f3" />
-                <path d="M0 32H300" stroke="#d8e4f3" />
-                <path d="M24 82 L62 74 L100 66 L138 58 L176 48 L214 40 L252 34 L286 28" stroke="#00796b" stroke-width="3" fill="none"/>
-                <path d="M24 82 L62 74 L100 66 L138 58 L176 48 L214 40 L252 34 L286 28 L286 92 L24 92Z" fill="rgba(0,121,107,.16)" />
-                <g fill="#00796b"><circle cx="24" cy="82" r="4"/><circle cx="62" cy="74" r="4"/><circle cx="100" cy="66" r="4"/><circle cx="138" cy="58" r="4"/><circle cx="176" cy="48" r="4"/><circle cx="214" cy="40" r="4"/><circle cx="252" cy="34" r="4"/><circle cx="286" cy="28" r="4"/></g>
-                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Mon</text><text x="58" y="99">Tue</text><text x="96" y="99">Wed</text><text x="134" y="99">Thu</text><text x="173" y="99">Fri</text><text x="211" y="99">Sat</text><text x="249" y="99">Sun</text><text x="283" y="99">Mon</text></g>
+                <path d="M0 92H300" stroke="#d0e7f2" />
+                <path d="M0 62H300" stroke="#d0e7f2" />
+                <path d="M0 32H300" stroke="#d0e7f2" />
+                <path d="M24 78 L62 66 L100 58 L138 50 L176 42 L214 36 L252 30 L286 24" stroke="#12a3c7" stroke-width="3" fill="none"/>
+                <path d="M24 78 L62 66 L100 58 L138 50 L176 42 L214 36 L252 30 L286 24 L286 92 L24 92Z" fill="rgba(18,163,199,.16)" />
+                <g fill="#12a3c7"><circle cx="24" cy="78" r="4"/><circle cx="62" cy="66" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="50" r="4"/><circle cx="176" cy="42" r="4"/><circle cx="214" cy="36" r="4"/><circle cx="252" cy="30" r="4"/><circle cx="286" cy="24" r="4"/></g>
+                <g fill="#2a5f7d" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">1月</text><text x="58" y="99">2月</text><text x="96" y="99">3月</text><text x="134" y="99">4月</text><text x="173" y="99">5月</text><text x="211" y="99">6月</text><text x="249" y="99">7月</text><text x="283" y="99">8月</text></g>
               </svg>
             </div>
           </div>
 
           <div class="mini-table">
-            <div class="row head"><div>Control Area</div><div>Owner</div><div>Status</div><div>Count</div><div>Review</div></div>
-            <div class="row"><div>Loyalty</div><div>Marketing</div><div>Active</div><div>12</div><div class="pill">Live</div></div>
-            <div class="row"><div>Web Orders</div><div>eCommerce</div><div>Open</div><div>86</div><div class="pill">On Track</div></div>
-            <div class="row"><div>Fulfilment</div><div>Warehouse</div><div>Picking</div><div>58</div><div class="pill">Active</div></div>
-            <div class="row"><div>Referrals</div><div>Growth</div><div>New</div><div>47</div><div class="pill">Watch</div></div>
-          </div>
+            <div class="row head"><div>管控领域</div><div>负责人</div><div>状态</div><div>数量</div><div>审核</div></div>
+            <div class="row"><div>水质与土壤检测</div><div>实验室团队</div><div>活跃</div><div>214</div><div class="pill">进展顺利</div></div>
+            <div class="row"><div>PCR 诊断</div><div>实验室团队</div><div>审核</div><div>52</div><div class="pill">活跃</div></div>
+            <div class="row"><div>超范围预警</div><div>主管</div><div>待处理</div><div>17</div><div class="pill">关注</div></div>
+            <div class="row"><div>处方选项</div><div>销售</div><div>开放</div><div>41%</div><div class="pill">活跃</div></div>
 
           <div class="dashboard-bottom">
             <div class="dash-card">
-              <h4>Top Category Sales</h4>
+              <h4>检测类别构成</h4>
               <div class="bar-list">
-                <div class="bar-item"><span>Dog Food</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span>68%</span></div>
-                <div class="bar-item"><span>Cat Food</span><div class="bar-track"><div class="bar-fill green" style="width:54%"></div></div><span>54%</span></div>
-                <div class="bar-item"><span>Grooming</span><div class="bar-track"><div class="bar-fill blue" style="width:42%"></div></div><span>42%</span></div>
-                <div class="bar-item"><span>Bundles</span><div class="bar-track"><div class="bar-fill purple" style="width:36%"></div></div><span>36%</span></div>
+                <div class="bar-item"><span>水质</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span>68%</span></div>
+                <div class="bar-item"><span>PCR</span><div class="bar-track"><div class="bar-fill green" style="width:42%"></div></div><span>42%</span></div>
+                <div class="bar-item"><span>土壤</span><div class="bar-track"><div class="bar-fill blue" style="width:36%"></div></div><span>36%</span></div>
+                <div class="bar-item"><span>浮游生物</span><div class="bar-track"><div class="bar-fill purple" style="width:24%"></div></div><span>24%</span></div>
               </div>
             </div>
             <div class="dash-card">
-              <h4>Orders Awaiting Dispatch</h4>
+              <h4>待审核检测</h4>
               <div class="queue-table">
-                <div class="queue-row head"><div>Order</div><div>Customer</div><div>Due</div><div>Type</div></div>
-                <div class="queue-row"><div>SO-2842</div><div>L. Tan</div><div>Today</div><div class="tag">Food</div></div>
-                <div class="queue-row"><div>SO-2847</div><div>M. Lee</div><div>Today</div><div class="tag delivery">Bundle</div></div>
-                <div class="queue-row"><div>SO-2851</div><div>K. Wong</div><div>Tomorrow</div><div class="tag">Grooming</div></div>
-                <div class="queue-row"><div>SO-2854</div><div>S. Lim</div><div>Tomorrow</div><div class="tag delivery">Accessories</div></div>
+                <div class="queue-row head"><div>批次</div><div>养殖场</div><div>到期</div><div>类型</div></div>
+                <div class="queue-row"><div>LT-2842</div><div>池塘 A</div><div>今日</div><div class="tag">水质</div></div>
+                <div class="queue-row"><div>LT-2847</div><div>养殖场 B</div><div>今日</div><div class="tag delivery">PCR</div></div>
+                <div class="queue-row"><div>LT-2851</div><div>池塘 C</div><div>明日</div><div class="tag">土壤</div></div>
+                <div class="queue-row"><div>LT-2854</div><div>养殖场 D</div><div>明日</div><div class="tag delivery">审核</div></div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> 与 ODOO 应用无缝集成 <span class="dot"></span></div>
     <section class="integrations">
       <div class="integration-grid">
-        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-store"></i></div>eCommerce</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-address-book"></i></div>Contacts</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>销售</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-boxes-stacked"></i></div>开票entory</div>
         <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Accounting</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-gift"></i></div>Loyalty</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-truck"></i></div>Delivery</div>
-        <div class="app"><div class="circle"><i class="fa-solid fa-credit-card"></i></div>Payments</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-id-card"></i></div>Membership</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-truck"></i></div>配送</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-hourglass-half"></i></div>Expiry</div>
         <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Reporting</div>
       </div>
     </section>
 
     <section class="bottom-benefits">
-      <div class="benefit-title">Business<br />Benefits</div>
-      <div class="bottom-item"><i class="fa-solid fa-paw"></i><div><h3>Know Every Pet</h3><p>Member profiles with breed and birthday for personalised retail.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-gift"></i><div><h3>Rewards That Retain</h3><p>Loyalty and referral programmes built into the web checkout.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-store"></i><div><h3>Premium Storefront</h3><p>Brands, bundles, and stock-aware shopping in one catalog.</p></div></div>
-      <div class="bottom-item"><i class="fa-solid fa-truck-fast"></i><div><h3>Click to Doorstep</h3><p>Orders, pickings, EasyParcel labels, and tracking in Odoo.</p></div></div>
+      <div class="benefit-title">商业<br />效益</div>
+      <div class="bottom-item"><i class="fa-solid fa-link"></i><div><h3>贯通实验室运营</h3><p>养殖户、样品、实验、建议与开票同一平台。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-bolt"></i><div><h3>更快启动检测</h3><p>从确认订单直接创建实验记录，减少手工设置。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-shield-halved"></i><div><h3>一致实验质量</h3><p>跨团队标准化参数、范围与报告输出。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-arrow-trend-up"></i><div><h3>更强跟进</h3><p>将实验发现转为结构化处理建议与增销机会。</p></div></div>
     </section>
 
     <footer class="footer">
@@ -1086,6 +1081,6 @@
       <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
     </footer>
   </main>
-  <script src="../../editor/flyer-editor.js?v=20260707-12" data-flyer-editor-script data-flyer-version="2026-07-07-pet-v1"></script>
+  <script src="../../editor/flyer-editor.js?v=20260707-12" data-flyer-editor-script data-flyer-version="2026-07-07-v1-zh"></script>
 </body>
 </html>
