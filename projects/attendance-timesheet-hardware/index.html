@@ -124,7 +124,7 @@
     }
 
     .mark {
-      width: 96px;
+      width: 88px;
       height: 88px;
       object-fit: contain;
       display: block;
@@ -848,10 +848,18 @@
     .legend {
       display: grid;
       gap: 8px;
-      font-size: 9.4px;
-      line-height: 1.2;
+      font-size: 9.5px;
       font-weight: 800;
-      color: var(--ink);
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
     }
 
     .legend span {

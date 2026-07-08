@@ -540,9 +540,8 @@
 
     .donut-ring {
       fill: none;
-      stroke-width: 30;
-      transform: rotate(-90deg);
-      transform-origin: 46px 46px;
+      stroke-width: 22;
+      stroke-linecap: butt;
     }
 
     .donut-hole {
@@ -551,9 +550,19 @@
 
     .legend {
       display: grid;
-      gap: 10px;
-      font-size: 10px;
+      gap: 8px;
+      font-size: 9.5px;
       font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
     }
 
     .legend span {
@@ -972,9 +981,8 @@
               <h4>Project Status Overview</h4>
               <div class="donut-wrap">
                 <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Project status chart">
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="132.45 62.33" stroke-dashoffset="0"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2879e3" stroke-dasharray="62.33 132.45" stroke-dashoffset="-132.45"></circle>
-                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 17.95 59.20 L 27.90 54.52 A 20 20 0 1 0 46.00 26.00 Z" fill="#35a853"></path>
+                  <path d="M 17.95 59.20 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 27.90 54.52 Z" fill="#2879e3"></path>
                 </svg>
                 <div class="legend">
                   <div><span></span>Ongoing Projects (87) 68%</div>

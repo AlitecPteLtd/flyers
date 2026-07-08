@@ -145,8 +145,8 @@
     .quick-benefit:last-child { border-right: 0; }
     .quick-benefit-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .round-icon {
-      width: 39px;
-      height: 39px;
+      width: 88px;
+      height: 88px;
       flex: 0 0 39px;
       display: grid;
       place-items: center;
@@ -276,11 +276,28 @@
     .charts { display: grid; grid-template-columns: 43% 57%; gap: 8px; margin-top: 10px; }
     .chart-card { border: 1px solid #d7e2f1; border-radius: 8px; padding: 10px; min-height: 130px; background: #fff; }
     .chart-card h4 { margin: 0 0 9px; color: var(--navy); font-size: 11px; font-weight: 900; }
-    .donut-wrap { display: grid; grid-template-columns: 96px 1fr; align-items: center; gap: 13px; }
+    .donut-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .donut { width: 72px; height: 72px; display: block; flex: 0 0 auto; }
     .donut { width: 92px; height: 92px; overflow: visible; }
-    .donut-ring { fill: none; stroke-width: 30; transform: rotate(-90deg); transform-origin: 46px 46px; }
+    .donut-ring { fill: none; stroke-width: 22; stroke-linecap: butt; }
     .donut-hole { fill: #fff; }
-    .legend { display: grid; gap: 8px; font-size: 9.5px; font-weight: 800; }
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
+    }
+
     .legend span { display: inline-flex; width: 10px; height: 10px; margin-right: 6px; border-radius: 2px; background: var(--green); }
     .legend div:nth-child(2) span { background: var(--blue); }
     .legend div:nth-child(3) span { background: var(--orange); }
@@ -500,9 +517,11 @@
               <h4>Operation Mix</h4>
               <div class="donut-wrap">
                 <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Quality status chart">
+                  <g transform="rotate(-90 46 46)">
                   <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="112.97 81.81" stroke-dashoffset="0"></circle>
                   <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2879e3" stroke-dasharray="46.75 148.03" stroke-dashoffset="-112.97"></circle>
                   <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#f18717" stroke-dasharray="35.06 159.72" stroke-dashoffset="-159.72"></circle>
+                  </g>
                   <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
                 </svg>
                 <div class="legend">

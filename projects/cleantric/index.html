@@ -543,9 +543,8 @@
 
     .donut-ring {
       fill: none;
-      stroke-width: 30;
-      transform: rotate(-90deg);
-      transform-origin: 46px 46px;
+      stroke-width: 22;
+      stroke-linecap: butt;
     }
 
     .donut-hole {
@@ -554,9 +553,19 @@
 
     .legend {
       display: grid;
-      gap: 10px;
-      font-size: 10px;
+      gap: 8px;
+      font-size: 9.5px;
       font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
     }
 
     .legend span {
@@ -975,9 +984,8 @@
               <h4>Booking Type Overview</h4>
               <div class="donut-wrap">
                 <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Service status chart">
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="118.82 75.96" stroke-dashoffset="0"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2879e3" stroke-dasharray="75.96 118.82" stroke-dashoffset="-118.82"></circle>
-                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#35a853"></path>
+                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#2879e3"></path>
                 </svg>
                 <div class="legend">
                   <div><span></span>Repeat Cleaning (194) 61%</div>

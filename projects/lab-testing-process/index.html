@@ -46,7 +46,7 @@
       top: 0;
       right: 0;
       width: 500px;
-      height: 380px;
+      height: 340px;
       object-fit: cover;
       object-position: 55% center;
       z-index: 0;
@@ -55,7 +55,7 @@
     .hero-fade {
       position: absolute;
       inset: 0 0 auto 0;
-      height: 400px;
+      height: 360px;
       z-index: 1;
       background:
         linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 34%, rgba(255,255,255,.76) 53%, rgba(255,255,255,.08) 84%),
@@ -65,9 +65,9 @@
     .curve {
       position: absolute;
       left: -40px;
-      top: 288px;
+      top: 248px;
       width: 1120px;
-      height: 80px;
+      height: 72px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
       background: linear-gradient(
@@ -86,8 +86,8 @@
     .hero {
       position: relative;
       z-index: 3;
-      height: 400px;
-      padding: 18px 32px 0 34px;
+      height: 360px;
+      padding: 14px 32px 0 34px;
     }
 
     .top-row {
@@ -103,15 +103,15 @@
     }
 
     .mark {
-      width: 96px;
-      height: 96px;
+      width: 88px;
+      height: 88px;
       object-fit: contain;
       display: block;
     }
 
     .divider {
       width: 1px;
-      height: 96px;
+      height: 88px;
       background: var(--navy);
       opacity: .9;
     }
@@ -525,9 +525,8 @@
 
     .donut-ring {
       fill: none;
-      stroke-width: 30;
-      transform: rotate(-90deg);
-      transform-origin: 46px 46px;
+      stroke-width: 22;
+      stroke-linecap: butt;
     }
 
     .donut-hole {
@@ -536,9 +535,19 @@
 
     .legend {
       display: grid;
-      gap: 10px;
-      font-size: 10px;
+      gap: 8px;
+      font-size: 9.5px;
       font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
     }
 
     .legend span {
@@ -956,9 +965,8 @@
               <h4>Tests by Type</h4>
               <div class="donut-wrap">
                 <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Tests by type chart">
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#12a3c7" stroke-dasharray="118.5 76.28" stroke-dashoffset="0"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#2ea85a" stroke-dasharray="76.28 118.5" stroke-dashoffset="-118.5"></circle>
-                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#12a3c7"></path>
+                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#2ea85a"></path>
                 </svg>
                 <div class="legend">
                   <div><span></span>Water &amp; Soil (214) 62%</div>

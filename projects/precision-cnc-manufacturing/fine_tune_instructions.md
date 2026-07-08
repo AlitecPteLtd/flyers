@@ -12,7 +12,7 @@
 - Theme: CNC machining workshop, precision metal parts
 - Fading navy curve over hero image (standard brochure style)
 - Steel blue accent `#1565c0` for charts and highlights
-- Compact hero ~400px; object-position favoring machinery on the right
+- Compact hero ~360px; hero image ~340px; object-position favoring subject on the right
 - Page size: 1024 × 1448 px (true A4)
 
 ## Must-Keep Claims (Verified in Source)

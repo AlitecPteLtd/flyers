@@ -119,7 +119,7 @@
     }
 
     .mark {
-      width: 96px;
+      width: 88px;
       height: 88px;
       object-fit: contain;
       display: block;
@@ -519,28 +519,34 @@
     }
 
     .donut-wrap {
-      display: grid;
-      grid-template-columns: 96px 1fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 13px;
+      gap: 6px;
     }
 
-    .donut { width: 92px; height: 92px; overflow: visible; }
-
-    .donut-ring {
-      fill: none;
-      stroke-width: 30;
-      transform: rotate(-90deg);
-      transform-origin: 46px 46px;
+    .donut {
+      width: 72px;
+      height: 72px;
+      display: block;
+      flex: 0 0 auto;
     }
-
-    .donut-hole { fill: #fff; }
 
     .legend {
       display: grid;
-      gap: 10px;
-      font-size: 10px;
+      gap: 8px;
+      font-size: 9.5px;
       font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
     }
 
     .legend span {
@@ -962,9 +968,8 @@
               <h4>Work Order Mix</h4>
               <div class="donut-wrap">
                 <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Work order mix chart">
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#1565c0" stroke-dasharray="118.5 76.28" stroke-dashoffset="0"></circle>
-                  <circle class="donut-ring" cx="46" cy="46" r="31" stroke="#35a853" stroke-dasharray="76.28 118.5" stroke-dashoffset="-118.5"></circle>
-                  <circle class="donut-hole" cx="46" cy="46" r="20"></circle>
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.24 69.89 L 33.25 61.41 A 20 20 0 1 0 46.00 26.00 Z" fill="#1565c0"></path>
+                  <path d="M 26.24 69.89 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.25 61.41 Z" fill="#35a853"></path>
                 </svg>
                 <div class="legend">
                   <div><span></span>In Progress (142) 58%</div>
