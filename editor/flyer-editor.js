@@ -821,7 +821,13 @@
       waits.push(document.fonts.ready);
     }
     Array.from(document.images).forEach(function (image) {
-      if (!image.complete) {
+      if (image.decode) {
+        waits.push(
+          image.decode().catch(function () {
+            return null;
+          })
+        );
+      } else if (!image.complete) {
         waits.push(
           new Promise(function (resolve) {
             image.addEventListener("load", resolve, { once: true });
@@ -831,6 +837,173 @@
       }
     });
     return Promise.all(waits);
+  }
+
+  function isMobileCaptureClient() {
+    return (
+      window.matchMedia("(max-width: 900px)").matches ||
+      (navigator.maxTouchPoints > 0 && window.innerWidth < 1100)
+    );
+  }
+
+  function preferredCaptureScale(baseScale) {
+    if (!isMobileCaptureClient()) {
+      return baseScale;
+    }
+    // Mobile Chrome often drops large absolute images / OOMs at 2.5x–3x.
+    return Math.min(baseScale, 1.75);
+  }
+
+  function drawImageWithObjectFit(ctx, image, boxWidth, boxHeight, objectFit, objectPosition) {
+    const sourceWidth = image.naturalWidth || image.width;
+    const sourceHeight = image.naturalHeight || image.height;
+    if (!sourceWidth || !sourceHeight || !boxWidth || !boxHeight) {
+      return;
+    }
+
+    const fit = objectFit === "contain" ? "contain" : "cover";
+    const scale =
+      fit === "contain"
+        ? Math.min(boxWidth / sourceWidth, boxHeight / sourceHeight)
+        : Math.max(boxWidth / sourceWidth, boxHeight / sourceHeight);
+    const drawWidth = sourceWidth * scale;
+    const drawHeight = sourceHeight * scale;
+
+    let posX = 0.5;
+    let posY = 0.5;
+    const parts = String(objectPosition || "center").trim().split(/\s+/);
+    if (parts.length === 1) {
+      if (parts[0] === "left") posX = 0;
+      else if (parts[0] === "right") posX = 1;
+      else if (parts[0] === "top") posY = 0;
+      else if (parts[0] === "bottom") posY = 1;
+      else if (parts[0].endsWith("%")) posX = posY = parseFloat(parts[0]) / 100;
+    } else if (parts.length >= 2) {
+      posX = parts[0] === "left" ? 0 : parts[0] === "right" ? 1 : parts[0].endsWith("%") ? parseFloat(parts[0]) / 100 : 0.5;
+      posY = parts[1] === "top" ? 0 : parts[1] === "bottom" ? 1 : parts[1].endsWith("%") ? parseFloat(parts[1]) / 100 : 0.5;
+    }
+
+    const dx = (boxWidth - drawWidth) * posX;
+    const dy = (boxHeight - drawHeight) * posY;
+    ctx.drawImage(image, dx, dy, drawWidth, drawHeight);
+  }
+
+  function rasterizeObjectFitImage(image, computed) {
+    const boxWidth = Math.max(
+      1,
+      Math.round(parseFloat(computed.width) || image.clientWidth || image.getBoundingClientRect().width || 1)
+    );
+    const boxHeight = Math.max(
+      1,
+      Math.round(parseFloat(computed.height) || image.clientHeight || image.getBoundingClientRect().height || 1)
+    );
+    const canvas = document.createElement("canvas");
+    canvas.width = boxWidth;
+    canvas.height = boxHeight;
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, boxWidth, boxHeight);
+    try {
+      drawImageWithObjectFit(
+        ctx,
+        image,
+        boxWidth,
+        boxHeight,
+        computed.objectFit,
+        computed.objectPosition
+      );
+      return canvas.toDataURL("image/jpeg", 0.92);
+    } catch (error) {
+      return image.currentSrc || image.getAttribute("src") || "";
+    }
+  }
+
+  function replaceObjectFitImagesInPlace(root) {
+    const restorers = [];
+    root.querySelectorAll("img").forEach(function (image) {
+      const computed = window.getComputedStyle(image);
+      const objectFit = computed.objectFit;
+      if (!objectFit || objectFit === "fill") {
+        return;
+      }
+
+      const replacement = document.createElement("div");
+      replacement.setAttribute("data-flyer-objectfit-replacement", "1");
+      [
+        "width",
+        "height",
+        "position",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "z-index",
+        "display",
+        "margin",
+        "padding",
+        "border",
+        "border-radius",
+        "opacity",
+        "transform",
+        "transform-origin",
+      ].forEach(function (prop) {
+        replacement.style.setProperty(prop, computed.getPropertyValue(prop));
+      });
+
+      const raster = rasterizeObjectFitImage(image, computed);
+      if (raster) {
+        replacement.style.backgroundImage = 'url("' + raster + '")';
+        replacement.style.backgroundSize = "100% 100%";
+        replacement.style.backgroundPosition = "center";
+        replacement.style.backgroundRepeat = "no-repeat";
+      }
+
+      const parent = image.parentNode;
+      if (!parent) {
+        return;
+      }
+      parent.insertBefore(replacement, image);
+      image.style.display = "none";
+      restorers.push(function () {
+        image.style.display = "";
+        if (replacement.parentNode) {
+          replacement.parentNode.removeChild(replacement);
+        }
+      });
+    });
+    return function restoreObjectFitReplacements() {
+      restorers
+        .slice()
+        .reverse()
+        .forEach(function (restore) {
+          restore();
+        });
+    };
+  }
+
+  async function preparePageForHtmlToImage(page) {
+    const imageCache = await buildImageDataUrlCache(page);
+    const previousSrc = [];
+    page.querySelectorAll("img[src]").forEach(function (image) {
+      const src = image.getAttribute("src");
+      const dataUrl = lookupImageCache(imageCache, src);
+      if (!dataUrl || dataUrl === src) {
+        return;
+      }
+      previousSrc.push({ image: image, src: src });
+      image.setAttribute("src", dataUrl);
+    });
+
+    // Hero banners use absolute positioned object-fit images. html-to-image on
+    // mobile Chrome often skips those; convert to background boxes first.
+    const restoreObjectFit = replaceObjectFitImagesInPlace(page);
+
+    return function restoreHtmlToImagePrep() {
+      restoreObjectFit();
+      previousSrc.forEach(function (entry) {
+        entry.image.setAttribute("src", entry.src);
+      });
+    };
   }
 
   function getMaxCaptureScale(page, preferredScale) {
@@ -1415,32 +1588,48 @@
   }
 
   async function capturePageAsDataUrl(page, preferredScale) {
-    return await window.htmlToImage.toPng(page, {
-      backgroundColor: "#ffffff",
-      cacheBust: true,
-      pixelRatio: preferredScale,
-      width: page.offsetWidth || page.scrollWidth,
-      height: page.offsetHeight || page.scrollHeight,
-      style: {
-        margin: "0",
-        transform: "none",
-      },
-      filter: function (node) {
-        return !(node.closest && node.closest(".flyer-editor-toolbar"));
-      },
-    });
+    const scale = preferredCaptureScale(preferredScale);
+    const restorePrep = await preparePageForHtmlToImage(page);
+    try {
+      // Give Chrome a frame to paint background replacements before snapshot.
+      await new Promise(function (resolve) {
+        window.requestAnimationFrame(function () {
+          window.requestAnimationFrame(resolve);
+        });
+      });
+      return await window.htmlToImage.toPng(page, {
+        backgroundColor: "#ffffff",
+        cacheBust: true,
+        pixelRatio: scale,
+        width: page.offsetWidth || page.scrollWidth,
+        height: page.offsetHeight || page.scrollHeight,
+        style: {
+          margin: "0",
+          transform: "none",
+        },
+        filter: function (node) {
+          if (node.classList && node.classList.contains("lang-switcher")) {
+            return false;
+          }
+          return !(node.closest && node.closest(".flyer-editor-toolbar"));
+        },
+      });
+    } finally {
+      restorePrep();
+    }
   }
 
   async function capturePageAsDataUrlWithFallback(page, preferredScale, exportVariant) {
     const variant = exportVariant || PDF_EXPORT_VARIANTS.full;
+    const scale = preferredCaptureScale(preferredScale);
     const captureTask = async function () {
       try {
         await ensureHtmlToImageTool();
-        return await capturePageAsDataUrl(page, preferredScale);
+        return await capturePageAsDataUrl(page, scale);
       } catch (htmlToImageError) {
         console.warn("html-to-image export failed; falling back to html2canvas.", htmlToImageError);
         await ensureCanvasTool();
-        const capture = await capturePage(page, Math.ceil(preferredScale));
+        const capture = await capturePage(page, Math.max(1, Math.ceil(scale)));
         return await canvasToDataUrlAsync(createFlattenedCanvas(capture.canvas));
       }
     };

@@ -43,12 +43,14 @@ LANG_SWITCHER_CSS = """
     }
 """
 
-INDEX_CARD_TEMPLATE = """      <a class="card" href="{href}">
-        <span class="tag">{tag}</span>
-        <h2>{title}</h2>
-        <p>{desc}</p>
+INDEX_CARD_TEMPLATE = """      <div class="card">
+        <a class="card-main" href="{href}">
+          <span class="tag">{tag}</span>
+          <h2>{title}</h2>
+          <p>{desc}</p>
+        </a>
         <div class="lang-links"><a href="{en_href}">English</a><span>·</span><a href="{zh_href}">中文</a></div>
-      </a>
+      </div>
 """
 
 INDEX_PAGE_TEMPLATE = """<!doctype html>
@@ -154,10 +156,10 @@ INDEX_PAGE_TEMPLATE = """<!doctype html>
       border-radius: 20px;
       background: rgba(255,255,255,.95);
       box-shadow: 0 14px 34px rgba(6, 42, 111, .08);
-      text-decoration: none;
       color: var(--ink);
       overflow: hidden;
-      display: block;
+      display: flex;
+      flex-direction: column;
     }}
 
     .card::after {{
@@ -169,12 +171,22 @@ INDEX_PAGE_TEMPLATE = """<!doctype html>
       height: 140px;
       border-radius: 50%;
       background: rgba(40, 121, 227, .09);
+      pointer-events: none;
     }}
 
     .card:hover {{
       transform: translateY(-2px);
       border-color: #8bb9ef;
       box-shadow: 0 18px 42px rgba(6, 42, 111, .14);
+    }}
+
+    .card-main {{
+      position: relative;
+      z-index: 1;
+      display: block;
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
     }}
 
     .tag {{
@@ -215,6 +227,7 @@ INDEX_PAGE_TEMPLATE = """<!doctype html>
       display: flex;
       gap: 8px;
       align-items: center;
+      margin-top: auto;
       font-size: 12px;
       font-weight: 800;
       color: #597094;

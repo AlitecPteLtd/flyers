@@ -101,10 +101,10 @@
       border-radius: 20px;
       background: rgba(255,255,255,.95);
       box-shadow: 0 14px 34px rgba(6, 42, 111, .08);
-      text-decoration: none;
       color: var(--ink);
       overflow: hidden;
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
 
     .card::after {
@@ -116,12 +116,22 @@
       height: 140px;
       border-radius: 50%;
       background: rgba(40, 121, 227, .09);
+      pointer-events: none;
     }
 
     .card:hover {
       transform: translateY(-2px);
       border-color: #8bb9ef;
       box-shadow: 0 18px 42px rgba(6, 42, 111, .14);
+    }
+
+    .card-main {
+      position: relative;
+      z-index: 1;
+      display: block;
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
     }
 
     .tag {
@@ -162,6 +172,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
+      margin-top: auto;
       font-size: 12px;
       font-weight: 800;
       color: #597094;
@@ -205,138 +216,176 @@
     </section>
 
     <section class="grid" aria-label="Flyer links">
-      <a class="card" href="../projects/temple-ngo-religious-operations/index-zh.html">
-        <span class="tag">寺庙 / 非营利</span>
-        <h2>寺庙与宗教组织</h2>
-        <p>在线功德供奉、法会排期、追思牌位、捐赠人 CRM、订阅续费与寺庙财务一体化管理。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/temple-ngo-religious-operations/index-zh.html">
+          <span class="tag">寺庙 / 非营利</span>
+          <h2>寺庙与宗教组织</h2>
+          <p>在线功德供奉、法会排期、追思牌位、捐赠人 CRM、订阅续费与寺庙财务一体化管理。</p>
+        </a>
         <div class="lang-links"><a href="../projects/temple-ngo-religious-operations/index.html">English</a><span>·</span><a href="../projects/temple-ngo-religious-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/industrial-equipment-wholesale/index-zh.html">
-        <span class="tag">批发分销</span>
-        <h2>工业设备批发</h2>
-        <p>门户订单同步、料号目录、SO 转 PO 采购、交付模式与分组 GST 开票。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/industrial-equipment-wholesale/index-zh.html">
+          <span class="tag">批发分销</span>
+          <h2>工业设备批发</h2>
+          <p>门户订单同步、料号目录、SO 转 PO 采购、交付模式与分组 GST 开票。</p>
+        </a>
         <div class="lang-links"><a href="../projects/industrial-equipment-wholesale/index.html">English</a><span>·</span><a href="../projects/industrial-equipment-wholesale/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/social-recreational-club/index-zh.html">
-        <span class="tag">俱乐部</span>
-        <h2>社交/休闲俱乐部</h2>
-        <p>会员入会、设施预约、活动与宴会、餐厅 POS、MSL 账单与会员门户。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/social-recreational-club/index-zh.html">
+          <span class="tag">俱乐部</span>
+          <h2>社交/休闲俱乐部</h2>
+          <p>会员入会、设施预约、活动与宴会、餐厅 POS、MSL 账单与会员门户。</p>
+        </a>
         <div class="lang-links"><a href="../projects/social-recreational-club/index.html">English</a><span>·</span><a href="../projects/social-recreational-club/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/precision-cnc-manufacturing/index-zh.html">
-        <span class="tag">制造</span>
-        <h2>精密 CNC 制造</h2>
-        <p>多品种小批量机加工 — 工艺路线、物料跟踪、多级 MRP、车间质检、CoC 与 Odoo 一体化开票。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/precision-cnc-manufacturing/index-zh.html">
+          <span class="tag">制造</span>
+          <h2>精密 CNC 制造</h2>
+          <p>多品种小批量机加工 — 工艺路线、物料跟踪、多级 MRP、车间质检、CoC 与 Odoo 一体化开票。</p>
+        </a>
         <div class="lang-links"><a href="../projects/precision-cnc-manufacturing/index.html">English</a><span>·</span><a href="../projects/precision-cnc-manufacturing/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/positive/index-zh.html">
-        <span class="tag">装修</span>
-        <h2>装修公司</h2>
-        <p>项目运营、报价明细、采购延续、审批流程与开票可视化。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/positive/index-zh.html">
+          <span class="tag">装修</span>
+          <h2>装修公司</h2>
+          <p>项目运营、报价明细、采购延续、审批流程与开票可视化。</p>
+        </a>
         <div class="lang-links"><a href="../projects/positive/index.html">English</a><span>·</span><a href="../projects/positive/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/cleantric/index-zh.html">
-        <span class="tag">清洁服务</span>
-        <h2>清洁服务公司</h2>
-        <p>在线预约、保洁员选择、排班调度、地址采集、订单跟进与支付流程。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/cleantric/index-zh.html">
+          <span class="tag">清洁服务</span>
+          <h2>清洁服务公司</h2>
+          <p>在线预约、保洁员选择、排班调度、地址采集、订单跟进与支付流程。</p>
+        </a>
         <div class="lang-links"><a href="../projects/cleantric/index.html">English</a><span>·</span><a href="../projects/cleantric/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/public-safety/index-zh.html">
-        <span class="tag">制造</span>
-        <h2>公共安全设备</h2>
-        <p>消防设备制造、BOM 计划、生产、质检、序列号追溯与现场服务。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/public-safety/index-zh.html">
+          <span class="tag">制造</span>
+          <h2>公共安全设备</h2>
+          <p>消防设备制造、BOM 计划、生产、质检、序列号追溯与现场服务。</p>
+        </a>
         <div class="lang-links"><a href="../projects/public-safety/index.html">English</a><span>·</span><a href="../projects/public-safety/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/secondary-process-manufacturing/index-zh.html">
-        <span class="tag">制造</span>
-        <h2>二次加工制造</h2>
-        <p>客供料管控、流转单工艺路线、IQC/OQC、拆批返工处理与退货文档。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/secondary-process-manufacturing/index-zh.html">
+          <span class="tag">制造</span>
+          <h2>二次加工制造</h2>
+          <p>客供料管控、流转单工艺路线、IQC/OQC、拆批返工处理与退货文档。</p>
+        </a>
         <div class="lang-links"><a href="../projects/secondary-process-manufacturing/index.html">English</a><span>·</span><a href="../projects/secondary-process-manufacturing/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/food-manufacturing-operations/index-zh.html">
-        <span class="tag">食品制造</span>
-        <h2>食品制造运营</h2>
-        <p>鲜食与寿司生产、中央厨房到门店计划、追溯、补货与报表。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/food-manufacturing-operations/index-zh.html">
+          <span class="tag">食品制造</span>
+          <h2>食品制造运营</h2>
+          <p>鲜食与寿司生产、中央厨房到门店计划、追溯、补货与报表。</p>
+        </a>
         <div class="lang-links"><a href="../projects/food-manufacturing-operations/index.html">English</a><span>·</span><a href="../projects/food-manufacturing-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/attendance-timesheet-hardware/index-zh.html">
-        <span class="tag">考勤</span>
-        <h2>考勤与硬件集成</h2>
-        <p>生物识别设备对接、打卡日志、班次管控、Excel 薪资导出与工时表审核。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/attendance-timesheet-hardware/index-zh.html">
+          <span class="tag">考勤</span>
+          <h2>考勤与硬件集成</h2>
+          <p>生物识别设备对接、打卡日志、班次管控、Excel 薪资导出与工时表审核。</p>
+        </a>
         <div class="lang-links"><a href="../projects/attendance-timesheet-hardware/index.html">English</a><span>·</span><a href="../projects/attendance-timesheet-hardware/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/translation-service-operations/index-zh.html">
-        <span class="tag">翻译</span>
-        <h2>翻译服务运营</h2>
-        <p>语言项目报价、作业管控、交付跟踪、审校协调、开票与客户跟进。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/translation-service-operations/index-zh.html">
+          <span class="tag">翻译</span>
+          <h2>翻译服务运营</h2>
+          <p>语言项目报价、作业管控、交付跟踪、审校协调、开票与客户跟进。</p>
+        </a>
         <div class="lang-links"><a href="../projects/translation-service-operations/index.html">English</a><span>·</span><a href="../projects/translation-service-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/gym-equipment-sales-service/index-zh.html">
-        <span class="tag">健身器材</span>
-        <h2>健身器材销售与服务</h2>
-        <p>B2B 与 B2C 设备销售、交付协调、维保服务、保修跟踪与客户支持。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/gym-equipment-sales-service/index-zh.html">
+          <span class="tag">健身器材</span>
+          <h2>健身器材销售与服务</h2>
+          <p>B2B 与 B2C 设备销售、交付协调、维保服务、保修跟踪与客户支持。</p>
+        </a>
         <div class="lang-links"><a href="../projects/gym-equipment-sales-service/index.html">English</a><span>·</span><a href="../projects/gym-equipment-sales-service/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/specialty-chemical-trading/index-zh.html">
-        <span class="tag">化工贸易</span>
-        <h2>特种化学品贸易</h2>
-        <p>化学品销售、采购、库存可视化、合规文档、交付跟进与客户账期管控。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/specialty-chemical-trading/index-zh.html">
+          <span class="tag">化工贸易</span>
+          <h2>特种化学品贸易</h2>
+          <p>化学品销售、采购、库存可视化、合规文档、交付跟进与客户账期管控。</p>
+        </a>
         <div class="lang-links"><a href="../projects/specialty-chemical-trading/index.html">English</a><span>·</span><a href="../projects/specialty-chemical-trading/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/school-uniform-seller/index-zh.html">
-        <span class="tag">零售</span>
-        <h2>校服销售</h2>
-        <p>校服销售、尺码管理、学校关联订购、库存管控与客户履约。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/school-uniform-seller/index-zh.html">
+          <span class="tag">零售</span>
+          <h2>校服销售</h2>
+          <p>校服销售、尺码管理、学校关联订购、库存管控与客户履约。</p>
+        </a>
         <div class="lang-links"><a href="../projects/school-uniform-seller/index.html">English</a><span>·</span><a href="../projects/school-uniform-seller/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/corporate-hamper-gifting/index-zh.html">
-        <span class="tag">礼品</span>
-        <h2>企业礼盒馈赠</h2>
-        <p>多收件人礼盒订购、eCommerce 与柜台销售、配送管控、贺卡留言与跟进。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/corporate-hamper-gifting/index-zh.html">
+          <span class="tag">礼品</span>
+          <h2>企业礼盒馈赠</h2>
+          <p>多收件人礼盒订购、eCommerce 与柜台销售、配送管控、贺卡留言与跟进。</p>
+        </a>
         <div class="lang-links"><a href="../projects/corporate-hamper-gifting/index.html">English</a><span>·</span><a href="../projects/corporate-hamper-gifting/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/pet-food-accessories-ecommerce/index-zh.html">
-        <span class="tag">宠物零售</span>
-        <h2>宠物食品与用品电商</h2>
-        <p>高端在线零售、产品套装、会员积分、履约配送、物流跟踪与客户跟进。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/pet-food-accessories-ecommerce/index-zh.html">
+          <span class="tag">宠物零售</span>
+          <h2>宠物食品与用品电商</h2>
+          <p>高端在线零售、产品套装、会员积分、履约配送、物流跟踪与客户跟进。</p>
+        </a>
         <div class="lang-links"><a href="../projects/pet-food-accessories-ecommerce/index.html">English</a><span>·</span><a href="../projects/pet-food-accessories-ecommerce/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/scaffolding/index-zh.html">
-        <span class="tag">租赁</span>
-        <h2>脚手架租赁与项目索赔</h2>
-        <p>租赁订单、现场交付、归还、索赔、仓库调拨、开票与项目可视化。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/scaffolding/index-zh.html">
+          <span class="tag">租赁</span>
+          <h2>脚手架租赁与项目索赔</h2>
+          <p>租赁订单、现场交付、归还、索赔、仓库调拨、开票与项目可视化。</p>
+        </a>
         <div class="lang-links"><a href="../projects/scaffolding/index.html">English</a><span>·</span><a href="../projects/scaffolding/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/bakery-ecommerce-operations/index-zh.html">
-        <span class="tag">烘焙</span>
-        <h2>烘焙电商与生产管控</h2>
-        <p>在线蛋糕订购、配送或自提时段、厨房产能管控、会员与积分忠诚计划。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/bakery-ecommerce-operations/index-zh.html">
+          <span class="tag">烘焙</span>
+          <h2>烘焙电商与生产管控</h2>
+          <p>在线蛋糕订购、配送或自提时段、厨房产能管控、会员与积分忠诚计划。</p>
+        </a>
         <div class="lang-links"><a href="../projects/bakery-ecommerce-operations/index.html">English</a><span>·</span><a href="../projects/bakery-ecommerce-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/lab-testing-process/index-zh.html">
-        <span class="tag">实验室检测</span>
-        <h2>实验室检测流程</h2>
-        <p>检测工作流、样品跟踪、质量检查、结果报告与运营跟进。</p>
+      <div class="card">
+        <a class="card-main" href="../projects/lab-testing-process/index-zh.html">
+          <span class="tag">实验室检测</span>
+          <h2>实验室检测流程</h2>
+          <p>检测工作流、样品跟踪、质量检查、结果报告与运营跟进。</p>
+        </a>
         <div class="lang-links"><a href="../projects/lab-testing-process/index.html">English</a><span>·</span><a href="../projects/lab-testing-process/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
     </section>
 

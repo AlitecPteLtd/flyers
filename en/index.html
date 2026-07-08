@@ -101,10 +101,10 @@
       border-radius: 20px;
       background: rgba(255,255,255,.95);
       box-shadow: 0 14px 34px rgba(6, 42, 111, .08);
-      text-decoration: none;
       color: var(--ink);
       overflow: hidden;
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
 
     .card::after {
@@ -116,12 +116,22 @@
       height: 140px;
       border-radius: 50%;
       background: rgba(40, 121, 227, .09);
+      pointer-events: none;
     }
 
     .card:hover {
       transform: translateY(-2px);
       border-color: #8bb9ef;
       box-shadow: 0 18px 42px rgba(6, 42, 111, .14);
+    }
+
+    .card-main {
+      position: relative;
+      z-index: 1;
+      display: block;
+      flex: 1;
+      text-decoration: none;
+      color: inherit;
     }
 
     .tag {
@@ -162,6 +172,7 @@
       display: flex;
       gap: 8px;
       align-items: center;
+      margin-top: auto;
       font-size: 12px;
       font-weight: 800;
       color: #597094;
@@ -205,138 +216,176 @@
     </section>
 
     <section class="grid" aria-label="Flyer links">
-      <a class="card" href="../projects/temple-ngo-religious-operations/">
-        <span class="tag">Temple / NGO</span>
-        <h2>Temple & Religious Organization</h2>
-        <p>Online merit offerings, ceremony scheduling, memorial dedications, donor CRM, subscriptions, and temple accounting.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/temple-ngo-religious-operations/">
+          <span class="tag">Temple / NGO</span>
+          <h2>Temple & Religious Organization</h2>
+          <p>Online merit offerings, ceremony scheduling, memorial dedications, donor CRM, subscriptions, and temple accounting.</p>
+        </a>
         <div class="lang-links"><a href="../projects/temple-ngo-religious-operations/index.html">English</a><span>·</span><a href="../projects/temple-ngo-religious-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/industrial-equipment-wholesale/">
-        <span class="tag">Wholesale</span>
-        <h2>Industrial Equipment Wholesale</h2>
-        <p>Portal order sync, part-number catalog, SO-to-PO procurement, delivery modes, and package GST invoicing.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/industrial-equipment-wholesale/">
+          <span class="tag">Wholesale</span>
+          <h2>Industrial Equipment Wholesale</h2>
+          <p>Portal order sync, part-number catalog, SO-to-PO procurement, delivery modes, and package GST invoicing.</p>
+        </a>
         <div class="lang-links"><a href="../projects/industrial-equipment-wholesale/index.html">English</a><span>·</span><a href="../projects/industrial-equipment-wholesale/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/social-recreational-club/">
-        <span class="tag">Club</span>
-        <h2>Social/Recreational Club</h2>
-        <p>Membership enrolment, facility booking, events and banquets, restaurant POS, MSL billing, and member portal.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/social-recreational-club/">
+          <span class="tag">Club</span>
+          <h2>Social/Recreational Club</h2>
+          <p>Membership enrolment, facility booking, events and banquets, restaurant POS, MSL billing, and member portal.</p>
+        </a>
         <div class="lang-links"><a href="../projects/social-recreational-club/index.html">English</a><span>·</span><a href="../projects/social-recreational-club/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/precision-cnc-manufacturing/">
-        <span class="tag">Manufacturing</span>
-        <h2>Precision CNC Manufacturing</h2>
-        <p>High-mix job shop — operation routing, material tracking, multi-level MRP, shop-floor QC, CoC, and billing with Odoo.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/precision-cnc-manufacturing/">
+          <span class="tag">Manufacturing</span>
+          <h2>Precision CNC Manufacturing</h2>
+          <p>High-mix job shop — operation routing, material tracking, multi-level MRP, shop-floor QC, CoC, and billing with Odoo.</p>
+        </a>
         <div class="lang-links"><a href="../projects/precision-cnc-manufacturing/index.html">English</a><span>·</span><a href="../projects/precision-cnc-manufacturing/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/positive/">
-        <span class="tag">Renovation</span>
-        <h2>Renovation Company</h2>
-        <p>Project operations, quotation detail, purchasing continuity, approvals, and billing visibility.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/positive/">
+          <span class="tag">Renovation</span>
+          <h2>Renovation Company</h2>
+          <p>Project operations, quotation detail, purchasing continuity, approvals, and billing visibility.</p>
+        </a>
         <div class="lang-links"><a href="../projects/positive/index.html">English</a><span>·</span><a href="../projects/positive/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/cleantric/">
-        <span class="tag">Cleaning</span>
-        <h2>Cleaning Service Company</h2>
-        <p>Online booking, cleaner selection, scheduling, address capture, order follow-through, and payment flow.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/cleantric/">
+          <span class="tag">Cleaning</span>
+          <h2>Cleaning Service Company</h2>
+          <p>Online booking, cleaner selection, scheduling, address capture, order follow-through, and payment flow.</p>
+        </a>
         <div class="lang-links"><a href="../projects/cleantric/index.html">English</a><span>·</span><a href="../projects/cleantric/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/public-safety/">
-        <span class="tag">Manufacturing</span>
-        <h2>Public Safety Equipment</h2>
-        <p>Firefighting equipment manufacturing, BOM planning, production, QC, serial traceability, and service.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/public-safety/">
+          <span class="tag">Manufacturing</span>
+          <h2>Public Safety Equipment</h2>
+          <p>Firefighting equipment manufacturing, BOM planning, production, QC, serial traceability, and service.</p>
+        </a>
         <div class="lang-links"><a href="../projects/public-safety/index.html">English</a><span>·</span><a href="../projects/public-safety/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/secondary-process-manufacturing/">
-        <span class="tag">Manufacturing</span>
-        <h2>Secondary Process Manufacturing</h2>
-        <p>Customer-supplied material control, traveler-based routing, IQC/OQC, split and rework handling, and return documentation.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/secondary-process-manufacturing/">
+          <span class="tag">Manufacturing</span>
+          <h2>Secondary Process Manufacturing</h2>
+          <p>Customer-supplied material control, traveler-based routing, IQC/OQC, split and rework handling, and return documentation.</p>
+        </a>
         <div class="lang-links"><a href="../projects/secondary-process-manufacturing/index.html">English</a><span>·</span><a href="../projects/secondary-process-manufacturing/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/food-manufacturing-operations/">
-        <span class="tag">Food Manufacturing</span>
-        <h2>Food Manufacturing Operations</h2>
-        <p>Fresh food and sushi production, kitchen-to-outlet planning, traceability, replenishment, and reporting.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/food-manufacturing-operations/">
+          <span class="tag">Food Manufacturing</span>
+          <h2>Food Manufacturing Operations</h2>
+          <p>Fresh food and sushi production, kitchen-to-outlet planning, traceability, replenishment, and reporting.</p>
+        </a>
         <div class="lang-links"><a href="../projects/food-manufacturing-operations/index.html">English</a><span>·</span><a href="../projects/food-manufacturing-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/attendance-timesheet-hardware/">
-        <span class="tag">Attendance</span>
-        <h2>Attendance & Hardware Integration</h2>
-        <p>Biometric device connectivity, punch logs, shift control, Excel payroll exports, and timesheet review.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/attendance-timesheet-hardware/">
+          <span class="tag">Attendance</span>
+          <h2>Attendance & Hardware Integration</h2>
+          <p>Biometric device connectivity, punch logs, shift control, Excel payroll exports, and timesheet review.</p>
+        </a>
         <div class="lang-links"><a href="../projects/attendance-timesheet-hardware/index.html">English</a><span>·</span><a href="../projects/attendance-timesheet-hardware/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/translation-service-operations/">
-        <span class="tag">Translation</span>
-        <h2>Translation Service Operations</h2>
-        <p>Language project quoting, job control, delivery tracking, reviewer coordination, invoicing, and customer follow-through.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/translation-service-operations/">
+          <span class="tag">Translation</span>
+          <h2>Translation Service Operations</h2>
+          <p>Language project quoting, job control, delivery tracking, reviewer coordination, invoicing, and customer follow-through.</p>
+        </a>
         <div class="lang-links"><a href="../projects/translation-service-operations/index.html">English</a><span>·</span><a href="../projects/translation-service-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/gym-equipment-sales-service/">
-        <span class="tag">Gym Equipment</span>
-        <h2>Gym Equipment Sales & Service</h2>
-        <p>B2B and B2C equipment sales, delivery coordination, maintenance service, warranty tracking, and customer support.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/gym-equipment-sales-service/">
+          <span class="tag">Gym Equipment</span>
+          <h2>Gym Equipment Sales & Service</h2>
+          <p>B2B and B2C equipment sales, delivery coordination, maintenance service, warranty tracking, and customer support.</p>
+        </a>
         <div class="lang-links"><a href="../projects/gym-equipment-sales-service/index.html">English</a><span>·</span><a href="../projects/gym-equipment-sales-service/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/specialty-chemical-trading/">
-        <span class="tag">Chemical Trading</span>
-        <h2>Specialty Chemical Trading</h2>
-        <p>Chemical sales, procurement, stock visibility, compliance documents, delivery follow-up, and customer account control.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/specialty-chemical-trading/">
+          <span class="tag">Chemical Trading</span>
+          <h2>Specialty Chemical Trading</h2>
+          <p>Chemical sales, procurement, stock visibility, compliance documents, delivery follow-up, and customer account control.</p>
+        </a>
         <div class="lang-links"><a href="../projects/specialty-chemical-trading/index.html">English</a><span>·</span><a href="../projects/specialty-chemical-trading/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/school-uniform-seller/">
-        <span class="tag">Retail</span>
-        <h2>School Uniform Seller</h2>
-        <p>Uniform sales, product sizing, school-linked ordering, inventory control, and customer fulfilment.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/school-uniform-seller/">
+          <span class="tag">Retail</span>
+          <h2>School Uniform Seller</h2>
+          <p>Uniform sales, product sizing, school-linked ordering, inventory control, and customer fulfilment.</p>
+        </a>
         <div class="lang-links"><a href="../projects/school-uniform-seller/index.html">English</a><span>·</span><a href="../projects/school-uniform-seller/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/corporate-hamper-gifting/">
-        <span class="tag">Gifting</span>
-        <h2>Corporate Hamper Gifting</h2>
-        <p>Multi-recipient hamper ordering, eCommerce and counter sales, delivery control, gifting messages, and follow-up.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/corporate-hamper-gifting/">
+          <span class="tag">Gifting</span>
+          <h2>Corporate Hamper Gifting</h2>
+          <p>Multi-recipient hamper ordering, eCommerce and counter sales, delivery control, gifting messages, and follow-up.</p>
+        </a>
         <div class="lang-links"><a href="../projects/corporate-hamper-gifting/index.html">English</a><span>·</span><a href="../projects/corporate-hamper-gifting/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/pet-food-accessories-ecommerce/">
-        <span class="tag">Pet Retail</span>
-        <h2>Pet Food & Accessories eCommerce</h2>
-        <p>Premium online retail, product bundles, loyalty, fulfilment, delivery tracking, and customer account follow-up.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/pet-food-accessories-ecommerce/">
+          <span class="tag">Pet Retail</span>
+          <h2>Pet Food & Accessories eCommerce</h2>
+          <p>Premium online retail, product bundles, loyalty, fulfilment, delivery tracking, and customer account follow-up.</p>
+        </a>
         <div class="lang-links"><a href="../projects/pet-food-accessories-ecommerce/index.html">English</a><span>·</span><a href="../projects/pet-food-accessories-ecommerce/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/scaffolding/">
-        <span class="tag">Rental</span>
-        <h2>Scaffolding Rental & Project Claims</h2>
-        <p>Rental orders, site deliveries, returns, claims, warehouse movement, billing, and project visibility.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/scaffolding/">
+          <span class="tag">Rental</span>
+          <h2>Scaffolding Rental & Project Claims</h2>
+          <p>Rental orders, site deliveries, returns, claims, warehouse movement, billing, and project visibility.</p>
+        </a>
         <div class="lang-links"><a href="../projects/scaffolding/index.html">English</a><span>·</span><a href="../projects/scaffolding/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/bakery-ecommerce-operations/">
-        <span class="tag">Bakery</span>
-        <h2>Bakery E-Commerce & Production Control</h2>
-        <p>Online cake ordering, delivery or collection slots, kitchen capacity control, memberships, and loyalty.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/bakery-ecommerce-operations/">
+          <span class="tag">Bakery</span>
+          <h2>Bakery E-Commerce & Production Control</h2>
+          <p>Online cake ordering, delivery or collection slots, kitchen capacity control, memberships, and loyalty.</p>
+        </a>
         <div class="lang-links"><a href="../projects/bakery-ecommerce-operations/index.html">English</a><span>·</span><a href="../projects/bakery-ecommerce-operations/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
-      <a class="card" href="../projects/lab-testing-process/">
-        <span class="tag">Lab Testing</span>
-        <h2>Lab Testing Process</h2>
-        <p>Lab testing workflow, sample tracking, quality checks, result reporting, and operational follow-through.</p>
+      <div class="card">
+        <a class="card-main" href="../projects/lab-testing-process/">
+          <span class="tag">Lab Testing</span>
+          <h2>Lab Testing Process</h2>
+          <p>Lab testing workflow, sample tracking, quality checks, result reporting, and operational follow-through.</p>
+        </a>
         <div class="lang-links"><a href="../projects/lab-testing-process/index.html">English</a><span>·</span><a href="../projects/lab-testing-process/index-zh.html">中文</a></div>
-      </a>
+      </div>
 
     </section>
 
