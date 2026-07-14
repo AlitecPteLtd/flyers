@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>仓储租赁业务宣传单</title>
+  <link rel="stylesheet" href="storage-rental-business-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0a3e94;
+      --ink: #07194f;
+      --blue: #0f86b5;
+      --sky: #eaf5ff;
+      --line: #b9d5f0;
+      --gold: #f6aa17;
+      --green: #2f8f45;
+      --purple: #7a2f8f;
+      --teal: #098da1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1448px;
+      margin: 0 auto;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(15, 134, 181, .1), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1024px;
+      height: 340px;
+      object-fit: cover;
+      object-position: center top;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 360px;
+      z-index: 1;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 35%, rgba(255,255,255,.78) 55%, rgba(255,255,255,.12) 84%),
+        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 292px;
+      width: 1120px;
+      height: 72px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: var(--navy);
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -14px 0 var(--gold);
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      height: 360px;
+      padding: 14px 32px 0 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .mark {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 88px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 3px 0 8px;
+      color: var(--navy);
+      font-size: 46px;
+      line-height: .98;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.28;
+      font-weight: 700;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 15px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      width: 168px;
+      text-align: right;
+      color: #60646c;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .odoo-logo {
+      display: block;
+      width: 168px;
+      height: auto;
+      margin-top: 6px;
+    }
+
+    .intro {
+      width: 720px;
+      margin-top: 34px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.78);
+      font-size: 16px;
+      line-height: 1.45;
+      color: #07194f;
+    }
+
+    .intro strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--blue);
+      font-size: 17px;
+      line-height: 1.34;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 720px;
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      min-height: 108px;
+      padding: 12px 14px 10px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .round-icon {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 16px; }
+
+    .quick-benefit h3 {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.12;
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 8.5px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 14px 31px 12px;
+      color: var(--navy);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .section-title .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      padding: 0 31px;
+    }
+
+    .capability {
+      min-height: 210px;
+      padding: 12px 10px 11px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy), #0f68b9);
+      font-size: 30px;
+    }
+
+    .capability:nth-child(2n) .cap-icon,
+    .capability:nth-child(4n) .cap-icon {
+      background: linear-gradient(135deg, #0d7b8c, #0aa9b7);
+    }
+
+    .capability h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 13.8px;
+      line-height: 1.18;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #081b50;
+      font-size: 11px;
+      line-height: 1.36;
+      font-weight: 600;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      gap: 14px;
+      padding: 0 31px;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 22px 0 6px;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .panel-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    .panel-sub {
+      margin: 0 0 10px;
+      color: #253858;
+      font-size: 13px;
+      line-height: 1.25;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 11px;
+    }
+
+    .process-body {
+      display: grid;
+      grid-template-columns: 56% 44%;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .process-step {
+      position: relative;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      align-items: center;
+      min-height: 66px;
+      border: 1.4px solid #1976c9;
+      border-radius: 7px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .process-step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -12px;
+      width: 2px;
+      height: 12px;
+      background: var(--navy);
+      transform: translateX(-50%);
+    }
+
+    .process-step:nth-child(2) { border-color: var(--green); }
+    .process-step:nth-child(5) { border-color: var(--purple); }
+
+    .process-step i {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      color: var(--teal);
+      font-size: 28px;
+    }
+
+    .process-step:nth-child(5) i { color: var(--purple); }
+
+    .process-step h4 {
+      margin: 0 0 3px;
+      color: var(--navy);
+      font-size: 12.7px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .process-step p {
+      margin: 0;
+      color: #14214a;
+      font-size: 10.2px;
+      line-height: 1.25;
+      font-weight: 600;
+    }
+
+    .control-list {
+      min-height: 374px;
+      margin-top: 0;
+      padding: 22px 10px 52px;
+      border: 1px dashed #83b7e8;
+      border-radius: 8px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.86)),
+        linear-gradient(180deg, rgba(255,255,255,.96), rgba(235,244,255,.9));
+    }
+
+    .check-item {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 7px;
+      align-items: start;
+      margin-bottom: 25px;
+      color: #14214a;
+      font-size: 10.2px;
+      line-height: 1.35;
+    }
+
+    .check-item:last-child { margin-bottom: 0; }
+
+    .check-item i {
+      color: var(--green);
+      font-size: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px;
+    }
+
+    .stat {
+      min-height: 77px;
+      padding: 10px 9px 8px;
+      border: 1px solid #d5e1f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 8px;
+      color: #344b74;
+      font-size: 10px;
+      line-height: 1.15;
+      font-weight: 800;
+    }
+
+    .stat .num {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 23px;
+      font-weight: 900;
+    }
+
+    .stat i { color: #1477d4; font-size: 22px; }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 48% 52%;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      min-height: 168px;
+      padding: 12px;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .donut {
+      width: 92px;
+      height: 92px;
+      overflow: visible;
+    }
+
+    .donut-segment {
+      stroke: #fff;
+      stroke-width: .8;
+      stroke-linejoin: round;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 50%;
+      background: #086bc3;
+    }
+
+    .legend div:nth-child(2) span { background: #0ca3a8; }
+    .legend div:nth-child(3) span { background: var(--gold); }
+
+    .line-chart {
+      width: 100%;
+      height: 108px;
+    }
+
+    .mini-table {
+      margin-top: 10px;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+      font-size: 9.2px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.4fr .95fr .85fr .85fr;
+      min-height: 24px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e5edf8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #344b74;
+      background: #f7fbff;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      padding: 3px 8px;
+      border-radius: 16px;
+      color: #18672c;
+      background: #d6edce;
+      font-size: 8.6px;
+      font-weight: 900;
+    }
+
+    .bottom-benefits {
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 14px 31px 0;
+      min-height: 74px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 54px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      padding: 0 44px;
+      color: #fff;
+      background: var(--navy);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
+      white-space: nowrap;
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 18px; font-size: 16px; text-align: center; }
+  
+    .lang-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #cbd9ef;
+      box-shadow: 0 8px 24px rgba(6, 42, 111, 0.12);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .lang-switcher a {
+      color: #062a6f;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher a.is-active {
+      background: #062a6f;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="lang-switcher" aria-label="Language"><a href="index.html">English</a><a class="is-active" href="index-zh.html">中文</a></nav>
+  <main class="page">
+    <img class="hero-image" src="storage-rental-business-assets/storage-rental-business-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="storage-rental-business-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>仓储租赁<br />业务</h1>
+            <div class="subtitle">仓储单元、租赁门户、开票与分店管控</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo">
+          <img class="odoo-logo" src="storage-rental-business-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
+        </div>
+      </div>
+
+      <p class="intro">
+        <strong>在一个平台管理仓储咨询、单元可用性、租赁合同、客户门户与周期性开票。</strong>
+        此 Odoo 方案贯通 CRM 咨询、尺寸选择、分店与楼层地图、仓储单元状态、租赁订单、客户门户产品、付款、发票、递延收入与分店运营可视化。
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <h3>2D 单元管控</h3>
+          </div>
+          <p>映射分店、楼层、区域、单元位置、合并单元与实时可用性。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-user-check"></i></div>
+            <h3>咨询到租赁</h3>
+          </div>
+          <p>将 CRM 咨询转换为仓储报价、租赁订单与订阅。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>客户门户</h3>
+          </div>
+          <p>展示在租产品、已付至日期、发票、付款与客户操作。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <h3>周期性开票</h3>
+          </div>
+          <p>支持预付、周期性发票、押金、管理费与递延收入。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title">核心功能 <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3>1. 2D 单元地图</h3>
+        <p>可视化分店、楼层、区域、单元位置、状态颜色与合并/拆分单元。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>2. 仓储状态</h3>
+        <p>管控可用、已预留、已占用、已阻止与超锁仓储状态。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+        <h3>3. 单元类型主数据</h3>
+        <p>维护单元类型、尺寸、长宽高、押金、租金与单元特征。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-file-signature"></i></div>
+        <h3>4. 租赁合同</h3>
+        <p>按搬入日期、周期、付款方式与分店创建租赁订单。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>5. 门户付款</h3>
+        <p>引导客户处理门户发票、付款方式、未结余额与收据。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <h3>6. 收入管控</h3>
+        <p>支持周期租金、押金、发票序列、递延收入与迁移延续。</p>
+      </div>
+    </section>
+
+    <section class="main-grid">
+      <div>
+        <div class="panel-title">租赁流程</div>
+        <p class="panel-sub">从咨询到已付款周期合同，清晰组织仓储租赁旅程。</p>
+        <div class="process-body">
+          <div class="process-grid">
+            <div class="process-step"><i class="fa-solid fa-message"></i><div><h4>咨询</h4><p>采集尺寸、周期、地点与搬入意向</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-magnifying-glass-location"></i><div><h4>匹配单元</h4><p>按分店、楼层、区域与状态查找可用单元</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-file-signature"></i><div><h4>租赁订单</h4><p>确认单元、搬入日期、付款方式与合同周期</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-credit-card"></i><div><h4>付款</h4><p>处理押金、预付、周期租金与门户付款</p></div></div>
+            <div class="process-step"><i class="fa-solid fa-repeat"></i><div><h4>续租 / 退租</h4><p>生成周期发票、通知、终止与搬出</p></div></div>
+          </div>
+          <div class="control-list">
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>确认报价前管控可用性。</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>每张租赁订单关联分店、单元类型与单元状态。</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>通过周期性开票与已付至日期减少漏计费。</p></div>
+            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>改善销售、运营、门户与财务协同。</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-title">运营仪表盘概览</div>
+        <p class="panel-sub">实时查看单元可用性、预留、占用率与开票活动。</p>
+        <div class="stats">
+          <div class="stat"><h4>仓储单元</h4><div class="num">1,284<i class="fa-solid fa-warehouse"></i></div></div>
+          <div class="stat"><h4>已占用单元</h4><div class="num">892<i class="fa-solid fa-boxes-stacked"></i></div></div>
+          <div class="stat"><h4>已预留单元</h4><div class="num">76<i class="fa-solid fa-calendar-check"></i></div></div>
+          <div class="stat"><h4>已阻止单元</h4><div class="num">18<i class="fa-solid fa-lock"></i></div></div>
+          <div class="stat"><h4>月度开票</h4><div class="num">$428K<i class="fa-solid fa-dollar-sign"></i></div></div>
+        </div>
+
+        <div class="charts">
+          <div class="chart-card">
+            <h4>仓储单元状态</h4>
+            <div class="donut-wrap">
+              <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="仓储单元状态图">
+                <path class="donut-segment" fill="#086bc3" d="M 46.00 4.00 A 42 42 0 1 1 13.14 72.16 L 29.57 59.08 A 21 21 0 1 0 46.00 25.00 Z"></path>
+                <path class="donut-segment" fill="#0ca3a8" d="M 13.14 72.16 A 42 42 0 0 1 16.87 15.75 L 31.43 30.87 A 21 21 0 0 0 29.57 59.08 Z"></path>
+                <path class="donut-segment" fill="#f6aa17" d="M 16.87 15.75 A 42 42 0 0 1 46.00 4.00 L 46.00 25.00 A 21 21 0 0 0 31.43 30.87 Z"></path>
+              </svg>
+              <div class="legend">
+                <div><span></span>已占用 69.5%</div>
+                <div><span></span>可用 24.1%</div>
+                <div><span></span>预留 / 阻止 6.4%</div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h4>月度周期性开票</h4>
+            <svg class="line-chart" viewBox="0 0 300 118" fill="none">
+              <path d="M0 98H300" stroke="#d8e4f3" />
+              <path d="M0 70H300" stroke="#d8e4f3" />
+              <path d="M0 42H300" stroke="#d8e4f3" />
+              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18" stroke="#1263c8" stroke-width="3" fill="none" />
+              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18 L260 98 L20 98Z" fill="rgba(18,99,200,.12)" />
+              <g fill="#1263c8"><circle cx="20" cy="88" r="4"/><circle cx="68" cy="38" r="4"/><circle cx="116" cy="48" r="4"/><circle cx="164" cy="22" r="4"/><circle cx="212" cy="40" r="4"/><circle cx="260" cy="18" r="4"/></g>
+              <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="16" y="114">1月</text><text x="64" y="114">2月</text><text x="112" y="114">3月</text><text x="160" y="114">4月</text><text x="208" y="114">5月</text><text x="256" y="114">6月</text></g>
+            </svg>
+          </div>
+        </div>
+
+        <div class="mini-table">
+          <div class="row head"><div>分店</div><div>占用率</div><div>状态</div><div>开票</div></div>
+          <div class="row"><div>中央仓储</div><div>88%</div><div class="pill">稳定</div><div>$126,400</div></div>
+          <div class="row"><div>东部仓库</div><div>72%</div><div class="pill">活跃</div><div>$98,600</div></div>
+          <div class="row"><div>西部储物柜</div><div>64%</div><div class="pill">促销</div><div>$54,800</div></div>
+          <div class="row"><div>北部空调仓</div><div>91%</div><div class="pill">满载</div><div>$86,900</div></div>
+          <div class="row"><div>南部商务仓</div><div>79%</div><div class="pill">活跃</div><div>$62,300</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">商业<br />效益</div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <div><h3>更好单元可视化</h3><p>管控分店、楼层、区域、单元状态与合并单元可用性。</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-user-check"></i>
+        <div><h3>更快咨询转化</h3><p>更快将咨询转为匹配单元、报价与租赁订单。</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-calculator"></i>
+        <div><h3>更准确开票</h3><p>从同一流程开票押金、预付、周期租金与递延收入。</p></div>
+      </div>
+      <div class="bottom-item">
+        <i class="fa-solid fa-users"></i>
+        <div><h3>更强协同</h3><p>保持销售、分店、门户用户、运营与财务团队一致。</p></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.sg</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js?v=20260714-storage-rental-v1-zh" data-flyer-editor-script data-flyer-version="2026-07-14-storage-rental-v1-zh"></script>
+</body>
+</html>
