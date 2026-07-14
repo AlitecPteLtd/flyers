@@ -8,15 +8,14 @@
   <style>
     :root {
       --navy: #062a6f;
-      --navy-2: #0a3e94;
+      --navy-2: #0b3b91;
       --ink: #07194f;
-      --blue: #0f86b5;
-      --sky: #eaf5ff;
-      --line: #b9d5f0;
+      --line: #cbd9ef;
       --gold: #f6aa17;
-      --green: #2f8f45;
+      --orange: #f18717;
       --purple: #7a2f8f;
-      --teal: #098da1;
+      --blue: #2879e3;
+      --green: #35a853;
     }
 
     * { box-sizing: border-box; }
@@ -32,10 +31,12 @@
       position: relative;
       width: 1024px;
       height: 1448px;
-      margin: 0 auto;
       overflow: hidden;
+      padding-bottom: 175px;
+      box-sizing: border-box;
+      margin: 0 auto;
       background:
-        radial-gradient(circle at 78% 11%, rgba(15, 134, 181, .1), transparent 18%),
+        radial-gradient(circle at 78% 11%, rgba(39, 121, 227, .11), transparent 18%),
         linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
     }
 
@@ -43,10 +44,10 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 1024px;
+      width: 500px;
       height: 340px;
       object-fit: cover;
-      object-position: center top;
+      object-position: 55% center;
       z-index: 0;
     }
 
@@ -56,22 +57,45 @@
       height: 360px;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 35%, rgba(255,255,255,.78) 55%, rgba(255,255,255,.12) 84%),
-        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
     }
 
     .curve {
       position: absolute;
       left: -40px;
-      top: 292px;
+      top: 248px;
       width: 1120px;
       height: 72px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
-      background: var(--navy);
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
       transform: rotate(-4deg);
       transform-origin: center;
-      box-shadow: 0 -14px 0 var(--gold);
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
     }
 
     .hero {
@@ -108,61 +132,47 @@
     }
 
     h1 {
-      margin: 3px 0 8px;
+      margin: 4px 0 6px;
       color: var(--navy);
-      font-size: 46px;
-      line-height: .98;
+      font-size: 38px;
+      line-height: .96;
       font-weight: 900;
-      text-transform: uppercase;
       letter-spacing: 0;
+      text-transform: uppercase;
     }
 
     .subtitle {
       color: var(--ink);
-      font-size: 18px;
-      line-height: 1.28;
-      font-weight: 700;
+      font-size: 15px;
+      margin-top: 4px;
+      max-width: 440px;
+      line-height: 1.2;
     }
 
     .short-line {
       width: 64px;
       height: 4px;
-      margin-top: 15px;
+      margin-top: 8px;
       background: var(--gold);
     }
 
     .odoo {
-      width: 168px;
       text-align: right;
-      color: #60646c;
-      font-size: 15px;
-      font-weight: 700;
+      width: 170px;
     }
 
     .odoo-logo {
-      display: block;
-      width: 168px;
+      width: 170px;
       height: auto;
-      margin-top: 6px;
+      display: block;
     }
 
     .intro {
       width: 720px;
-      margin-top: 34px;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(255,255,255,.78);
-      font-size: 16px;
-      line-height: 1.45;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
       color: #07194f;
-    }
-
-    .intro strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--blue);
-      font-size: 17px;
-      line-height: 1.34;
     }
 
     .quick-benefits {
@@ -178,8 +188,8 @@
     }
 
     .quick-benefit {
-      min-height: 108px;
-      padding: 12px 14px 10px;
+      min-height: 88px;
+      padding: 8px 10px 6px;
       border-right: 1px dashed #b7c8e1;
     }
 
@@ -193,9 +203,9 @@
     }
 
     .round-icon {
-      width: 36px;
-      height: 36px;
-      flex: 0 0 36px;
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
       display: grid;
       place-items: center;
       border-radius: 50%;
@@ -203,300 +213,339 @@
       color: #fff;
     }
 
-    .round-icon i { font-size: 16px; }
+    .round-icon i { font-size: 18px; }
 
     .quick-benefit h3 {
       margin: 0;
-      font-size: 12px;
-      line-height: 1.12;
+      font-size: 12.5px;
+      line-height: 1.15;
       color: var(--navy);
-      font-weight: 900;
+      font-weight: 800;
     }
 
     .quick-benefit p {
       margin: 0;
       color: #07194f;
-      font-size: 8.5px;
-      line-height: 1.22;
-      font-weight: 700;
+      font-size: 9.2px;
+      line-height: 1.28;
+      font-weight: 600;
     }
 
     .section-title {
+      position: relative;
+      z-index: 5;
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin: 14px 31px 12px;
+      gap: 18px;
+      margin: 6px 22px 8px;
       color: var(--navy);
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 900;
-      text-transform: uppercase;
+      text-align: center;
       letter-spacing: 0;
     }
 
+    .section-title::before,
     .section-title::after {
       content: "";
       flex: 1;
       height: 1px;
-      background: var(--blue);
+      background: #9fc0ee;
     }
 
-    .section-title .dot {
-      width: 5px;
-      height: 5px;
+    .dot {
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: var(--blue);
+      background: var(--navy-2);
     }
 
     .capabilities {
+      position: relative;
+      z-index: 4;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      padding: 0 31px;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
     }
 
     .capability {
-      min-height: 210px;
-      padding: 12px 10px 11px;
-      border: 1px solid var(--line);
-      border-radius: 7px;
+      min-height: 120px;
+      padding: 0 9px;
       text-align: center;
-      background: #fff;
+      border-right: 1px dashed #b9cce5;
     }
+
+    .capability:last-child { border-right: 0; }
 
     .cap-icon {
       display: grid;
       place-items: center;
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 10px;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
       border-radius: 50%;
-      color: #fff;
-      background: linear-gradient(135deg, var(--navy), #0f68b9);
-      font-size: 30px;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
     }
 
-    .capability:nth-child(2n) .cap-icon,
-    .capability:nth-child(4n) .cap-icon {
-      background: linear-gradient(135deg, #0d7b8c, #0aa9b7);
-    }
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
 
     .capability h3 {
-      margin: 0 0 8px;
+      min-height: 35px;
+      margin: 0 0 5px;
       color: var(--navy);
-      font-size: 13.8px;
-      line-height: 1.18;
+      font-size: 12.3px;
+      line-height: 1.2;
       font-weight: 900;
     }
 
     .capability p {
       margin: 0;
-      color: #081b50;
-      font-size: 11px;
-      line-height: 1.36;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
       font-weight: 600;
     }
 
-    .main-grid {
+    .panels {
       display: grid;
-      grid-template-columns: 38% 62%;
+      grid-template-columns: 46% 54%;
       gap: 14px;
-      padding: 0 31px;
+      padding: 4px 16px 0;
     }
 
-    .panel-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 22px 0 6px;
-      color: var(--navy);
-      font-size: 18px;
-      line-height: 1.1;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0;
-    }
-
-    .panel-title::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--blue);
-    }
-
-    .panel-sub {
-      margin: 0 0 10px;
-      color: #253858;
-      font-size: 13px;
-      line-height: 1.25;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 11px;
-    }
-
-    .process-body {
-      display: grid;
-      grid-template-columns: 56% 44%;
-      gap: 12px;
-      align-items: stretch;
-    }
-
-    .process-step {
-      position: relative;
-      display: grid;
-      grid-template-columns: 54px 1fr;
-      align-items: center;
-      min-height: 66px;
-      border: 1.4px solid #1976c9;
-      border-radius: 7px;
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
       background: #fff;
       overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
     }
 
-    .process-step:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -12px;
-      width: 2px;
-      height: 12px;
-      background: var(--navy);
-      transform: translateX(-50%);
-    }
-
-    .process-step:nth-child(2) { border-color: var(--green); }
-    .process-step:nth-child(5) { border-color: var(--purple); }
-
-    .process-step i {
-      display: grid;
-      place-items: center;
-      height: 100%;
-      color: var(--teal);
-      font-size: 28px;
-    }
-
-    .process-step:nth-child(5) i { color: var(--purple); }
-
-    .process-step h4 {
-      margin: 0 0 3px;
-      color: var(--navy);
-      font-size: 12.7px;
-      line-height: 1.1;
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
       font-weight: 900;
       text-transform: uppercase;
     }
 
-    .process-step p {
-      margin: 0;
-      color: #14214a;
-      font-size: 10.2px;
-      line-height: 1.25;
-      font-weight: 600;
+    .panel-header.purple {
+      background: linear-gradient(90deg, #722384, #8d2d92);
     }
 
-    .control-list {
-      min-height: 374px;
-      margin-top: 0;
-      padding: 22px 10px 52px;
-      border: 1px dashed #83b7e8;
-      border-radius: 8px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.86)),
-        linear-gradient(180deg, rgba(255,255,255,.96), rgba(235,244,255,.9));
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow {
+      padding: 12px 12px 6px;
     }
 
-    .check-item {
+    .steps {
       display: grid;
-      grid-template-columns: 28px 1fr;
-      gap: 7px;
-      align-items: start;
-      margin-bottom: 25px;
-      color: #14214a;
-      font-size: 10.2px;
-      line-height: 1.35;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
     }
 
-    .check-item:last-child { margin-bottom: 0; }
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
 
-    .check-item i {
-      color: var(--green);
-      font-size: 20px;
+    .step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 8px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard {
+      padding: 10px 10px 10px;
     }
 
     .stats {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 9px;
+      gap: 8px;
     }
 
     .stat {
-      min-height: 77px;
-      padding: 10px 9px 8px;
-      border: 1px solid #d5e1f1;
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
       border-radius: 7px;
       background: #fff;
     }
 
     .stat h4 {
-      margin: 0 0 8px;
-      color: #344b74;
-      font-size: 10px;
-      line-height: 1.15;
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
       font-weight: 800;
     }
 
-    .stat .num {
+    .stat .number {
       display: flex;
       align-items: center;
       justify-content: space-between;
       color: var(--navy);
-      font-size: 23px;
+      font-size: 21px;
       font-weight: 900;
     }
 
-    .stat i { color: #1477d4; font-size: 22px; }
+    .stat i { font-size: 22px; color: var(--blue); }
 
     .charts {
       display: grid;
-      grid-template-columns: 48% 52%;
-      gap: 10px;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
       margin-top: 10px;
     }
 
     .chart-card {
-      min-height: 168px;
-      padding: 12px;
-      border: 1px solid #d5e1f1;
+      border: 1px solid #d7e2f1;
       border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
       background: #fff;
     }
 
     .chart-card h4 {
-      margin: 0 0 10px;
+      margin: 0 0 9px;
       color: var(--navy);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
     }
 
     .donut-wrap {
       display: grid;
       grid-template-columns: 96px 1fr;
-      gap: 12px;
       align-items: center;
+      gap: 13px;
     }
 
     .donut {
       width: 92px;
-      height: 92px;
+      height: 80px;
       overflow: visible;
     }
 
-    .donut-segment {
-      stroke: #fff;
-      stroke-width: .8;
-      stroke-linejoin: round;
+    .donut-ring {
+      fill: none;
+      stroke-width: 22;
+      stroke-linecap: butt;
+    }
+
+    .donut-hole {
+      fill: #fff;
     }
 
     .legend {
@@ -521,60 +570,192 @@
       width: 10px;
       height: 10px;
       margin-right: 6px;
-      border-radius: 50%;
-      background: #086bc3;
+      border-radius: 2px;
+      background: var(--green);
     }
 
-    .legend div:nth-child(2) span { background: #0ca3a8; }
-    .legend div:nth-child(3) span { background: var(--gold); }
+    .legend div:last-child span { background: var(--blue); }
 
     .line-chart {
       width: 100%;
-      height: 108px;
+      height: 84px;
     }
 
     .mini-table {
-      margin-top: 10px;
-      border: 1px solid #d5e1f1;
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
       border-radius: 8px;
       overflow: hidden;
-      background: #fff;
-      font-size: 9.2px;
+      font-size: 10px;
       font-weight: 700;
     }
 
     .row {
       display: grid;
-      grid-template-columns: 1.4fr .95fr .85fr .85fr;
-      min-height: 24px;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
       align-items: center;
       padding: 0 10px;
-      border-bottom: 1px solid #e5edf8;
+      border-bottom: 1px solid #e6eef8;
     }
 
     .row:last-child { border-bottom: 0; }
     .row.head {
-      color: #344b74;
+      color: #39547d;
       background: #f7fbff;
+      font-size: 9.5px;
       font-weight: 900;
     }
 
     .pill {
       justify-self: start;
-      padding: 3px 8px;
-      border-radius: 16px;
-      color: #18672c;
-      background: #d6edce;
-      font-size: 8.6px;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ccebc6;
+      color: #26763a;
+      font-size: 9px;
       font-weight: 900;
     }
 
+    
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 8px;
+      background: #fff;
+      min-height: 108px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list { display: grid; gap: 7px; }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--blue), var(--orange));
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      background: #dbeafe;
+      color: #1d4f91;
+      font-size: 8px;
+      font-weight: 900;
+    }
+
+    .tag.delivery { background: #ffe2bf; color: #9a4f08; }
+
+    .integrations {
+      padding: 0 43px 0;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 44px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
     .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 99px;
+      z-index: 4;
       display: grid;
       grid-template-columns: 132px repeat(4, 1fr);
       gap: 0;
-      margin: 14px 31px 0;
-      min-height: 74px;
+      margin: 0;
+      min-height: 58px;
       border-radius: 11px;
       overflow: hidden;
       background: linear-gradient(90deg, #062a6f, #0b3b91);
@@ -611,7 +792,6 @@
       line-height: 1.25;
       font-weight: 900;
     }
-
     .bottom-item p {
       margin: 0;
       font-size: 8.3px;
@@ -628,11 +808,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: center;
-      padding: 0 44px;
-      color: #fff;
       background: var(--navy);
+      color: #fff;
+      padding: 0 44px;
       font-size: 14px;
-      font-weight: 800;
     }
 
     .contact {
@@ -642,7 +821,6 @@
       gap: 10px;
       height: 22px;
       border-right: 1px solid rgba(255,255,255,.55);
-      white-space: nowrap;
     }
 
     .contact:last-child { border-right: 0; }
@@ -693,29 +871,26 @@
           <div class="divider"></div>
           <div>
             <h1>Storage Rental<br />Business</h1>
-            <div class="subtitle">Unit Inventory, Rental Portal, Billing and Branch Control with Odoo</div>
+            <div class="subtitle">Complete Storage Rental Operations with Odoo</div>
             <div class="short-line"></div>
           </div>
         </div>
-        <div class="odoo">
-          <img class="odoo-logo" src="storage-rental-business-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" />
-        </div>
+        <div class="odoo"><img class="odoo-logo" src="storage-rental-business-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
       </div>
 
       <p class="intro">
-        <strong>Manage self-storage enquiries, unit availability, rental contracts, portal access, and recurring billing in one platform.</strong>
-        This Odoo solution connects CRM enquiries, size selection, branch and floor mapping,
-        storage unit status, rental orders, customer portal products, payments, invoices,
-        deferred revenue, and branch-level operating visibility.
+        Alitec's Storage Rental Business solution on Odoo helps self-storage operators
+        manage enquiries, unit availability, rental contracts, portal access,
+        recurring billing, payments, and branch-level operating visibility.
       </p>
 
       <div class="quick-benefits">
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+            <div class="round-icon"><i class="fa-solid fa-map-location-dot"></i></div>
             <h3>2D Unit Control</h3>
           </div>
-          <p>Map branches, floors, sections, unit positions, merged units, and live availability.</p>
+          <p>Map branches, floors, sections, unit positions, merged units, and availability.</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
@@ -726,146 +901,196 @@
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="round-icon"><i class="fa-solid fa-laptop"></i></div>
             <h3>Customer Portal</h3>
           </div>
-          <p>Expose rented products, paid-through dates, invoices, payments, and customer actions.</p>
+          <p>Expose rented products, paid-through dates, invoices, payments, and actions.</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
+            <div class="round-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
             <h3>Recurring Billing</h3>
           </div>
-          <p>Support prepayment, recurring invoices, deposits, admin fees, and deferred revenue.</p>
+          <p>Support prepayment, deposits, recurring invoices, admin fees, and deferred revenue.</p>
         </div>
       </div>
     </section>
 
-    <div class="section-title">Key Capabilities <span class="dot"></span></div>
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
     <section class="capabilities">
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-        <h3>1. 2D Unit Map</h3>
-        <p>Visualize branches, floors, sections, unit positions, status colors, and merge/split units.</p>
+        <div class="cap-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <h3>2D Storage Unit Map</h3>
+        <p>Visualize branch, floor, section, unit position, status color, and merged units.</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-warehouse"></i></div>
-        <h3>2. Storage Status</h3>
-        <p>Control available, reserved, occupied, blocked, and overlocked storage status.</p>
+        <div class="cap-icon orange"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>Unit Status Control</h3>
+        <p>Control available, reserved, occupied, blocked, and overlocked storage states.</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-ruler-combined"></i></div>
-        <h3>3. Unit Type Master</h3>
-        <p>Maintain unit types, size, dimensions, deposit, rental price, and unit features.</p>
+        <div class="cap-icon purple"><i class="fa-solid fa-ruler-combined"></i></div>
+        <h3>Unit Type Master</h3>
+        <p>Maintain size, dimensions, volume, deposit, rental price, and unit features.</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-file-signature"></i></div>
-        <h3>4. Rental Contracts</h3>
-        <p>Create rental orders with move-in date, recurring duration, payment type, and branch.</p>
+        <div class="cap-icon"><i class="fa-solid fa-message"></i></div>
+        <h3>CRM Enquiry Capture</h3>
+        <p>Capture move-in date, duration, branch, aircon preference, and size range.</p>
       </div>
       <div class="capability">
-        <div class="cap-icon"><i class="fa-solid fa-credit-card"></i></div>
-        <h3>5. Portal Payments</h3>
-        <p>Guide customers through portal invoices, payment methods, outstanding balances, and receipts.</p>
+        <div class="cap-icon green"><i class="fa-solid fa-file-signature"></i></div>
+        <h3>Rental Contract Flow</h3>
+        <p>Create rental orders with move-in date, period, payment method, and branch.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-credit-card"></i></div>
+        <h3>Portal Payments</h3>
+        <p>Guide customers through portal invoices, payment methods, and open balances.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-repeat"></i></div>
+        <h3>Recurring Rental</h3>
+        <p>Generate repeat rental invoices, notifications, paid-through dates, and renewals.</p>
       </div>
       <div class="capability">
         <div class="cap-icon"><i class="fa-solid fa-chart-line"></i></div>
-        <h3>6. Revenue Control</h3>
-        <p>Support recurring rent, deposits, invoice sequences, deferred revenue, and migration continuity.</p>
+        <h3>Revenue Visibility</h3>
+        <p>Track deposits, deferred revenue, invoice sequence, migration, and commissions.</p>
       </div>
     </section>
 
-    <section class="main-grid">
-      <div>
-        <div class="panel-title">Rental Process Flow</div>
-        <p class="panel-sub">Structure your storage rental journey from enquiry to paid recurring contract.</p>
-        <div class="process-body">
-          <div class="process-grid">
-            <div class="process-step"><i class="fa-solid fa-message"></i><div><h4>Enquiry</h4><p>Capture size, duration, location, and move-in intent</p></div></div>
-            <div class="process-step"><i class="fa-solid fa-map-location-dot"></i><div><h4>Unit Match</h4><p>Find available unit by branch, floor, section, and status</p></div></div>
-            <div class="process-step"><i class="fa-solid fa-file-contract"></i><div><h4>Rental Order</h4><p>Confirm unit, move-in date, payment type, and contract term</p></div></div>
-            <div class="process-step"><i class="fa-solid fa-credit-card"></i><div><h4>Payment</h4><p>Handle deposits, prepayment, recurring rent, and portal payment</p></div></div>
-            <div class="process-step"><i class="fa-solid fa-repeat"></i><div><h4>Renew / Move Out</h4><p>Generate recurring invoices, notices, termination, and move-out</p></div></div>
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Rental Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-message"></i></div><h4>Capture<br />Enquiry</h4><p>Record size, duration, branch, and move-in intent</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-magnifying-glass-location"></i></div><h4>Match<br />Unit</h4><p>Find available units by branch, floor, section, and status</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>Create<br />Rental</h4><p>Confirm unit, customer, dates, and payment method</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-credit-card"></i></div><h4>Collect<br />Payment</h4><p>Handle deposits, prepayment, portal payment, and invoices</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-repeat"></i></div><h4>Renew or<br />Move Out</h4><p>Process recurring billing, notices, termination, and move-out</p></div>
           </div>
-          <div class="control-list">
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Control availability before quotation confirmation.</p></div>
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Link each rental order to branch, unit type, and unit status.</p></div>
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Reduce billing leakage with recurring and paid-through dates.</p></div>
-            <div class="check-item"><i class="fa-solid fa-circle-check"></i><p>Improve sales, operations, portal, and finance coordination.</p></div>
+
+          <div class="sub-title">Control Modes</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-map-location-dot"></i><h4>2D Map</h4><p>Branch, floor, section, and unit positioning</p></div>
+            <div class="slot"><i class="fa-solid fa-lock"></i><h4>Status Rules</h4><p>Available, reserved, occupied, blocked, and overlocked</p></div>
+            <div class="slot"><i class="fa-solid fa-user-check"></i><h4>CRM Match</h4><p>Convert enquiries into rental-ready records</p></div>
+            <div class="slot"><i class="fa-solid fa-laptop"></i><h4>Portal View</h4><p>Customer invoices, payments, and rented products</p></div>
+            <div class="slot"><i class="fa-solid fa-file-invoice-dollar"></i><h4>Billing Flow</h4><p>Prepaid rent, deposits, admin fees, and renewals</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-ruler-combined"></i>Unit dimensions and volume</div>
+            <div class="feature"><i class="fa-solid fa-building"></i>Branch and location control</div>
+            <div class="feature"><i class="fa-solid fa-calendar-days"></i>Move-in and move-out dates</div>
+            <div class="feature"><i class="fa-solid fa-bell"></i>Renewal and termination notices</div>
+            <div class="feature"><i class="fa-solid fa-money-bill-transfer"></i>Deferred revenue tracking</div>
+            <div class="feature"><i class="fa-solid fa-file-import"></i>Migration continuity</div>
+            <div class="feature"><i class="fa-solid fa-percent"></i>Sales commission control</div>
+            <div class="feature"><i class="fa-solid fa-receipt"></i>Invoice and payment visibility</div>
           </div>
         </div>
       </div>
 
-      <div>
-        <div class="panel-title">Operations Dashboard Overview</div>
-        <p class="panel-sub">Get a real-time view of unit availability, reservations, occupancy, and billing activity.</p>
-        <div class="stats">
-          <div class="stat"><h4>Storage Units</h4><div class="num">1,284<i class="fa-solid fa-warehouse"></i></div></div>
-          <div class="stat"><h4>Occupied Units</h4><div class="num">892<i class="fa-solid fa-lock"></i></div></div>
-          <div class="stat"><h4>Reserved Units</h4><div class="num">76<i class="fa-solid fa-calendar-check"></i></div></div>
-          <div class="stat"><h4>Blocked Units</h4><div class="num">18<i class="fa-solid fa-ban"></i></div></div>
-          <div class="stat"><h4>Monthly Billing</h4><div class="num">$428K<i class="fa-solid fa-dollar-sign"></i></div></div>
-        </div>
+      <div class="panel">
+        <div class="panel-header purple"><i class="fa-solid fa-chart-line"></i> Storage Visibility</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Storage Units</h4><div class="number">1,284<i class="fa-solid fa-warehouse"></i></div></div>
+            <div class="stat"><h4>Occupied Units</h4><div class="number">892<i class="fa-solid fa-lock"></i></div></div>
+            <div class="stat"><h4>Reserved Units</h4><div class="number">76<i class="fa-solid fa-calendar-check"></i></div></div>
+            <div class="stat"><h4>Blocked Units</h4><div class="number">18<i class="fa-solid fa-ban"></i></div></div>
+            <div class="stat"><h4>Monthly Billing</h4><div class="number">$428K<i class="fa-solid fa-dollar-sign"></i></div></div>
+          </div>
 
-        <div class="charts">
-          <div class="chart-card">
-            <h4>Storage Unit Status</h4>
-            <div class="donut-wrap">
-              <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Storage unit status chart">
-                <path class="donut-segment" fill="#086bc3" d="M 46.00 4.00 A 42 42 0 1 1 13.14 72.16 L 29.57 59.08 A 21 21 0 1 0 46.00 25.00 Z"></path>
-                <path class="donut-segment" fill="#0ca3a8" d="M 13.14 72.16 A 42 42 0 0 1 16.87 15.75 L 31.43 30.87 A 21 21 0 0 0 29.57 59.08 Z"></path>
-                <path class="donut-segment" fill="#f6aa17" d="M 16.87 15.75 A 42 42 0 0 1 46.00 4.00 L 46.00 25.00 A 21 21 0 0 0 31.43 30.87 Z"></path>
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Storage Unit Status</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Storage unit status chart">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 17.95 59.20 L 27.90 54.52 A 20 20 0 1 0 46.00 26.00 Z" fill="#2879e3"></path>
+                  <path d="M 17.95 59.20 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 27.90 54.52 Z" fill="#0ca3a8"></path>
+                  <path d="M 46.00 15.00 A 31 31 0 0 1 65.30 21.75 L 58.46 30.36 A 20 20 0 0 0 46.00 26.00 Z" fill="#f6aa17"></path>
+                </svg>
+                <div class="legend">
+                  <div><span></span>Occupied Units 69.5%</div>
+                  <div><span></span>Available Units 24.1%</div>
+                  <div><span></span>Reserved / Blocked 6.4%</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Monthly Recurring Billing</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 76 L62 50 L100 56 L138 36 L176 44 L214 32 L252 28 L286 20" stroke="#7a2f8f" stroke-width="3" fill="none"/>
+                <path d="M24 76 L62 50 L100 56 L138 36 L176 44 L214 32 L252 28 L286 20 L286 92 L24 92Z" fill="rgba(122,47,143,.16)" />
+                <g fill="#7a2f8f"><circle cx="24" cy="76" r="4"/><circle cx="62" cy="50" r="4"/><circle cx="100" cy="56" r="4"/><circle cx="138" cy="36" r="4"/><circle cx="176" cy="44" r="4"/><circle cx="214" cy="32" r="4"/><circle cx="252" cy="28" r="4"/><circle cx="286" cy="20" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Jan</text><text x="58" y="99">Feb</text><text x="96" y="99">Mar</text><text x="134" y="99">Apr</text><text x="173" y="99">May</text><text x="211" y="99">Jun</text><text x="249" y="99">Jul</text><text x="283" y="99">Aug</text></g>
               </svg>
-              <div class="legend">
-                <div><span></span>Occupied 69.5%</div>
-                <div><span></span>Available 24.1%</div>
-                <div><span></span>Reserved / Blocked 6.4%</div>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Branch</div><div>Occupancy</div><div>Status</div><div>Billing</div><div>Review</div></div>
+            <div class="row"><div>Central Facility</div><div>88%</div><div>Stable</div><div>$126K</div><div class="pill">Active</div></div>
+            <div class="row"><div>East Warehouse</div><div>72%</div><div>Active</div><div>$98K</div><div class="pill">Active</div></div>
+            <div class="row"><div>West Lockers</div><div>64%</div><div>Promo</div><div>$54K</div><div class="pill">Review</div></div>
+            <div class="row"><div>North Aircon</div><div>91%</div><div>Full</div><div>$86K</div><div class="pill">Active</div></div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>Unit Availability Mix</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>Occupied</span><div class="bar-track"><div class="bar-fill" style="width:69%"></div></div><span>69%</span></div>
+                <div class="bar-item"><span>Available</span><div class="bar-track"><div class="bar-fill green" style="width:24%"></div></div><span>24%</span></div>
+                <div class="bar-item"><span>Reserved</span><div class="bar-track"><div class="bar-fill blue" style="width:6%"></div></div><span>6%</span></div>
+                <div class="bar-item"><span>Blocked</span><div class="bar-track"><div class="bar-fill purple" style="width:2%"></div></div><span>2%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>Rental Work Queue</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>Item</div><div>Customer</div><div>Due</div><div>Stage</div></div>
+                <div class="queue-row"><div>ENQ-2841</div><div>Business Box</div><div>Today</div><div class="tag">Match</div></div>
+                <div class="queue-row"><div>RNT-1847</div><div>Unit B12</div><div>Today</div><div class="tag delivery">Pay</div></div>
+                <div class="queue-row"><div>RNT-1851</div><div>Unit C08</div><div>Fri</div><div class="tag">Renew</div></div>
+                <div class="queue-row"><div>RNT-1854</div><div>Unit A04</div><div>Mon</div><div class="tag delivery">Move</div></div>
               </div>
             </div>
           </div>
-          <div class="chart-card">
-            <h4>Monthly Recurring Billing</h4>
-            <svg class="line-chart" viewBox="0 0 300 118" fill="none">
-              <path d="M0 98H300" stroke="#d8e4f3" />
-              <path d="M0 70H300" stroke="#d8e4f3" />
-              <path d="M0 42H300" stroke="#d8e4f3" />
-              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18" stroke="#1263c8" stroke-width="3" fill="none" />
-              <path d="M20 88 L68 38 L116 48 L164 22 L212 40 L260 18 L260 98 L20 98Z" fill="rgba(18,99,200,.12)" />
-              <g fill="#1263c8"><circle cx="20" cy="88" r="4"/><circle cx="68" cy="38" r="4"/><circle cx="116" cy="48" r="4"/><circle cx="164" cy="22" r="4"/><circle cx="212" cy="40" r="4"/><circle cx="260" cy="18" r="4"/></g>
-              <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="16" y="114">Jan</text><text x="64" y="114">Feb</text><text x="112" y="114">Mar</text><text x="160" y="114">Apr</text><text x="208" y="114">May</text><text x="256" y="114">Jun</text></g>
-            </svg>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="mini-table">
-          <div class="row head"><div>Branch</div><div>Occupancy</div><div>Status</div><div>Billing</div></div>
-          <div class="row"><div>Central Facility</div><div>88%</div><div class="pill">Stable</div><div>$126,400</div></div>
-          <div class="row"><div>East Warehouse</div><div>72%</div><div class="pill">Active</div><div>$98,600</div></div>
-          <div class="row"><div>West Lockers</div><div>64%</div><div class="pill">Promo</div><div>$54,800</div></div>
-          <div class="row"><div>North Aircon</div><div>91%</div><div class="pill">Full</div><div>$86,900</div></div>
-          <div class="row"><div>South Business</div><div>79%</div><div class="pill">Active</div><div>$62,300</div></div>
-        </div>
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-user-check"></i></div>CRM</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-repeat"></i></div>Rental</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-globe"></i></div>Website</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Invoicing</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-dollar-sign"></i></div>Accounting</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-folder-open"></i></div>Documents</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>Dashboards</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-clipboard-check"></i></div>Approvals</div>
       </div>
     </section>
 
     <section class="bottom-benefits">
       <div class="benefit-title">Business<br />Benefits</div>
-      <div class="bottom-item">
-        <i class="fa-solid fa-cube"></i>
-        <div><h3>Better Unit Visibility</h3><p>Control branch, floor, section, unit status, and merged-unit availability.</p></div>
-      </div>
-      <div class="bottom-item">
-        <i class="fa-solid fa-user-check"></i>
-        <div><h3>Faster Lead Conversion</h3><p>Turn enquiries into matched units, quotations, and rental orders faster.</p></div>
-      </div>
-      <div class="bottom-item">
-        <i class="fa-solid fa-calculator"></i>
-        <div><h3>More Accurate Billing</h3><p>Invoice deposits, prepayments, recurring rent, and deferred revenue from one flow.</p></div>
-      </div>
-      <div class="bottom-item">
-        <i class="fa-solid fa-users"></i>
-        <div><h3>Stronger Coordination</h3><p>Keep sales, branches, portal users, operations, and finance teams aligned.</p></div>
-      </div>
+      <div class="bottom-item"><i class="fa-solid fa-map-location-dot"></i><div><h3>Better Unit Visibility</h3><p>Control branch, floor, section, unit status, and merged-unit availability.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-user-check"></i><div><h3>Faster Lead Conversion</h3><p>Move enquiries into matched units, quotations, and rental orders faster.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-calculator"></i><div><h3>More Accurate Billing</h3><p>Invoice deposits, prepayments, recurring rent, and deferred revenue from one flow.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-users"></i><div><h3>Stronger Coordination</h3><p>Keep sales, branches, portal users, operations, and finance teams aligned.</p></div></div>
     </section>
 
     <footer class="footer">
@@ -875,6 +1100,6 @@
       <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
     </footer>
   </main>
-  <script src="../../editor/flyer-editor.js?v=20260714-storage-rental-v1" data-flyer-editor-script data-flyer-version="2026-07-14-storage-rental-v1"></script>
+  <script src="../../editor/flyer-editor.js?v=20260714-storage-rental-follow-standard" data-flyer-editor-script></script>
 </body>
 </html>
