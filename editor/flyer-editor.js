@@ -839,6 +839,26 @@
     return Promise.all(waits);
   }
 
+  function waitForPaintFrames(count) {
+    let remaining = count || 2;
+    return new Promise(function (resolve) {
+      const next = function () {
+        remaining -= 1;
+        if (remaining <= 0) {
+          resolve();
+          return;
+        }
+        window.requestAnimationFrame(next);
+      };
+      window.requestAnimationFrame(next);
+    });
+  }
+
+  async function waitForCaptureReady() {
+    await waitForCaptureAssets();
+    await waitForPaintFrames(3);
+  }
+
   function isMobileCaptureClient() {
     return (
       window.matchMedia("(max-width: 900px)").matches ||
@@ -1036,10 +1056,21 @@
       windowWidth: page.scrollWidth,
       windowHeight: page.scrollHeight,
       ignoreElements: function (node) {
+        if (node.classList && node.classList.contains("lang-switcher")) {
+          return true;
+        }
         return !!node.closest && !!node.closest(".flyer-editor-toolbar");
       },
       onclone: function (clonedDoc, clonedPage) {
-        prepareCaptureClone(page, clonedDoc, clonedPage, imageCache);
+        clonedDoc
+          .querySelectorAll(".flyer-editor-toolbar, .lang-switcher")
+          .forEach(function (node) {
+            node.remove();
+          });
+        applyImageCacheToClone(clonedPage, imageCache);
+        clonedPage.style.margin = "0";
+        clonedPage.style.transform = "none";
+        clonedPage.style.backgroundColor = "#ffffff";
       },
     };
   }
@@ -1527,16 +1558,13 @@
     "https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js";
 
   function ensurePdfTools() {
-    if (window.htmlToImage && window.jspdf && window.jspdf.jsPDF) {
+    if (window.html2canvas && window.jspdf && window.jspdf.jsPDF) {
       return Promise.resolve();
     }
-    const localImage = editorBaseUrl
-      ? new URL("vendor/html-to-image.min.js", editorBaseUrl).href
-      : HTML_TO_IMAGE_CDN;
     const localPdf = editorBaseUrl
       ? new URL("vendor/jspdf.umd.min.js", editorBaseUrl).href
       : JSPDF_CDN;
-    return loadScriptWithFallback(localImage, HTML_TO_IMAGE_CDN).then(function () {
+    return ensureCanvasTool().then(function () {
       return loadScriptWithFallback(localPdf, JSPDF_CDN);
     });
   }
@@ -1624,13 +1652,15 @@
     const scale = preferredCaptureScale(preferredScale);
     const captureTask = async function () {
       try {
-        await ensureHtmlToImageTool();
-        return await capturePageAsDataUrl(page, scale);
-      } catch (htmlToImageError) {
-        console.warn("html-to-image export failed; falling back to html2canvas.", htmlToImageError);
         await ensureCanvasTool();
+        await waitForCaptureReady();
         const capture = await capturePage(page, Math.max(1, Math.ceil(scale)));
         return await canvasToDataUrlAsync(createFlattenedCanvas(capture.canvas));
+      } catch (canvasError) {
+        console.warn("html2canvas export failed; falling back to html-to-image.", canvasError);
+        await ensureHtmlToImageTool();
+        await waitForCaptureReady();
+        return await capturePageAsDataUrl(page, scale);
       }
     };
 
@@ -1646,7 +1676,7 @@
 
     try {
       await ensurePdfTools();
-      await waitForCaptureAssets();
+      await waitForCaptureReady();
 
       const page = document.querySelector(".page") || document.body;
       const imageData = await capturePageAsDataUrlWithFallback(page, 2.5, exportVariant);
@@ -1685,8 +1715,8 @@
     updateStatus("Preparing PNG");
 
     try {
-      await ensureHtmlToImageTool();
-      await waitForCaptureAssets();
+      await ensureCanvasTool();
+      await waitForCaptureReady();
 
       const page = document.querySelector(".page") || document.body;
       const imageData = await capturePageAsDataUrlWithFallback(page, 3);
