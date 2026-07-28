@@ -1,0 +1,4 @@
+interface:
+  display_name: "Odoo Flyer Generator"
+  short_description: "Create bilingual Alitec flyer projects from Odoo repositories."
+  default_prompt: "Create a new flyer from this Odoo project repository and update the Flyers website indexes."
