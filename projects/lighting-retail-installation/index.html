@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lighting Retail &amp; Installation Operations Flyer</title>
+  <link rel="stylesheet" href="lighting-retail-installation-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1448px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-bottom: 140px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(2, 119, 189, .10), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 340px;
+      object-fit: cover;
+      object-position: 62% center;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 360px;
+      z-index: 1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 248px;
+      width: 1120px;
+      height: 72px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      min-height: 360px;
+      height: auto;
+      padding: 14px 32px 6px 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 620px;
+    }
+
+    .mark {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 88px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 0 0 3px;
+      color: var(--navy);
+      font-size: 30px;
+      line-height: .96;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 14px;
+      margin-top: 4px;
+      max-width: 460px;
+      line-height: 1.22;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 8px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 180px;
+    }
+
+    .odoo-logo {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 720px;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 720px;
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      min-height: 88px;
+      padding: 9px 11px 7px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.15;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.2px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 14px 22px 10px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+      clear: both;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 4px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.orange {
+      background: linear-gradient(90deg, #b85c10, #f18717);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow { padding: 12px 12px 6px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step { position: relative; z-index: 1; text-align: center; }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard { padding: 10px 10px 10px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .donut {
+      width: 72px;
+      height: 72px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: #0277bd;
+    }
+
+    .legend div:last-child span { background: var(--green); }
+
+    .line-chart { width: 100%; height: 84px; }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ffe2bf;
+      color: #9a4f08;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #0277bd, #f18717);
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 8px;
+      font-weight: 900;
+      background: #fde8e8;
+      color: #8b1a1a;
+    }
+
+    .tag.delivery {
+      background: #e7f4ea;
+      color: #2d7640;
+    }
+
+    .integrations {
+      padding: 0 43px 0;
+      margin-bottom: 8px;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 44px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 67px;
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 0;
+      min-height: 64px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+      z-index: 4;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 44px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 24px;
+      font-size: 12px;
+      z-index: 5;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 16px; font-size: 14px; text-align: center; }
+  
+    .lang-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #cbd9ef;
+      box-shadow: 0 8px 24px rgba(6, 42, 111, 0.12);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .lang-switcher a {
+      color: #062a6f;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher a.is-active {
+      background: #062a6f;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="lang-switcher" aria-label="Language"><a class="is-active" href="index.html">English</a><a href="index-zh.html">中文</a></nav>
+  <main class="page">
+    <img class="hero-image" src="lighting-retail-installation-assets/lighting-retail-installation-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="lighting-retail-installation-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>Lighting Retail &amp;<br />Installation Operations</h1>
+            <div class="subtitle">Quote Fixtures, Control Discounts, Schedule Site Jobs &amp; Bill with Commissions</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="lighting-retail-installation-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec's lighting retail and installation solution helps fixture showrooms quote with real
+        product photos, sell down discontinued stock safely, and enforce VIP/Gold/Silver discount
+        ceilings by sales role. Confirmed orders turn into scheduled site appointments and Gantt-ready
+        project tasks, technicians close jobs with FSM worksheets, and invoices compute staff and
+        interior-designer commissions automatically — all in one Odoo platform.
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Visual Quotes</h3>
+          </div>
+          <p>Product photos on every order line for accurate fixture selection.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-percent"></i></div>
+            <h3>Controlled Discounts</h3>
+          </div>
+          <p>VIP, Gold &amp; Silver tier limits enforced automatically by sales group.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3>Site Scheduling</h3>
+          </div>
+          <p>Confirmed orders auto-create appointments and Gantt project tasks.</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+            <h3>Commission Payouts</h3>
+          </div>
+          <p>Staff and interior-designer commissions computed on every invoice.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> KEY CAPABILITIES <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-images"></i></div>
+        <h3>Visual Order Lines</h3>
+        <p>Product photos display directly on quotation and order lines.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-box-archive"></i></div>
+        <h3>Discontinued Sell-Down</h3>
+        <p>Locks ordering to free stock so phase-out fixtures never oversell.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-crown"></i></div>
+        <h3>VIP/Gold/Silver Tiers</h3>
+        <p>One-click discount buttons capped by each tier's approved limit.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Price Guardrails</h3>
+        <p>Group-based ceilings on line discount, unit price cuts and fixed amounts.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>SO &#8594; Project &amp; Tasks</h3>
+        <p>Confirmed orders sync analytics to linked project tasks automatically.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-calendar-days"></i></div>
+        <h3>Site Appointments</h3>
+        <p>Appointment date, time window and customer set from the order date.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-chart-gantt"></i></div>
+        <h3>Gantt Planning</h3>
+        <p>Custom "By Project" board with stage-colored pills and fast task lookup.</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+        <h3>FSM Worksheets</h3>
+        <p>Field worksheets prefill job data; invoices compute staff &amp; ID commission.</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> Quote-to-Install Workflow</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-lightbulb"></i></div><h4>Quote<br />Fixtures</h4><p>Sales rep builds SO with product photos and stock-checked lines</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-percent"></i></div><h4>Apply<br />Tier Discount</h4><p>VIP/Gold/Silver wizard applies group-limited discount</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-calendar-check"></i></div><h4>Confirm<br />&amp; Schedule</h4><p>SO confirm creates project task, appointment slot and Gantt entry</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-toolbox"></i></div><h4>Site Visit<br />&amp; FSM</h4><p>Technician completes job via FSM worksheet with signature</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-sack-dollar"></i></div><h4>Invoice &amp;<br />Commission</h4><p>Invoice posts with staff and ID commission computed automatically</p></div>
+          </div>
+
+          <div class="sub-title">Control Modes</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-images"></i><h4>Visual Quoting</h4><p>Photos and stock checks right on the order line</p></div>
+            <div class="slot"><i class="fa-solid fa-crown"></i><h4>Discount Tiers</h4><p>VIP, Gold and Silver limits by user group</p></div>
+            <div class="slot"><i class="fa-solid fa-lock"></i><h4>Stock Lock</h4><p>Discontinued items capped to free quantity</p></div>
+            <div class="slot"><i class="fa-solid fa-calendar-days"></i><h4>Appointments</h4><p>Auto-set date, time window and service customer</p></div>
+            <div class="slot"><i class="fa-solid fa-chart-gantt"></i><h4>Gantt Board</h4><p>Project-based scheduling with colored stage pills</p></div>
+          </div>
+
+          <div class="sub-title">Additional Features</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-sliders"></i>Global &amp; fixed-amount discount wizard</div>
+            <div class="feature"><i class="fa-solid fa-shield-halved"></i>Unit price change guardrails per group</div>
+            <div class="feature"><i class="fa-solid fa-link"></i>Analytics auto-sync SO &#8594; task &#8594; invoice</div>
+            <div class="feature"><i class="fa-solid fa-user-gear"></i>Task edit wizard for assignee, resource &amp; role</div>
+            <div class="feature"><i class="fa-solid fa-calendar-plus"></i>Planning slots auto-created on confirm</div>
+            <div class="feature"><i class="fa-solid fa-palette"></i>Stage-colored Gantt pills by task status</div>
+            <div class="feature"><i class="fa-solid fa-signature"></i>FSM worksheet with customer signature</div>
+            <div class="feature"><i class="fa-solid fa-ban"></i>Discontinued line validation on save</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> Operations Visibility</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>Open Quotations</h4><div class="number">32<i class="fa-solid fa-file-signature"></i></div></div>
+            <div class="stat"><h4>Tier Discounts Applied</h4><div class="number">19<i class="fa-solid fa-percent"></i></div></div>
+            <div class="stat"><h4>Site Jobs Scheduled</h4><div class="number">24<i class="fa-solid fa-calendar-check"></i></div></div>
+            <div class="stat"><h4>FSM Jobs Completed</h4><div class="number">17<i class="fa-solid fa-clipboard-check"></i></div></div>
+            <div class="stat"><h4>Commission Payable</h4><div class="number">$4.2k<i class="fa-solid fa-sack-dollar"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>Discount Tier Mix</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="Discount tier mix chart">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 24.78 68.60 L 32.31 60.58 A 20 20 0 1 0 46.00 26.00 Z" fill="#0277bd"></path>
+                  <path d="M 24.78 68.60 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 32.31 60.58 Z" fill="#35a853"></path>
+                </svg>
+                <div class="legend">
+                  <div><span></span>Gold &amp; VIP (64%) 46</div>
+                  <div><span></span>Silver &amp; Standard (36%) 26</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>Weekly Installation Jobs</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34" stroke="#0277bd" stroke-width="3" fill="none"/>
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34 L286 92 L24 92Z" fill="rgba(2,119,189,.16)" />
+                <g fill="#0277bd"><circle cx="24" cy="70" r="4"/><circle cx="62" cy="64" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><circle cx="214" cy="42" r="4"/><circle cx="252" cy="38" r="4"/><circle cx="286" cy="34" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">Mon</text><text x="58" y="99">Tue</text><text x="96" y="99">Wed</text><text x="134" y="99">Thu</text><text x="173" y="99">Fri</text><text x="211" y="99">Sat</text><text x="249" y="99">Sun</text><text x="283" y="99">Mon</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>Control Area</div><div>Owner</div><div>Status</div><div>Count</div><div>Review</div></div>
+            <div class="row"><div>Showroom Quotes</div><div>Sales</div><div>Quoting</div><div>32</div><div class="pill">On Track</div></div>
+            <div class="row"><div>Site Schedule</div><div>Planning</div><div>Booked</div><div>24</div><div class="pill">Live</div></div>
+            <div class="row"><div>Field Service</div><div>Technicians</div><div>In Progress</div><div>17</div><div class="pill">Active</div></div>
+            <div class="row"><div>Commissions</div><div>Accounts</div><div>Pending</div><div>9</div><div class="pill">Review</div></div>
+          </div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>Fixture Category Sales Mix</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>Pendants</span><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div><span>70%</span></div>
+                <div class="bar-item"><span>Downlights</span><div class="bar-track"><div class="bar-fill green" style="width:56%"></div></div><span>56%</span></div>
+                <div class="bar-item"><span>Track Lighting</span><div class="bar-track"><div class="bar-fill blue" style="width:47%"></div></div><span>47%</span></div>
+                <div class="bar-item"><span>Smart Controls</span><div class="bar-track"><div class="bar-fill purple" style="width:33%"></div></div><span>33%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>Upcoming Site Appointments</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>SO</div><div>Customer</div><div>Date</div><div>Status</div></div>
+                <div class="queue-row"><div>SO-3140</div><div>Residence A</div><div>Wed</div><div class="tag">Booked</div></div>
+                <div class="queue-row"><div>SO-3145</div><div>Office Tower B</div><div>Thu</div><div class="tag delivery">FSM</div></div>
+                <div class="queue-row"><div>SO-3151</div><div>Showhouse C</div><div>Fri</div><div class="tag">Booked</div></div>
+                <div class="queue-row"><div>SO-3158</div><div>Retail Unit D</div><div>Mon</div><div class="tag delivery">Invoice</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> SEAMLESS INTEGRATION WITH ODOO APPS <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>Sales</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-diagram-project"></i></div>Project</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-calendar-days"></i></div>Planning</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-toolbox"></i></div>Field Service</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>Inventory</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>Accounting</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">Business<br />Benefits</div>
+      <div class="bottom-item"><i class="fa-solid fa-bolt"></i><div><h3>Faster, Accurate Quotes</h3><p>Visual line items cut fixture mix-ups and pricing mistakes.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-shield-halved"></i><div><h3>Protected Margins</h3><p>Tiered discount ceilings stop unauthorized markdowns.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-calendar-check"></i><div><h3>Reliable Site Delivery</h3><p>Auto-scheduled jobs and Gantt visibility prevent missed visits.</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-sack-dollar"></i><div><h3>Transparent Payouts</h3><p>Staff and ID commissions calculate automatically at invoice.</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js?v=20260715-pdf-canvas-1" data-flyer-editor-script data-flyer-version="2026-07-28-lighting-retail-v1"></script>
+</body>
+</html>

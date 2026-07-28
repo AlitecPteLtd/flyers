@@ -1,0 +1,1096 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>室内设计与装修运营宣传单</title>
+  <link rel="stylesheet" href="interior-design-firm-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1448px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-bottom: 140px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(2, 119, 189, .10), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 340px;
+      object-fit: cover;
+      object-position: 55% center;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 360px;
+      z-index: 1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 248px;
+      width: 1120px;
+      height: 72px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      min-height: 360px;
+      height: auto;
+      padding: 14px 32px 6px 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 620px;
+    }
+
+    .mark {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 88px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 0 0 3px;
+      color: var(--navy);
+      font-size: 32px;
+      line-height: .94;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 14px;
+      margin-top: 4px;
+      max-width: 486px;
+      line-height: 1.24;
+      font-weight: 600;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 8px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 180px;
+    }
+
+    .odoo-logo {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 720px;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 720px;
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      min-height: 88px;
+      padding: 9px 11px 7px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.15;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.2px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 14px 22px 10px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+      clear: both;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 4px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.orange {
+      background: linear-gradient(90deg, #b85c10, #f18717);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow { padding: 12px 12px 6px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step { position: relative; z-index: 1; text-align: center; }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard { padding: 10px 10px 10px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .donut {
+      width: 72px;
+      height: 72px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: #0277bd;
+    }
+
+    .legend div:last-child span { background: var(--green); }
+
+    .line-chart { width: 100%; height: 84px; }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ffe2bf;
+      color: #9a4f08;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #0277bd, #f18717);
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 8px;
+      font-weight: 900;
+      background: #fde8e8;
+      color: #8b1a1a;
+    }
+
+    .tag.delivery {
+      background: #e7f4ea;
+      color: #2d7640;
+    }
+
+    .integrations {
+      padding: 0 43px 0;
+      margin-bottom: 8px;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 44px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 67px;
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 0;
+      min-height: 64px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+      z-index: 4;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 44px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 24px;
+      font-size: 12px;
+      z-index: 5;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 16px; font-size: 14px; text-align: center; }
+  
+    .lang-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #cbd9ef;
+      box-shadow: 0 8px 24px rgba(6, 42, 111, 0.12);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .lang-switcher a {
+      color: #062a6f;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher a.is-active {
+      background: #062a6f;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="lang-switcher" aria-label="Language"><a href="index.html">English</a><a class="is-active" href="index-zh.html">中文</a></nav>
+  <main class="page">
+    <img class="hero-image" src="interior-design-firm-assets/interior-design-firm-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="interior-design-firm-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>室内设计与<br />装修运营管理</h1>
+            <div class="subtitle">从设计喜好与产品选购，到报价、送货、交房与项目成本核算，尽在 Odoo</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="interior-design-firm-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec 室内设计与装修方案从 CRM 阶段就记录每个项目的装修类型、设计喜好与钥匙收取信息；
+        业主登录后才能浏览受限的产品目录；设计师根据客户所选产品出具报价单，支持多次修订版本，
+        并通过人工确认（Manual Accept）审慎放行订单。每张订单明细可指定各自的送货地址，
+        项目通过分析账户以“进行中/已结案”跟踪成本，交房与整改确认单均可打印签收，
+        新加坡电子发票字段也已预先备妥——全部集中在一套 Odoo 平台完成。
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            <h3>CRM 设计信息采集</h3>
+          </div>
+          <p>从首次询盘起记录装修类型、设计喜好与钥匙收取。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-lock"></i></div>
+            <h3>登录后浏览产品目录</h3>
+          </div>
+          <p>产品选购仅对已登录业主开放，非公开浏览。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h3>人工确认报价</h3>
+          </div>
+          <p>设计师主导报价与修订，订单需人工确认方可放行。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>项目成本可视化</h3>
+          </div>
+          <p>分析账户按“进行中/已结案”跟踪每个装修项目。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> 核心能力 <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+        <h3>装修与设计信息采集</h3>
+        <p>CRM 线索记录装修类型、设计喜好与钥匙收取安排。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-lock"></i></div>
+        <h3>登录后浏览产品目录</h3>
+        <p>商城页面对匿名访客自动跳转登录，登录后方可浏览。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <h3>报价与修订版本</h3>
+        <p>设计师依所选产品出具报价，一键生成编号修订版。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-square-check"></i></div>
+        <h3>人工确认管控</h3>
+        <p>确认按钮改为“人工确认”，由设计师审慎放行订单。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>订单明细独立送货地址</h3>
+        <p>每条订单明细均可指定各自的工地或单位地址。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>项目成本：进行中/已结案</h3>
+        <p>分析账户跟踪状态、完成日期与项目结余。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-file-contract"></i></div>
+        <h3>交房与整改确认单</h3>
+        <p>可打印的交房与整改确认表单，支持签名留存。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-file-invoice"></i></div>
+        <h3>新加坡电子发票字段就绪</h3>
+        <p>Peppol ID 与发票明细字段已备妥，为后续上线做准备。</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> 设计到交房流程</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-clipboard-list"></i></div><h4>采集<br />线索</h4><p>CRM 记录装修类型、设计喜好与钥匙收取信息</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-right-to-bracket"></i></div><h4>登录<br />浏览</h4><p>业主登录后浏览受限的产品目录</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>报价<br />修订</h4><p>设计师制作报价单并出具编号修订版</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-square-check"></i></div><h4>确认<br />送货</h4><p>人工确认放行订单，按明细拆分送货地址</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-key"></i></div><h4>交房<br />结算</h4><p>签收的交房/整改确认单结案，项目成本核算</p></div>
+          </div>
+
+          <div class="sub-title">管控模式</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-compass-drafting"></i><h4>设计字段</h4><p>CRM 线索上的装修类型与设计喜好</p></div>
+            <div class="slot"><i class="fa-solid fa-lock"></i><h4>受限商城</h4><p>产品目录需先登录才能浏览</p></div>
+            <div class="slot"><i class="fa-solid fa-clock-rotate-left"></i><h4>修订版本</h4><p>自动编号的报价修订，历史可追溯</p></div>
+            <div class="slot"><i class="fa-solid fa-square-check"></i><h4>人工确认</h4><p>确认按钮更名，设计师审慎放行</p></div>
+            <div class="slot"><i class="fa-solid fa-location-dot"></i><h4>送货地址</h4><p>每条订单明细可指定各自地址</p></div>
+          </div>
+
+          <div class="sub-title">附加功能</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-address-card"></i>报价单与发票的联系人字段</div>
+            <div class="feature"><i class="fa-solid fa-key"></i>钥匙收取登记与线索关联</div>
+            <div class="feature"><i class="fa-solid fa-signature"></i>交房签名、签收人与日期</div>
+            <div class="feature"><i class="fa-solid fa-camera"></i>整改照片与完工核对清单</div>
+            <div class="feature"><i class="fa-solid fa-truck-ramp-box"></i>明细地址联动送货拣配</div>
+            <div class="feature"><i class="fa-solid fa-calendar-check"></i>结案项目须填写完成日期</div>
+            <div class="feature"><i class="fa-solid fa-id-card"></i>合作伙伴 Peppol ID 与方案字段</div>
+            <div class="feature"><i class="fa-solid fa-file-invoice"></i>结构化电子发票明细字段</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> 运营可视</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>待处理报价</h4><div class="number">32<i class="fa-solid fa-file-signature"></i></div></div>
+            <div class="stat"><h4>进行中项目</h4><div class="number">18<i class="fa-solid fa-compass-drafting"></i></div></div>
+            <div class="stat"><h4>本月已结案</h4><div class="number">11<i class="fa-solid fa-circle-check"></i></div></div>
+            <div class="stat"><h4>待送货</h4><div class="number">15<i class="fa-solid fa-truck"></i></div></div>
+            <div class="stat"><h4>已签收交房</h4><div class="number">9<i class="fa-solid fa-key"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>项目状态结构</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="项目状态结构图">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 24.78 68.60 L 32.31 60.58 A 20 20 0 1 0 46.00 26.00 Z" fill="#0277bd"></path>
+                  <path d="M 24.78 68.60 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 32.31 60.58 Z" fill="#35a853"></path>
+                </svg>
+                <div class="legend">
+                  <div><span></span>进行中 (62%) 18</div>
+                  <div><span></span>已结案 (38%) 11</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>每周报价金额趋势</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34" stroke="#0277bd" stroke-width="3" fill="none"/>
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34 L286 92 L24 92Z" fill="rgba(2,119,189,.16)" />
+                <g fill="#0277bd"><circle cx="24" cy="70" r="4"/><circle cx="62" cy="64" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><circle cx="214" cy="42" r="4"/><circle cx="252" cy="38" r="4"/><circle cx="286" cy="34" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="19" y="99">一</text><text x="58" y="99">二</text><text x="96" y="99">三</text><text x="134" y="99">四</text><text x="173" y="99">五</text><text x="211" y="99">六</text><text x="249" y="99">日</text><text x="283" y="99">一</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>管控区域</div><div>负责人</div><div>状态</div><div>数量</div><div>复核</div></div>
+            <div class="row"><div>设计台</div><div>销售</div><div>报价中</div><div>32</div><div class="pill">正常</div></div>
+            <div class="row"><div>受限商城</div><div>网站</div><div>浏览中</div><div>47</div><div class="pill">实时</div></div>
+            <div class="row"><div>送货</div><div>运营</div><div>按址配送</div><div>15</div><div class="pill">进行中</div></div>
+            <div class="row"><div>交房</div><div>项目经理</div><div>签收中</div><div>9</div><div class="pill">复核</div></div>
+          </div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>装修类型结构</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>全屋装修</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span>68%</span></div>
+                <div class="bar-item"><span>局部装修</span><div class="bar-track"><div class="bar-fill green" style="width:52%"></div></div><span>52%</span></div>
+                <div class="bar-item"><span>厨房专项</span><div class="bar-track"><div class="bar-fill blue" style="width:38%"></div></div><span>38%</span></div>
+                <div class="bar-item"><span>卫浴专项</span><div class="bar-track"><div class="bar-fill purple" style="width:30%"></div></div><span>30%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>待确认报价</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>订单</div><div>客户</div><div>期限</div><div>状态</div></div>
+                <div class="queue-row"><div>SO-3110</div><div>Tan Family</div><div>周三</div><div class="tag">报价</div></div>
+                <div class="queue-row"><div>SO-3114</div><div>Lim Residence</div><div>周四</div><div class="tag delivery">修订</div></div>
+                <div class="queue-row"><div>SO-3118</div><div>Ong Unit</div><div>周五</div><div class="tag">确认</div></div>
+                <div class="queue-row"><div>SO-3121</div><div>Koh Home</div><div>周一</div><div class="tag delivery">送货</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> 与 Odoo 应用无缝集成 <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-bullseye"></i></div>CRM</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-signature"></i></div>销售</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-globe"></i></div>网站</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-door-open"></i></div>门户</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-arrow-down"></i></div>采购</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>库存</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>会计</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-pie"></i></div>分析账户</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">业务<br />收益</div>
+      <div class="bottom-item"><i class="fa-solid fa-compass-drafting"></i><div><h3>设计信息统一采集</h3><p>每个询盘从一开始就记录装修类型与喜好。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-lock"></i><div><h3>客户访问受控</h3><p>业主须先登录才能浏览产品目录。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-square-check"></i><div><h3>订单审慎放行</h3><p>人工确认与修订机制避免过早确认订单。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-chart-pie"></i><div><h3>项目盈利可视化</h3><p>“进行中/已结案”跟踪呈现每个项目的真实利润。</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>Malaysia</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js?v=20260715-pdf-canvas-1" data-flyer-editor-script data-flyer-version="2026-07-28-interior-design-firm-v1"></script>
+</body>
+</html>

@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>空调服务运营宣传单</title>
+  <link rel="stylesheet" href="air-conditioning-assets/fontawesome/css/all.min.css" />
+  <style>
+    :root {
+      --navy: #062a6f;
+      --navy-2: #0b3b91;
+      --ink: #07194f;
+      --line: #cbd9ef;
+      --gold: #f6aa17;
+      --orange: #f18717;
+      --purple: #7a2f8f;
+      --blue: #2879e3;
+      --green: #35a853;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef7;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      position: relative;
+      width: 1024px;
+      height: 1448px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-bottom: 140px;
+      box-sizing: border-box;
+      background:
+        radial-gradient(circle at 78% 11%, rgba(2, 119, 189, .10), transparent 18%),
+        linear-gradient(180deg, #ffffff 0%, #fbfdff 58%, #ffffff 100%);
+    }
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 500px;
+      height: 340px;
+      object-fit: cover;
+      object-position: 55% center;
+      z-index: 0;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 360px;
+      z-index: 1;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
+    }
+
+    .curve {
+      position: absolute;
+      left: -40px;
+      top: 248px;
+      width: 1120px;
+      height: 72px;
+      z-index: 2;
+      border-radius: 0 0 50% 50%;
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
+      transform: rotate(-4deg);
+      transform-origin: center;
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+      min-height: 360px;
+      height: auto;
+      padding: 14px 32px 6px 34px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 620px;
+    }
+
+    .mark {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .divider {
+      width: 1px;
+      height: 88px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    h1 {
+      margin: 0 0 3px;
+      color: var(--navy);
+      font-size: 32px;
+      line-height: .94;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      color: var(--ink);
+      font-size: 15px;
+      margin-top: 4px;
+      max-width: 440px;
+      line-height: 1.2;
+    }
+
+    .short-line {
+      width: 64px;
+      height: 4px;
+      margin-top: 8px;
+      background: var(--gold);
+    }
+
+    .odoo {
+      text-align: right;
+      width: 180px;
+    }
+
+    .odoo-logo {
+      width: 180px;
+      height: auto;
+      display: block;
+    }
+
+    .intro {
+      width: 720px;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
+      color: #07194f;
+    }
+
+    .quick-benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      width: 720px;
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 18px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
+      overflow: hidden;
+    }
+
+    .quick-benefit {
+      min-height: 88px;
+      padding: 9px 11px 7px;
+      border-right: 1px dashed #b7c8e1;
+    }
+
+    .quick-benefit:last-child { border-right: 0; }
+
+    .quick-benefit-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .round-icon {
+      width: 39px;
+      height: 39px;
+      flex: 0 0 39px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+    }
+
+    .round-icon i { font-size: 18px; }
+
+    .quick-benefit h3 {
+      margin: 0;
+      font-size: 12.5px;
+      line-height: 1.15;
+      color: var(--navy);
+      font-weight: 800;
+    }
+
+    .quick-benefit p {
+      margin: 0;
+      color: #07194f;
+      font-size: 9.2px;
+      line-height: 1.28;
+      font-weight: 600;
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 14px 22px 10px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      letter-spacing: 0;
+      clear: both;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #9fc0ee;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--navy-2);
+    }
+
+    .capabilities {
+      position: relative;
+      z-index: 4;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .capability {
+      min-height: 142px;
+      padding: 0 9px;
+      text-align: center;
+      border-right: 1px dashed #b9cce5;
+    }
+
+    .capability:last-child { border-right: 0; }
+
+    .cap-icon {
+      display: grid;
+      place-items: center;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      border: 1.8px solid currentColor;
+      color: var(--blue);
+      background: #fff;
+    }
+
+    .cap-icon.orange { color: var(--orange); }
+    .cap-icon.purple { color: var(--purple); }
+    .cap-icon.green { color: var(--green); }
+    .cap-icon i { font-size: 24px; }
+
+    .capability h3 {
+      min-height: 35px;
+      margin: 0 0 5px;
+      color: var(--navy);
+      font-size: 12.3px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .capability p {
+      margin: 0;
+      color: #07194f;
+      font-size: 10px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    .panels {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 14px;
+      padding: 4px 16px 0;
+    }
+
+    .panel {
+      border: 1px solid #d5e1f1;
+      border-radius: 10px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 5px 14px rgba(13, 39, 85, .06);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 47px;
+      padding: 0 18px;
+      color: #fff;
+      background: linear-gradient(90deg, var(--navy), #093b8d);
+      font-size: 18px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .panel-header.orange {
+      background: linear-gradient(90deg, #b85c10, #f18717);
+    }
+
+    .panel-header i { width: 28px; font-size: 22px; text-align: center; }
+
+    .workflow { padding: 12px 12px 6px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      position: relative;
+    }
+
+    .steps::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 62px;
+      right: 62px;
+      height: 2px;
+      background: var(--navy);
+      opacity: .9;
+    }
+
+    .step { position: relative; z-index: 1; text-align: center; }
+
+    .step-box {
+      display: grid;
+      place-items: center;
+      width: 57px;
+      height: 57px;
+      margin: 0 auto 8px;
+      border: 1px solid #cbd9ef;
+      border-radius: 9px;
+      background: #fff;
+      color: var(--navy);
+    }
+
+    .step-box i { font-size: 31px; }
+
+    .step h4 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 11.5px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.26;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      margin: 14px 0 10px;
+      border-top: 1px solid #d8e4f3;
+      padding-top: 11px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .slot {
+      min-height: 76px;
+      padding: 8px 4px 6px;
+      text-align: center;
+      border: 1px solid #d5e1f1;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .slot i { color: var(--blue); font-size: 24px; }
+    .slot:nth-child(5) i { color: var(--purple); }
+    .slot h4 {
+      margin: 5px 0 3px;
+      color: var(--navy);
+      font-size: 11.3px;
+      font-weight: 900;
+    }
+    .slot p {
+      margin: 0;
+      font-size: 9px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 12px;
+      border-top: 1px solid #d8e4f3;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 5px 8px;
+      border-right: 1px dashed #b9cce5;
+      color: var(--navy);
+      font-size: 9.1px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+
+    .feature:nth-child(4n) { border-right: 0; }
+    .feature i { flex: 0 0 23px; width: 23px; font-size: 21px; text-align: center; }
+
+    .dashboard { padding: 10px 10px 10px; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      min-height: 68px;
+      padding: 9px 8px 7px;
+      border: 1px solid #d7e2f1;
+      border-radius: 7px;
+      background: #fff;
+    }
+
+    .stat h4 {
+      margin: 0 0 10px;
+      color: #2a4777;
+      font-size: 9.8px;
+      font-weight: 800;
+    }
+
+    .stat .number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--navy);
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .stat i { font-size: 22px; color: var(--blue); }
+
+    .charts {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .chart-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 11px;
+      min-height: 130px;
+      background: #fff;
+    }
+
+    .chart-card h4 {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .donut-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .donut {
+      width: 72px;
+      height: 72px;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .legend {
+      display: grid;
+      gap: 8px;
+      font-size: 9.5px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+.legend div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 8.5px;
+      gap: 0;
+    }
+
+    .legend span {
+      display: inline-flex;
+      width: 10px;
+      height: 10px;
+      margin-right: 6px;
+      border-radius: 2px;
+      background: #0277bd;
+    }
+
+    .legend div:last-child span { background: var(--green); }
+
+    .line-chart { width: 100%; height: 84px; }
+
+    .mini-table {
+      margin-top: 8px;
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1.2fr .75fr .75fr .6fr .6fr;
+      min-height: 25px;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 1px solid #e6eef8;
+    }
+
+    .row:last-child { border-bottom: 0; }
+    .row.head {
+      color: #39547d;
+      background: #f7fbff;
+      font-size: 9.5px;
+      font-weight: 900;
+    }
+
+    .pill {
+      justify-self: start;
+      border-radius: 20px;
+      padding: 4px 9px;
+      background: #ffe2bf;
+      color: #9a4f08;
+      font-size: 9px;
+      font-weight: 900;
+    }
+
+    .dashboard-bottom {
+      display: grid;
+      grid-template-columns: 46% 54%;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .dash-card {
+      border: 1px solid #d7e2f1;
+      border-radius: 8px;
+      padding: 10px;
+      background: #fff;
+      min-height: 118px;
+    }
+
+    .dash-card h4 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .bar-list {
+      display: grid;
+      gap: 7px;
+    }
+
+    .bar-item {
+      display: grid;
+      grid-template-columns: 62px 1fr 28px;
+      gap: 6px;
+      align-items: center;
+      font-size: 9px;
+      font-weight: 800;
+      color: #2a4777;
+    }
+
+    .bar-track {
+      height: 8px;
+      border-radius: 999px;
+      background: #eef3fa;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #0277bd, #f18717);
+    }
+
+    .bar-fill.green { background: linear-gradient(90deg, #35a853, #6cc27d); }
+    .bar-fill.blue { background: linear-gradient(90deg, #2879e3, #5ca0ef); }
+    .bar-fill.purple { background: linear-gradient(90deg, #7a2f8f, #a45cb8); }
+
+    .queue-table {
+      border: 1px solid #e6eef8;
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .queue-row {
+      display: grid;
+      grid-template-columns: .9fr 1fr .7fr .55fr;
+      min-height: 22px;
+      align-items: center;
+      padding: 0 8px;
+      border-bottom: 1px solid #eef3fa;
+      color: #2a4777;
+    }
+
+    .queue-row:last-child { border-bottom: 0; }
+
+    .queue-row.head {
+      background: #f7fbff;
+      color: #39547d;
+      font-size: 8.8px;
+      font-weight: 900;
+    }
+
+    .tag {
+      justify-self: start;
+      border-radius: 999px;
+      padding: 2px 7px;
+      font-size: 8px;
+      font-weight: 900;
+      background: #fde8e8;
+      color: #8b1a1a;
+    }
+
+    .tag.delivery {
+      background: #e7f4ea;
+      color: #2d7640;
+    }
+
+    .integrations {
+      padding: 0 43px 0;
+      margin-bottom: 8px;
+    }
+
+    .integration-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 11px;
+      align-items: start;
+    }
+
+    .app {
+      text-align: center;
+      color: var(--navy);
+      font-size: 11px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .app .circle {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 44px;
+      margin: 0 auto 7px;
+      border-radius: 15px;
+      border: 1px solid #cbd9ef;
+      background: #fff;
+      color: var(--blue);
+      box-shadow: 0 4px 10px rgba(13, 39, 85, .07);
+    }
+
+    .app:nth-child(2n) .circle { color: var(--orange); }
+    .app:nth-child(4n) .circle { color: var(--purple); }
+    .app:nth-child(5n) .circle { color: var(--green); }
+    .app i { font-size: 28px; }
+
+    .bottom-benefits {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 67px;
+      display: grid;
+      grid-template-columns: 132px repeat(4, 1fr);
+      gap: 0;
+      margin: 0;
+      min-height: 64px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: linear-gradient(90deg, #062a6f, #0b3b91);
+      color: #fff;
+      z-index: 4;
+    }
+
+    .benefit-title {
+      display: grid;
+      place-items: center;
+      padding: 0 12px;
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 10px;
+      border-right: 1px solid rgba(255,255,255,.42);
+    }
+
+    .bottom-item:last-child { border-right: 0; }
+    .bottom-item i { width: 30px; font-size: 29px; text-align: center; }
+    .bottom-item h3 {
+      margin: 0 0 4px;
+      color: #fff;
+      font-size: 9.8px;
+      line-height: 1.25;
+      font-weight: 900;
+    }
+    .bottom-item p {
+      margin: 0;
+      font-size: 8.3px;
+      line-height: 1.22;
+      font-weight: 700;
+    }
+
+    .footer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 44px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      background: var(--navy);
+      color: #fff;
+      padding: 0 24px;
+      font-size: 12px;
+      z-index: 5;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      height: 22px;
+      border-right: 1px solid rgba(255,255,255,.55);
+    }
+
+    .contact:last-child { border-right: 0; }
+    .contact i { width: 16px; font-size: 14px; text-align: center; }
+  
+    .lang-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 10000;
+      display: flex;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid #cbd9ef;
+      box-shadow: 0 8px 24px rgba(6, 42, 111, 0.12);
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .lang-switcher a {
+      color: #062a6f;
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher a.is-active {
+      background: #062a6f;
+      color: #fff;
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="lang-switcher" aria-label="Language"><a href="index.html">English</a><a class="is-active" href="index-zh.html">中文</a></nav>
+  <main class="page">
+    <img class="hero-image" src="air-conditioning-assets/air-conditioning-hero.png" alt="" />
+    <div class="hero-fade"></div>
+    <div class="curve"></div>
+
+    <section class="hero">
+      <div class="top-row">
+        <div class="brand">
+          <img class="mark" src="air-conditioning-assets/alitec-logo.jpeg" alt="Alitec" />
+          <div class="divider"></div>
+          <div>
+            <h1>空调服务<br />运营管理</h1>
+            <div class="subtitle">用 Odoo 打通报价、现场预约、工单到交付与开票的完整服务流程</div>
+            <div class="short-line"></div>
+          </div>
+        </div>
+        <div class="odoo"><img class="odoo-logo" src="air-conditioning-assets/odoo-gold-partner.png" alt="Odoo Gold Partner" /></div>
+      </div>
+
+      <p class="intro">
+        Alitec 空调服务解决方案帮助 HVAC 团队在每个任务上记录服务地址与预约信息，
+        将已确认的销售订单转化为共享分析账户的关联项目，并引导技术人员完成空调专属
+        检查表工单——以带照片和签字的服务单收尾，配合统一品牌单据与清晰的
+        价格成本可视化。
+      </p>
+
+      <div class="quick-benefits">
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <h3>现场与预约</h3>
+          </div>
+          <p>服务地址、联系人与预约时间段记录在每个任务上。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3>订单转项目</h3>
+          </div>
+          <p>确认销售订单自动生成关联项目、任务与分析账户。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h3>签字服务单</h3>
+          </div>
+          <p>工作完成 PDF 附现场照片及技术员/客户签名。</p>
+        </div>
+        <div class="quick-benefit">
+          <div class="quick-benefit-top">
+            <div class="round-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>价格成本管控</h3>
+          </div>
+          <p>按角色权限在订单行显示单位成本对比价格。</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title"><span class="dot"></span> 核心能力 <span class="dot"></span></div>
+    <section class="capabilities">
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h3>服务现场与预约</h3>
+        <p>任务直接记录服务地址、联系方式与预约时间段。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>订单转任务自动化</h3>
+        <p>已确认订单自动生成关联项目任务并共享分析账户。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-list-check"></i></div>
+        <h3>空调专属检查表</h3>
+        <p>过滤网、风扇、马达等检查项自动加载到工单。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-file-signature"></i></div>
+        <h3>服务单 PDF</h3>
+        <p>完工报告列出所用配件，附照片与签名区域。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon green"><i class="fa-solid fa-image"></i></div>
+        <h3>照片拖拽上传</h3>
+        <p>技术人员可将现场照片直接拖拽至工单图片栏。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon orange"><i class="fa-solid fa-sitemap"></i></div>
+        <h3>按人员分摊提成</h3>
+        <p>报表按每个任务所指派的技术人员分摊订单金额。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon purple"><i class="fa-solid fa-file-lines"></i></div>
+        <h3>统一品牌单据</h3>
+        <p>报价单、发票、送货单及对账单风格保持一致。</p>
+      </div>
+      <div class="capability">
+        <div class="cap-icon"><i class="fa-solid fa-eye"></i></div>
+        <h3>价格成本可视化</h3>
+        <p>授权用户可在单据上直接查看单位成本与价格。</p>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="panel">
+        <div class="panel-header"><i class="fa-solid fa-list-check"></i> 服务流程</div>
+        <div class="workflow">
+          <div class="steps">
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>报价<br />确认</h4><p>为空调服务报价并确认销售订单</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-calendar-check"></i></div><h4>预约<br />现场</h4><p>任务记录服务地址、联系人与预约时间段</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-list-check"></i></div><h4>完成<br />工单</h4><p>技术人员执行空调检查表并附上现场照片</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-signature"></i></div><h4>签字<br />确认</h4><p>打印带照片及技术员/客户签名的服务单</p></div>
+            <div class="step"><div class="step-box"><i class="fa-solid fa-file-invoice-dollar"></i></div><h4>交付<br />开票</h4><p>统一品牌的送货单、发票与报表完成收尾</p></div>
+          </div>
+
+          <div class="sub-title">工单管理要点</div>
+          <div class="slots">
+            <div class="slot"><i class="fa-solid fa-location-dot"></i><h4>服务信息</h4><p>任务记录现场地址、联系人及技术人员</p></div>
+            <div class="slot"><i class="fa-solid fa-clock"></i><h4>预约时段</h4><p>排程与看板视图显示开始与结束时间</p></div>
+            <div class="slot"><i class="fa-solid fa-list-check"></i><h4>默认检查表</h4><p>过滤网、风扇、马达等项目自动加载</p></div>
+            <div class="slot"><i class="fa-solid fa-image"></i><h4>图片拖拽</h4><p>照片可直接拖拽至工单图片字段</p></div>
+            <div class="slot"><i class="fa-solid fa-signature"></i><h4>签名确认</h4><p>服务单上记录技术员与客户签字</p></div>
+          </div>
+
+          <div class="sub-title">更多特性</div>
+          <div class="feature-grid">
+            <div class="feature"><i class="fa-solid fa-diagram-project"></i>关联项目与任务共享同一分析账户</div>
+            <div class="feature"><i class="fa-solid fa-calendar-days"></i>项目规划周期最长可达一年</div>
+            <div class="feature"><i class="fa-solid fa-receipt"></i>服务单列出所用配件及数量</div>
+            <div class="feature"><i class="fa-solid fa-camera"></i>每份完工报告可附多张现场照片</div>
+            <div class="feature"><i class="fa-solid fa-coins"></i>订单行价格旁显示参考单位成本</div>
+            <div class="feature"><i class="fa-solid fa-user-shield"></i>成本与价格字段按用户角色限制查看</div>
+            <div class="feature"><i class="fa-solid fa-chart-pie"></i>按人员分摊提成的列表与透视报表</div>
+            <div class="feature"><i class="fa-solid fa-file-invoice"></i>统一品牌的发票、送货单与对账单</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header orange"><i class="fa-solid fa-chart-line"></i> 运营可视化</div>
+        <div class="dashboard">
+          <div class="stats">
+            <div class="stat"><h4>今日预约</h4><div class="number">32<i class="fa-solid fa-calendar-check"></i></div></div>
+            <div class="stat"><h4>已完成工单</h4><div class="number">118<i class="fa-solid fa-list-check"></i></div></div>
+            <div class="stat"><h4>已签字服务单</h4><div class="number">96<i class="fa-solid fa-file-signature"></i></div></div>
+            <div class="stat"><h4>待开票订单</h4><div class="number">21<i class="fa-solid fa-file-invoice-dollar"></i></div></div>
+            <div class="stat"><h4>提成分摊笔数</h4><div class="number">47<i class="fa-solid fa-sitemap"></i></div></div>
+          </div>
+
+          <div class="charts">
+            <div class="chart-card">
+              <h4>工单状态占比</h4>
+              <div class="donut-wrap">
+                <svg class="donut" viewBox="0 0 92 92" role="img" aria-label="工单状态占比图">
+                  <path d="M 46.00 15.00 A 31 31 0 1 1 26.50 67.30 L 33.44 59.71 A 20 20 0 1 0 46.00 26.00 Z" fill="#0277bd"></path>
+                  <path d="M 26.50 67.30 A 31 31 0 0 1 46.00 15.00 L 46.00 26.00 A 20 20 0 0 0 33.44 59.71 Z" fill="#35a853"></path>
+                </svg>
+                <div class="legend">
+                  <div><span></span>已完成 (74%) 118</div>
+                  <div><span></span>进行中 (26%) 41</div>
+                </div>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h4>每周预约趋势</h4>
+              <svg class="line-chart" viewBox="0 0 300 100" fill="none">
+                <path d="M0 92H300" stroke="#d8e4f3" />
+                <path d="M0 62H300" stroke="#d8e4f3" />
+                <path d="M0 32H300" stroke="#d8e4f3" />
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34" stroke="#0277bd" stroke-width="3" fill="none"/>
+                <path d="M24 70 L62 64 L100 58 L138 52 L176 48 L214 42 L252 38 L286 34 L286 92 L24 92Z" fill="rgba(2,119,189,.16)" />
+                <g fill="#0277bd"><circle cx="24" cy="70" r="4"/><circle cx="62" cy="64" r="4"/><circle cx="100" cy="58" r="4"/><circle cx="138" cy="52" r="4"/><circle cx="176" cy="48" r="4"/><circle cx="214" cy="42" r="4"/><circle cx="252" cy="38" r="4"/><circle cx="286" cy="34" r="4"/></g>
+                <g fill="#344b74" font-size="9" font-family="Arial" font-weight="700"><text x="17" y="99">周一</text><text x="56" y="99">周二</text><text x="94" y="99">周三</text><text x="132" y="99">周四</text><text x="171" y="99">周五</text><text x="209" y="99">周六</text><text x="247" y="99">周日</text><text x="281" y="99">周一</text></g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="mini-table">
+            <div class="row head"><div>管控区域</div><div>负责方</div><div>状态</div><div>数量</div><div>评估</div></div>
+            <div class="row"><div>服务现场</div><div>现场团队</div><div>已排期</div><div>32</div><div class="pill">进行中</div></div>
+            <div class="row"><div>工单</div><div>技术人员</div><div>处理中</div><div>26</div><div class="pill">正常</div></div>
+            <div class="row"><div>服务单</div><div>质控</div><div>已签字</div><div>96</div><div class="pill">活跃</div></div>
+            <div class="row"><div>提成分摊</div><div>销售</div><div>已复核</div><div>47</div><div class="pill">待复核</div></div>
+          </div>
+
+          <div class="dashboard-bottom">
+            <div class="dash-card">
+              <h4>检查项完成率</h4>
+              <div class="bar-list">
+                <div class="bar-item"><span>过滤网</span><div class="bar-track"><div class="bar-fill" style="width:92%"></div></div><span>92%</span></div>
+                <div class="bar-item"><span>风扇检查</span><div class="bar-track"><div class="bar-fill green" style="width:85%"></div></div><span>85%</span></div>
+                <div class="bar-item"><span>马达加油</span><div class="bar-track"><div class="bar-fill blue" style="width:78%"></div></div><span>78%</span></div>
+                <div class="bar-item"><span>其他项目</span><div class="bar-track"><div class="bar-fill purple" style="width:63%"></div></div><span>63%</span></div>
+              </div>
+            </div>
+            <div class="dash-card">
+              <h4>待签字工单</h4>
+              <div class="queue-table">
+                <div class="queue-row head"><div>订单</div><div>现场</div><div>截止</div><div>状态</div></div>
+                <div class="queue-row"><div>SO-3120</div><div>现场 A</div><div>周三</div><div class="tag">服务单</div></div>
+                <div class="queue-row"><div>SO-3124</div><div>现场 B</div><div>周四</div><div class="tag delivery">开票</div></div>
+                <div class="queue-row"><div>SO-3128</div><div>现场 C</div><div>周五</div><div class="tag">工单</div></div>
+                <div class="queue-row"><div>SO-3131</div><div>现场 D</div><div>周一</div><div class="tag delivery">已签字</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title" style="margin-top:2px;"><span class="dot"></span> 无缝集成 ODOO 应用 <span class="dot"></span></div>
+    <section class="integrations">
+      <div class="integration-grid">
+        <div class="app"><div class="circle"><i class="fa-solid fa-toolbox"></i></div>现场服务</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-cart-shopping"></i></div>销售</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-diagram-project"></i></div>项目</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-warehouse"></i></div>库存</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-file-invoice-dollar"></i></div>财务</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-calendar-days"></i></div>排班</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-address-book"></i></div>联系人</div>
+        <div class="app"><div class="circle"><i class="fa-solid fa-chart-column"></i></div>报表</div>
+      </div>
+    </section>
+
+    <section class="bottom-benefits">
+      <div class="benefit-title">业务<br />价值</div>
+      <div class="bottom-item"><i class="fa-solid fa-bolt"></i><div><h3>现场作业更高效</h3><p>清晰的服务地址与预约信息减少技术员沟通成本。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-camera"></i><div><h3>照片留证更可靠</h3><p>拖拽上传的照片与签名为每个工单提供有力凭证。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-file-lines"></i><div><h3>作业记录更规范</h3><p>统一的空调检查表与服务单适用于每次预约。</p></div></div>
+      <div class="bottom-item"><i class="fa-solid fa-scale-balanced"></i><div><h3>提成分配更公平</h3><p>按人员分摊的报表让技术人员薪酬更加透明。</p></div></div>
+    </section>
+
+    <footer class="footer">
+      <div class="contact"><i class="fa-regular fa-envelope"></i>sales@alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+65 6262 2001</div>
+      <div class="contact"><i class="fa-solid fa-phone"></i>+60 327123253</div>
+      <div class="contact"><i class="fa-solid fa-globe"></i>www.alitec.asia</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>新加坡</div>
+      <div class="contact"><i class="fa-solid fa-location-dot"></i>马来西亚</div>
+    </footer>
+  </main>
+  <script src="../../editor/flyer-editor.js?v=20260715-pdf-canvas-1" data-flyer-editor-script data-flyer-version="2026-07-28-air-conditioning-zh-v1"></script>
+</body>
+</html>
