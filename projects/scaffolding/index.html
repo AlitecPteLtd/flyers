@@ -43,7 +43,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 1024px;
+      width: 500px;
       height: 340px;
       object-fit: cover;
       object-position: center top;
@@ -56,8 +56,24 @@
       height: 360px;
       z-index: 1;
       background:
-        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.99) 35%, rgba(255,255,255,.78) 55%, rgba(255,255,255,.12) 84%),
-        linear-gradient(180deg, rgba(255,255,255,0) 58%, #fff 100%);
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 52%,
+          rgba(255, 255, 255, .98) 56%,
+          rgba(255, 255, 255, .92) 60%,
+          rgba(255, 255, 255, .78) 66%,
+          rgba(255, 255, 255, .45) 74%,
+          rgba(255, 255, 255, .12) 82%,
+          rgba(255, 255, 255, 0) 92%
+        ),
+        radial-gradient(
+          ellipse 240px 120px at 90% 14%,
+          rgba(255, 255, 255, .96) 0%,
+          rgba(255, 255, 255, .82) 58%,
+          rgba(255, 255, 255, 0) 100%
+        ),
+        linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 62%, rgba(255,255,255,.28) 86%, rgba(255,255,255,.82) 100%);
     }
 
     .curve {
@@ -68,17 +84,25 @@
       height: 72px;
       z-index: 2;
       border-radius: 0 0 50% 50%;
-      background: var(--navy);
+      background: linear-gradient(
+        180deg,
+        rgba(6, 42, 111, .78) 0%,
+        rgba(6, 42, 111, .42) 42%,
+        rgba(6, 42, 111, .12) 72%,
+        rgba(6, 42, 111, 0) 100%
+      );
       transform: rotate(-4deg);
       transform-origin: center;
-      box-shadow: 0 -14px 0 var(--gold);
+      box-shadow: 0 -5px 0 rgba(246, 170, 23, .95);
+      pointer-events: none;
     }
 
     .hero {
       position: relative;
       z-index: 3;
-      height: 360px;
-      padding: 14px 32px 0 34px;
+      min-height: 360px;
+      height: auto;
+      padding: 14px 32px 6px 34px;
     }
 
     .top-row {
@@ -148,35 +172,35 @@
 
     .intro {
       width: 720px;
-      margin-top: 34px;
-      font-size: 16px;
-      line-height: 1.45;
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.32;
       color: #07194f;
     }
 
     .intro strong {
       display: block;
       margin-bottom: 4px;
-      color: var(--blue);
-      font-size: 17px;
-      line-height: 1.34;
+      color: var(--navy);
+      font-size: 16px;
+      line-height: 1.28;
     }
 
     .quick-benefits {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       width: 720px;
-      margin-top: 16px;
+      margin-top: 8px;
       border: 1px solid #d7e2f1;
       border-radius: 18px;
-      background: rgba(255,255,255,.95);
+      background: rgba(255,255,255,.98);
       box-shadow: 0 12px 32px rgba(16, 46, 94, .12);
       overflow: hidden;
     }
 
     .quick-benefit {
-      min-height: 108px;
-      padding: 12px 14px 10px;
+      min-height: 88px;
+      padding: 9px 11px 7px;
       border-right: 1px dashed #b7c8e1;
     }
 
@@ -709,31 +733,31 @@
       <div class="quick-benefits">
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-clipboard-list"></i></div>
-            <h3>Rental Order Flow</h3>
+            <div class="round-icon"><i class="fa-solid fa-link"></i></div>
+            <h3>Linked Rentals</h3>
           </div>
-          <p>Quotation, customer PO, rental order, return, and recurring billing stay linked.</p>
+          <p>Keep quotation, PO, rental order, return, and recurring billing connected.</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-truck"></i></div>
-            <h3>Delivery Control</h3>
+            <div class="round-icon"><i class="fa-solid fa-location-crosshairs"></i></div>
+            <h3>Site Stock Clarity</h3>
           </div>
-          <p>Track site dispatches, returns, repair, loss, and over-return handling.</p>
+          <p>See what left the yard, what returned, and what needs repair or write-off.</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-file-circle-check"></i></div>
-            <h3>Project Claims</h3>
+            <div class="round-icon"><i class="fa-solid fa-file-signature"></i></div>
+            <h3>Claim-Ready Docs</h3>
           </div>
-          <p>Manage work done, dismantling records, claims, and certificates.</p>
+          <p>Prepare work-done records, dismantling notes, claims, and certificates faster.</p>
         </div>
         <div class="quick-benefit">
           <div class="quick-benefit-top">
-            <div class="round-icon"><i class="fa-solid fa-chart-column"></i></div>
-            <h3>Billing Visibility</h3>
+            <div class="round-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3>Billing Clarity</h3>
           </div>
-          <p>Support rental billing by density, delivery percentage, and monthly cycles.</p>
+          <p>Support density, delivery percentage, and monthly rental billing cycles.</p>
         </div>
       </div>
     </section>
@@ -872,6 +896,6 @@
       <div class="contact"><i class="fa-solid fa-location-dot"></i>Singapore</div>
     </footer>
   </main>
-  <script src="../../editor/flyer-editor.js?v=20260715-pdf-canvas-1" data-flyer-editor-script data-flyer-version="2026-07-07-v2"></script>
+  <script src="../../editor/flyer-editor.js?v=20260715-pdf-canvas-1" data-flyer-editor-script data-flyer-version="2026-07-29-scaffolding-layout-1"></script>
 </body>
 </html>
