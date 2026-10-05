@@ -108,8 +108,66 @@
       font-size: 14px;
     }
 
+    .campaigns {
+      margin-top: 46px;
+      padding-top: 38px;
+      border-top: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .campaigns h2 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .campaigns > p {
+      margin: 0 auto 24px;
+      max-width: 640px;
+      color: #52698d;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .campaign-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .campaign-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: #fff;
+      box-shadow: 0 16px 38px rgba(6, 42, 111, .1);
+      color: var(--ink);
+      text-decoration: none;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .campaign-card:hover {
+      transform: translateY(-3px);
+      border-color: #8bb9ef;
+    }
+
+    .campaign-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1.414 / 1;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .campaign-copy { padding: 22px 24px 24px; }
+    .campaign-copy span { color: var(--blue); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .campaign-copy h3 { margin: 8px 0 8px; color: var(--navy); font-size: 24px; }
+    .campaign-copy p { margin: 0; color: #52698d; font-size: 14px; line-height: 1.5; }
+
     @media (max-width: 720px) {
-      .lang-grid { grid-template-columns: 1fr; }
+      .lang-grid, .campaign-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -129,6 +187,28 @@
         <h2>中文</h2>
         <p>浏览全部 40 个行业方案中文宣传单。</p>
       </a>
+    </section>
+    <section class="campaigns" aria-labelledby="campaign-title">
+      <h2 id="campaign-title">Featured Sales Flyers</h2>
+      <p>Open the latest Alitec campaign flyers for Odoo ERP transformation and Singapore GST InvoiceNow readiness.</p>
+      <div class="campaign-grid">
+        <a class="campaign-card" href="sales-flyers/alitec-odoo-campaign/odoo-erp-flyer.html">
+          <img src="sales-flyers/alitec-odoo-campaign/previews/odoo-erp-flyer.png" alt="Preview of the Alitec Odoo ERP flyer">
+          <div class="campaign-copy">
+            <span>Odoo ERP</span>
+            <h3>One connected business platform</h3>
+            <p>Finance, sales, purchasing, inventory, manufacturing and service operations in one practical rollout.</p>
+          </div>
+        </a>
+        <a class="campaign-card" href="sales-flyers/alitec-odoo-campaign/odoo-invoicenow-flyer.html">
+          <img src="sales-flyers/alitec-odoo-campaign/previews/odoo-invoicenow-flyer.png" alt="Preview of the Alitec GST InvoiceNow readiness flyer">
+          <div class="campaign-copy">
+            <span>GST InvoiceNow</span>
+            <h3>Prepare for your mandatory date</h3>
+            <p>Assess the implementation timeline, system readiness, data flow, testing and adoption requirements.</p>
+          </div>
+        </a>
+      </div>
     </section>
     <div class="footer">Published at https://alitecpteltd.github.io/flyers/</div>
   </main>
